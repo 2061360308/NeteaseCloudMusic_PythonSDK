@@ -78,10 +78,18 @@ class NeteaseCloudMusicApi:
             query["cookie"] = self.cookie
 
         if query.get("realIP") is None:
-            query["ip"] = self.ip
+            query["realIP"] = self.ip
         else:
-            query["ip"] = query.get("realIP")
+            query["realIP"] = query.get("realIP")
 
         result = self.getRequestParam(name, query)
-        response = requests.post(result["url"], data=result["data"], headers=result["headers"])
+
+        param_data = {}
+        for item in result["data"].split("&"):
+            param_data[item.split("=")[0]] = item.split("=")[1]
+
+        if self.DEBUG:
+            print(f"    - param_data:{param_data}")
+
+        response = requests.post(result["url"], data=param_data, headers=result["headers"])
         return response

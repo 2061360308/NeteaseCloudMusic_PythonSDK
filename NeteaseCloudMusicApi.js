@@ -36597,9 +36597,9 @@ function createRandomString(len) {
 });
 
 ;// CONCATENATED MODULE: ./util/config.json
-const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1":"R_MV_5_","2":"A_PL_0_","3":"R_AL_3_","4":"A_DJ_1_","5":"R_VI_62_","6":"A_EV_2_","7":"A_DR_14_"}}');
+const config_namespaceObject = JSON.parse('{"A":{"0":"R_SO_4_","1":"R_MV_5_","2":"A_PL_0_","3":"R_AL_3_","4":"A_DJ_1_","5":"R_VI_62_","6":"A_EV_2_","7":"A_DR_14_"}}');
 ;// CONCATENATED MODULE: ./module/comment.js
-
+const resourceTypeMap = config_namespaceObject.A;
 // 发送与删除评论
 
 /* harmony default export */ const comment = ((query, request) => {
@@ -36609,7 +36609,7 @@ const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1"
     0: 'delete',
     2: 'reply',
   }[query.t]
-  query.type = config_namespaceObject[query.type]
+  query.type = resourceTypeMap[query.type]
   const data = {
     threadId: query.type + query.id,
   }
@@ -36707,9 +36707,9 @@ const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1"
 });
 
 ;// CONCATENATED MODULE: ./module/comment_floor.js
-
+const comment_floor_resourceTypeMap = config_namespaceObject.A;
 /* harmony default export */ const comment_floor = ((query, request) => {
-  query.type = config_namespaceObject[query.type]
+  query.type = comment_floor_resourceTypeMap[query.type]
   const data = {
     parentCommentId: query.parentCommentId,
     threadId: query.type + query.id,
@@ -36730,12 +36730,12 @@ const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1"
 });
 
 ;// CONCATENATED MODULE: ./module/comment_hot.js
-
+const comment_hot_resourceTypeMap = config_namespaceObject.A;
 // 热门评论
 
 /* harmony default export */ const comment_hot = ((query, request) => {
   query.cookie.os = 'pc'
-  query.type = config_namespaceObject[query.type]
+  query.type = comment_hot_resourceTypeMap[query.type]
   const data = {
     rid: query.id,
     limit: query.limit || 20,
@@ -36756,11 +36756,11 @@ const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1"
 });
 
 ;// CONCATENATED MODULE: ./module/comment_hug_list.js
-
+const comment_hug_list_resourceTypeMap = config_namespaceObject.A;
 /* harmony default export */ const comment_hug_list = ((query, request) => {
   query.cookie.os = 'ios'
   query.cookie.appver = '8.10.90'
-  query.type = config_namespaceObject[query.type || 0]
+  query.type = comment_hug_list_resourceTypeMap[query.type || 0]
   const threadId = query.type + query.sid
   const data = {
     targetUserId: query.uid,
@@ -36785,13 +36785,13 @@ const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1"
 });
 
 ;// CONCATENATED MODULE: ./module/comment_like.js
-
+const comment_like_resourceTypeMap = config_namespaceObject.A;
 // 点赞与取消点赞评论
 
 /* harmony default export */ const comment_like = ((query, request) => {
   query.cookie.os = 'pc'
   query.t = query.t == 1 ? 'like' : 'unlike'
-  query.type = config_namespaceObject[query.type]
+  query.type = comment_like_resourceTypeMap[query.type]
   const data = {
     threadId: query.type + query.id,
     commentId: query.cid,
@@ -36861,12 +36861,12 @@ const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1"
 });
 
 ;// CONCATENATED MODULE: ./module/comment_new.js
-
+const comment_new_resourceTypeMap = config_namespaceObject.A;
 // 评论
 
 /* harmony default export */ const comment_new = ((query, request) => {
   query.cookie.os = 'pc'
-  query.type = config_namespaceObject[query.type]
+  query.type = comment_new_resourceTypeMap[query.type]
   const threadId = query.type + query.id
   const pageSize = query.pageSize || 20
   const pageNo = query.pageNo || 1
@@ -37250,32 +37250,7 @@ const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1"
 });
 
 ;// CONCATENATED MODULE: ./util/index.js
-// export default {
-//   toBoolean(val) {
-//     if (typeof val === 'boolean') return val
-//     if (val === '') return val
-//     return val === 'true' || val == '1'
-//   },
-//   cookieToJson(cookie) {
-//     if (!cookie) return {}
-//     let cookieArr = cookie.split(';')
-//     let obj = {}
-//     cookieArr.forEach((i) => {
-//       let arr = i.split('=')
-//       obj[arr[0]] = arr[1]
-//     })
-//     return obj
-//   },
-//   getRandom(num) {
-//     var random = Math.floor(
-//       (Math.random() + Math.floor(Math.random() * 9 + 1)) *
-//         Math.pow(10, num - 1),
-//     )
-//     return random
-//   },
-// }
-
-function toBoolean(val) {
+function toBoolean (val) {
   if (typeof val === 'boolean') return val
   if (val === '') return val
   return val === 'true' || val == '1'
@@ -37927,11 +37902,11 @@ const typeMap = {
 });
 
 ;// CONCATENATED MODULE: ./module/hug_comment.js
-
+const hug_comment_resourceTypeMap = config_namespaceObject.A;
 /* harmony default export */ const hug_comment = ((query, request) => {
   query.cookie.os = 'ios'
   query.cookie.appver = '8.10.90'
-  query.type = config_namespaceObject[query.type || 0]
+  query.type = hug_comment_resourceTypeMap[query.type || 0]
   const threadId = query.type + query.sid
   const data = {
     targetUserId: query.uid,
@@ -40002,11 +39977,11 @@ var crypto_js_default = /*#__PURE__*/__webpack_require__.n(crypto_js);
 
 ;// CONCATENATED MODULE: ./module/resource_like.js
 // 点赞与取消点赞资源
-
+const resource_like_resourceTypeMap = config_namespaceObject.A;
 /* harmony default export */ const resource_like = ((query, request) => {
   query.cookie.os = 'android'
   query.t = query.t == 1 ? 'like' : 'unlike'
-  query.type = config_namespaceObject[query.type]
+  query.type = resource_like_resourceTypeMap[query.type]
   const data = {
     threadId: query.type + query.id,
   }
