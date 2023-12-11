@@ -1,4 +1,5 @@
 .idea/
 __pycache__/
 .env
+.pytest_cache/
 cookie_storage

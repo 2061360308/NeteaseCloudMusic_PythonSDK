@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+NeteaseCloudMusic/NeteaseCloudMusicApi.js
+NeteaseCloudMusic/__init__.py
+NeteaseCloudMusic/config.json
+NeteaseCloudMusic/help.py
+NeteaseCloudMusic/main.py
+NeteaseCloudMusicApi.egg-info/PKG-INFO
+NeteaseCloudMusicApi.egg-info/SOURCES.txt
+NeteaseCloudMusicApi.egg-info/dependency_links.txt
+NeteaseCloudMusicApi.egg-info/requires.txt
+NeteaseCloudMusicApi.egg-info/top_level.txt
