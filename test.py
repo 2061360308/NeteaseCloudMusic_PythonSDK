@@ -5,7 +5,9 @@ import os
 from pprint import pprint
 import dotenv
 
-from NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
+from package.NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
+
+# from NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
 
 dotenv.load_dotenv()  # 从.env文件中加载环境变量
 
@@ -14,7 +16,7 @@ netease_cloud_music_api.cookie = os.getenv("COOKIE")  # 设置cookie
 netease_cloud_music_api.DEBUG = True  # 开启调试模式
 
 
-def songv1_test():
+def song_url_v1_test():
     # 获取歌曲详情
     response = netease_cloud_music_api.request("song_url_v1", {"id": 33894312, "level": "exhigh"})
     pprint(response)
@@ -83,11 +85,22 @@ def login_cellphone_test():
     # pprint(response)
 
 
+def personalized_djprogram_test():
+    response = netease_cloud_music_api.request("personalized_djprogram")
+    pprint(response)
+
+
+def top_mv_test():
+    response = netease_cloud_music_api.request("top_mv", {'limit': 6})
+    pprint(response)
+
+
 if __name__ == '__main__':
     pass
-    print(api_list())
-    print(api_help())
-    # songv1_test()
+    # print(api_list())
+    # print(api_help())
+    # song_url_v1_test()
+    top_mv_test()
     # search_test()
     # search_default_test()
     # user_account_test()

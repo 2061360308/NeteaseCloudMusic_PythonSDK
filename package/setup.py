@@ -5,6 +5,7 @@
 #   $ pipenv install twine --dev
 
 import io
+import json
 import os
 import sys
 from shutil import rmtree
@@ -12,13 +13,13 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'NeteaseCloudMusicApi'
+NAME = 'NeteaseCloudMusic'
 DESCRIPTION = '网易云音乐API NeteaseCloudMusicApi项目的 Python SDK'
-URL = 'https://github.com/me/myproject'
-EMAIL = 'me@example.com'
-AUTHOR = 'Awesome Soul'
+URL = 'https://github.com/2061360308/NeteaseCloudMusic_PythonSDK'
+EMAIL = '2061360308@qq.com'
+AUTHOR = '盧瞳'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.1'
+VERSION = '0.1.3'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -41,12 +42,25 @@ here = os.path.abspath(os.path.dirname(__file__))
 # Import the README and use it as the long-description.
 # Note: this will only work if 'README.md' is present in your MANIFEST.in file!
 try:
-    with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+    with io.open(os.path.join(here, '../README.md'), encoding='utf-8') as f:
         long_description = '\n' + f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
 
 # print("long_description:", long_description)
+
+print("copy config.json start")
+with open(os.path.join(here, '../config.json'), 'r', encoding='utf-8') as f:
+    config = json.loads(f.read())
+
+for key in config:
+    for example in config[key]['example']:
+        if 'result' in example:
+            del example['result']
+with open(os.path.join(here, 'NeteaseCloudMusic/config.json'), 'w+', encoding='utf-8') as f:
+    f.write(json.dumps(config, indent=2, ensure_ascii=False))
+print("copy config.json end")
+
 
 # Load the package's __version__.py module as a dictionary.
 about = {}

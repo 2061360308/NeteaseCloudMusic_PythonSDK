@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: NeteaseCloudMusic
+Version: 0.1.3
+Summary: 网易云音乐API NeteaseCloudMusicApi项目的 Python SDK
+Home-page: https://github.com/2061360308/NeteaseCloudMusic_PythonSDK
+Author: 盧瞳
+Author-email: 2061360308@qq.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+网易云音乐API NeteaseCloudMusicApi项目的 Python SDK

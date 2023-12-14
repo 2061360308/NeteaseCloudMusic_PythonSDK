@@ -4,6 +4,10 @@ import pkg_resources
 # 载入配置
 resource_path = pkg_resources.resource_filename(__name__, 'config.json')
 
+# 不被支持的接口
+exclude = ["/request/reference", "/avatar/upload", "/cloud", "/playlist/cover/update", "/voice/upload",
+           "/register/anonimous", "/verify/getQr"]
+
 with open(resource_path, 'r', encoding='utf-8') as f:
     config = json.loads(f.read())
 
@@ -39,4 +43,4 @@ def api_list():
     获取接口列表
     :return:
     """
-    return list(config.keys())
+    return [item for item in list(config.keys()) if item not in exclude]

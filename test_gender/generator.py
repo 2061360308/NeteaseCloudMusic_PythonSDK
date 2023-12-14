@@ -18,13 +18,48 @@ def pathToName(path):
 
 tests = ""
 
-exclude = ["apicache.js", "memory-cache.js", "request_reference.js", "avatar_upload.js", "cloud.js",
-           "playlist_cover_update.js", "voice_upload.js", "register_anonimous.js", "verify_getQr.js"]
+# 不被支持的接口
+exclude = ["/request/reference", "/avatar/upload", "/cloud", "/playlist/cover/update", "/voice/upload",
+           "/register/anonimous", "/verify/getQr"]
+
+# 忽略一些接口的测试
+ignore = ['/login/cellphone',
+          '/user/replacephone',
+          '/audio/match',
+          '/rebind',
+          '/nickname/check',
+          '/activate/init/profile',
+          '/cellphone/existence/check',
+          '/register/cellphone',
+          '/captcha/verify',
+          '/captcha/sent',
+          '/login/refresh',
+          '/logout',
+          '/user/update',
+          '/avatar/upload',
+          '/pl/count',
+          '/playlist/update',
+          '/playlist/desc/update',
+          '/playlist/name/update',
+          '/playlist/tags/update',
+          '/playlist/cover/update',
+          '/event/forward',
+          '/event/del',
+          '/share/resource',
+          '/send/text',
+          '/send/playlist',
+          '/playlist/create',
+          '/playlist/tracks',
+          '/daily_signin',
+          '/fm_trash']
 
 for apiPath, value in config.items():
     apiName = pathToName(apiPath)
 
-    if (apiName+".js") in exclude:
+    if (apiName + ".js") in exclude:
+        continue
+
+    if apiPath in ignore:
         continue
 
     apiExplain = value["explain"]
