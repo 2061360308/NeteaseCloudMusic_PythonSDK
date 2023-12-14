@@ -2,9 +2,7 @@ from pytest_html import extras
 import json
 import os
 from pprint import pprint
-import dotenv
 from package.NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
-dotenv.load_dotenv()  # 从.env文件中加载环境变量
 netease_cloud_music_api = NeteaseCloudMusicApi()  # 初始化API
 netease_cloud_music_api.cookie = os.getenv('COOKIE')  # 设置cookie
 netease_cloud_music_api.DEBUG = True  # 开启调试模式
