@@ -19,7 +19,7 @@ URL = 'https://github.com/2061360308/NeteaseCloudMusic_PythonSDK'
 EMAIL = '2061360308@qq.com'
 AUTHOR = '盧瞳'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.3'
+VERSION = '0.1.4'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -39,10 +39,17 @@ EXTRAS = {
 
 here = os.path.abspath(os.path.dirname(__file__))
 
+print("copy README.md start")
+with open(os.path.join(here, '../README.md'), 'r', encoding='utf-8') as f:
+    README = f.read()
+with open(os.path.join(here, 'README.md'), 'w+', encoding='utf-8') as f:
+    f.write(README)
+print("copy README.md end")
+
 # Import the README and use it as the long-description.
 # Note: this will only work if 'README.md' is present in your MANIFEST.in file!
 try:
-    with io.open(os.path.join(here, '../README.md'), encoding='utf-8') as f:
+    with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
         long_description = '\n' + f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
