@@ -12,7 +12,7 @@ from package.NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
 dotenv.load_dotenv()  # 从.env文件中加载环境变量
 
 netease_cloud_music_api = NeteaseCloudMusicApi()  # 初始化API
-netease_cloud_music_api.cookie = os.getenv("COOKIE")  # 设置cookie
+# netease_cloud_music_api.cookie = os.getenv("COOKIE")  # 设置cookie
 netease_cloud_music_api.DEBUG = True  # 开启调试模式
 
 
@@ -42,7 +42,6 @@ def user_account_test():
 
 
 def comment_new_test():
-    # 获取用户账号信息
     response = netease_cloud_music_api.request("comment_new", {
         "type": "0",
         "id": "1407551413",
@@ -73,16 +72,13 @@ def top_playlist_highquality_test():
 
 
 def captcha_sent_test():
-    response = netease_cloud_music_api.request("/captcha/sent", {"phone": "15234941791"})
+    response = netease_cloud_music_api.request("/captcha/sent", {"phone": "15229954305"})
     pprint(response)
 
 
 def login_cellphone_test():
-    # 注意这里需要调用login_cellphone方法，而不是api方法，具体实现可以看main.py
-    # 有后续操作的api都需要自己实现一下
-    pass
-    # response = netease_cloud_music_api.login_cellphone("15234941791", "9464")
-    # pprint(response)
+    response = netease_cloud_music_api.request("/login/cellphone",{"phone": "15229954305", "captcha": "4273"})
+    pprint(response)
 
 
 def personalized_djprogram_test():
@@ -100,7 +96,7 @@ if __name__ == '__main__':
     # print(api_list())
     # print(api_help())
     # song_url_v1_test()
-    top_mv_test()
+    # top_mv_test()
     # search_test()
     # search_default_test()
     # user_account_test()
@@ -109,4 +105,4 @@ if __name__ == '__main__':
     # playlist_detail_test()
     # top_playlist_highquality_test()
     # captcha_sent_test()
-    # login_cellphone_test()
+    login_cellphone_test()

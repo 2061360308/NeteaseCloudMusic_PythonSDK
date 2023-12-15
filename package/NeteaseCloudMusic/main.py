@@ -2,6 +2,8 @@ import json
 import os.path
 import socket
 from pprint import pprint
+import http.cookies
+import datetime
 
 import pkg_resources
 import requests
@@ -17,6 +19,7 @@ class NeteaseCloudMusicApi:
         self.DEBUG = debug  # 是否开启调试模式
 
         self.special_api = {"/playlist/track/all": self.playlist_track_all,
+                            "/login/cellphone": self.login_cellphone,
                             "/inner/version": self.inner_version}
 
         # 载入js代码
@@ -57,7 +60,7 @@ class NeteaseCloudMusicApi:
         # 处理俩个云贝接口名称转换问题
         if name in yubei_special.keys():
             name = yubei_special[name]
-            print("转换了个麻烦的路由", name)
+            # print("转换了个麻烦的路由", name)
 
         if name not in api_list():
             if name not in yubei_special.values():
@@ -78,6 +81,8 @@ class NeteaseCloudMusicApi:
             result = self.special_api[name](query)
         else:
             result = self.call_api(name, query)
+
+        #
 
         return result
 
@@ -100,7 +105,7 @@ class NeteaseCloudMusicApi:
         if self.__cookie is None:
             if os.path.isfile("cookie_storage"):
                 with open("cookie_storage", "r", encoding='utf-8') as f:
-                    self.__cookie = f.read()
+                    self.cookie = f.read()
             else:
                 self.__cookie = ""  # 如果没有cookie文件，就设置为空
 
@@ -110,9 +115,36 @@ class NeteaseCloudMusicApi:
     def cookie(self, cookie):
         if cookie is None:
             cookie = ""
-        self.__cookie = cookie
+
+        _cookie = cookie
+
+        '''判断cookie是否过期'''
+
+        # 创建一个Morsel对象，它可以解析cookie字符串
+        morsel = http.cookies.SimpleCookie(cookie)
+        # 获取当前时间
+        now = datetime.datetime.now()
+
+        # 只判断 __csrf 是否过期
+        if not morsel.get('__csrf'):
+            # __csrf 不存在，不是有效cookie
+            _cookie = ""
+        else:
+            # 将过期时间字符串转换为datetime对象
+            expires = morsel.get('__csrf')['expires']
+            expires_datetime = datetime.datetime.strptime(expires, "%a, %d %b %Y %H:%M:%S GMT")
+
+            # 判断cookie是否过期
+            if now > expires_datetime:
+                # 过期了
+                _cookie = ""
+            else:
+                # 未过期
+                pass
+
+        self.__cookie = _cookie
         with open("cookie_storage", "w+", encoding='utf-8') as f:
-            f.write(cookie)
+            f.write(_cookie)
 
     @property
     def ip(self):
@@ -146,6 +178,12 @@ class NeteaseCloudMusicApi:
             "data": data,
             "status": response.status_code,
         }
+
+        # print("headers", response.headers)
+        # print("headers_dict", dict(response.headers))
+
+        # with open("response_result.json", "w+", encoding='utf-8') as f:
+        #     f.write(json.dumps(response_result, indent=2, ensure_ascii=False))
 
         result = self.ctx.call('NeteaseCloudMusicApi.afterRequest',
                                json.dumps(response_result),
@@ -184,24 +222,16 @@ class NeteaseCloudMusicApi:
         result = self.ctx.call('NeteaseCloudMusicApi.inner_version')
         return result
 
+    def login_cellphone(self, query):
+        """
+        手机号登录
+        :param query:
+        :return:
+        """
+        result = self.call_api("/login/cellphone", query)
 
-if __name__ == '__main__':
-    import json
-    import os
-    from pprint import pprint
-    import dotenv
-
-    dotenv.load_dotenv("../../.env")  # 从.env文件中加载环境变量
-
-    netease_cloud_music_api = NeteaseCloudMusicApi()  # 初始化API
-    netease_cloud_music_api.cookie = os.getenv("COOKIE")  # 设置cookie
-    netease_cloud_music_api.DEBUG = True  # 开启调试模式
-
-
-    def songv1_test():
-        # 获取歌曲详情
-        response = netease_cloud_music_api.request("song_url_v1", {"id": 33894312, "level": "exhigh"})
-        pprint(response)
-
-
-    songv1_test()
+        # 自动 填充cookie
+        if result["code"] == 200:
+            if result.get("data").get("cookie"):
+                self.cookie = result.get("data").get("cookie")
+        return result
