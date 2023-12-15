@@ -19,7 +19,10 @@ URL = 'https://github.com/2061360308/NeteaseCloudMusic_PythonSDK'
 EMAIL = '2061360308@qq.com'
 AUTHOR = '盧瞳'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.4'
+VERSION = '0.1.6'
+UPDATA_INFO = ('修复了初次使用时没有cookie导致的一系列问题\n'
+               '修复了NeteaseCloudMusicApi.js没有更新的问题\n'
+               '添加了对于cookie的判断，现在可以正常判断cookie是否过期了')
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -110,7 +113,7 @@ class UploadCommand(Command):
         os.system('twine upload dist/*')
 
         self.status('Pushing git tags…')
-        os.system('git tag v{0}'.format(about['__version__']))
+        os.system(f'git tag -a {about["__version__"]} -m {UPDATA_INFO}')
         os.system('git push --tags')
 
         sys.exit()

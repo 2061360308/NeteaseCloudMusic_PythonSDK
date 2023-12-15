@@ -17,13 +17,13 @@
 
 ### 使用
 - 安装 `pip install NeteaseCloudMusic`
-- 导入API进行使用(具体查看`test.py`中的示例)
+- 导入API进行使用(具体查看`example.py`中的示例)
 ```python
 from NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
 import os
 
 netease_cloud_music_api = NeteaseCloudMusicApi()  # 初始化API
-netease_cloud_music_api.cookie = os.getenv("COOKIE")  # 设置cookie
+netease_cloud_music_api.cookie = "你的cookie"  # 设置cookie， 如果没有cookie需要先登录 具体见example.py
 response = netease_cloud_music_api.request("song_url_v1", {"id": 33894312, "level": "exhigh"})  # 调用API
 
 # 获取帮助

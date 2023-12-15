@@ -2,6 +2,7 @@ LICENSE
 MANIFEST.in
 README.md
 setup.py
+NeteaseCloudMusic/NeteaseCloudMusicApi.js
 NeteaseCloudMusic/__init__.py
 NeteaseCloudMusic/config.json
 NeteaseCloudMusic/help.py

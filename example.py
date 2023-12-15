@@ -7,9 +7,14 @@ from pprint import pprint
 
 import requests
 
-from package.NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
+from NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
 
 netease_cloud_music_api = NeteaseCloudMusicApi()  # 初始化API
+
+version_result = netease_cloud_music_api.request("inner_version")
+print(
+    f'当前使用NeteaseCloudMusicApi版本号：{version_result["NeteaseCloudMusicApi"]}\n当前使用NeteaseCloudMusicApi_V8版本号：{version_result["NeteaseCloudMusicApi_V8"]}')  # 退出登录
+
 
 
 def captcha_sent(_phone):
