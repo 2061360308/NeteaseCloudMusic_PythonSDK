@@ -4,6 +4,7 @@ import socket
 from pprint import pprint
 import http.cookies
 import datetime
+from diskcache import Cache
 
 import pkg_resources
 import requests
@@ -14,6 +15,10 @@ from .help import api_list
 class NeteaseCloudMusicApi:
     __cookie = None
     __ip = None
+
+    cache = Cache('cache', timeout=120)  # 设置缓存目录和过期时间
+
+    # cache = TTLCache(maxsize=100, ttl=120)  # 设置缓存大小为100，缓存项的生存时间为120秒
 
     def __init__(self, debug=False):
         self.DEBUG = debug  # 是否开启调试模式
@@ -66,8 +71,20 @@ class NeteaseCloudMusicApi:
             if name not in yubei_special.values():
                 raise Exception(f"apiName: {name} not found，please use ”api_list()“ to view the interface list")
 
+        # 生成一个唯一的键，用于在缓存中查找结果
+        cache_key = (name, frozenset(query.items()) if query else None)
+
+        # 检查缓存中是否已经有了结果
+        if self.cache.get(cache_key):
+            return self.cache.get(cache_key)
+
         if query is None:
             query = {}
+        else:
+            # 如果存在timestamp参数，那么删除它
+            if query.get("timestamp"):
+                del query["timestamp"]
+
         if query.get("cookie") is None:
             query["cookie"] = self.cookie
 
@@ -82,7 +99,8 @@ class NeteaseCloudMusicApi:
         else:
             result = self.call_api(name, query)
 
-        #
+        # 将结果存入缓存
+        self.cache.set(cache_key, result)
 
         return result
 

@@ -95,7 +95,7 @@ if __name__ == '__main__':
     pass
     # print(api_list())
     # print(api_help())
-    # song_url_v1_test()
+    song_url_v1_test()
     # top_mv_test()
     # search_test()
     # search_default_test()
@@ -105,4 +105,4 @@ if __name__ == '__main__':
     # playlist_detail_test()
     # top_playlist_highquality_test()
     # captcha_sent_test()
-    login_cellphone_test()
+    # login_cellphone_test()
