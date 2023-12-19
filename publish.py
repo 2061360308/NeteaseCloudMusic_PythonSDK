@@ -10,3 +10,6 @@ subprocess.check_call(['git', 'push', '--tags'])
 
 # Run towncrier
 subprocess.check_call(['towncrier', '--yes'])
+
+if not os.path.isdir('./newsfragments'):
+    os.mkdir('./newsfragments')

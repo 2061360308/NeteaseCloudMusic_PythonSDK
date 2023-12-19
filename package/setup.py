@@ -50,8 +50,13 @@ with open(os.path.join(here, 'README.md'), 'w+', encoding='utf-8') as f:
 print("copy README.md end")
 
 try:
-    with io.open(os.path.join(here, '../CHANGELOG.md'), encoding='utf-8') as f:
-        changelog = f.read()
+    if os.path.exists(os.path.join(here, '../release_notes.txt')):
+        # 优先读取release_notes.txt（工作流自动生成的当前版本的更新内容）
+        with open(os.path.join(here, '../release_notes.txt'), 'r', encoding='utf-8') as f:
+            changelog = f.read()
+    else:
+        with io.open(os.path.join(here, '../CHANGELOG.md'), encoding='utf-8') as f:
+            changelog = f.read()
 except FileNotFoundError:
     changelog = ''
 
@@ -59,7 +64,7 @@ except FileNotFoundError:
 # Note: this will only work if 'README.md' is present in your MANIFEST.in file!
 try:
     with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
-        long_description = '\n' + changelog + '\n' + f.read()
+        long_description = '\n' + "# 更新信息" + "\n" + changelog + '\n' + f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
 
