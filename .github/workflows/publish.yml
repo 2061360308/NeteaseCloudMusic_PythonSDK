@@ -23,9 +23,14 @@ jobs:
       run: |
         python -m pip install build towncrier
 
-    - name: Generate release notes to "RELEASE_NOTES" Environment Variable
-      run: |
-        echo "RELEASE_NOTES=$(towncrier --draft | sed 's/#//g')" >> $GITHUB_ENV
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: $(towncrier --draft)
 
     - name: Generate version notes with towncrier
       run: |
@@ -44,12 +49,3 @@ jobs:
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-
-    - name: Create Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: ${{ env.RELEASE_NOTES }}
