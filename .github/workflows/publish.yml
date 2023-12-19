@@ -25,7 +25,7 @@ jobs:
 
     - name: Generate release notes to "RELEASE_NOTES" Environment Variable
       run: |
-        echo "RELEASE_NOTES=$(towncrier --draft | base64)" >> $GITHUB_ENV
+        echo "RELEASE_NOTES=$(towncrier --draft | sed 's/#//g')" >> $GITHUB_ENV
 
     - name: Generate version notes with towncrier
       run: |
@@ -52,4 +52,4 @@ jobs:
       with:
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
-        body: ${{ env.RELEASE_NOTES | base64 --decode }}
+        body: ${{ env.RELEASE_NOTES }}
