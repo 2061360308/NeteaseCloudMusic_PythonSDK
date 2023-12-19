@@ -19,7 +19,7 @@ URL = 'https://github.com/2061360308/NeteaseCloudMusic_PythonSDK'
 EMAIL = '2061360308@qq.com'
 AUTHOR = '盧瞳'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.10'
+VERSION = '0.1.11'
 UPDATA_INFO = ('修复了初次使用时没有cookie导致的一系列问题\n'
                '修复了NeteaseCloudMusicApi.js没有更新的问题\n'
                '添加了对于cookie的判断，现在可以正常判断cookie是否过期了')
