@@ -29,6 +29,7 @@ jobs:
         echo ${{ env.VERSION }}
         echo ${{ github.ref }}
         ls ./package/dist/
+        cat ./package/setup.py
 
     - name: Install dependencies
       run: |
@@ -46,6 +47,7 @@ jobs:
       run: |
         cd package
         python setup.py build
+        ls ./dist/
 
     - name: Publish distribution 📦 to PyPI
       run: |
