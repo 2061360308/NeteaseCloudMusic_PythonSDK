@@ -50,7 +50,7 @@ with open(os.path.join(here, 'README.md'), 'w+', encoding='utf-8') as f:
 print("copy README.md end")
 
 try:
-    with io.open(os.path.join(here, 'CHANGELOG.md'), encoding='utf-8') as f:
+    with io.open(os.path.join(here, '../CHANGELOG.md'), encoding='utf-8') as f:
         changelog = f.read()
 except FileNotFoundError:
     changelog = ''

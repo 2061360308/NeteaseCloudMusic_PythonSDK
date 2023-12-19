@@ -50,7 +50,7 @@ print(api_list())
 ├── test.py  手动测试/ 使用示例
 ```
 
-### 更新
+#### 更新
 项目使用towncrier自动生成更新日志
 
 在 newsfragments 目录下，创建一个新的文本文件。这个文件的名字应该是一个唯一的编号，后缀是 .rst。
@@ -66,7 +66,11 @@ print(api_list())
 在这个文件中，写下你的更改的描述。这个描述应该是简短的，通常只有一到两句话。
 例如`Added support for the XYZ feature.`
 
-### 发布新版本
+#### 发布新版本
+自动：
+运行 python publish.py
+
+手动：
 使用bumpversion自动更新版本号，提交并发布标签
 你需要安装bumpversion然后执行
 ```bash
