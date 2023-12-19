@@ -23,6 +23,7 @@ jobs:
       id: get_version
       run: |
         echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        echo ${{ env.VERSION }}
 
     - name: Install dependencies
       run: |
@@ -51,6 +52,7 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
 
     - name: Create Release
+      id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
