@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install build towncrier
+        python -m pip install build towncrier setuptools
     
     - name: Generate release notes
       run: |
