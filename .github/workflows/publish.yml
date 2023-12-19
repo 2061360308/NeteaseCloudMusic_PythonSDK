@@ -22,7 +22,7 @@ jobs:
     - name: Get the version
       id: get_version
       run: |
-      echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: |
