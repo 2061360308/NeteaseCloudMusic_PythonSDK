@@ -33,7 +33,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install build towncrier setuptools
+        python -m pip install build towncrier setuptools wheel
     
     - name: Generate release notes
       run: |
