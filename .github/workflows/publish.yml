@@ -17,20 +17,19 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.
+        
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
     - name: Install dependencies
       run: |
         python -m pip install build towncrier
-
-    - name: Create Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: $(towncrier --draft)
+    
+    - name: Generate release notes
+      run: |
+        towncrier --draft > release_notes.txt
 
     - name: Generate version notes with towncrier
       run: |
@@ -49,3 +48,32 @@ jobs:
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body_path: release_notes.txt
+
+    - name: Upload Release Asset gz
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./package/dist/NeteaseCloudMusic-${{ steps.get_version.outputs.VERSION }}.tar.gz
+        asset_name: NeteaseCloudMusic-${{ steps.get_version.outputs.VERSION }}.tar.gz
+        asset_content_type: application/zip
+    
+    - name: Upload Release Asset whl
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./package/dist/NeteaseCloudMusic-${{ steps.get_version.outputs.VERSION }}-py2.py3-none-any.whl
+        asset_name: NeteaseCloudMusic-${{ steps.get_version.outputs.VERSION }}-py2.py3-none-any.whl
+        asset_content_type: application/zip
