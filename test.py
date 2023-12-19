@@ -2,6 +2,8 @@
 
 import json
 import os
+import time
+from enum import Enum
 from pprint import pprint
 import dotenv
 
@@ -18,7 +20,7 @@ netease_cloud_music_api.DEBUG = True  # 开启调试模式
 
 def song_url_v1_test():
     # 获取歌曲详情
-    response = netease_cloud_music_api.request("song_url_v1", {"id": 33894312, "level": "exhigh"})
+    response = netease_cloud_music_api.request("song_url_v1", {"id": '1880562045', "level": "exhigh"})
     pprint(response)
 
 
@@ -37,7 +39,7 @@ def search_default_test():
 
 def user_account_test():
     # 获取用户账号信息
-    response = netease_cloud_music_api.request("user_account")
+    response = netease_cloud_music_api.request("user_account", query={"timestamp": time.time()})
     pprint(response)
 
 
@@ -72,12 +74,17 @@ def top_playlist_highquality_test():
 
 
 def captcha_sent_test():
-    response = netease_cloud_music_api.request("/captcha/sent", {"phone": "15229954305"})
+    response = netease_cloud_music_api.request("/captcha/sent", {"phone": "15234941791", "timestamp": time.time()})
     pprint(response)
 
 
 def login_cellphone_test():
-    response = netease_cloud_music_api.request("/login/cellphone",{"phone": "15229954305", "captcha": "4273"})
+    response = netease_cloud_music_api.request("/login/cellphone",
+                                               {
+                                                   "phone": "15234941791",
+                                                   "captcha": "9159",
+                                                   "timestamp": time.time()
+                                               })
     pprint(response)
 
 
@@ -91,6 +98,16 @@ def top_mv_test():
     pprint(response)
 
 
+def playlist_track_all_test():
+    response = netease_cloud_music_api.request("playlist_track_all", {'id': '592179800'})
+    pprint(response)
+
+
+def login_refresh():
+    response = netease_cloud_music_api.request("login_refresh", {"timestamp": time.time()})
+    pprint(response)
+
+
 if __name__ == '__main__':
     pass
     # print(api_list())
@@ -99,10 +116,12 @@ if __name__ == '__main__':
     # top_mv_test()
     # search_test()
     # search_default_test()
-    # user_account_test()
     # comment_new_test()
     # toplist_detail_test()
     # playlist_detail_test()
     # top_playlist_highquality_test()
     # captcha_sent_test()
     # login_cellphone_test()
+    user_account_test()
+    # playlist_track_all_test()
+    # login_refresh()
