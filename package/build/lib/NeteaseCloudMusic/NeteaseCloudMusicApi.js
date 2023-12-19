@@ -44,6 +44,7 @@ if (typeof window === "undefined") {
   }
 
   function encodeURIComponent(str) {
+    str = String(str);  // 将输入转换为字符串 以免True，False等非字符无法转换
     var result = "";
 
     if (str !== undefined && str !== null) {
@@ -37928,7 +37929,7 @@ const hug_comment_resourceTypeMap = config_namespaceObject.A;
 });
 
 ;// CONCATENATED MODULE: ./package.json
-const package_namespaceObject = {"i8":"0.1.1"};
+const package_namespaceObject = {"i8":"0.1.2"};
 ;// CONCATENATED MODULE: ./module/inner_version.js
 
 /* harmony default export */ const inner_version = ((query, request) => {
@@ -38338,30 +38339,19 @@ var crypto_js = __webpack_require__(1292);
 ;// CONCATENATED MODULE: ./module/login_refresh.js
 // 登录刷新
 
-/* harmony default export */ const login_refresh = (async (query, request) => {
-  let result = await request(
-    'POST',
+/* harmony default export */ const login_refresh = ((query, request) => {
+  return request(
+    "POST",
     `https://music.163.com/weapi/login/token/refresh`,
     {},
     {
-      crypto: 'weapi',
-      ua: 'pc',
+      crypto: "weapi",
+      ua: "pc",
       cookie: query.cookie,
       proxy: query.proxy,
       realIP: query.realIP,
-    },
-  )
-  if (result.body.code === 200) {
-    result = {
-      status: 200,
-      body: {
-        ...result.body,
-        cookie: result.cookie.join(';'),
-      },
-      cookie: result.cookie,
     }
-  }
-  return result
+  );
 });
 
 ;// CONCATENATED MODULE: ./module/login_status.js
@@ -42852,6 +42842,7 @@ const weapi = (object) => {
   for (let i = 0; i < 16; i++) {
     secretKey += base62.charAt(Math.round(Math.random() * 61))
   }
+  
   return {
     params: aesEncrypt(
       aesEncrypt(text, 'cbc', presetKey, iv),
@@ -43181,6 +43172,27 @@ function beforeRequest(name, query) {
   return response;
 });
 
+;// CONCATENATED MODULE: ./afterRequest/login_refresh.js
+/* harmony default export */ const afterRequest_login_refresh = ((response) => {
+  response = JSON.parse(response);
+  let cookie = response.cookie;
+  if (Array.isArray(cookie)) {
+    cookie = cookie.join(";");
+  }
+  if (response.body.code === 200) {
+    response = {
+      status: 200,
+      body: {
+        ...response.body,
+        cookie: cookie,
+      },
+      cookie: cookie,
+    };
+  }
+
+  return response;
+});
+
 ;// CONCATENATED MODULE: ./afterRequest/login_status.js
 /* harmony default export */ const afterRequest_login_status = ((response) => {
   response = JSON.parse(response);
@@ -43255,9 +43267,11 @@ function beforeRequest(name, query) {
 
 
 
+
 /* harmony default export */ const afterRequestApi = ({
     'check_music':afterRequest_check_music,
     'login_cellphone':afterRequest_login_cellphone,
+    'login_refresh':afterRequest_login_refresh,
     'login_status':afterRequest_login_status,
     'related_playlist':afterRequest_related_playlist,
     'top_playlist':afterRequest_top_playlist,

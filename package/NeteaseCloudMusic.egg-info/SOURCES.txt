@@ -7,6 +7,7 @@ NeteaseCloudMusic/__init__.py
 NeteaseCloudMusic/config.json
 NeteaseCloudMusic/help.py
 NeteaseCloudMusic/main.py
+NeteaseCloudMusic/utils.py
 NeteaseCloudMusic.egg-info/PKG-INFO
 NeteaseCloudMusic.egg-info/SOURCES.txt
 NeteaseCloudMusic.egg-info/dependency_links.txt

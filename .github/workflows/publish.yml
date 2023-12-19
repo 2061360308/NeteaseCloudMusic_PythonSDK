@@ -46,7 +46,7 @@ jobs:
     - name: Build a binary wheel and a source tarball
       run: |
         cd package
-        python setup.py build
+        python setup.py upload
         ls ./dist/
 
     - name: Publish distribution 📦 to PyPI

@@ -1,26 +1,36 @@
 import json
 import os.path
 import socket
+import time
 from pprint import pprint
 import http.cookies
 import datetime
+from diskcache import Cache
 
 import pkg_resources
 import requests
 from py_mini_racer import py_mini_racer
 from .help import api_list
+from .utils import format_cookie_str, prase_cookie_str
+import urllib.parse
 
 
 class NeteaseCloudMusicApi:
     __cookie = None
     __ip = None
 
-    def __init__(self, debug=False):
+    cache = Cache('cache', timeout=120)  # 设置缓存目录和过期时间
+
+    # cache = TTLCache(maxsize=100, ttl=120)  # 设置缓存大小为100，缓存项的生存时间为120秒
+
+    def __init__(self, debug=False, cache=False):
         self.DEBUG = debug  # 是否开启调试模式
+        self.CACHE = cache  # 是否开启缓存
 
         self.special_api = {"/playlist/track/all": self.playlist_track_all,
                             "/login/cellphone": self.login_cellphone,
-                            "/inner/version": self.inner_version}
+                            "/inner/version": self.inner_version,
+                            "/login/refresh": self.login_refresh}
 
         # 载入js代码
         resource_path = pkg_resources.resource_filename(__name__, 'NeteaseCloudMusicApi.js')
@@ -66,8 +76,21 @@ class NeteaseCloudMusicApi:
             if name not in yubei_special.values():
                 raise Exception(f"apiName: {name} not found，please use ”api_list()“ to view the interface list")
 
+        # 生成一个唯一的键，用于在缓存中查找结果
+        cache_key = (name, frozenset(query.items()) if query else None)
+
+        if self.CACHE:
+            # 检查缓存中是否已经有了结果
+            if self.cache.get(cache_key):
+                return self.cache.get(cache_key)
+
         if query is None:
             query = {}
+        else:
+            # 如果存在timestamp参数，那么删除它
+            if query.get("timestamp"):
+                del query["timestamp"]
+
         if query.get("cookie") is None:
             query["cookie"] = self.cookie
 
@@ -82,7 +105,9 @@ class NeteaseCloudMusicApi:
         else:
             result = self.call_api(name, query)
 
-        #
+        if self.CACHE:
+            # 将结果存入缓存
+            self.cache.set(cache_key, result)
 
         return result
 
@@ -105,46 +130,47 @@ class NeteaseCloudMusicApi:
         if self.__cookie is None:
             if os.path.isfile("cookie_storage"):
                 with open("cookie_storage", "r", encoding='utf-8') as f:
-                    self.cookie = f.read()
+                    content = f.read()
+                try:
+                    cookie_storage = json.loads(content)
+                    # 验证cookie是否过期
+                    create_time_stamp = cookie_storage['create_time_stamp']
+
+                    if time.time() - create_time_stamp > 1296010:
+                        # cookie过期了
+                        self.__cookie = ""
+                    else:
+                        # 判断cookie生成时间是否超过1天
+                        if time.time() - create_time_stamp > 86400:
+                            # 更新cookie
+                            # Todo login_refresh接口返回cookie好像少一些值
+                            # self.request("/login/refresh", {"cookie": cookie_storage['cookie'], "timestamp": time.time()})
+                            self.cookie = cookie_storage['cookie']
+                        else:
+                            self.__cookie = cookie_storage['cookie']
+                except json.JSONDecodeError and KeyError:
+                    self.__cookie = ""
             else:
                 self.__cookie = ""  # 如果没有cookie文件，就设置为空
 
         return self.__cookie
 
     @cookie.setter
-    def cookie(self, cookie):
-        if cookie is None:
-            cookie = ""
+    def cookie(self, value):
+        if value is None:
+            self.__cookie = ""
+            return
 
-        _cookie = cookie
+        "判断cookie是否合法, 简单检查一下关键的键"
+        necessary_keys = ["__csrf", "MUSIC_A_T", "MUSIC_R_T"]
+        cookie_dict = prase_cookie_str(value)
+        for key in necessary_keys:
+            if cookie_dict.get(key) is None:
+                raise Exception(f"cookie is illegal, missing key: {key}.")
 
-        '''判断cookie是否过期'''
-
-        # 创建一个Morsel对象，它可以解析cookie字符串
-        morsel = http.cookies.SimpleCookie(cookie)
-        # 获取当前时间
-        now = datetime.datetime.now()
-
-        # 只判断 __csrf 是否过期
-        if not morsel.get('__csrf'):
-            # __csrf 不存在，不是有效cookie
-            _cookie = ""
-        else:
-            # 将过期时间字符串转换为datetime对象
-            expires = morsel.get('__csrf')['expires']
-            expires_datetime = datetime.datetime.strptime(expires, "%a, %d %b %Y %H:%M:%S GMT")
-
-            # 判断cookie是否过期
-            if now > expires_datetime:
-                # 过期了
-                _cookie = ""
-            else:
-                # 未过期
-                pass
-
-        self.__cookie = _cookie
+        self.__cookie = value
         with open("cookie_storage", "w+", encoding='utf-8') as f:
-            f.write(_cookie)
+            f.write(json.dumps({"cookie": value, "create_time_stamp": time.time()}, indent=2, ensure_ascii=False))
 
     @property
     def ip(self):
@@ -155,18 +181,17 @@ class NeteaseCloudMusicApi:
     def call_api(self, name, query):
         request_param = self.ctx.call('NeteaseCloudMusicApi.beforeRequest', name, query)  # 拿到请求头和请求参数
 
+        # Todo 了解 py_mini_racer 返回没有自动编码 而 node可以
         param_data = {}
         if request_param["data"] != "":
             for item in request_param["data"].split("&"):
+                # param_data[item.split("=")[0]] = urllib.parse.quote(item.split("=")[1], safe='') # 不需要编码后反而出错
                 param_data[item.split("=")[0]] = item.split("=")[1]
-
-        # print("url", request_param["url"], "data", param_data, "headers\n", json.dumps(request_param["headers"], indent=2, ensure_ascii=False))
 
         if request_param.get("method") == "GET":
             response = requests.get(request_param["url"], params=param_data, headers=request_param["headers"])
         else:
             response = requests.post(request_param["url"], data=param_data, headers=request_param["headers"])
-        # response = requests.post(request_param["url"], data=param_data, headers=request_param["headers"])
 
         try:
             data = json.loads(response.text)
@@ -178,12 +203,6 @@ class NeteaseCloudMusicApi:
             "data": data,
             "status": response.status_code,
         }
-
-        # print("headers", response.headers)
-        # print("headers_dict", dict(response.headers))
-
-        # with open("response_result.json", "w+", encoding='utf-8') as f:
-        #     f.write(json.dumps(response_result, indent=2, ensure_ascii=False))
 
         result = self.ctx.call('NeteaseCloudMusicApi.afterRequest',
                                json.dumps(response_result),
@@ -230,8 +249,29 @@ class NeteaseCloudMusicApi:
         """
         result = self.call_api("/login/cellphone", query)
 
-        # 自动 填充cookie
+        # 自动 更新cookie
         if result["code"] == 200:
             if result.get("data").get("cookie"):
-                self.cookie = result.get("data").get("cookie")
+                # cookie_str = format_cookie_str(result.get("data").get("cookie"))
+                cookie_str = result.get("data").get("cookie")
+                result["data"]["cookie"] = cookie_str
+                self.cookie = cookie_str
+        return result
+
+    def login_refresh(self, query):
+        """
+        刷新登录状态
+        :param query:
+        :return:
+        """
+        result = self.call_api("/login/refresh", query)
+
+        # 自动 更新cookie
+        # if result["code"] == 200:
+        #     if result.get("data").get("cookie"):
+        #         # cookie_str = format_cookie_str(result.get("data").get("cookie"))
+        #         cookie_str = result.get("data").get("cookie")
+        #         result["data"]["cookie"] = cookie_str
+        #         pprint(cookie_str)
+        #         self.cookie = cookie_str
         return result
