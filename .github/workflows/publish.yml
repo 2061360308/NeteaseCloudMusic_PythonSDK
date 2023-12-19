@@ -22,12 +22,13 @@ jobs:
     - name: Get the version
       id: get_version
       run: |
-        echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
     
     - name: Print the version
       run: |
         echo ${{ env.VERSION }}
         echo ${{ github.ref }}
+        ls ./package/dist/
 
     - name: Install dependencies
       run: |
