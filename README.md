@@ -1,7 +1,9 @@
 # NeteaseCloudMusic_PythonSDK
+现已同步原项目接口且测试通过的有200多个 :wave: :wave: :star: 求赞 :star:
+![](https://img.shields.io/badge/py_mini_racer-@0.6.0-red.svg) ![License](https://img.shields.io/badge/license-MIT-yellow)
+
 > 基于 [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi) 封装的 Python SDK。
 > 网易云API Python版本。
-> 现已同步原项目接口且测试通过的有200多个:wave::wave:，:star:求赞:star:
 > 已发布到PyPi，可直接使用pip安装。项目地址：[GitHub](https://github.com/2061360308/NeteaseCloudMusic_PythonSDK)
 >
 > 在此感谢`NeteaseCloudMusicApi`项目及其作者`Binaryify`
@@ -9,9 +11,6 @@
 > 当然也感谢史上最最最好用的听歌软件——网易云音乐
 >
 > 项目仅用于学习，还望大家合理使用该项目
-
-![](https://img.shields.io/badge/py_mini_racer-@0.6.0-red.svg)
-![License](https://img.shields.io/badge/license-MIT-yellow)
 
 <div align="center">
 <img src="./static/网易云.png" width="144" height="144" /><img src="./static/Python.jpg" width="144" height="144" /><img src="./static/Qt.jpg" width="144" height="144" /><img src="./static/idea.jpg" width="144" height="144" />
