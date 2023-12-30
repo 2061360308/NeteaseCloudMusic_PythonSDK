@@ -30,7 +30,7 @@ Binaryify 创建了有趣的项目[NeteaseCloudMusicApi](https://github.com/Bina
 
 ### :heart:作者寄语
 
-本项目使用Python开发，在我影响中这是一门活跃的语言，也有一群拥有许许多多“奇思妙想”的使用者。[NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)项目开源有好多年了，得到了3万颗星，但在此之前，我发现大多都是“前端们”使用前端技术（vue，electron）进行创作，这次我把这个接口项目封装到Python平台，相信小伙伴们一定能为这个优质项目注入新的活力！
+本项目使用Python开发，在我印象中这是一门非常活跃的语言，拥有一群怀揣许许多多“奇思妙想”的使用者。[NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)项目开源有好多年了，得到了3万颗星，无疑是一个优质的项目。但在此之前，我发现大多都是“前端们”使用前端技术（vue，electron）进行创作，这次我把这个接口项目封装到Python平台，相信我们的小伙伴们一定能为这个优质项目注入新的活力！
 
 希望你们在开心创作的同时能够有不菲的收获。
 
