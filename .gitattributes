@@ -1,4 +1,4 @@
 report.html linguist-generated
-/package/NeteaseCloudMusic/NeteaseCloudMusicApi.js linguist-vendored
-/docs/* linguist-vendored
-/static/* linguist-vendored
+package/NeteaseCloudMusic/NeteaseCloudMusicApi.js linguist-vendored
+docs/* linguist-vendored
+static/* linguist-vendored
