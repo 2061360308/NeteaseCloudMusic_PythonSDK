@@ -2,66 +2,16 @@
 // Author: LuTong
 // Date: 2021/10/13
 
-if (typeof window === "undefined") {
+if (typeof window === 'undefined') {
   var window = {
     crypto: {
       getRandomValues: function (array) {
         for (var i = 0; i < array.length; i++) {
-          array[i] = Math.floor(Math.random() * Math.pow(2, 32));
+          array[i] = Math.floor(Math.random() * Math.pow(2, 32))
         }
-        return array;
+        return array
       },
     },
-  };
-
-  function URLSearchParams(queryString) {
-    var params = {};
-
-    if (typeof queryString === "string") {
-      queryString.split("&").forEach(function (param) {
-        var parts = param.split("=");
-        params[parts[0]] = parts[1];
-      });
-    } else if (typeof queryString === "object") {
-      Object.entries(queryString).forEach(function ([key, value]) {
-        params[key] = value;
-      });
-    } else {
-      console.log("来了个解析不了的~~~", queryString);
-    }
-
-    this.get = function (name) {
-      return paramsmain;
-    };
-
-    this.toString = function () {
-      return Object.entries(params)
-        .map(function ([key, value]) {
-          return key + "=" + value;
-        })
-        .join("&");
-    };
-  }
-
-  function encodeURIComponent(str) {
-    str = String(str);  // 将输入转换为字符串 以免True，False等非字符无法转换
-    var result = "";
-
-    if (str !== undefined && str !== null) {
-      for (var i = 0; i < str.length; i++) {
-        var char = str.charAt(i);
-        if (/^[a-zA-Z0-9\-_.!~*'()]$/.test(char)) {
-          // 这些字符不需要编码
-          result += char;
-        } else {
-          // 其他字符需要编码
-          var charCode = str.charCodeAt(i).toString(16);
-          result +=
-            "%" + (charCode.length < 2 ? "0" : "") + charCode.toUpperCase();
-        }
-      }
-    }
-    return result;
   }
 }
 
@@ -78,13 +28,13 @@ if (typeof window === "undefined") {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 6244:
+/***/ 452:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(4227), __webpack_require__(2857), __webpack_require__(842), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(8269), __webpack_require__(8214), __webpack_require__(888), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -311,13 +261,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 2717:
+/***/ 7407:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(4227), __webpack_require__(2857), __webpack_require__(842), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(8269), __webpack_require__(8214), __webpack_require__(888), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -781,13 +731,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 3667:
+/***/ 5109:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(842));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(888));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -1675,7 +1625,7 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 2034:
+/***/ 8249:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -1723,7 +1673,7 @@ return /******/ (() => { // webpackBootstrap
 	    // Native crypto import via require (NodeJS)
 	    if (!crypto && "function" === 'function') {
 	        try {
-	            crypto = __webpack_require__(2297);
+	            crypto = __webpack_require__(2480);
 	        } catch (err) {}
 	    }
 
@@ -2481,13 +2431,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 4227:
+/***/ 8269:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -2616,13 +2566,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 1182:
+/***/ 3786:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -2763,13 +2713,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 3018:
+/***/ 298:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -2911,13 +2861,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 842:
+/***/ 888:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(6635), __webpack_require__(5574));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(2783), __webpack_require__(9824));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3044,13 +2994,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 7908:
+/***/ 2209:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3109,13 +3059,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 5574:
+/***/ 9824:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3251,13 +3201,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 1292:
+/***/ 1354:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(6925), __webpack_require__(8055), __webpack_require__(3018), __webpack_require__(4227), __webpack_require__(1182), __webpack_require__(2857), __webpack_require__(6635), __webpack_require__(5386), __webpack_require__(3834), __webpack_require__(1113), __webpack_require__(5501), __webpack_require__(5618), __webpack_require__(1342), __webpack_require__(5574), __webpack_require__(631), __webpack_require__(842), __webpack_require__(3667), __webpack_require__(1767), __webpack_require__(5508), __webpack_require__(7198), __webpack_require__(452), __webpack_require__(6172), __webpack_require__(6930), __webpack_require__(7533), __webpack_require__(1322), __webpack_require__(4455), __webpack_require__(9167), __webpack_require__(7908), __webpack_require__(6244), __webpack_require__(199), __webpack_require__(92), __webpack_require__(4598), __webpack_require__(6173), __webpack_require__(2717));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(4938), __webpack_require__(4433), __webpack_require__(298), __webpack_require__(8269), __webpack_require__(3786), __webpack_require__(8214), __webpack_require__(2783), __webpack_require__(2153), __webpack_require__(7792), __webpack_require__(34), __webpack_require__(7460), __webpack_require__(3327), __webpack_require__(706), __webpack_require__(9824), __webpack_require__(2112), __webpack_require__(888), __webpack_require__(5109), __webpack_require__(8568), __webpack_require__(4242), __webpack_require__(9968), __webpack_require__(7660), __webpack_require__(1148), __webpack_require__(3615), __webpack_require__(2807), __webpack_require__(1077), __webpack_require__(6475), __webpack_require__(6991), __webpack_require__(2209), __webpack_require__(452), __webpack_require__(4253), __webpack_require__(1857), __webpack_require__(4454), __webpack_require__(3974), __webpack_require__(7407));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3268,13 +3218,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 8055:
+/***/ 4433:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3343,13 +3293,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 2857:
+/***/ 8214:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3610,13 +3560,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 1767:
+/***/ 8568:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3689,13 +3639,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 7198:
+/***/ 9968:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3804,13 +3754,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 5508:
+/***/ 4242:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3861,13 +3811,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 6172:
+/***/ 1148:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3900,13 +3850,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 452:
+/***/ 7660:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -3953,13 +3903,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 6930:
+/***/ 3615:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4001,13 +3951,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 7533:
+/***/ 2807:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4044,13 +3994,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 1322:
+/***/ 1077:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4083,13 +4033,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 9167:
+/***/ 6991:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4112,13 +4062,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 4455:
+/***/ 6475:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4158,13 +4108,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 631:
+/***/ 2112:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(5386), __webpack_require__(5574));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(2153), __webpack_require__(9824));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4302,13 +4252,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 6173:
+/***/ 3974:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(4227), __webpack_require__(2857), __webpack_require__(842), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(8269), __webpack_require__(8214), __webpack_require__(888), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4491,13 +4441,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 4598:
+/***/ 4454:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(4227), __webpack_require__(2857), __webpack_require__(842), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(8269), __webpack_require__(8214), __webpack_require__(888), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4682,13 +4632,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 92:
+/***/ 1857:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(4227), __webpack_require__(2857), __webpack_require__(842), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(8269), __webpack_require__(8214), __webpack_require__(888), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -4820,13 +4770,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 1342:
+/***/ 706:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -5086,13 +5036,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 6635:
+/***/ 2783:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -5235,13 +5185,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 3834:
+/***/ 7792:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(5386));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(2153));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -5314,13 +5264,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 5386:
+/***/ 2153:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -5512,13 +5462,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 5618:
+/***/ 3327:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(6925));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(4938));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -5837,13 +5787,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 5501:
+/***/ 7460:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(6925), __webpack_require__(1113));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(4938), __webpack_require__(34));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -5919,13 +5869,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 1113:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(6925));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(4938));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -6244,13 +6194,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 199:
+/***/ 4253:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034), __webpack_require__(4227), __webpack_require__(2857), __webpack_require__(842), __webpack_require__(3667));
+		module.exports = exports = factory(__webpack_require__(8249), __webpack_require__(8269), __webpack_require__(8214), __webpack_require__(888), __webpack_require__(5109));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -7022,13 +6972,13 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 6925:
+/***/ 4938:
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(2034));
+		module.exports = exports = factory(__webpack_require__(8249));
 	}
 	else {}
 }(this, function (CryptoJS) {
@@ -7325,7 +7275,243 @@ return /******/ (() => { // webpackBootstrap
 
 /***/ }),
 
-/***/ 8663:
+/***/ 5987:
+/***/ ((module) => {
+
+"use strict";
+
+
+/******************************************************************************
+ * Created 2008-08-19.
+ *
+ * Dijkstra path-finding functions. Adapted from the Dijkstar Python project.
+ *
+ * Copyright (C) 2008
+ *   Wyatt Baldwin <self@wyattbaldwin.com>
+ *   All rights reserved
+ *
+ * Licensed under the MIT license.
+ *
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *****************************************************************************/
+var dijkstra = {
+  single_source_shortest_paths: function(graph, s, d) {
+    // Predecessor map for each node that has been encountered.
+    // node ID => predecessor node ID
+    var predecessors = {};
+
+    // Costs of shortest paths from s to all nodes encountered.
+    // node ID => cost
+    var costs = {};
+    costs[s] = 0;
+
+    // Costs of shortest paths from s to all nodes encountered; differs from
+    // `costs` in that it provides easy access to the node that currently has
+    // the known shortest path from s.
+    // XXX: Do we actually need both `costs` and `open`?
+    var open = dijkstra.PriorityQueue.make();
+    open.push(s, 0);
+
+    var closest,
+        u, v,
+        cost_of_s_to_u,
+        adjacent_nodes,
+        cost_of_e,
+        cost_of_s_to_u_plus_cost_of_e,
+        cost_of_s_to_v,
+        first_visit;
+    while (!open.empty()) {
+      // In the nodes remaining in graph that have a known cost from s,
+      // find the node, u, that currently has the shortest path from s.
+      closest = open.pop();
+      u = closest.value;
+      cost_of_s_to_u = closest.cost;
+
+      // Get nodes adjacent to u...
+      adjacent_nodes = graph[u] || {};
+
+      // ...and explore the edges that connect u to those nodes, updating
+      // the cost of the shortest paths to any or all of those nodes as
+      // necessary. v is the node across the current edge from u.
+      for (v in adjacent_nodes) {
+        if (adjacent_nodes.hasOwnProperty(v)) {
+          // Get the cost of the edge running from u to v.
+          cost_of_e = adjacent_nodes[v];
+
+          // Cost of s to u plus the cost of u to v across e--this is *a*
+          // cost from s to v that may or may not be less than the current
+          // known cost to v.
+          cost_of_s_to_u_plus_cost_of_e = cost_of_s_to_u + cost_of_e;
+
+          // If we haven't visited v yet OR if the current known cost from s to
+          // v is greater than the new cost we just found (cost of s to u plus
+          // cost of u to v across e), update v's cost in the cost list and
+          // update v's predecessor in the predecessor list (it's now u).
+          cost_of_s_to_v = costs[v];
+          first_visit = (typeof costs[v] === 'undefined');
+          if (first_visit || cost_of_s_to_v > cost_of_s_to_u_plus_cost_of_e) {
+            costs[v] = cost_of_s_to_u_plus_cost_of_e;
+            open.push(v, cost_of_s_to_u_plus_cost_of_e);
+            predecessors[v] = u;
+          }
+        }
+      }
+    }
+
+    if (typeof d !== 'undefined' && typeof costs[d] === 'undefined') {
+      var msg = ['Could not find a path from ', s, ' to ', d, '.'].join('');
+      throw new Error(msg);
+    }
+
+    return predecessors;
+  },
+
+  extract_shortest_path_from_predecessor_list: function(predecessors, d) {
+    var nodes = [];
+    var u = d;
+    var predecessor;
+    while (u) {
+      nodes.push(u);
+      predecessor = predecessors[u];
+      u = predecessors[u];
+    }
+    nodes.reverse();
+    return nodes;
+  },
+
+  find_path: function(graph, s, d) {
+    var predecessors = dijkstra.single_source_shortest_paths(graph, s, d);
+    return dijkstra.extract_shortest_path_from_predecessor_list(
+      predecessors, d);
+  },
+
+  /**
+   * A very naive priority queue implementation.
+   */
+  PriorityQueue: {
+    make: function (opts) {
+      var T = dijkstra.PriorityQueue,
+          t = {},
+          key;
+      opts = opts || {};
+      for (key in T) {
+        if (T.hasOwnProperty(key)) {
+          t[key] = T[key];
+        }
+      }
+      t.queue = [];
+      t.sorter = opts.sorter || T.default_sorter;
+      return t;
+    },
+
+    default_sorter: function (a, b) {
+      return a.cost - b.cost;
+    },
+
+    /**
+     * Add a new item to the queue and ensure the highest priority element
+     * is at the front of the queue.
+     */
+    push: function (value, cost) {
+      var item = {value: value, cost: cost};
+      this.queue.push(item);
+      this.queue.sort(this.sorter);
+    },
+
+    /**
+     * Return the highest priority element in the queue.
+     */
+    pop: function () {
+      return this.queue.shift();
+    },
+
+    empty: function () {
+      return this.queue.length === 0;
+    }
+  }
+};
+
+
+// node.js module exports
+if (true) {
+  module.exports = dijkstra;
+}
+
+
+/***/ }),
+
+/***/ 2378:
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function encodeUtf8 (input) {
+  var result = []
+  var size = input.length
+
+  for (var index = 0; index < size; index++) {
+    var point = input.charCodeAt(index)
+
+    if (point >= 0xD800 && point <= 0xDBFF && size > index + 1) {
+      var second = input.charCodeAt(index + 1)
+
+      if (second >= 0xDC00 && second <= 0xDFFF) {
+        // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+        point = (point - 0xD800) * 0x400 + second - 0xDC00 + 0x10000
+        index += 1
+      }
+    }
+
+    // US-ASCII
+    if (point < 0x80) {
+      result.push(point)
+      continue
+    }
+
+    // 2-byte UTF-8
+    if (point < 0x800) {
+      result.push((point >> 6) | 192)
+      result.push((point & 63) | 128)
+      continue
+    }
+
+    // 3-byte UTF-8
+    if (point < 0xD800 || (point >= 0xE000 && point < 0x10000)) {
+      result.push((point >> 12) | 224)
+      result.push(((point >> 6) & 63) | 128)
+      result.push((point & 63) | 128)
+      continue
+    }
+
+    // 4-byte UTF-8
+    if (point >= 0x10000 && point <= 0x10FFFF) {
+      result.push((point >> 18) | 240)
+      result.push(((point >> 12) & 63) | 128)
+      result.push(((point >> 6) & 63) | 128)
+      result.push((point & 63) | 128)
+      continue
+    }
+
+    // Invalid character
+    result.push(0xEF, 0xBF, 0xBD)
+  }
+
+  return new Uint8Array(result).buffer
+}
+
+
+/***/ }),
+
+/***/ 8925:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -7345,10 +7531,10 @@ return /******/ (() => { // webpackBootstrap
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(4125);
-__webpack_require__(5142);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(5649);
+__webpack_require__(1967);
+__webpack_require__(7116);
 
 /* AES API */
 module.exports = forge.aes = forge.aes || {};
@@ -8423,7 +8609,7 @@ function _createCipher(options) {
 
 /***/ }),
 
-/***/ 6608:
+/***/ 6164:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -8434,9 +8620,9 @@ function _createCipher(options) {
  * Copyright (c) 2009-2015 Digital Bazaar, Inc.
  *
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(8663);
-__webpack_require__(3020);
+var forge = __webpack_require__(3832);
+__webpack_require__(8925);
+__webpack_require__(4311);
 
 var tls = module.exports = forge.tls;
 
@@ -8712,15 +8898,15 @@ function compareMacs(key, mac1, mac2) {
 
 /***/ }),
 
-/***/ 9425:
+/***/ 9205:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 /**
  * Copyright (c) 2019 Digital Bazaar, Inc.
  */
 
-var forge = __webpack_require__(4117);
-__webpack_require__(9319);
+var forge = __webpack_require__(3832);
+__webpack_require__(3068);
 var asn1 = forge.asn1;
 
 exports.privateKeyValidator = {
@@ -8810,7 +8996,7 @@ exports.publicKeyValidator = {
 
 /***/ }),
 
-/***/ 9319:
+/***/ 3068:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -8948,9 +9134,9 @@ exports.publicKeyValidator = {
  * The full OID (including ASN.1 tag and length of 6 bytes) is:
  * 0x06062A864886F70D
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
-__webpack_require__(1384);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
+__webpack_require__(6270);
 
 /* ASN.1 API */
 var asn1 = module.exports = forge.asn1 = forge.asn1 || {};
@@ -10251,7 +10437,7 @@ asn1.prettyPrint = function(obj, level, indentation) {
 
 /***/ }),
 
-/***/ 1727:
+/***/ 8807:
 /***/ ((module) => {
 
 /**
@@ -10444,7 +10630,7 @@ function _encodeWithByteBuffer(input, alphabet) {
 
 /***/ }),
 
-/***/ 4125:
+/***/ 5649:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -10454,8 +10640,8 @@ function _encodeWithByteBuffer(input, alphabet) {
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
 
 module.exports = forge.cipher = forge.cipher || {};
 
@@ -10681,7 +10867,7 @@ BlockCipher.prototype.finish = function(pad) {
 
 /***/ }),
 
-/***/ 5142:
+/***/ 1967:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -10691,8 +10877,8 @@ BlockCipher.prototype.finish = function(pad) {
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
 
 forge.cipher = forge.cipher || {};
 
@@ -11687,7 +11873,7 @@ function from64To32(num) {
 
 /***/ }),
 
-/***/ 2188:
+/***/ 3480:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -11721,10 +11907,10 @@ function from64To32(num) {
  * Copyright (c) 2012 Stefan Siegl <stesie@brokenpipe.de>
  * Copyright (c) 2012-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(4125);
-__webpack_require__(5142);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(5649);
+__webpack_require__(1967);
+__webpack_require__(7116);
 
 /* DES API */
 module.exports = forge.des = forge.des || {};
@@ -12190,7 +12376,7 @@ function _createCipher(options) {
 
 /***/ }),
 
-/***/ 3956:
+/***/ 69:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -12203,12 +12389,12 @@ function _createCipher(options) {
  *
  * https://github.com/dchest/tweetnacl-js
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(1838);
-__webpack_require__(7646);
-__webpack_require__(501);
-__webpack_require__(9993);
-var asn1Validator = __webpack_require__(9425);
+var forge = __webpack_require__(3832);
+__webpack_require__(5764);
+__webpack_require__(9563);
+__webpack_require__(3219);
+__webpack_require__(7116);
+var asn1Validator = __webpack_require__(9205);
 var publicKeyValidator = asn1Validator.publicKeyValidator;
 var privateKeyValidator = asn1Validator.privateKeyValidator;
 
@@ -13269,7 +13455,7 @@ function M(o, a, b) {
 
 /***/ }),
 
-/***/ 4117:
+/***/ 3832:
 /***/ ((module) => {
 
 /**
@@ -13289,7 +13475,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7637:
+/***/ 6607:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -13301,9 +13487,9 @@ module.exports = {
  *
  * Copyright (c) 2010-2012 Digital Bazaar, Inc. All rights reserved.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(7279);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8991);
+__webpack_require__(7116);
 
 /* HMAC API */
 var hmac = module.exports = forge.hmac = forge.hmac || {};
@@ -13442,7 +13628,7 @@ hmac.create = function() {
 
 /***/ }),
 
-/***/ 2795:
+/***/ 2079:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -13452,37 +13638,37 @@ hmac.create = function() {
  *
  * Copyright 2011-2016 Digital Bazaar, Inc.
  */
-module.exports = __webpack_require__(4117);
-__webpack_require__(8663);
-__webpack_require__(6608);
-__webpack_require__(9319);
-__webpack_require__(4125);
-__webpack_require__(2188);
-__webpack_require__(3956);
-__webpack_require__(7637);
-__webpack_require__(5427);
-__webpack_require__(8512);
-__webpack_require__(5835);
-__webpack_require__(898);
-__webpack_require__(3498);
-__webpack_require__(624);
-__webpack_require__(1504);
-__webpack_require__(6433);
-__webpack_require__(2292);
-__webpack_require__(2696);
-__webpack_require__(9293);
-__webpack_require__(833);
-__webpack_require__(3678);
-__webpack_require__(7646);
-__webpack_require__(6232);
-__webpack_require__(6786);
-__webpack_require__(3020);
-__webpack_require__(9993);
+module.exports = __webpack_require__(3832);
+__webpack_require__(8925);
+__webpack_require__(6164);
+__webpack_require__(3068);
+__webpack_require__(5649);
+__webpack_require__(3480);
+__webpack_require__(69);
+__webpack_require__(6607);
+__webpack_require__(6366);
+__webpack_require__(4145);
+__webpack_require__(3389);
+__webpack_require__(3453);
+__webpack_require__(8960);
+__webpack_require__(6953);
+__webpack_require__(8936);
+__webpack_require__(5147);
+__webpack_require__(9437);
+__webpack_require__(4742);
+__webpack_require__(9654);
+__webpack_require__(4933);
+__webpack_require__(6007);
+__webpack_require__(9563);
+__webpack_require__(9372);
+__webpack_require__(7173);
+__webpack_require__(4311);
+__webpack_require__(7116);
 
 
 /***/ }),
 
-/***/ 1838:
+/***/ 5764:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Copyright (c) 2005  Tom Wu
@@ -13533,7 +13719,7 @@ Address all questions regarding this license to:
   Tom Wu
   tjw@cs.Stanford.EDU
 */
-var forge = __webpack_require__(4117);
+var forge = __webpack_require__(3832);
 
 module.exports = forge.jsbn = forge.jsbn || {};
 
@@ -14753,7 +14939,7 @@ BigInteger.prototype.isProbablePrime = bnIsProbablePrime;
 
 /***/ }),
 
-/***/ 5427:
+/***/ 6366:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -14765,10 +14951,10 @@ BigInteger.prototype.isProbablePrime = bnIsProbablePrime;
  * Copyright (c) 2014 Lautaro Cozzani <lautaro.cozzani@scytl.com>
  * Copyright (c) 2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
-__webpack_require__(7646);
-__webpack_require__(1838);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
+__webpack_require__(9563);
+__webpack_require__(5764);
 
 module.exports = forge.kem = forge.kem || {};
 
@@ -14928,7 +15114,7 @@ function _createKDF(kdf, md, counterStart, digestLength) {
 
 /***/ }),
 
-/***/ 8512:
+/***/ 4145:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -14938,8 +15124,8 @@ function _createKDF(kdf, md, counterStart, digestLength) {
  *
  * Copyright (c) 2008-2013 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
 
 /* LOG API */
 module.exports = forge.log = forge.log || {};
@@ -15254,7 +15440,7 @@ forge.log.consoleLogger = sConsoleLogger;
 
 /***/ }),
 
-/***/ 5835:
+/***/ 3389:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -15264,17 +15450,17 @@ forge.log.consoleLogger = sConsoleLogger;
  *
  * Copyright 2011-2017 Digital Bazaar, Inc.
  */
-module.exports = __webpack_require__(7279);
+module.exports = __webpack_require__(8991);
 
-__webpack_require__(6383);
-__webpack_require__(76);
-__webpack_require__(4824);
-__webpack_require__(501);
+__webpack_require__(5063);
+__webpack_require__(137);
+__webpack_require__(1668);
+__webpack_require__(3219);
 
 
 /***/ }),
 
-/***/ 7279:
+/***/ 8991:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -15284,7 +15470,7 @@ __webpack_require__(501);
  *
  * Copyright 2011-2017 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
+var forge = __webpack_require__(3832);
 
 module.exports = forge.md = forge.md || {};
 forge.md.algorithms = forge.md.algorithms || {};
@@ -15292,7 +15478,7 @@ forge.md.algorithms = forge.md.algorithms || {};
 
 /***/ }),
 
-/***/ 6383:
+/***/ 5063:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -15302,9 +15488,9 @@ forge.md.algorithms = forge.md.algorithms || {};
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(7279);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8991);
+__webpack_require__(7116);
 
 var md5 = module.exports = forge.md5 = forge.md5 || {};
 forge.md.md5 = forge.md.algorithms.md5 = md5;
@@ -15588,7 +15774,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 3049:
+/***/ 6971:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -15598,8 +15784,8 @@ function _update(s, w, bytes) {
  *
  * Copyright 2012 Stefan Siegl <stesie@brokenpipe.de>
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(898);
+var forge = __webpack_require__(3832);
+__webpack_require__(3453);
 
 module.exports = forge.mgf = forge.mgf || {};
 forge.mgf.mgf1 = forge.mgf1;
@@ -15607,7 +15793,7 @@ forge.mgf.mgf1 = forge.mgf1;
 
 /***/ }),
 
-/***/ 898:
+/***/ 3453:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -15619,8 +15805,8 @@ forge.mgf.mgf1 = forge.mgf1;
  * Copyright (c) 2012 Stefan Siegl <stesie@brokenpipe.de>
  * Copyright (c) 2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
 
 forge.mgf = forge.mgf || {};
 var mgf1 = module.exports = forge.mgf.mgf1 = forge.mgf1 = forge.mgf1 || {};
@@ -15671,7 +15857,7 @@ mgf1.create = function(md) {
 
 /***/ }),
 
-/***/ 1384:
+/***/ 6270:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -15681,7 +15867,7 @@ mgf1.create = function(md) {
  *
  * Copyright (c) 2010-2013 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
+var forge = __webpack_require__(3832);
 
 forge.pki = forge.pki || {};
 var oids = module.exports = forge.pki.oids = forge.oids = forge.oids || {};
@@ -15857,7 +16043,7 @@ _IN('1.3.6.1.5.5.7.3.8', 'timeStamping');
 
 /***/ }),
 
-/***/ 8788:
+/***/ 7450:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -15879,18 +16065,18 @@ _IN('1.3.6.1.5.5.7.3.8', 'timeStamping');
  *
  * EncryptedData ::= OCTET STRING
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(8663);
-__webpack_require__(9319);
-__webpack_require__(2188);
-__webpack_require__(7279);
-__webpack_require__(1384);
-__webpack_require__(3498);
-__webpack_require__(624);
-__webpack_require__(7646);
-__webpack_require__(6232);
-__webpack_require__(8855);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8925);
+__webpack_require__(3068);
+__webpack_require__(3480);
+__webpack_require__(8991);
+__webpack_require__(6270);
+__webpack_require__(8960);
+__webpack_require__(6953);
+__webpack_require__(9563);
+__webpack_require__(9372);
+__webpack_require__(8095);
+__webpack_require__(7116);
 
 if(typeof BigInteger === 'undefined') {
   var BigInteger = forge.jsbn.BigInteger;
@@ -16887,7 +17073,7 @@ function createPbkdf2Params(salt, countBytes, dkLen, prfAlgorithm) {
 
 /***/ }),
 
-/***/ 3498:
+/***/ 8960:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -16899,16 +17085,16 @@ function createPbkdf2Params(salt, countBytes, dkLen, prfAlgorithm) {
  *
  * Copyright (c) 2010-2013 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(7637);
-__webpack_require__(7279);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(6607);
+__webpack_require__(8991);
+__webpack_require__(7116);
 
 var pkcs5 = forge.pkcs5 = forge.pkcs5 || {};
 
 var crypto;
 if(forge.util.isNodejs && !forge.options.usePureJavaScript) {
-  crypto = __webpack_require__(289);
+  crypto = __webpack_require__(5819);
 }
 
 /**
@@ -17105,7 +17291,7 @@ module.exports = forge.pbkdf2 = pkcs5.pbkdf2 = function(
 
 /***/ }),
 
-/***/ 624:
+/***/ 6953:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -17136,8 +17322,8 @@ module.exports = forge.pbkdf2 = pkcs5.pbkdf2 = function(
  *
  * body: the binary-encoded body.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
 
 // shortcut for pem API
 var pem = module.exports = forge.pem = forge.pem || {};
@@ -17349,7 +17535,7 @@ function ltrim(str) {
 
 /***/ }),
 
-/***/ 1504:
+/***/ 8936:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -17397,10 +17583,10 @@ function ltrim(str) {
  *
  * Copyright (c) 2013-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
-__webpack_require__(7646);
-__webpack_require__(76);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
+__webpack_require__(9563);
+__webpack_require__(137);
 
 // shortcut for PKCS#1 API
 var pkcs1 = module.exports = forge.pkcs1 = forge.pkcs1 || {};
@@ -17632,7 +17818,7 @@ function rsa_mgf1(seed, maskLength, hash) {
 
 /***/ }),
 
-/***/ 6433:
+/***/ 5147:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -17730,17 +17916,17 @@ function rsa_mgf1(seed, maskLength, hash) {
  *   ... -- For future extensions
  * }
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9319);
-__webpack_require__(7637);
-__webpack_require__(1384);
-__webpack_require__(8840);
-__webpack_require__(8788);
-__webpack_require__(7646);
-__webpack_require__(8855);
-__webpack_require__(76);
-__webpack_require__(9993);
-__webpack_require__(5200);
+var forge = __webpack_require__(3832);
+__webpack_require__(3068);
+__webpack_require__(6607);
+__webpack_require__(6270);
+__webpack_require__(5496);
+__webpack_require__(7450);
+__webpack_require__(9563);
+__webpack_require__(8095);
+__webpack_require__(137);
+__webpack_require__(7116);
+__webpack_require__(5414);
 
 // shortcut for asn.1 & PKI API
 var asn1 = forge.asn1;
@@ -18713,7 +18899,7 @@ p12.generateKey = forge.pbe.generatePkcs12Key;
 
 /***/ }),
 
-/***/ 2292:
+/***/ 9437:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -18734,16 +18920,16 @@ p12.generateKey = forge.pbe.generatePkcs12Key;
  * a separate file pkcs7asn1.js, since those are referenced from other
  * PKCS standards like PKCS #12.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(8663);
-__webpack_require__(9319);
-__webpack_require__(2188);
-__webpack_require__(1384);
-__webpack_require__(624);
-__webpack_require__(8840);
-__webpack_require__(7646);
-__webpack_require__(9993);
-__webpack_require__(5200);
+var forge = __webpack_require__(3832);
+__webpack_require__(8925);
+__webpack_require__(3068);
+__webpack_require__(3480);
+__webpack_require__(6270);
+__webpack_require__(6953);
+__webpack_require__(5496);
+__webpack_require__(9563);
+__webpack_require__(7116);
+__webpack_require__(5414);
 
 // shortcut for ASN.1 API
 var asn1 = forge.asn1;
@@ -19980,7 +20166,7 @@ function _decryptContent(msg) {
 
 /***/ }),
 
-/***/ 8840:
+/***/ 5496:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -20092,9 +20278,9 @@ function _decryptContent(msg) {
  *
  * EncryptedKey ::= OCTET STRING
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9319);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(3068);
+__webpack_require__(7116);
 
 // shortcut for ASN.1 API
 var asn1 = forge.asn1;
@@ -20397,7 +20583,7 @@ p7v.recipientInfoValidator = {
 
 /***/ }),
 
-/***/ 2696:
+/***/ 4742:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -20408,17 +20594,17 @@ p7v.recipientInfoValidator = {
  *
  * Copyright (c) 2010-2013 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9319);
-__webpack_require__(1384);
-__webpack_require__(8788);
-__webpack_require__(624);
-__webpack_require__(3498);
-__webpack_require__(6433);
-__webpack_require__(3678);
-__webpack_require__(8855);
-__webpack_require__(9993);
-__webpack_require__(5200);
+var forge = __webpack_require__(3832);
+__webpack_require__(3068);
+__webpack_require__(6270);
+__webpack_require__(7450);
+__webpack_require__(6953);
+__webpack_require__(8960);
+__webpack_require__(5147);
+__webpack_require__(6007);
+__webpack_require__(8095);
+__webpack_require__(7116);
+__webpack_require__(5414);
 
 // shortcut for asn.1 API
 var asn1 = forge.asn1;
@@ -20506,7 +20692,7 @@ pki.privateKeyInfoToPem = function(pki, maxline) {
 
 /***/ }),
 
-/***/ 9293:
+/***/ 9654:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -20516,10 +20702,10 @@ pki.privateKeyInfoToPem = function(pki, maxline) {
  *
  * Copyright (c) 2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
-__webpack_require__(1838);
-__webpack_require__(7646);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
+__webpack_require__(5764);
+__webpack_require__(9563);
 
 (function() {
 
@@ -20810,7 +20996,7 @@ function getMillerRabinTests(bits) {
 
 /***/ }),
 
-/***/ 833:
+/***/ 4933:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -20824,13 +21010,13 @@ function getMillerRabinTests(bits) {
  *
  * Copyright (c) 2010-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
 
 var _crypto = null;
 if(forge.util.isNodejs && !forge.options.usePureJavaScript &&
   !process.versions['node-webkit']) {
-  _crypto = __webpack_require__(289);
+  _crypto = __webpack_require__(5819);
 }
 
 /* PRNG API */
@@ -21236,7 +21422,7 @@ prng.create = function(plugin) {
 
 /***/ }),
 
-/***/ 3678:
+/***/ 6007:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -21246,9 +21432,9 @@ prng.create = function(plugin) {
  *
  * Copyright (c) 2012 Stefan Siegl <stesie@brokenpipe.de>
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(7646);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(9563);
+__webpack_require__(7116);
 
 // shortcut for PSS API
 var pss = module.exports = forge.pss = forge.pss || {};
@@ -21484,7 +21670,7 @@ pss.create = function(options) {
 
 /***/ }),
 
-/***/ 7646:
+/***/ 9563:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -21502,11 +21688,11 @@ pss.create = function(options) {
  *
  * Copyright (c) 2009-2014 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(8663);
-__webpack_require__(4824);
-__webpack_require__(833);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8925);
+__webpack_require__(1668);
+__webpack_require__(4933);
+__webpack_require__(7116);
 
 (function() {
 
@@ -21682,7 +21868,7 @@ module.exports = forge.random;
 
 /***/ }),
 
-/***/ 6232:
+/***/ 9372:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -21695,8 +21881,8 @@ module.exports = forge.random;
  * Information on the RC2 cipher is available from RFC #2268,
  * http://www.ietf.org/rfc/rfc2268.txt
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(7116);
 
 var piTable = [
   0xd9, 0x78, 0xf9, 0xc4, 0x19, 0xdd, 0xb5, 0xed, 0x28, 0xe9, 0xfd, 0x79, 0x4a, 0xa0, 0xd8, 0x9d,
@@ -22099,7 +22285,7 @@ forge.rc2.createDecryptionCipher = function(key, bits) {
 
 /***/ }),
 
-/***/ 8855:
+/***/ 8095:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -22165,20 +22351,20 @@ forge.rc2.createDecryptionCipher = function(key, bits) {
  *
  * The OID for the RSA key algorithm is: 1.2.840.113549.1.1.1
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9319);
-__webpack_require__(1838);
-__webpack_require__(1384);
-__webpack_require__(1504);
-__webpack_require__(9293);
-__webpack_require__(7646);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(3068);
+__webpack_require__(5764);
+__webpack_require__(6270);
+__webpack_require__(8936);
+__webpack_require__(9654);
+__webpack_require__(9563);
+__webpack_require__(7116);
 
 if(typeof BigInteger === 'undefined') {
   var BigInteger = forge.jsbn.BigInteger;
 }
 
-var _crypto = forge.util.isNodejs ? __webpack_require__(289) : null;
+var _crypto = forge.util.isNodejs ? __webpack_require__(5819) : null;
 
 // shortcut for asn.1 API
 var asn1 = forge.asn1;
@@ -24055,7 +24241,7 @@ function _base64ToBigInt(b64) {
 
 /***/ }),
 
-/***/ 76:
+/***/ 137:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -24065,9 +24251,9 @@ function _base64ToBigInt(b64) {
  *
  * Copyright (c) 2010-2015 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(7279);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8991);
+__webpack_require__(7116);
 
 var sha1 = module.exports = forge.sha1 = forge.sha1 || {};
 forge.md.sha1 = forge.md.algorithms.sha1 = sha1;
@@ -24381,7 +24567,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 4824:
+/***/ 1668:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -24393,9 +24579,9 @@ function _update(s, w, bytes) {
  *
  * Copyright (c) 2010-2015 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(7279);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8991);
+__webpack_require__(7116);
 
 var sha256 = module.exports = forge.sha256 = forge.sha256 || {};
 forge.md.sha256 = forge.md.algorithms.sha256 = sha256;
@@ -24715,7 +24901,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 501:
+/***/ 3219:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -24730,9 +24916,9 @@ function _update(s, w, bytes) {
  *
  * Copyright (c) 2014-2015 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(7279);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8991);
+__webpack_require__(7116);
 
 var sha512 = module.exports = forge.sha512 = forge.sha512 || {};
 
@@ -25283,7 +25469,7 @@ function _update(s, w, bytes) {
 
 /***/ }),
 
-/***/ 6786:
+/***/ 7173:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -25296,12 +25482,12 @@ function _update(s, w, bytes) {
  *
  * @author https://github.com/shellac
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(8663);
-__webpack_require__(7637);
-__webpack_require__(6383);
-__webpack_require__(76);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8925);
+__webpack_require__(6607);
+__webpack_require__(5063);
+__webpack_require__(137);
+__webpack_require__(7116);
 
 var ssh = module.exports = forge.ssh = forge.ssh || {};
 
@@ -25526,7 +25712,7 @@ function _sha1() {
 
 /***/ }),
 
-/***/ 3020:
+/***/ 4311:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -25761,15 +25947,15 @@ function _sha1() {
  * due to the large block size of existing MACs and the small size of the
  * timing signal.
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(9319);
-__webpack_require__(7637);
-__webpack_require__(6383);
-__webpack_require__(624);
-__webpack_require__(2696);
-__webpack_require__(7646);
-__webpack_require__(76);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(3068);
+__webpack_require__(6607);
+__webpack_require__(5063);
+__webpack_require__(6953);
+__webpack_require__(4742);
+__webpack_require__(9563);
+__webpack_require__(137);
+__webpack_require__(7116);
 
 /**
  * Generates pseudo random bytes by mixing the result of two hash functions,
@@ -29815,7 +30001,7 @@ forge.tls.createConnection = tls.createConnection;
 
 /***/ }),
 
-/***/ 9993:
+/***/ 7116:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -29825,8 +30011,8 @@ forge.tls.createConnection = tls.createConnection;
  *
  * Copyright (c) 2010-2018 Digital Bazaar, Inc.
  */
-var forge = __webpack_require__(4117);
-var baseN = __webpack_require__(1727);
+var forge = __webpack_require__(3832);
+var baseN = __webpack_require__(8807);
 
 /* Utilities API */
 var util = module.exports = forge.util = forge.util || {};
@@ -32474,7 +32660,7 @@ util.estimateCores = function(options, callback) {
 
 /***/ }),
 
-/***/ 5200:
+/***/ 5414:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
@@ -32586,17 +32772,17 @@ util.estimateCores = function(options, callback) {
  *   signature          BIT STRING
  * }
  */
-var forge = __webpack_require__(4117);
-__webpack_require__(8663);
-__webpack_require__(9319);
-__webpack_require__(2188);
-__webpack_require__(7279);
-__webpack_require__(3049);
-__webpack_require__(1384);
-__webpack_require__(624);
-__webpack_require__(3678);
-__webpack_require__(8855);
-__webpack_require__(9993);
+var forge = __webpack_require__(3832);
+__webpack_require__(8925);
+__webpack_require__(3068);
+__webpack_require__(3480);
+__webpack_require__(8991);
+__webpack_require__(6971);
+__webpack_require__(6270);
+__webpack_require__(6953);
+__webpack_require__(6007);
+__webpack_require__(8095);
+__webpack_require__(7116);
 
 // shortcut for asn.1 API
 var asn1 = forge.asn1;
@@ -35723,14 +35909,2815 @@ pki.verifyCertificateChain = function(caStore, chain, options) {
 
 /***/ }),
 
-/***/ 2297:
+/***/ 2592:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+const canPromise = __webpack_require__(7138)
+
+const QRCode = __webpack_require__(5115)
+const CanvasRenderer = __webpack_require__(6907)
+const SvgRenderer = __webpack_require__(3776)
+
+function renderCanvas (renderFunc, canvas, text, opts, cb) {
+  const args = [].slice.call(arguments, 1)
+  const argsNum = args.length
+  const isLastArgCb = typeof args[argsNum - 1] === 'function'
+
+  if (!isLastArgCb && !canPromise()) {
+    throw new Error('Callback required as last argument')
+  }
+
+  if (isLastArgCb) {
+    if (argsNum < 2) {
+      throw new Error('Too few arguments provided')
+    }
+
+    if (argsNum === 2) {
+      cb = text
+      text = canvas
+      canvas = opts = undefined
+    } else if (argsNum === 3) {
+      if (canvas.getContext && typeof cb === 'undefined') {
+        cb = opts
+        opts = undefined
+      } else {
+        cb = opts
+        opts = text
+        text = canvas
+        canvas = undefined
+      }
+    }
+  } else {
+    if (argsNum < 1) {
+      throw new Error('Too few arguments provided')
+    }
+
+    if (argsNum === 1) {
+      text = canvas
+      canvas = opts = undefined
+    } else if (argsNum === 2 && !canvas.getContext) {
+      opts = text
+      text = canvas
+      canvas = undefined
+    }
+
+    return new Promise(function (resolve, reject) {
+      try {
+        const data = QRCode.create(text, opts)
+        resolve(renderFunc(data, canvas, opts))
+      } catch (e) {
+        reject(e)
+      }
+    })
+  }
+
+  try {
+    const data = QRCode.create(text, opts)
+    cb(null, renderFunc(data, canvas, opts))
+  } catch (e) {
+    cb(e)
+  }
+}
+
+exports.create = QRCode.create
+exports.toCanvas = renderCanvas.bind(null, CanvasRenderer.render)
+exports.toDataURL = renderCanvas.bind(null, CanvasRenderer.renderToDataURL)
+
+// only svg for now.
+exports.toString = renderCanvas.bind(null, function (data, _, opts) {
+  return SvgRenderer.render(data, opts)
+})
+
+
+/***/ }),
+
+/***/ 7138:
+/***/ ((module) => {
+
+// can-promise has a crash in some versions of react native that dont have
+// standard global objects
+// https://github.com/soldair/node-qrcode/issues/157
+
+module.exports = function () {
+  return typeof Promise === 'function' && Promise.prototype && Promise.prototype.then
+}
+
+
+/***/ }),
+
+/***/ 1845:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+/**
+ * Alignment pattern are fixed reference pattern in defined positions
+ * in a matrix symbology, which enables the decode software to re-synchronise
+ * the coordinate mapping of the image modules in the event of moderate amounts
+ * of distortion of the image.
+ *
+ * Alignment patterns are present only in QR Code symbols of version 2 or larger
+ * and their number depends on the symbol version.
+ */
+
+const getSymbolSize = (__webpack_require__(242).getSymbolSize)
+
+/**
+ * Calculate the row/column coordinates of the center module of each alignment pattern
+ * for the specified QR Code version.
+ *
+ * The alignment patterns are positioned symmetrically on either side of the diagonal
+ * running from the top left corner of the symbol to the bottom right corner.
+ *
+ * Since positions are simmetrical only half of the coordinates are returned.
+ * Each item of the array will represent in turn the x and y coordinate.
+ * @see {@link getPositions}
+ *
+ * @param  {Number} version QR Code version
+ * @return {Array}          Array of coordinate
+ */
+exports.getRowColCoords = function getRowColCoords (version) {
+  if (version === 1) return []
+
+  const posCount = Math.floor(version / 7) + 2
+  const size = getSymbolSize(version)
+  const intervals = size === 145 ? 26 : Math.ceil((size - 13) / (2 * posCount - 2)) * 2
+  const positions = [size - 7] // Last coord is always (size - 7)
+
+  for (let i = 1; i < posCount - 1; i++) {
+    positions[i] = positions[i - 1] - intervals
+  }
+
+  positions.push(6) // First coord is always 6
+
+  return positions.reverse()
+}
+
+/**
+ * Returns an array containing the positions of each alignment pattern.
+ * Each array's element represent the center point of the pattern as (x, y) coordinates
+ *
+ * Coordinates are calculated expanding the row/column coordinates returned by {@link getRowColCoords}
+ * and filtering out the items that overlaps with finder pattern
+ *
+ * @example
+ * For a Version 7 symbol {@link getRowColCoords} returns values 6, 22 and 38.
+ * The alignment patterns, therefore, are to be centered on (row, column)
+ * positions (6,22), (22,6), (22,22), (22,38), (38,22), (38,38).
+ * Note that the coordinates (6,6), (6,38), (38,6) are occupied by finder patterns
+ * and are not therefore used for alignment patterns.
+ *
+ * let pos = getPositions(7)
+ * // [[6,22], [22,6], [22,22], [22,38], [38,22], [38,38]]
+ *
+ * @param  {Number} version QR Code version
+ * @return {Array}          Array of coordinates
+ */
+exports.getPositions = function getPositions (version) {
+  const coords = []
+  const pos = exports.getRowColCoords(version)
+  const posLength = pos.length
+
+  for (let i = 0; i < posLength; i++) {
+    for (let j = 0; j < posLength; j++) {
+      // Skip if position is occupied by finder patterns
+      if ((i === 0 && j === 0) || // top-left
+          (i === 0 && j === posLength - 1) || // bottom-left
+          (i === posLength - 1 && j === 0)) { // top-right
+        continue
+      }
+
+      coords.push([pos[i], pos[j]])
+    }
+  }
+
+  return coords
+}
+
+
+/***/ }),
+
+/***/ 8260:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const Mode = __webpack_require__(6910)
+
+/**
+ * Array of characters available in alphanumeric mode
+ *
+ * As per QR Code specification, to each character
+ * is assigned a value from 0 to 44 which in this case coincides
+ * with the array index
+ *
+ * @type {Array}
+ */
+const ALPHA_NUM_CHARS = [
+  '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+  'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+  ' ', '$', '%', '*', '+', '-', '.', '/', ':'
+]
+
+function AlphanumericData (data) {
+  this.mode = Mode.ALPHANUMERIC
+  this.data = data
+}
+
+AlphanumericData.getBitsLength = function getBitsLength (length) {
+  return 11 * Math.floor(length / 2) + 6 * (length % 2)
+}
+
+AlphanumericData.prototype.getLength = function getLength () {
+  return this.data.length
+}
+
+AlphanumericData.prototype.getBitsLength = function getBitsLength () {
+  return AlphanumericData.getBitsLength(this.data.length)
+}
+
+AlphanumericData.prototype.write = function write (bitBuffer) {
+  let i
+
+  // Input data characters are divided into groups of two characters
+  // and encoded as 11-bit binary codes.
+  for (i = 0; i + 2 <= this.data.length; i += 2) {
+    // The character value of the first character is multiplied by 45
+    let value = ALPHA_NUM_CHARS.indexOf(this.data[i]) * 45
+
+    // The character value of the second digit is added to the product
+    value += ALPHA_NUM_CHARS.indexOf(this.data[i + 1])
+
+    // The sum is then stored as 11-bit binary number
+    bitBuffer.put(value, 11)
+  }
+
+  // If the number of input data characters is not a multiple of two,
+  // the character value of the final character is encoded as a 6-bit binary number.
+  if (this.data.length % 2) {
+    bitBuffer.put(ALPHA_NUM_CHARS.indexOf(this.data[i]), 6)
+  }
+}
+
+module.exports = AlphanumericData
+
+
+/***/ }),
+
+/***/ 7245:
+/***/ ((module) => {
+
+function BitBuffer () {
+  this.buffer = []
+  this.length = 0
+}
+
+BitBuffer.prototype = {
+
+  get: function (index) {
+    const bufIndex = Math.floor(index / 8)
+    return ((this.buffer[bufIndex] >>> (7 - index % 8)) & 1) === 1
+  },
+
+  put: function (num, length) {
+    for (let i = 0; i < length; i++) {
+      this.putBit(((num >>> (length - i - 1)) & 1) === 1)
+    }
+  },
+
+  getLengthInBits: function () {
+    return this.length
+  },
+
+  putBit: function (bit) {
+    const bufIndex = Math.floor(this.length / 8)
+    if (this.buffer.length <= bufIndex) {
+      this.buffer.push(0)
+    }
+
+    if (bit) {
+      this.buffer[bufIndex] |= (0x80 >>> (this.length % 8))
+    }
+
+    this.length++
+  }
+}
+
+module.exports = BitBuffer
+
+
+/***/ }),
+
+/***/ 3280:
+/***/ ((module) => {
+
+/**
+ * Helper class to handle QR Code symbol modules
+ *
+ * @param {Number} size Symbol size
+ */
+function BitMatrix (size) {
+  if (!size || size < 1) {
+    throw new Error('BitMatrix size must be defined and greater than 0')
+  }
+
+  this.size = size
+  this.data = new Uint8Array(size * size)
+  this.reservedBit = new Uint8Array(size * size)
+}
+
+/**
+ * Set bit value at specified location
+ * If reserved flag is set, this bit will be ignored during masking process
+ *
+ * @param {Number}  row
+ * @param {Number}  col
+ * @param {Boolean} value
+ * @param {Boolean} reserved
+ */
+BitMatrix.prototype.set = function (row, col, value, reserved) {
+  const index = row * this.size + col
+  this.data[index] = value
+  if (reserved) this.reservedBit[index] = true
+}
+
+/**
+ * Returns bit value at specified location
+ *
+ * @param  {Number}  row
+ * @param  {Number}  col
+ * @return {Boolean}
+ */
+BitMatrix.prototype.get = function (row, col) {
+  return this.data[row * this.size + col]
+}
+
+/**
+ * Applies xor operator at specified location
+ * (used during masking process)
+ *
+ * @param {Number}  row
+ * @param {Number}  col
+ * @param {Boolean} value
+ */
+BitMatrix.prototype.xor = function (row, col, value) {
+  this.data[row * this.size + col] ^= value
+}
+
+/**
+ * Check if bit at specified location is reserved
+ *
+ * @param {Number}   row
+ * @param {Number}   col
+ * @return {Boolean}
+ */
+BitMatrix.prototype.isReserved = function (row, col) {
+  return this.reservedBit[row * this.size + col]
+}
+
+module.exports = BitMatrix
+
+
+/***/ }),
+
+/***/ 3424:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const encodeUtf8 = __webpack_require__(2378)
+const Mode = __webpack_require__(6910)
+
+function ByteData (data) {
+  this.mode = Mode.BYTE
+  if (typeof (data) === 'string') {
+    data = encodeUtf8(data)
+  }
+  this.data = new Uint8Array(data)
+}
+
+ByteData.getBitsLength = function getBitsLength (length) {
+  return length * 8
+}
+
+ByteData.prototype.getLength = function getLength () {
+  return this.data.length
+}
+
+ByteData.prototype.getBitsLength = function getBitsLength () {
+  return ByteData.getBitsLength(this.data.length)
+}
+
+ByteData.prototype.write = function (bitBuffer) {
+  for (let i = 0, l = this.data.length; i < l; i++) {
+    bitBuffer.put(this.data[i], 8)
+  }
+}
+
+module.exports = ByteData
+
+
+/***/ }),
+
+/***/ 5393:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const ECLevel = __webpack_require__(4908)
+
+const EC_BLOCKS_TABLE = [
+// L  M  Q  H
+  1, 1, 1, 1,
+  1, 1, 1, 1,
+  1, 1, 2, 2,
+  1, 2, 2, 4,
+  1, 2, 4, 4,
+  2, 4, 4, 4,
+  2, 4, 6, 5,
+  2, 4, 6, 6,
+  2, 5, 8, 8,
+  4, 5, 8, 8,
+  4, 5, 8, 11,
+  4, 8, 10, 11,
+  4, 9, 12, 16,
+  4, 9, 16, 16,
+  6, 10, 12, 18,
+  6, 10, 17, 16,
+  6, 11, 16, 19,
+  6, 13, 18, 21,
+  7, 14, 21, 25,
+  8, 16, 20, 25,
+  8, 17, 23, 25,
+  9, 17, 23, 34,
+  9, 18, 25, 30,
+  10, 20, 27, 32,
+  12, 21, 29, 35,
+  12, 23, 34, 37,
+  12, 25, 34, 40,
+  13, 26, 35, 42,
+  14, 28, 38, 45,
+  15, 29, 40, 48,
+  16, 31, 43, 51,
+  17, 33, 45, 54,
+  18, 35, 48, 57,
+  19, 37, 51, 60,
+  19, 38, 53, 63,
+  20, 40, 56, 66,
+  21, 43, 59, 70,
+  22, 45, 62, 74,
+  24, 47, 65, 77,
+  25, 49, 68, 81
+]
+
+const EC_CODEWORDS_TABLE = [
+// L  M  Q  H
+  7, 10, 13, 17,
+  10, 16, 22, 28,
+  15, 26, 36, 44,
+  20, 36, 52, 64,
+  26, 48, 72, 88,
+  36, 64, 96, 112,
+  40, 72, 108, 130,
+  48, 88, 132, 156,
+  60, 110, 160, 192,
+  72, 130, 192, 224,
+  80, 150, 224, 264,
+  96, 176, 260, 308,
+  104, 198, 288, 352,
+  120, 216, 320, 384,
+  132, 240, 360, 432,
+  144, 280, 408, 480,
+  168, 308, 448, 532,
+  180, 338, 504, 588,
+  196, 364, 546, 650,
+  224, 416, 600, 700,
+  224, 442, 644, 750,
+  252, 476, 690, 816,
+  270, 504, 750, 900,
+  300, 560, 810, 960,
+  312, 588, 870, 1050,
+  336, 644, 952, 1110,
+  360, 700, 1020, 1200,
+  390, 728, 1050, 1260,
+  420, 784, 1140, 1350,
+  450, 812, 1200, 1440,
+  480, 868, 1290, 1530,
+  510, 924, 1350, 1620,
+  540, 980, 1440, 1710,
+  570, 1036, 1530, 1800,
+  570, 1064, 1590, 1890,
+  600, 1120, 1680, 1980,
+  630, 1204, 1770, 2100,
+  660, 1260, 1860, 2220,
+  720, 1316, 1950, 2310,
+  750, 1372, 2040, 2430
+]
+
+/**
+ * Returns the number of error correction block that the QR Code should contain
+ * for the specified version and error correction level.
+ *
+ * @param  {Number} version              QR Code version
+ * @param  {Number} errorCorrectionLevel Error correction level
+ * @return {Number}                      Number of error correction blocks
+ */
+exports.getBlocksCount = function getBlocksCount (version, errorCorrectionLevel) {
+  switch (errorCorrectionLevel) {
+    case ECLevel.L:
+      return EC_BLOCKS_TABLE[(version - 1) * 4 + 0]
+    case ECLevel.M:
+      return EC_BLOCKS_TABLE[(version - 1) * 4 + 1]
+    case ECLevel.Q:
+      return EC_BLOCKS_TABLE[(version - 1) * 4 + 2]
+    case ECLevel.H:
+      return EC_BLOCKS_TABLE[(version - 1) * 4 + 3]
+    default:
+      return undefined
+  }
+}
+
+/**
+ * Returns the number of error correction codewords to use for the specified
+ * version and error correction level.
+ *
+ * @param  {Number} version              QR Code version
+ * @param  {Number} errorCorrectionLevel Error correction level
+ * @return {Number}                      Number of error correction codewords
+ */
+exports.getTotalCodewordsCount = function getTotalCodewordsCount (version, errorCorrectionLevel) {
+  switch (errorCorrectionLevel) {
+    case ECLevel.L:
+      return EC_CODEWORDS_TABLE[(version - 1) * 4 + 0]
+    case ECLevel.M:
+      return EC_CODEWORDS_TABLE[(version - 1) * 4 + 1]
+    case ECLevel.Q:
+      return EC_CODEWORDS_TABLE[(version - 1) * 4 + 2]
+    case ECLevel.H:
+      return EC_CODEWORDS_TABLE[(version - 1) * 4 + 3]
+    default:
+      return undefined
+  }
+}
+
+
+/***/ }),
+
+/***/ 4908:
+/***/ ((__unused_webpack_module, exports) => {
+
+exports.L = { bit: 1 }
+exports.M = { bit: 0 }
+exports.Q = { bit: 3 }
+exports.H = { bit: 2 }
+
+function fromString (string) {
+  if (typeof string !== 'string') {
+    throw new Error('Param is not a string')
+  }
+
+  const lcStr = string.toLowerCase()
+
+  switch (lcStr) {
+    case 'l':
+    case 'low':
+      return exports.L
+
+    case 'm':
+    case 'medium':
+      return exports.M
+
+    case 'q':
+    case 'quartile':
+      return exports.Q
+
+    case 'h':
+    case 'high':
+      return exports.H
+
+    default:
+      throw new Error('Unknown EC Level: ' + string)
+  }
+}
+
+exports.isValid = function isValid (level) {
+  return level && typeof level.bit !== 'undefined' &&
+    level.bit >= 0 && level.bit < 4
+}
+
+exports.from = function from (value, defaultValue) {
+  if (exports.isValid(value)) {
+    return value
+  }
+
+  try {
+    return fromString(value)
+  } catch (e) {
+    return defaultValue
+  }
+}
+
+
+/***/ }),
+
+/***/ 6526:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const getSymbolSize = (__webpack_require__(242).getSymbolSize)
+const FINDER_PATTERN_SIZE = 7
+
+/**
+ * Returns an array containing the positions of each finder pattern.
+ * Each array's element represent the top-left point of the pattern as (x, y) coordinates
+ *
+ * @param  {Number} version QR Code version
+ * @return {Array}          Array of coordinates
+ */
+exports.getPositions = function getPositions (version) {
+  const size = getSymbolSize(version)
+
+  return [
+    // top-left
+    [0, 0],
+    // top-right
+    [size - FINDER_PATTERN_SIZE, 0],
+    // bottom-left
+    [0, size - FINDER_PATTERN_SIZE]
+  ]
+}
+
+
+/***/ }),
+
+/***/ 1642:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const Utils = __webpack_require__(242)
+
+const G15 = (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0)
+const G15_MASK = (1 << 14) | (1 << 12) | (1 << 10) | (1 << 4) | (1 << 1)
+const G15_BCH = Utils.getBCHDigit(G15)
+
+/**
+ * Returns format information with relative error correction bits
+ *
+ * The format information is a 15-bit sequence containing 5 data bits,
+ * with 10 error correction bits calculated using the (15, 5) BCH code.
+ *
+ * @param  {Number} errorCorrectionLevel Error correction level
+ * @param  {Number} mask                 Mask pattern
+ * @return {Number}                      Encoded format information bits
+ */
+exports.getEncodedBits = function getEncodedBits (errorCorrectionLevel, mask) {
+  const data = ((errorCorrectionLevel.bit << 3) | mask)
+  let d = data << 10
+
+  while (Utils.getBCHDigit(d) - G15_BCH >= 0) {
+    d ^= (G15 << (Utils.getBCHDigit(d) - G15_BCH))
+  }
+
+  // xor final data with mask pattern in order to ensure that
+  // no combination of Error Correction Level and data mask pattern
+  // will result in an all-zero data string
+  return ((data << 10) | d) ^ G15_MASK
+}
+
+
+/***/ }),
+
+/***/ 9729:
+/***/ ((__unused_webpack_module, exports) => {
+
+const EXP_TABLE = new Uint8Array(512)
+const LOG_TABLE = new Uint8Array(256)
+/**
+ * Precompute the log and anti-log tables for faster computation later
+ *
+ * For each possible value in the galois field 2^8, we will pre-compute
+ * the logarithm and anti-logarithm (exponential) of this value
+ *
+ * ref {@link https://en.wikiversity.org/wiki/Reed%E2%80%93Solomon_codes_for_coders#Introduction_to_mathematical_fields}
+ */
+;(function initTables () {
+  let x = 1
+  for (let i = 0; i < 255; i++) {
+    EXP_TABLE[i] = x
+    LOG_TABLE[x] = i
+
+    x <<= 1 // multiply by 2
+
+    // The QR code specification says to use byte-wise modulo 100011101 arithmetic.
+    // This means that when a number is 256 or larger, it should be XORed with 0x11D.
+    if (x & 0x100) { // similar to x >= 256, but a lot faster (because 0x100 == 256)
+      x ^= 0x11D
+    }
+  }
+
+  // Optimization: double the size of the anti-log table so that we don't need to mod 255 to
+  // stay inside the bounds (because we will mainly use this table for the multiplication of
+  // two GF numbers, no more).
+  // @see {@link mul}
+  for (let i = 255; i < 512; i++) {
+    EXP_TABLE[i] = EXP_TABLE[i - 255]
+  }
+}())
+
+/**
+ * Returns log value of n inside Galois Field
+ *
+ * @param  {Number} n
+ * @return {Number}
+ */
+exports.log = function log (n) {
+  if (n < 1) throw new Error('log(' + n + ')')
+  return LOG_TABLE[n]
+}
+
+/**
+ * Returns anti-log value of n inside Galois Field
+ *
+ * @param  {Number} n
+ * @return {Number}
+ */
+exports.exp = function exp (n) {
+  return EXP_TABLE[n]
+}
+
+/**
+ * Multiplies two number inside Galois Field
+ *
+ * @param  {Number} x
+ * @param  {Number} y
+ * @return {Number}
+ */
+exports.mul = function mul (x, y) {
+  if (x === 0 || y === 0) return 0
+
+  // should be EXP_TABLE[(LOG_TABLE[x] + LOG_TABLE[y]) % 255] if EXP_TABLE wasn't oversized
+  // @see {@link initTables}
+  return EXP_TABLE[LOG_TABLE[x] + LOG_TABLE[y]]
+}
+
+
+/***/ }),
+
+/***/ 5442:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const Mode = __webpack_require__(6910)
+const Utils = __webpack_require__(242)
+
+function KanjiData (data) {
+  this.mode = Mode.KANJI
+  this.data = data
+}
+
+KanjiData.getBitsLength = function getBitsLength (length) {
+  return length * 13
+}
+
+KanjiData.prototype.getLength = function getLength () {
+  return this.data.length
+}
+
+KanjiData.prototype.getBitsLength = function getBitsLength () {
+  return KanjiData.getBitsLength(this.data.length)
+}
+
+KanjiData.prototype.write = function (bitBuffer) {
+  let i
+
+  // In the Shift JIS system, Kanji characters are represented by a two byte combination.
+  // These byte values are shifted from the JIS X 0208 values.
+  // JIS X 0208 gives details of the shift coded representation.
+  for (i = 0; i < this.data.length; i++) {
+    let value = Utils.toSJIS(this.data[i])
+
+    // For characters with Shift JIS values from 0x8140 to 0x9FFC:
+    if (value >= 0x8140 && value <= 0x9FFC) {
+      // Subtract 0x8140 from Shift JIS value
+      value -= 0x8140
+
+    // For characters with Shift JIS values from 0xE040 to 0xEBBF
+    } else if (value >= 0xE040 && value <= 0xEBBF) {
+      // Subtract 0xC140 from Shift JIS value
+      value -= 0xC140
+    } else {
+      throw new Error(
+        'Invalid SJIS character: ' + this.data[i] + '\n' +
+        'Make sure your charset is UTF-8')
+    }
+
+    // Multiply most significant byte of result by 0xC0
+    // and add least significant byte to product
+    value = (((value >>> 8) & 0xff) * 0xC0) + (value & 0xff)
+
+    // Convert result to a 13-bit binary string
+    bitBuffer.put(value, 13)
+  }
+}
+
+module.exports = KanjiData
+
+
+/***/ }),
+
+/***/ 7126:
+/***/ ((__unused_webpack_module, exports) => {
+
+/**
+ * Data mask pattern reference
+ * @type {Object}
+ */
+exports.Patterns = {
+  PATTERN000: 0,
+  PATTERN001: 1,
+  PATTERN010: 2,
+  PATTERN011: 3,
+  PATTERN100: 4,
+  PATTERN101: 5,
+  PATTERN110: 6,
+  PATTERN111: 7
+}
+
+/**
+ * Weighted penalty scores for the undesirable features
+ * @type {Object}
+ */
+const PenaltyScores = {
+  N1: 3,
+  N2: 3,
+  N3: 40,
+  N4: 10
+}
+
+/**
+ * Check if mask pattern value is valid
+ *
+ * @param  {Number}  mask    Mask pattern
+ * @return {Boolean}         true if valid, false otherwise
+ */
+exports.isValid = function isValid (mask) {
+  return mask != null && mask !== '' && !isNaN(mask) && mask >= 0 && mask <= 7
+}
+
+/**
+ * Returns mask pattern from a value.
+ * If value is not valid, returns undefined
+ *
+ * @param  {Number|String} value        Mask pattern value
+ * @return {Number}                     Valid mask pattern or undefined
+ */
+exports.from = function from (value) {
+  return exports.isValid(value) ? parseInt(value, 10) : undefined
+}
+
+/**
+* Find adjacent modules in row/column with the same color
+* and assign a penalty value.
+*
+* Points: N1 + i
+* i is the amount by which the number of adjacent modules of the same color exceeds 5
+*/
+exports.getPenaltyN1 = function getPenaltyN1 (data) {
+  const size = data.size
+  let points = 0
+  let sameCountCol = 0
+  let sameCountRow = 0
+  let lastCol = null
+  let lastRow = null
+
+  for (let row = 0; row < size; row++) {
+    sameCountCol = sameCountRow = 0
+    lastCol = lastRow = null
+
+    for (let col = 0; col < size; col++) {
+      let module = data.get(row, col)
+      if (module === lastCol) {
+        sameCountCol++
+      } else {
+        if (sameCountCol >= 5) points += PenaltyScores.N1 + (sameCountCol - 5)
+        lastCol = module
+        sameCountCol = 1
+      }
+
+      module = data.get(col, row)
+      if (module === lastRow) {
+        sameCountRow++
+      } else {
+        if (sameCountRow >= 5) points += PenaltyScores.N1 + (sameCountRow - 5)
+        lastRow = module
+        sameCountRow = 1
+      }
+    }
+
+    if (sameCountCol >= 5) points += PenaltyScores.N1 + (sameCountCol - 5)
+    if (sameCountRow >= 5) points += PenaltyScores.N1 + (sameCountRow - 5)
+  }
+
+  return points
+}
+
+/**
+ * Find 2x2 blocks with the same color and assign a penalty value
+ *
+ * Points: N2 * (m - 1) * (n - 1)
+ */
+exports.getPenaltyN2 = function getPenaltyN2 (data) {
+  const size = data.size
+  let points = 0
+
+  for (let row = 0; row < size - 1; row++) {
+    for (let col = 0; col < size - 1; col++) {
+      const last = data.get(row, col) +
+        data.get(row, col + 1) +
+        data.get(row + 1, col) +
+        data.get(row + 1, col + 1)
+
+      if (last === 4 || last === 0) points++
+    }
+  }
+
+  return points * PenaltyScores.N2
+}
+
+/**
+ * Find 1:1:3:1:1 ratio (dark:light:dark:light:dark) pattern in row/column,
+ * preceded or followed by light area 4 modules wide
+ *
+ * Points: N3 * number of pattern found
+ */
+exports.getPenaltyN3 = function getPenaltyN3 (data) {
+  const size = data.size
+  let points = 0
+  let bitsCol = 0
+  let bitsRow = 0
+
+  for (let row = 0; row < size; row++) {
+    bitsCol = bitsRow = 0
+    for (let col = 0; col < size; col++) {
+      bitsCol = ((bitsCol << 1) & 0x7FF) | data.get(row, col)
+      if (col >= 10 && (bitsCol === 0x5D0 || bitsCol === 0x05D)) points++
+
+      bitsRow = ((bitsRow << 1) & 0x7FF) | data.get(col, row)
+      if (col >= 10 && (bitsRow === 0x5D0 || bitsRow === 0x05D)) points++
+    }
+  }
+
+  return points * PenaltyScores.N3
+}
+
+/**
+ * Calculate proportion of dark modules in entire symbol
+ *
+ * Points: N4 * k
+ *
+ * k is the rating of the deviation of the proportion of dark modules
+ * in the symbol from 50% in steps of 5%
+ */
+exports.getPenaltyN4 = function getPenaltyN4 (data) {
+  let darkCount = 0
+  const modulesCount = data.data.length
+
+  for (let i = 0; i < modulesCount; i++) darkCount += data.data[i]
+
+  const k = Math.abs(Math.ceil((darkCount * 100 / modulesCount) / 5) - 10)
+
+  return k * PenaltyScores.N4
+}
+
+/**
+ * Return mask value at given position
+ *
+ * @param  {Number} maskPattern Pattern reference value
+ * @param  {Number} i           Row
+ * @param  {Number} j           Column
+ * @return {Boolean}            Mask value
+ */
+function getMaskAt (maskPattern, i, j) {
+  switch (maskPattern) {
+    case exports.Patterns.PATTERN000: return (i + j) % 2 === 0
+    case exports.Patterns.PATTERN001: return i % 2 === 0
+    case exports.Patterns.PATTERN010: return j % 3 === 0
+    case exports.Patterns.PATTERN011: return (i + j) % 3 === 0
+    case exports.Patterns.PATTERN100: return (Math.floor(i / 2) + Math.floor(j / 3)) % 2 === 0
+    case exports.Patterns.PATTERN101: return (i * j) % 2 + (i * j) % 3 === 0
+    case exports.Patterns.PATTERN110: return ((i * j) % 2 + (i * j) % 3) % 2 === 0
+    case exports.Patterns.PATTERN111: return ((i * j) % 3 + (i + j) % 2) % 2 === 0
+
+    default: throw new Error('bad maskPattern:' + maskPattern)
+  }
+}
+
+/**
+ * Apply a mask pattern to a BitMatrix
+ *
+ * @param  {Number}    pattern Pattern reference number
+ * @param  {BitMatrix} data    BitMatrix data
+ */
+exports.applyMask = function applyMask (pattern, data) {
+  const size = data.size
+
+  for (let col = 0; col < size; col++) {
+    for (let row = 0; row < size; row++) {
+      if (data.isReserved(row, col)) continue
+      data.xor(row, col, getMaskAt(pattern, row, col))
+    }
+  }
+}
+
+/**
+ * Returns the best mask pattern for data
+ *
+ * @param  {BitMatrix} data
+ * @return {Number} Mask pattern reference number
+ */
+exports.getBestMask = function getBestMask (data, setupFormatFunc) {
+  const numPatterns = Object.keys(exports.Patterns).length
+  let bestPattern = 0
+  let lowerPenalty = Infinity
+
+  for (let p = 0; p < numPatterns; p++) {
+    setupFormatFunc(p)
+    exports.applyMask(p, data)
+
+    // Calculate penalty
+    const penalty =
+      exports.getPenaltyN1(data) +
+      exports.getPenaltyN2(data) +
+      exports.getPenaltyN3(data) +
+      exports.getPenaltyN4(data)
+
+    // Undo previously applied mask
+    exports.applyMask(p, data)
+
+    if (penalty < lowerPenalty) {
+      lowerPenalty = penalty
+      bestPattern = p
+    }
+  }
+
+  return bestPattern
+}
+
+
+/***/ }),
+
+/***/ 6910:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const VersionCheck = __webpack_require__(3114)
+const Regex = __webpack_require__(7007)
+
+/**
+ * Numeric mode encodes data from the decimal digit set (0 - 9)
+ * (byte values 30HEX to 39HEX).
+ * Normally, 3 data characters are represented by 10 bits.
+ *
+ * @type {Object}
+ */
+exports.NUMERIC = {
+  id: 'Numeric',
+  bit: 1 << 0,
+  ccBits: [10, 12, 14]
+}
+
+/**
+ * Alphanumeric mode encodes data from a set of 45 characters,
+ * i.e. 10 numeric digits (0 - 9),
+ *      26 alphabetic characters (A - Z),
+ *   and 9 symbols (SP, $, %, *, +, -, ., /, :).
+ * Normally, two input characters are represented by 11 bits.
+ *
+ * @type {Object}
+ */
+exports.ALPHANUMERIC = {
+  id: 'Alphanumeric',
+  bit: 1 << 1,
+  ccBits: [9, 11, 13]
+}
+
+/**
+ * In byte mode, data is encoded at 8 bits per character.
+ *
+ * @type {Object}
+ */
+exports.BYTE = {
+  id: 'Byte',
+  bit: 1 << 2,
+  ccBits: [8, 16, 16]
+}
+
+/**
+ * The Kanji mode efficiently encodes Kanji characters in accordance with
+ * the Shift JIS system based on JIS X 0208.
+ * The Shift JIS values are shifted from the JIS X 0208 values.
+ * JIS X 0208 gives details of the shift coded representation.
+ * Each two-byte character value is compacted to a 13-bit binary codeword.
+ *
+ * @type {Object}
+ */
+exports.KANJI = {
+  id: 'Kanji',
+  bit: 1 << 3,
+  ccBits: [8, 10, 12]
+}
+
+/**
+ * Mixed mode will contain a sequences of data in a combination of any of
+ * the modes described above
+ *
+ * @type {Object}
+ */
+exports.MIXED = {
+  bit: -1
+}
+
+/**
+ * Returns the number of bits needed to store the data length
+ * according to QR Code specifications.
+ *
+ * @param  {Mode}   mode    Data mode
+ * @param  {Number} version QR Code version
+ * @return {Number}         Number of bits
+ */
+exports.getCharCountIndicator = function getCharCountIndicator (mode, version) {
+  if (!mode.ccBits) throw new Error('Invalid mode: ' + mode)
+
+  if (!VersionCheck.isValid(version)) {
+    throw new Error('Invalid version: ' + version)
+  }
+
+  if (version >= 1 && version < 10) return mode.ccBits[0]
+  else if (version < 27) return mode.ccBits[1]
+  return mode.ccBits[2]
+}
+
+/**
+ * Returns the most efficient mode to store the specified data
+ *
+ * @param  {String} dataStr Input data string
+ * @return {Mode}           Best mode
+ */
+exports.getBestModeForData = function getBestModeForData (dataStr) {
+  if (Regex.testNumeric(dataStr)) return exports.NUMERIC
+  else if (Regex.testAlphanumeric(dataStr)) return exports.ALPHANUMERIC
+  else if (Regex.testKanji(dataStr)) return exports.KANJI
+  else return exports.BYTE
+}
+
+/**
+ * Return mode name as string
+ *
+ * @param {Mode} mode Mode object
+ * @returns {String}  Mode name
+ */
+exports.toString = function toString (mode) {
+  if (mode && mode.id) return mode.id
+  throw new Error('Invalid mode')
+}
+
+/**
+ * Check if input param is a valid mode object
+ *
+ * @param   {Mode}    mode Mode object
+ * @returns {Boolean} True if valid mode, false otherwise
+ */
+exports.isValid = function isValid (mode) {
+  return mode && mode.bit && mode.ccBits
+}
+
+/**
+ * Get mode object from its name
+ *
+ * @param   {String} string Mode name
+ * @returns {Mode}          Mode object
+ */
+function fromString (string) {
+  if (typeof string !== 'string') {
+    throw new Error('Param is not a string')
+  }
+
+  const lcStr = string.toLowerCase()
+
+  switch (lcStr) {
+    case 'numeric':
+      return exports.NUMERIC
+    case 'alphanumeric':
+      return exports.ALPHANUMERIC
+    case 'kanji':
+      return exports.KANJI
+    case 'byte':
+      return exports.BYTE
+    default:
+      throw new Error('Unknown mode: ' + string)
+  }
+}
+
+/**
+ * Returns mode from a value.
+ * If value is not a valid mode, returns defaultValue
+ *
+ * @param  {Mode|String} value        Encoding mode
+ * @param  {Mode}        defaultValue Fallback value
+ * @return {Mode}                     Encoding mode
+ */
+exports.from = function from (value, defaultValue) {
+  if (exports.isValid(value)) {
+    return value
+  }
+
+  try {
+    return fromString(value)
+  } catch (e) {
+    return defaultValue
+  }
+}
+
+
+/***/ }),
+
+/***/ 1085:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const Mode = __webpack_require__(6910)
+
+function NumericData (data) {
+  this.mode = Mode.NUMERIC
+  this.data = data.toString()
+}
+
+NumericData.getBitsLength = function getBitsLength (length) {
+  return 10 * Math.floor(length / 3) + ((length % 3) ? ((length % 3) * 3 + 1) : 0)
+}
+
+NumericData.prototype.getLength = function getLength () {
+  return this.data.length
+}
+
+NumericData.prototype.getBitsLength = function getBitsLength () {
+  return NumericData.getBitsLength(this.data.length)
+}
+
+NumericData.prototype.write = function write (bitBuffer) {
+  let i, group, value
+
+  // The input data string is divided into groups of three digits,
+  // and each group is converted to its 10-bit binary equivalent.
+  for (i = 0; i + 3 <= this.data.length; i += 3) {
+    group = this.data.substr(i, 3)
+    value = parseInt(group, 10)
+
+    bitBuffer.put(value, 10)
+  }
+
+  // If the number of input digits is not an exact multiple of three,
+  // the final one or two digits are converted to 4 or 7 bits respectively.
+  const remainingNum = this.data.length - i
+  if (remainingNum > 0) {
+    group = this.data.substr(i)
+    value = parseInt(group, 10)
+
+    bitBuffer.put(value, remainingNum * 3 + 1)
+  }
+}
+
+module.exports = NumericData
+
+
+/***/ }),
+
+/***/ 6143:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const GF = __webpack_require__(9729)
+
+/**
+ * Multiplies two polynomials inside Galois Field
+ *
+ * @param  {Uint8Array} p1 Polynomial
+ * @param  {Uint8Array} p2 Polynomial
+ * @return {Uint8Array}    Product of p1 and p2
+ */
+exports.mul = function mul (p1, p2) {
+  const coeff = new Uint8Array(p1.length + p2.length - 1)
+
+  for (let i = 0; i < p1.length; i++) {
+    for (let j = 0; j < p2.length; j++) {
+      coeff[i + j] ^= GF.mul(p1[i], p2[j])
+    }
+  }
+
+  return coeff
+}
+
+/**
+ * Calculate the remainder of polynomials division
+ *
+ * @param  {Uint8Array} divident Polynomial
+ * @param  {Uint8Array} divisor  Polynomial
+ * @return {Uint8Array}          Remainder
+ */
+exports.mod = function mod (divident, divisor) {
+  let result = new Uint8Array(divident)
+
+  while ((result.length - divisor.length) >= 0) {
+    const coeff = result[0]
+
+    for (let i = 0; i < divisor.length; i++) {
+      result[i] ^= GF.mul(divisor[i], coeff)
+    }
+
+    // remove all zeros from buffer head
+    let offset = 0
+    while (offset < result.length && result[offset] === 0) offset++
+    result = result.slice(offset)
+  }
+
+  return result
+}
+
+/**
+ * Generate an irreducible generator polynomial of specified degree
+ * (used by Reed-Solomon encoder)
+ *
+ * @param  {Number} degree Degree of the generator polynomial
+ * @return {Uint8Array}    Buffer containing polynomial coefficients
+ */
+exports.generateECPolynomial = function generateECPolynomial (degree) {
+  let poly = new Uint8Array([1])
+  for (let i = 0; i < degree; i++) {
+    poly = exports.mul(poly, new Uint8Array([1, GF.exp(i)]))
+  }
+
+  return poly
+}
+
+
+/***/ }),
+
+/***/ 5115:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const Utils = __webpack_require__(242)
+const ECLevel = __webpack_require__(4908)
+const BitBuffer = __webpack_require__(7245)
+const BitMatrix = __webpack_require__(3280)
+const AlignmentPattern = __webpack_require__(1845)
+const FinderPattern = __webpack_require__(6526)
+const MaskPattern = __webpack_require__(7126)
+const ECCode = __webpack_require__(5393)
+const ReedSolomonEncoder = __webpack_require__(2882)
+const Version = __webpack_require__(3103)
+const FormatInfo = __webpack_require__(1642)
+const Mode = __webpack_require__(6910)
+const Segments = __webpack_require__(6130)
+
+/**
+ * QRCode for JavaScript
+ *
+ * modified by Ryan Day for nodejs support
+ * Copyright (c) 2011 Ryan Day
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+//---------------------------------------------------------------------
+// QRCode for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//   http://www.opensource.org/licenses/mit-license.php
+//
+// The word "QR Code" is registered trademark of
+// DENSO WAVE INCORPORATED
+//   http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+*/
+
+/**
+ * Add finder patterns bits to matrix
+ *
+ * @param  {BitMatrix} matrix  Modules matrix
+ * @param  {Number}    version QR Code version
+ */
+function setupFinderPattern (matrix, version) {
+  const size = matrix.size
+  const pos = FinderPattern.getPositions(version)
+
+  for (let i = 0; i < pos.length; i++) {
+    const row = pos[i][0]
+    const col = pos[i][1]
+
+    for (let r = -1; r <= 7; r++) {
+      if (row + r <= -1 || size <= row + r) continue
+
+      for (let c = -1; c <= 7; c++) {
+        if (col + c <= -1 || size <= col + c) continue
+
+        if ((r >= 0 && r <= 6 && (c === 0 || c === 6)) ||
+          (c >= 0 && c <= 6 && (r === 0 || r === 6)) ||
+          (r >= 2 && r <= 4 && c >= 2 && c <= 4)) {
+          matrix.set(row + r, col + c, true, true)
+        } else {
+          matrix.set(row + r, col + c, false, true)
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Add timing pattern bits to matrix
+ *
+ * Note: this function must be called before {@link setupAlignmentPattern}
+ *
+ * @param  {BitMatrix} matrix Modules matrix
+ */
+function setupTimingPattern (matrix) {
+  const size = matrix.size
+
+  for (let r = 8; r < size - 8; r++) {
+    const value = r % 2 === 0
+    matrix.set(r, 6, value, true)
+    matrix.set(6, r, value, true)
+  }
+}
+
+/**
+ * Add alignment patterns bits to matrix
+ *
+ * Note: this function must be called after {@link setupTimingPattern}
+ *
+ * @param  {BitMatrix} matrix  Modules matrix
+ * @param  {Number}    version QR Code version
+ */
+function setupAlignmentPattern (matrix, version) {
+  const pos = AlignmentPattern.getPositions(version)
+
+  for (let i = 0; i < pos.length; i++) {
+    const row = pos[i][0]
+    const col = pos[i][1]
+
+    for (let r = -2; r <= 2; r++) {
+      for (let c = -2; c <= 2; c++) {
+        if (r === -2 || r === 2 || c === -2 || c === 2 ||
+          (r === 0 && c === 0)) {
+          matrix.set(row + r, col + c, true, true)
+        } else {
+          matrix.set(row + r, col + c, false, true)
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Add version info bits to matrix
+ *
+ * @param  {BitMatrix} matrix  Modules matrix
+ * @param  {Number}    version QR Code version
+ */
+function setupVersionInfo (matrix, version) {
+  const size = matrix.size
+  const bits = Version.getEncodedBits(version)
+  let row, col, mod
+
+  for (let i = 0; i < 18; i++) {
+    row = Math.floor(i / 3)
+    col = i % 3 + size - 8 - 3
+    mod = ((bits >> i) & 1) === 1
+
+    matrix.set(row, col, mod, true)
+    matrix.set(col, row, mod, true)
+  }
+}
+
+/**
+ * Add format info bits to matrix
+ *
+ * @param  {BitMatrix} matrix               Modules matrix
+ * @param  {ErrorCorrectionLevel}    errorCorrectionLevel Error correction level
+ * @param  {Number}    maskPattern          Mask pattern reference value
+ */
+function setupFormatInfo (matrix, errorCorrectionLevel, maskPattern) {
+  const size = matrix.size
+  const bits = FormatInfo.getEncodedBits(errorCorrectionLevel, maskPattern)
+  let i, mod
+
+  for (i = 0; i < 15; i++) {
+    mod = ((bits >> i) & 1) === 1
+
+    // vertical
+    if (i < 6) {
+      matrix.set(i, 8, mod, true)
+    } else if (i < 8) {
+      matrix.set(i + 1, 8, mod, true)
+    } else {
+      matrix.set(size - 15 + i, 8, mod, true)
+    }
+
+    // horizontal
+    if (i < 8) {
+      matrix.set(8, size - i - 1, mod, true)
+    } else if (i < 9) {
+      matrix.set(8, 15 - i - 1 + 1, mod, true)
+    } else {
+      matrix.set(8, 15 - i - 1, mod, true)
+    }
+  }
+
+  // fixed module
+  matrix.set(size - 8, 8, 1, true)
+}
+
+/**
+ * Add encoded data bits to matrix
+ *
+ * @param  {BitMatrix}  matrix Modules matrix
+ * @param  {Uint8Array} data   Data codewords
+ */
+function setupData (matrix, data) {
+  const size = matrix.size
+  let inc = -1
+  let row = size - 1
+  let bitIndex = 7
+  let byteIndex = 0
+
+  for (let col = size - 1; col > 0; col -= 2) {
+    if (col === 6) col--
+
+    while (true) {
+      for (let c = 0; c < 2; c++) {
+        if (!matrix.isReserved(row, col - c)) {
+          let dark = false
+
+          if (byteIndex < data.length) {
+            dark = (((data[byteIndex] >>> bitIndex) & 1) === 1)
+          }
+
+          matrix.set(row, col - c, dark)
+          bitIndex--
+
+          if (bitIndex === -1) {
+            byteIndex++
+            bitIndex = 7
+          }
+        }
+      }
+
+      row += inc
+
+      if (row < 0 || size <= row) {
+        row -= inc
+        inc = -inc
+        break
+      }
+    }
+  }
+}
+
+/**
+ * Create encoded codewords from data input
+ *
+ * @param  {Number}   version              QR Code version
+ * @param  {ErrorCorrectionLevel}   errorCorrectionLevel Error correction level
+ * @param  {ByteData} data                 Data input
+ * @return {Uint8Array}                    Buffer containing encoded codewords
+ */
+function createData (version, errorCorrectionLevel, segments) {
+  // Prepare data buffer
+  const buffer = new BitBuffer()
+
+  segments.forEach(function (data) {
+    // prefix data with mode indicator (4 bits)
+    buffer.put(data.mode.bit, 4)
+
+    // Prefix data with character count indicator.
+    // The character count indicator is a string of bits that represents the
+    // number of characters that are being encoded.
+    // The character count indicator must be placed after the mode indicator
+    // and must be a certain number of bits long, depending on the QR version
+    // and data mode
+    // @see {@link Mode.getCharCountIndicator}.
+    buffer.put(data.getLength(), Mode.getCharCountIndicator(data.mode, version))
+
+    // add binary data sequence to buffer
+    data.write(buffer)
+  })
+
+  // Calculate required number of bits
+  const totalCodewords = Utils.getSymbolTotalCodewords(version)
+  const ecTotalCodewords = ECCode.getTotalCodewordsCount(version, errorCorrectionLevel)
+  const dataTotalCodewordsBits = (totalCodewords - ecTotalCodewords) * 8
+
+  // Add a terminator.
+  // If the bit string is shorter than the total number of required bits,
+  // a terminator of up to four 0s must be added to the right side of the string.
+  // If the bit string is more than four bits shorter than the required number of bits,
+  // add four 0s to the end.
+  if (buffer.getLengthInBits() + 4 <= dataTotalCodewordsBits) {
+    buffer.put(0, 4)
+  }
+
+  // If the bit string is fewer than four bits shorter, add only the number of 0s that
+  // are needed to reach the required number of bits.
+
+  // After adding the terminator, if the number of bits in the string is not a multiple of 8,
+  // pad the string on the right with 0s to make the string's length a multiple of 8.
+  while (buffer.getLengthInBits() % 8 !== 0) {
+    buffer.putBit(0)
+  }
+
+  // Add pad bytes if the string is still shorter than the total number of required bits.
+  // Extend the buffer to fill the data capacity of the symbol corresponding to
+  // the Version and Error Correction Level by adding the Pad Codewords 11101100 (0xEC)
+  // and 00010001 (0x11) alternately.
+  const remainingByte = (dataTotalCodewordsBits - buffer.getLengthInBits()) / 8
+  for (let i = 0; i < remainingByte; i++) {
+    buffer.put(i % 2 ? 0x11 : 0xEC, 8)
+  }
+
+  return createCodewords(buffer, version, errorCorrectionLevel)
+}
+
+/**
+ * Encode input data with Reed-Solomon and return codewords with
+ * relative error correction bits
+ *
+ * @param  {BitBuffer} bitBuffer            Data to encode
+ * @param  {Number}    version              QR Code version
+ * @param  {ErrorCorrectionLevel} errorCorrectionLevel Error correction level
+ * @return {Uint8Array}                     Buffer containing encoded codewords
+ */
+function createCodewords (bitBuffer, version, errorCorrectionLevel) {
+  // Total codewords for this QR code version (Data + Error correction)
+  const totalCodewords = Utils.getSymbolTotalCodewords(version)
+
+  // Total number of error correction codewords
+  const ecTotalCodewords = ECCode.getTotalCodewordsCount(version, errorCorrectionLevel)
+
+  // Total number of data codewords
+  const dataTotalCodewords = totalCodewords - ecTotalCodewords
+
+  // Total number of blocks
+  const ecTotalBlocks = ECCode.getBlocksCount(version, errorCorrectionLevel)
+
+  // Calculate how many blocks each group should contain
+  const blocksInGroup2 = totalCodewords % ecTotalBlocks
+  const blocksInGroup1 = ecTotalBlocks - blocksInGroup2
+
+  const totalCodewordsInGroup1 = Math.floor(totalCodewords / ecTotalBlocks)
+
+  const dataCodewordsInGroup1 = Math.floor(dataTotalCodewords / ecTotalBlocks)
+  const dataCodewordsInGroup2 = dataCodewordsInGroup1 + 1
+
+  // Number of EC codewords is the same for both groups
+  const ecCount = totalCodewordsInGroup1 - dataCodewordsInGroup1
+
+  // Initialize a Reed-Solomon encoder with a generator polynomial of degree ecCount
+  const rs = new ReedSolomonEncoder(ecCount)
+
+  let offset = 0
+  const dcData = new Array(ecTotalBlocks)
+  const ecData = new Array(ecTotalBlocks)
+  let maxDataSize = 0
+  const buffer = new Uint8Array(bitBuffer.buffer)
+
+  // Divide the buffer into the required number of blocks
+  for (let b = 0; b < ecTotalBlocks; b++) {
+    const dataSize = b < blocksInGroup1 ? dataCodewordsInGroup1 : dataCodewordsInGroup2
+
+    // extract a block of data from buffer
+    dcData[b] = buffer.slice(offset, offset + dataSize)
+
+    // Calculate EC codewords for this data block
+    ecData[b] = rs.encode(dcData[b])
+
+    offset += dataSize
+    maxDataSize = Math.max(maxDataSize, dataSize)
+  }
+
+  // Create final data
+  // Interleave the data and error correction codewords from each block
+  const data = new Uint8Array(totalCodewords)
+  let index = 0
+  let i, r
+
+  // Add data codewords
+  for (i = 0; i < maxDataSize; i++) {
+    for (r = 0; r < ecTotalBlocks; r++) {
+      if (i < dcData[r].length) {
+        data[index++] = dcData[r][i]
+      }
+    }
+  }
+
+  // Apped EC codewords
+  for (i = 0; i < ecCount; i++) {
+    for (r = 0; r < ecTotalBlocks; r++) {
+      data[index++] = ecData[r][i]
+    }
+  }
+
+  return data
+}
+
+/**
+ * Build QR Code symbol
+ *
+ * @param  {String} data                 Input string
+ * @param  {Number} version              QR Code version
+ * @param  {ErrorCorretionLevel} errorCorrectionLevel Error level
+ * @param  {MaskPattern} maskPattern     Mask pattern
+ * @return {Object}                      Object containing symbol data
+ */
+function createSymbol (data, version, errorCorrectionLevel, maskPattern) {
+  let segments
+
+  if (Array.isArray(data)) {
+    segments = Segments.fromArray(data)
+  } else if (typeof data === 'string') {
+    let estimatedVersion = version
+
+    if (!estimatedVersion) {
+      const rawSegments = Segments.rawSplit(data)
+
+      // Estimate best version that can contain raw splitted segments
+      estimatedVersion = Version.getBestVersionForData(rawSegments, errorCorrectionLevel)
+    }
+
+    // Build optimized segments
+    // If estimated version is undefined, try with the highest version
+    segments = Segments.fromString(data, estimatedVersion || 40)
+  } else {
+    throw new Error('Invalid data')
+  }
+
+  // Get the min version that can contain data
+  const bestVersion = Version.getBestVersionForData(segments, errorCorrectionLevel)
+
+  // If no version is found, data cannot be stored
+  if (!bestVersion) {
+    throw new Error('The amount of data is too big to be stored in a QR Code')
+  }
+
+  // If not specified, use min version as default
+  if (!version) {
+    version = bestVersion
+
+  // Check if the specified version can contain the data
+  } else if (version < bestVersion) {
+    throw new Error('\n' +
+      'The chosen QR Code version cannot contain this amount of data.\n' +
+      'Minimum version required to store current data is: ' + bestVersion + '.\n'
+    )
+  }
+
+  const dataBits = createData(version, errorCorrectionLevel, segments)
+
+  // Allocate matrix buffer
+  const moduleCount = Utils.getSymbolSize(version)
+  const modules = new BitMatrix(moduleCount)
+
+  // Add function modules
+  setupFinderPattern(modules, version)
+  setupTimingPattern(modules)
+  setupAlignmentPattern(modules, version)
+
+  // Add temporary dummy bits for format info just to set them as reserved.
+  // This is needed to prevent these bits from being masked by {@link MaskPattern.applyMask}
+  // since the masking operation must be performed only on the encoding region.
+  // These blocks will be replaced with correct values later in code.
+  setupFormatInfo(modules, errorCorrectionLevel, 0)
+
+  if (version >= 7) {
+    setupVersionInfo(modules, version)
+  }
+
+  // Add data codewords
+  setupData(modules, dataBits)
+
+  if (isNaN(maskPattern)) {
+    // Find best mask pattern
+    maskPattern = MaskPattern.getBestMask(modules,
+      setupFormatInfo.bind(null, modules, errorCorrectionLevel))
+  }
+
+  // Apply mask pattern
+  MaskPattern.applyMask(maskPattern, modules)
+
+  // Replace format info bits with correct values
+  setupFormatInfo(modules, errorCorrectionLevel, maskPattern)
+
+  return {
+    modules: modules,
+    version: version,
+    errorCorrectionLevel: errorCorrectionLevel,
+    maskPattern: maskPattern,
+    segments: segments
+  }
+}
+
+/**
+ * QR Code
+ *
+ * @param {String | Array} data                 Input data
+ * @param {Object} options                      Optional configurations
+ * @param {Number} options.version              QR Code version
+ * @param {String} options.errorCorrectionLevel Error correction level
+ * @param {Function} options.toSJISFunc         Helper func to convert utf8 to sjis
+ */
+exports.create = function create (data, options) {
+  if (typeof data === 'undefined' || data === '') {
+    throw new Error('No input text')
+  }
+
+  let errorCorrectionLevel = ECLevel.M
+  let version
+  let mask
+
+  if (typeof options !== 'undefined') {
+    // Use higher error correction level as default
+    errorCorrectionLevel = ECLevel.from(options.errorCorrectionLevel, ECLevel.M)
+    version = Version.from(options.version)
+    mask = MaskPattern.from(options.maskPattern)
+
+    if (options.toSJISFunc) {
+      Utils.setToSJISFunction(options.toSJISFunc)
+    }
+  }
+
+  return createSymbol(data, version, errorCorrectionLevel, mask)
+}
+
+
+/***/ }),
+
+/***/ 2882:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const Polynomial = __webpack_require__(6143)
+
+function ReedSolomonEncoder (degree) {
+  this.genPoly = undefined
+  this.degree = degree
+
+  if (this.degree) this.initialize(this.degree)
+}
+
+/**
+ * Initialize the encoder.
+ * The input param should correspond to the number of error correction codewords.
+ *
+ * @param  {Number} degree
+ */
+ReedSolomonEncoder.prototype.initialize = function initialize (degree) {
+  // create an irreducible generator polynomial
+  this.degree = degree
+  this.genPoly = Polynomial.generateECPolynomial(this.degree)
+}
+
+/**
+ * Encodes a chunk of data
+ *
+ * @param  {Uint8Array} data Buffer containing input data
+ * @return {Uint8Array}      Buffer containing encoded data
+ */
+ReedSolomonEncoder.prototype.encode = function encode (data) {
+  if (!this.genPoly) {
+    throw new Error('Encoder not initialized')
+  }
+
+  // Calculate EC for this data block
+  // extends data size to data+genPoly size
+  const paddedData = new Uint8Array(data.length + this.degree)
+  paddedData.set(data)
+
+  // The error correction codewords are the remainder after dividing the data codewords
+  // by a generator polynomial
+  const remainder = Polynomial.mod(paddedData, this.genPoly)
+
+  // return EC data blocks (last n byte, where n is the degree of genPoly)
+  // If coefficients number in remainder are less than genPoly degree,
+  // pad with 0s to the left to reach the needed number of coefficients
+  const start = this.degree - remainder.length
+  if (start > 0) {
+    const buff = new Uint8Array(this.degree)
+    buff.set(remainder, start)
+
+    return buff
+  }
+
+  return remainder
+}
+
+module.exports = ReedSolomonEncoder
+
+
+/***/ }),
+
+/***/ 7007:
+/***/ ((__unused_webpack_module, exports) => {
+
+const numeric = '[0-9]+'
+const alphanumeric = '[A-Z $%*+\\-./:]+'
+let kanji = '(?:[u3000-u303F]|[u3040-u309F]|[u30A0-u30FF]|' +
+  '[uFF00-uFFEF]|[u4E00-u9FAF]|[u2605-u2606]|[u2190-u2195]|u203B|' +
+  '[u2010u2015u2018u2019u2025u2026u201Cu201Du2225u2260]|' +
+  '[u0391-u0451]|[u00A7u00A8u00B1u00B4u00D7u00F7])+'
+kanji = kanji.replace(/u/g, '\\u')
+
+const byte = '(?:(?![A-Z0-9 $%*+\\-./:]|' + kanji + ')(?:.|[\r\n]))+'
+
+exports.KANJI = new RegExp(kanji, 'g')
+exports.BYTE_KANJI = new RegExp('[^A-Z0-9 $%*+\\-./:]+', 'g')
+exports.BYTE = new RegExp(byte, 'g')
+exports.NUMERIC = new RegExp(numeric, 'g')
+exports.ALPHANUMERIC = new RegExp(alphanumeric, 'g')
+
+const TEST_KANJI = new RegExp('^' + kanji + '$')
+const TEST_NUMERIC = new RegExp('^' + numeric + '$')
+const TEST_ALPHANUMERIC = new RegExp('^[A-Z0-9 $%*+\\-./:]+$')
+
+exports.testKanji = function testKanji (str) {
+  return TEST_KANJI.test(str)
+}
+
+exports.testNumeric = function testNumeric (str) {
+  return TEST_NUMERIC.test(str)
+}
+
+exports.testAlphanumeric = function testAlphanumeric (str) {
+  return TEST_ALPHANUMERIC.test(str)
+}
+
+
+/***/ }),
+
+/***/ 6130:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const Mode = __webpack_require__(6910)
+const NumericData = __webpack_require__(1085)
+const AlphanumericData = __webpack_require__(8260)
+const ByteData = __webpack_require__(3424)
+const KanjiData = __webpack_require__(5442)
+const Regex = __webpack_require__(7007)
+const Utils = __webpack_require__(242)
+const dijkstra = __webpack_require__(5987)
+
+/**
+ * Returns UTF8 byte length
+ *
+ * @param  {String} str Input string
+ * @return {Number}     Number of byte
+ */
+function getStringByteLength (str) {
+  return unescape(encodeURIComponent(str)).length
+}
+
+/**
+ * Get a list of segments of the specified mode
+ * from a string
+ *
+ * @param  {Mode}   mode Segment mode
+ * @param  {String} str  String to process
+ * @return {Array}       Array of object with segments data
+ */
+function getSegments (regex, mode, str) {
+  const segments = []
+  let result
+
+  while ((result = regex.exec(str)) !== null) {
+    segments.push({
+      data: result[0],
+      index: result.index,
+      mode: mode,
+      length: result[0].length
+    })
+  }
+
+  return segments
+}
+
+/**
+ * Extracts a series of segments with the appropriate
+ * modes from a string
+ *
+ * @param  {String} dataStr Input string
+ * @return {Array}          Array of object with segments data
+ */
+function getSegmentsFromString (dataStr) {
+  const numSegs = getSegments(Regex.NUMERIC, Mode.NUMERIC, dataStr)
+  const alphaNumSegs = getSegments(Regex.ALPHANUMERIC, Mode.ALPHANUMERIC, dataStr)
+  let byteSegs
+  let kanjiSegs
+
+  if (Utils.isKanjiModeEnabled()) {
+    byteSegs = getSegments(Regex.BYTE, Mode.BYTE, dataStr)
+    kanjiSegs = getSegments(Regex.KANJI, Mode.KANJI, dataStr)
+  } else {
+    byteSegs = getSegments(Regex.BYTE_KANJI, Mode.BYTE, dataStr)
+    kanjiSegs = []
+  }
+
+  const segs = numSegs.concat(alphaNumSegs, byteSegs, kanjiSegs)
+
+  return segs
+    .sort(function (s1, s2) {
+      return s1.index - s2.index
+    })
+    .map(function (obj) {
+      return {
+        data: obj.data,
+        mode: obj.mode,
+        length: obj.length
+      }
+    })
+}
+
+/**
+ * Returns how many bits are needed to encode a string of
+ * specified length with the specified mode
+ *
+ * @param  {Number} length String length
+ * @param  {Mode} mode     Segment mode
+ * @return {Number}        Bit length
+ */
+function getSegmentBitsLength (length, mode) {
+  switch (mode) {
+    case Mode.NUMERIC:
+      return NumericData.getBitsLength(length)
+    case Mode.ALPHANUMERIC:
+      return AlphanumericData.getBitsLength(length)
+    case Mode.KANJI:
+      return KanjiData.getBitsLength(length)
+    case Mode.BYTE:
+      return ByteData.getBitsLength(length)
+  }
+}
+
+/**
+ * Merges adjacent segments which have the same mode
+ *
+ * @param  {Array} segs Array of object with segments data
+ * @return {Array}      Array of object with segments data
+ */
+function mergeSegments (segs) {
+  return segs.reduce(function (acc, curr) {
+    const prevSeg = acc.length - 1 >= 0 ? acc[acc.length - 1] : null
+    if (prevSeg && prevSeg.mode === curr.mode) {
+      acc[acc.length - 1].data += curr.data
+      return acc
+    }
+
+    acc.push(curr)
+    return acc
+  }, [])
+}
+
+/**
+ * Generates a list of all possible nodes combination which
+ * will be used to build a segments graph.
+ *
+ * Nodes are divided by groups. Each group will contain a list of all the modes
+ * in which is possible to encode the given text.
+ *
+ * For example the text '12345' can be encoded as Numeric, Alphanumeric or Byte.
+ * The group for '12345' will contain then 3 objects, one for each
+ * possible encoding mode.
+ *
+ * Each node represents a possible segment.
+ *
+ * @param  {Array} segs Array of object with segments data
+ * @return {Array}      Array of object with segments data
+ */
+function buildNodes (segs) {
+  const nodes = []
+  for (let i = 0; i < segs.length; i++) {
+    const seg = segs[i]
+
+    switch (seg.mode) {
+      case Mode.NUMERIC:
+        nodes.push([seg,
+          { data: seg.data, mode: Mode.ALPHANUMERIC, length: seg.length },
+          { data: seg.data, mode: Mode.BYTE, length: seg.length }
+        ])
+        break
+      case Mode.ALPHANUMERIC:
+        nodes.push([seg,
+          { data: seg.data, mode: Mode.BYTE, length: seg.length }
+        ])
+        break
+      case Mode.KANJI:
+        nodes.push([seg,
+          { data: seg.data, mode: Mode.BYTE, length: getStringByteLength(seg.data) }
+        ])
+        break
+      case Mode.BYTE:
+        nodes.push([
+          { data: seg.data, mode: Mode.BYTE, length: getStringByteLength(seg.data) }
+        ])
+    }
+  }
+
+  return nodes
+}
+
+/**
+ * Builds a graph from a list of nodes.
+ * All segments in each node group will be connected with all the segments of
+ * the next group and so on.
+ *
+ * At each connection will be assigned a weight depending on the
+ * segment's byte length.
+ *
+ * @param  {Array} nodes    Array of object with segments data
+ * @param  {Number} version QR Code version
+ * @return {Object}         Graph of all possible segments
+ */
+function buildGraph (nodes, version) {
+  const table = {}
+  const graph = { start: {} }
+  let prevNodeIds = ['start']
+
+  for (let i = 0; i < nodes.length; i++) {
+    const nodeGroup = nodes[i]
+    const currentNodeIds = []
+
+    for (let j = 0; j < nodeGroup.length; j++) {
+      const node = nodeGroup[j]
+      const key = '' + i + j
+
+      currentNodeIds.push(key)
+      table[key] = { node: node, lastCount: 0 }
+      graph[key] = {}
+
+      for (let n = 0; n < prevNodeIds.length; n++) {
+        const prevNodeId = prevNodeIds[n]
+
+        if (table[prevNodeId] && table[prevNodeId].node.mode === node.mode) {
+          graph[prevNodeId][key] =
+            getSegmentBitsLength(table[prevNodeId].lastCount + node.length, node.mode) -
+            getSegmentBitsLength(table[prevNodeId].lastCount, node.mode)
+
+          table[prevNodeId].lastCount += node.length
+        } else {
+          if (table[prevNodeId]) table[prevNodeId].lastCount = node.length
+
+          graph[prevNodeId][key] = getSegmentBitsLength(node.length, node.mode) +
+            4 + Mode.getCharCountIndicator(node.mode, version) // switch cost
+        }
+      }
+    }
+
+    prevNodeIds = currentNodeIds
+  }
+
+  for (let n = 0; n < prevNodeIds.length; n++) {
+    graph[prevNodeIds[n]].end = 0
+  }
+
+  return { map: graph, table: table }
+}
+
+/**
+ * Builds a segment from a specified data and mode.
+ * If a mode is not specified, the more suitable will be used.
+ *
+ * @param  {String} data             Input data
+ * @param  {Mode | String} modesHint Data mode
+ * @return {Segment}                 Segment
+ */
+function buildSingleSegment (data, modesHint) {
+  let mode
+  const bestMode = Mode.getBestModeForData(data)
+
+  mode = Mode.from(modesHint, bestMode)
+
+  // Make sure data can be encoded
+  if (mode !== Mode.BYTE && mode.bit < bestMode.bit) {
+    throw new Error('"' + data + '"' +
+      ' cannot be encoded with mode ' + Mode.toString(mode) +
+      '.\n Suggested mode is: ' + Mode.toString(bestMode))
+  }
+
+  // Use Mode.BYTE if Kanji support is disabled
+  if (mode === Mode.KANJI && !Utils.isKanjiModeEnabled()) {
+    mode = Mode.BYTE
+  }
+
+  switch (mode) {
+    case Mode.NUMERIC:
+      return new NumericData(data)
+
+    case Mode.ALPHANUMERIC:
+      return new AlphanumericData(data)
+
+    case Mode.KANJI:
+      return new KanjiData(data)
+
+    case Mode.BYTE:
+      return new ByteData(data)
+  }
+}
+
+/**
+ * Builds a list of segments from an array.
+ * Array can contain Strings or Objects with segment's info.
+ *
+ * For each item which is a string, will be generated a segment with the given
+ * string and the more appropriate encoding mode.
+ *
+ * For each item which is an object, will be generated a segment with the given
+ * data and mode.
+ * Objects must contain at least the property "data".
+ * If property "mode" is not present, the more suitable mode will be used.
+ *
+ * @param  {Array} array Array of objects with segments data
+ * @return {Array}       Array of Segments
+ */
+exports.fromArray = function fromArray (array) {
+  return array.reduce(function (acc, seg) {
+    if (typeof seg === 'string') {
+      acc.push(buildSingleSegment(seg, null))
+    } else if (seg.data) {
+      acc.push(buildSingleSegment(seg.data, seg.mode))
+    }
+
+    return acc
+  }, [])
+}
+
+/**
+ * Builds an optimized sequence of segments from a string,
+ * which will produce the shortest possible bitstream.
+ *
+ * @param  {String} data    Input string
+ * @param  {Number} version QR Code version
+ * @return {Array}          Array of segments
+ */
+exports.fromString = function fromString (data, version) {
+  const segs = getSegmentsFromString(data, Utils.isKanjiModeEnabled())
+
+  const nodes = buildNodes(segs)
+  const graph = buildGraph(nodes, version)
+  const path = dijkstra.find_path(graph.map, 'start', 'end')
+
+  const optimizedSegs = []
+  for (let i = 1; i < path.length - 1; i++) {
+    optimizedSegs.push(graph.table[path[i]].node)
+  }
+
+  return exports.fromArray(mergeSegments(optimizedSegs))
+}
+
+/**
+ * Splits a string in various segments with the modes which
+ * best represent their content.
+ * The produced segments are far from being optimized.
+ * The output of this function is only used to estimate a QR Code version
+ * which may contain the data.
+ *
+ * @param  {string} data Input string
+ * @return {Array}       Array of segments
+ */
+exports.rawSplit = function rawSplit (data) {
+  return exports.fromArray(
+    getSegmentsFromString(data, Utils.isKanjiModeEnabled())
+  )
+}
+
+
+/***/ }),
+
+/***/ 242:
+/***/ ((__unused_webpack_module, exports) => {
+
+let toSJISFunction
+const CODEWORDS_COUNT = [
+  0, // Not used
+  26, 44, 70, 100, 134, 172, 196, 242, 292, 346,
+  404, 466, 532, 581, 655, 733, 815, 901, 991, 1085,
+  1156, 1258, 1364, 1474, 1588, 1706, 1828, 1921, 2051, 2185,
+  2323, 2465, 2611, 2761, 2876, 3034, 3196, 3362, 3532, 3706
+]
+
+/**
+ * Returns the QR Code size for the specified version
+ *
+ * @param  {Number} version QR Code version
+ * @return {Number}         size of QR code
+ */
+exports.getSymbolSize = function getSymbolSize (version) {
+  if (!version) throw new Error('"version" cannot be null or undefined')
+  if (version < 1 || version > 40) throw new Error('"version" should be in range from 1 to 40')
+  return version * 4 + 17
+}
+
+/**
+ * Returns the total number of codewords used to store data and EC information.
+ *
+ * @param  {Number} version QR Code version
+ * @return {Number}         Data length in bits
+ */
+exports.getSymbolTotalCodewords = function getSymbolTotalCodewords (version) {
+  return CODEWORDS_COUNT[version]
+}
+
+/**
+ * Encode data with Bose-Chaudhuri-Hocquenghem
+ *
+ * @param  {Number} data Value to encode
+ * @return {Number}      Encoded value
+ */
+exports.getBCHDigit = function (data) {
+  let digit = 0
+
+  while (data !== 0) {
+    digit++
+    data >>>= 1
+  }
+
+  return digit
+}
+
+exports.setToSJISFunction = function setToSJISFunction (f) {
+  if (typeof f !== 'function') {
+    throw new Error('"toSJISFunc" is not a valid function.')
+  }
+
+  toSJISFunction = f
+}
+
+exports.isKanjiModeEnabled = function () {
+  return typeof toSJISFunction !== 'undefined'
+}
+
+exports.toSJIS = function toSJIS (kanji) {
+  return toSJISFunction(kanji)
+}
+
+
+/***/ }),
+
+/***/ 3114:
+/***/ ((__unused_webpack_module, exports) => {
+
+/**
+ * Check if QR Code version is valid
+ *
+ * @param  {Number}  version QR Code version
+ * @return {Boolean}         true if valid version, false otherwise
+ */
+exports.isValid = function isValid (version) {
+  return !isNaN(version) && version >= 1 && version <= 40
+}
+
+
+/***/ }),
+
+/***/ 3103:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const Utils = __webpack_require__(242)
+const ECCode = __webpack_require__(5393)
+const ECLevel = __webpack_require__(4908)
+const Mode = __webpack_require__(6910)
+const VersionCheck = __webpack_require__(3114)
+
+// Generator polynomial used to encode version information
+const G18 = (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0)
+const G18_BCH = Utils.getBCHDigit(G18)
+
+function getBestVersionForDataLength (mode, length, errorCorrectionLevel) {
+  for (let currentVersion = 1; currentVersion <= 40; currentVersion++) {
+    if (length <= exports.getCapacity(currentVersion, errorCorrectionLevel, mode)) {
+      return currentVersion
+    }
+  }
+
+  return undefined
+}
+
+function getReservedBitsCount (mode, version) {
+  // Character count indicator + mode indicator bits
+  return Mode.getCharCountIndicator(mode, version) + 4
+}
+
+function getTotalBitsFromDataArray (segments, version) {
+  let totalBits = 0
+
+  segments.forEach(function (data) {
+    const reservedBits = getReservedBitsCount(data.mode, version)
+    totalBits += reservedBits + data.getBitsLength()
+  })
+
+  return totalBits
+}
+
+function getBestVersionForMixedData (segments, errorCorrectionLevel) {
+  for (let currentVersion = 1; currentVersion <= 40; currentVersion++) {
+    const length = getTotalBitsFromDataArray(segments, currentVersion)
+    if (length <= exports.getCapacity(currentVersion, errorCorrectionLevel, Mode.MIXED)) {
+      return currentVersion
+    }
+  }
+
+  return undefined
+}
+
+/**
+ * Returns version number from a value.
+ * If value is not a valid version, returns defaultValue
+ *
+ * @param  {Number|String} value        QR Code version
+ * @param  {Number}        defaultValue Fallback value
+ * @return {Number}                     QR Code version number
+ */
+exports.from = function from (value, defaultValue) {
+  if (VersionCheck.isValid(value)) {
+    return parseInt(value, 10)
+  }
+
+  return defaultValue
+}
+
+/**
+ * Returns how much data can be stored with the specified QR code version
+ * and error correction level
+ *
+ * @param  {Number} version              QR Code version (1-40)
+ * @param  {Number} errorCorrectionLevel Error correction level
+ * @param  {Mode}   mode                 Data mode
+ * @return {Number}                      Quantity of storable data
+ */
+exports.getCapacity = function getCapacity (version, errorCorrectionLevel, mode) {
+  if (!VersionCheck.isValid(version)) {
+    throw new Error('Invalid QR Code version')
+  }
+
+  // Use Byte mode as default
+  if (typeof mode === 'undefined') mode = Mode.BYTE
+
+  // Total codewords for this QR code version (Data + Error correction)
+  const totalCodewords = Utils.getSymbolTotalCodewords(version)
+
+  // Total number of error correction codewords
+  const ecTotalCodewords = ECCode.getTotalCodewordsCount(version, errorCorrectionLevel)
+
+  // Total number of data codewords
+  const dataTotalCodewordsBits = (totalCodewords - ecTotalCodewords) * 8
+
+  if (mode === Mode.MIXED) return dataTotalCodewordsBits
+
+  const usableBits = dataTotalCodewordsBits - getReservedBitsCount(mode, version)
+
+  // Return max number of storable codewords
+  switch (mode) {
+    case Mode.NUMERIC:
+      return Math.floor((usableBits / 10) * 3)
+
+    case Mode.ALPHANUMERIC:
+      return Math.floor((usableBits / 11) * 2)
+
+    case Mode.KANJI:
+      return Math.floor(usableBits / 13)
+
+    case Mode.BYTE:
+    default:
+      return Math.floor(usableBits / 8)
+  }
+}
+
+/**
+ * Returns the minimum version needed to contain the amount of data
+ *
+ * @param  {Segment} data                    Segment of data
+ * @param  {Number} [errorCorrectionLevel=H] Error correction level
+ * @param  {Mode} mode                       Data mode
+ * @return {Number}                          QR Code version
+ */
+exports.getBestVersionForData = function getBestVersionForData (data, errorCorrectionLevel) {
+  let seg
+
+  const ecl = ECLevel.from(errorCorrectionLevel, ECLevel.M)
+
+  if (Array.isArray(data)) {
+    if (data.length > 1) {
+      return getBestVersionForMixedData(data, ecl)
+    }
+
+    if (data.length === 0) {
+      return 1
+    }
+
+    seg = data[0]
+  } else {
+    seg = data
+  }
+
+  return getBestVersionForDataLength(seg.mode, seg.getLength(), ecl)
+}
+
+/**
+ * Returns version information with relative error correction bits
+ *
+ * The version information is included in QR Code symbols of version 7 or larger.
+ * It consists of an 18-bit sequence containing 6 data bits,
+ * with 12 error correction bits calculated using the (18, 6) Golay code.
+ *
+ * @param  {Number} version QR Code version
+ * @return {Number}         Encoded version info bits
+ */
+exports.getEncodedBits = function getEncodedBits (version) {
+  if (!VersionCheck.isValid(version) || version < 7) {
+    throw new Error('Invalid QR Code version')
+  }
+
+  let d = version << 12
+
+  while (Utils.getBCHDigit(d) - G18_BCH >= 0) {
+    d ^= (G18 << (Utils.getBCHDigit(d) - G18_BCH))
+  }
+
+  return (version << 12) | d
+}
+
+
+/***/ }),
+
+/***/ 6907:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const Utils = __webpack_require__(9653)
+
+function clearCanvas (ctx, canvas, size) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+  if (!canvas.style) canvas.style = {}
+  canvas.height = size
+  canvas.width = size
+  canvas.style.height = size + 'px'
+  canvas.style.width = size + 'px'
+}
+
+function getCanvasElement () {
+  try {
+    return document.createElement('canvas')
+  } catch (e) {
+    throw new Error('You need to specify a canvas element')
+  }
+}
+
+exports.render = function render (qrData, canvas, options) {
+  let opts = options
+  let canvasEl = canvas
+
+  if (typeof opts === 'undefined' && (!canvas || !canvas.getContext)) {
+    opts = canvas
+    canvas = undefined
+  }
+
+  if (!canvas) {
+    canvasEl = getCanvasElement()
+  }
+
+  opts = Utils.getOptions(opts)
+  const size = Utils.getImageWidth(qrData.modules.size, opts)
+
+  const ctx = canvasEl.getContext('2d')
+  const image = ctx.createImageData(size, size)
+  Utils.qrToImageData(image.data, qrData, opts)
+
+  clearCanvas(ctx, canvasEl, size)
+  ctx.putImageData(image, 0, 0)
+
+  return canvasEl
+}
+
+exports.renderToDataURL = function renderToDataURL (qrData, canvas, options) {
+  let opts = options
+
+  if (typeof opts === 'undefined' && (!canvas || !canvas.getContext)) {
+    opts = canvas
+    canvas = undefined
+  }
+
+  if (!opts) opts = {}
+
+  const canvasEl = exports.render(qrData, canvas, opts)
+
+  const type = opts.type || 'image/png'
+  const rendererOpts = opts.rendererOpts || {}
+
+  return canvasEl.toDataURL(type, rendererOpts.quality)
+}
+
+
+/***/ }),
+
+/***/ 3776:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const Utils = __webpack_require__(9653)
+
+function getColorAttrib (color, attrib) {
+  const alpha = color.a / 255
+  const str = attrib + '="' + color.hex + '"'
+
+  return alpha < 1
+    ? str + ' ' + attrib + '-opacity="' + alpha.toFixed(2).slice(1) + '"'
+    : str
+}
+
+function svgCmd (cmd, x, y) {
+  let str = cmd + x
+  if (typeof y !== 'undefined') str += ' ' + y
+
+  return str
+}
+
+function qrToPath (data, size, margin) {
+  let path = ''
+  let moveBy = 0
+  let newRow = false
+  let lineLength = 0
+
+  for (let i = 0; i < data.length; i++) {
+    const col = Math.floor(i % size)
+    const row = Math.floor(i / size)
+
+    if (!col && !newRow) newRow = true
+
+    if (data[i]) {
+      lineLength++
+
+      if (!(i > 0 && col > 0 && data[i - 1])) {
+        path += newRow
+          ? svgCmd('M', col + margin, 0.5 + row + margin)
+          : svgCmd('m', moveBy, 0)
+
+        moveBy = 0
+        newRow = false
+      }
+
+      if (!(col + 1 < size && data[i + 1])) {
+        path += svgCmd('h', lineLength)
+        lineLength = 0
+      }
+    } else {
+      moveBy++
+    }
+  }
+
+  return path
+}
+
+exports.render = function render (qrData, options, cb) {
+  const opts = Utils.getOptions(options)
+  const size = qrData.modules.size
+  const data = qrData.modules.data
+  const qrcodesize = size + opts.margin * 2
+
+  const bg = !opts.color.light.a
+    ? ''
+    : '<path ' + getColorAttrib(opts.color.light, 'fill') +
+      ' d="M0 0h' + qrcodesize + 'v' + qrcodesize + 'H0z"/>'
+
+  const path =
+    '<path ' + getColorAttrib(opts.color.dark, 'stroke') +
+    ' d="' + qrToPath(data, size, opts.margin) + '"/>'
+
+  const viewBox = 'viewBox="' + '0 0 ' + qrcodesize + ' ' + qrcodesize + '"'
+
+  const width = !opts.width ? '' : 'width="' + opts.width + '" height="' + opts.width + '" '
+
+  const svgTag = '<svg xmlns="http://www.w3.org/2000/svg" ' + width + viewBox + ' shape-rendering="crispEdges">' + bg + path + '</svg>\n'
+
+  if (typeof cb === 'function') {
+    cb(null, svgTag)
+  }
+
+  return svgTag
+}
+
+
+/***/ }),
+
+/***/ 9653:
+/***/ ((__unused_webpack_module, exports) => {
+
+function hex2rgba (hex) {
+  if (typeof hex === 'number') {
+    hex = hex.toString()
+  }
+
+  if (typeof hex !== 'string') {
+    throw new Error('Color should be defined as hex string')
+  }
+
+  let hexCode = hex.slice().replace('#', '').split('')
+  if (hexCode.length < 3 || hexCode.length === 5 || hexCode.length > 8) {
+    throw new Error('Invalid hex color: ' + hex)
+  }
+
+  // Convert from short to long form (fff -> ffffff)
+  if (hexCode.length === 3 || hexCode.length === 4) {
+    hexCode = Array.prototype.concat.apply([], hexCode.map(function (c) {
+      return [c, c]
+    }))
+  }
+
+  // Add default alpha value
+  if (hexCode.length === 6) hexCode.push('F', 'F')
+
+  const hexValue = parseInt(hexCode.join(''), 16)
+
+  return {
+    r: (hexValue >> 24) & 255,
+    g: (hexValue >> 16) & 255,
+    b: (hexValue >> 8) & 255,
+    a: hexValue & 255,
+    hex: '#' + hexCode.slice(0, 6).join('')
+  }
+}
+
+exports.getOptions = function getOptions (options) {
+  if (!options) options = {}
+  if (!options.color) options.color = {}
+
+  const margin = typeof options.margin === 'undefined' ||
+    options.margin === null ||
+    options.margin < 0
+    ? 4
+    : options.margin
+
+  const width = options.width && options.width >= 21 ? options.width : undefined
+  const scale = options.scale || 4
+
+  return {
+    width: width,
+    scale: width ? 4 : scale,
+    margin: margin,
+    color: {
+      dark: hex2rgba(options.color.dark || '#000000ff'),
+      light: hex2rgba(options.color.light || '#ffffffff')
+    },
+    type: options.type,
+    rendererOpts: options.rendererOpts || {}
+  }
+}
+
+exports.getScale = function getScale (qrSize, opts) {
+  return opts.width && opts.width >= qrSize + opts.margin * 2
+    ? opts.width / (qrSize + opts.margin * 2)
+    : opts.scale
+}
+
+exports.getImageWidth = function getImageWidth (qrSize, opts) {
+  const scale = exports.getScale(qrSize, opts)
+  return Math.floor((qrSize + opts.margin * 2) * scale)
+}
+
+exports.qrToImageData = function qrToImageData (imgData, qr, opts) {
+  const size = qr.modules.size
+  const data = qr.modules.data
+  const scale = exports.getScale(size, opts)
+  const symbolSize = Math.floor((size + opts.margin * 2) * scale)
+  const scaledMargin = opts.margin * scale
+  const palette = [opts.color.light, opts.color.dark]
+
+  for (let i = 0; i < symbolSize; i++) {
+    for (let j = 0; j < symbolSize; j++) {
+      let posDst = (i * symbolSize + j) * 4
+      let pxColor = opts.color.light
+
+      if (i >= scaledMargin && j >= scaledMargin &&
+        i < symbolSize - scaledMargin && j < symbolSize - scaledMargin) {
+        const iSrc = Math.floor((i - scaledMargin) / scale)
+        const jSrc = Math.floor((j - scaledMargin) / scale)
+        pxColor = palette[data[iSrc * size + jSrc] ? 1 : 0]
+      }
+
+      imgData[posDst++] = pxColor.r
+      imgData[posDst++] = pxColor.g
+      imgData[posDst++] = pxColor.b
+      imgData[posDst] = pxColor.a
+    }
+  }
+}
+
+
+/***/ }),
+
+/***/ 2480:
 /***/ (() => {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 289:
+/***/ 5819:
 /***/ (() => {
 
 /* (ignored) */
@@ -35764,6 +38751,18 @@ pki.verifyCertificateChain = function(caStore, chain, options) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -35801,376 +38800,1098 @@ var __webpack_exports__ = {};
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ index)
+  "default": () => (/* binding */ corejs)
 });
 
-;// CONCATENATED MODULE: ./module/activate_init_profile.js
+;// CONCATENATED MODULE: ./corejs/util/index.js
+var util_module = {
+  exports: {}
+};
+var util_exports = util_module.exports;
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function toBoolean(val) {
+  if (typeof val === 'boolean') return val;
+  if (val === '') return val;
+  return val === 'true' || val == '1';
+}
+function cookieToJson(cookie) {
+  // python的requests模块返回的多个cookie会用','分隔但是set-cookie的值里面也有','
+  // 先用';'分隔开，再用','分隔开
+  // 如果分割结果里面有'='，那么就是一个完整的cookie。如果不包含等号
+  // 那么这个部分应该与前一个部分合并，因为它是前一个cookie的一部分。
+  if (!cookie) return {};
+  var cookies = [];
+  cookies = cookie.split(';');
+  var cookieArr = [];
+  cookies.forEach(function (i) {
+    var parts = i.split(',');
+    parts.forEach(function (part, i) {
+      if (part.includes('=')) {
+        cookieArr.push(part);
+      } else {
+        cookieArr[cookieArr.length - 1] += ',' + part;
+      }
+    });
+  });
+  var obj = {};
+  cookieArr.forEach(function (i) {
+    var arr = i.split('=');
+    if (arr.length === 2) {
+      obj[arr[0].trim()] = arr[1];
+    } else {
+      obj[arr[0].trim()] = '';
+    }
+  });
+  return obj;
+}
+function getRandom(num) {
+  var random = Math.floor((Math.random() + Math.floor(Math.random() * 9 + 1)) * Math.pow(10, num - 1));
+  return random;
+}
+function util_URLSearchParams(queryString) {
+  var params = {};
+  if (typeof queryString === 'string') {
+    queryString.split('&').forEach(function (param) {
+      var index = param.indexOf('=');
+      var key = param.slice(0, index);
+      var value = param.slice(index + 1);
+      params[key] = util_encodeURIComponent(value);
+      console.log('params', params[key]);
+    });
+  } else if (_typeof(queryString) === 'object') {
+    Object.entries(queryString).forEach(function (_ref) {
+      var _ref2 = _slicedToArray(_ref, 2),
+        key = _ref2[0],
+        value = _ref2[1];
+      params[key] = util_encodeURIComponent(value);
+    });
+  } else {
+    console.log('来了个解析不了的~~~', queryString);
+  }
+  this.get = function (name) {
+    return params[name];
+  };
+  this.toString = function () {
+    return Object.entries(params).map(function (_ref3) {
+      var _ref4 = _slicedToArray(_ref3, 2),
+        key = _ref4[0],
+        value = _ref4[1];
+      return key + '=' + value;
+    }).join('&');
+  };
+}
+function util_encodeURIComponent(str) {
+  str = String(str);
+  var result = '';
+  if (str !== undefined && str !== null) {
+    for (var i = 0; i < str.length; i++) {
+      var _char = str.charAt(i);
+      if (/^[a-zA-Z0-9\-_.!~*'()]$/.test(_char)) {
+        // 这些字符不需要编码
+        result += _char;
+      } else {
+        // 其他字符需要编码
+        var charCode = str.charCodeAt(i).toString(16);
+        result += '%' + (charCode.length < 2 ? '0' : '') + charCode.toUpperCase();
+      }
+    }
+  }
+  return result;
+}
+util_module.exports = {
+  toBoolean: toBoolean,
+  cookieToJson: cookieToJson,
+  getRandom: getRandom,
+  URLSearchParams: util_URLSearchParams,
+  encodeURIComponent: util_encodeURIComponent
+};
+/* harmony default export */ const util = (util_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/check_music.js
+var check_music_module = {
+  exports: {}
+};
+var check_music_exports = check_music_module.exports;
+// 歌曲可用性
+
+check_music_module.exports = function (response) {
+  var playable = false;
+  if (response.body.code == 200) {
+    if (response.body.data[0].code == 200) {
+      playable = true;
+    }
+  }
+  if (playable) {
+    response.body = {
+      code: 200,
+      success: true,
+      message: 'ok'
+    };
+    return response;
+  } else {
+    // response.status = 404
+    response.body = {
+      code: 200,
+      success: false,
+      message: '亲爱的,暂无版权'
+    };
+    return response;
+    // return Promise.reject(response)
+  }
+};
+/* harmony default export */ const check_music = (check_music_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/login_cellphone.js
+var login_cellphone_module = {
+  exports: {}
+};
+var login_cellphone_exports = login_cellphone_module.exports;
+function login_cellphone_typeof(o) { "@babel/helpers - typeof"; return login_cellphone_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, login_cellphone_typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == login_cellphone_typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != login_cellphone_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != login_cellphone_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+login_cellphone_module.exports = function (response) {
+  if (response.body.code === 200) {
+    var cookie = response.cookie;
+    if (Array.isArray(cookie)) {
+      cookie = cookie.join(';');
+    }
+    response = {
+      status: 200,
+      body: _objectSpread(_objectSpread({}, JSON.parse(JSON.stringify(response.body).replace(/avatarImgId_str/g, 'avatarImgIdStr'))), {}, {
+        cookie: cookie
+      }),
+      cookie: cookie
+    };
+  }
+  return response;
+};
+/* harmony default export */ const login_cellphone = (login_cellphone_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/login_status.js
+var login_status_module = {
+  exports: {}
+};
+var login_status_exports = login_status_module.exports;
+function login_status_typeof(o) { "@babel/helpers - typeof"; return login_status_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, login_status_typeof(o); }
+function login_status_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function login_status_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? login_status_ownKeys(Object(t), !0).forEach(function (r) { login_status_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : login_status_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function login_status_defineProperty(obj, key, value) { key = login_status_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function login_status_toPropertyKey(t) { var i = login_status_toPrimitive(t, "string"); return "symbol" == login_status_typeof(i) ? i : String(i); }
+function login_status_toPrimitive(t, r) { if ("object" != login_status_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != login_status_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+login_status_module.exports = function (response) {
+  if (response.body.code === 200) {
+    response = {
+      status: 200,
+      body: {
+        data: login_status_objectSpread(login_status_objectSpread({}, response.body), {}, {
+          cookie: response.cookie
+        })
+      }
+    };
+  }
+  return response;
+};
+/* harmony default export */ const login_status = (login_status_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/register_anonimous.js
+var register_anonimous_module = {
+  exports: {}
+};
+var register_anonimous_exports = register_anonimous_module.exports;
+function register_anonimous_typeof(o) { "@babel/helpers - typeof"; return register_anonimous_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, register_anonimous_typeof(o); }
+function register_anonimous_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function register_anonimous_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? register_anonimous_ownKeys(Object(t), !0).forEach(function (r) { register_anonimous_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : register_anonimous_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function register_anonimous_defineProperty(obj, key, value) { key = register_anonimous_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function register_anonimous_toPropertyKey(t) { var i = register_anonimous_toPrimitive(t, "string"); return "symbol" == register_anonimous_typeof(i) ? i : String(i); }
+function register_anonimous_toPrimitive(t, r) { if ("object" != register_anonimous_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != register_anonimous_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+register_anonimous_module.exports = function (response) {
+  if (response.body.code === 200) {
+    response = {
+      status: 200,
+      body: register_anonimous_objectSpread(register_anonimous_objectSpread({}, response.body), {}, {
+        cookie: response.cookie.join(';')
+      }),
+      cookie: response.cookie
+    };
+  }
+  return response;
+};
+/* harmony default export */ const register_anonimous = (register_anonimous_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/related_playlist.js
+var related_playlist_module = {
+  exports: {}
+};
+var related_playlist_exports = related_playlist_module.exports;
+related_playlist_module.exports = function (response) {
+  try {
+    var pattern = /<div class="cver u-cover u-cover-3">[\s\S]*?<img src="([^"]+)">[\s\S]*?<a class="sname f-fs1 s-fc0" href="([^"]+)"[^>]*>([^<]+?)<\/a>[\s\S]*?<a class="nm nm f-thide s-fc3" href="([^"]+)"[^>]*>([^<]+?)<\/a>/g;
+    var result,
+      playlists = [];
+    while ((result = pattern.exec(response.body)) != null) {
+      playlists.push({
+        creator: {
+          userId: result[4].slice('/user/home?id='.length),
+          nickname: result[5]
+        },
+        coverImgUrl: result[1].slice(0, -'?param=50y50'.length),
+        name: result[3],
+        id: result[2].slice('/playlist?id='.length)
+      });
+    }
+    response.body = {
+      code: 200,
+      playlists: playlists
+    };
+    return response;
+  } catch (err) {
+    response.status = 500;
+    response.body = {
+      code: 500,
+      msg: err.stack
+    };
+    return response;
+  }
+};
+/* harmony default export */ const related_playlist = (related_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/song_url.js
+var song_url_module = {
+  exports: {}
+};
+var song_url_exports = song_url_module.exports;
+song_url_module.exports = function (response) {
+  // 根据id排序
+  var result = response.body.data;
+  result.sort(function (a, b) {
+    return ids.indexOf(String(a.id)) - ids.indexOf(String(b.id));
+  });
+  return {
+    status: 200,
+    body: {
+      code: 200,
+      data: result
+    }
+  };
+};
+/* harmony default export */ const song_url = (song_url_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/top_playlist.js
+var top_playlist_module = {
+  exports: {}
+};
+var top_playlist_exports = top_playlist_module.exports;
+top_playlist_module.exports = function (response) {
+  response = JSON.stringify(response).replace(/avatarImgId_str/g, 'avatarImgIdStr');
+  return JSON.parse(response);
+};
+/* harmony default export */ const top_playlist = (top_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/afterRequest/user_detail.js
+var user_detail_module = {
+  exports: {}
+};
+var user_detail_exports = user_detail_module.exports;
+user_detail_module.exports = function (response) {
+  response = JSON.stringify(response).replace(/avatarImgId_str/g, 'avatarImgIdStr');
+  return JSON.parse(response);
+};
+/* harmony default export */ const user_detail = (user_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/util/afterRequestApi.js
+
+
+
+
+
+
+
+
+var afterRequestApi_module = {
+  exports: {}
+};
+var afterRequestApi_exports = afterRequestApi_module.exports;
+var afterRequestApi_user_detail = user_detail;
+var afterRequestApi_top_playlist = top_playlist;
+var afterRequestApi_song_url = song_url;
+var afterRequestApi_related_playlist = related_playlist;
+var afterRequestApi_register_anonimous = register_anonimous;
+var afterRequestApi_login_status = login_status;
+var afterRequestApi_login_cellphone = login_cellphone;
+var afterRequestApi_check_music = check_music;
+afterRequestApi_module.exports = {
+  user_detail: afterRequestApi_user_detail,
+  top_playlist: afterRequestApi_top_playlist,
+  song_url: afterRequestApi_song_url,
+  related_playlist: afterRequestApi_related_playlist,
+  register_anonimous: afterRequestApi_register_anonimous,
+  login_status: afterRequestApi_login_status,
+  login_cellphone: afterRequestApi_login_cellphone,
+  check_music: afterRequestApi_check_music
+};
+/* harmony default export */ const afterRequestApi = (afterRequestApi_module.exports);
+// EXTERNAL MODULE: ./node_modules/node-forge/lib/index.js
+var lib = __webpack_require__(2079);
+var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
+// EXTERNAL MODULE: ./node_modules/crypto-js/index.js
+var crypto_js = __webpack_require__(1354);
+var crypto_js_default = /*#__PURE__*/__webpack_require__.n(crypto_js);
+;// CONCATENATED MODULE: ./corejs/util/crypto.js
+
+
+var crypto_module = {
+  exports: {}
+};
+var crypto_exports = crypto_module.exports;
+function crypto_typeof(o) { "@babel/helpers - typeof"; return crypto_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, crypto_typeof(o); }
+var CryptoJS = (crypto_js_default());
+var forge = (lib_default());
+var iv = '0102030405060708';
+var presetKey = '0CoJUm6Qyw8W8jud';
+var linuxapiKey = 'rFgB&h#%2?^eDg:Q';
+var base62 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+var publicKey = "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgtQn2JZ34ZC28NWYpAUd98iZ37BUrX/aKzmFbt7clFSs6sXqHauqKWqdtLkF2KexO40H1YTX8z2lSgBBOAxLsvaklV8k4cBFK9snQXE9/DDaFt6Rr7iVZMldczhC0JNgTz+SHXT6CBHuX3e9SdB1Ua44oncaTWz7OBGLbCiK45wIDAQAB\n-----END PUBLIC KEY-----";
+var eapiKey = 'e82ckenh8dichen8';
+var aesEncrypt = function aesEncrypt(text, mode, key, iv) {
+  var format = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'base64';
+  var encrypted = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(text), CryptoJS.enc.Utf8.parse(key), {
+    iv: CryptoJS.enc.Utf8.parse(iv),
+    mode: CryptoJS.mode[mode.toUpperCase()],
+    padding: CryptoJS.pad.Pkcs7
+  });
+  if (format === 'base64') {
+    return encrypted.toString();
+  }
+  return encrypted.ciphertext.toString().toUpperCase();
+};
+var rsaEncrypt = function rsaEncrypt(str, key) {
+  var forgePublicKey = forge.pki.publicKeyFromPem(key);
+  var encrypted = forgePublicKey.encrypt(str, 'NONE');
+  return forge.util.bytesToHex(encrypted);
+};
+var weapi = function weapi(object) {
+  var text = JSON.stringify(object);
+  var secretKey = '';
+  for (var i = 0; i < 16; i++) {
+    secretKey += base62.charAt(Math.round(Math.random() * 61));
+  }
+  return {
+    params: aesEncrypt(aesEncrypt(text, 'cbc', presetKey, iv), 'cbc', secretKey, iv),
+    encSecKey: rsaEncrypt(secretKey.split('').reverse().join(''), publicKey)
+  };
+};
+var linuxapi = function linuxapi(object) {
+  var text = JSON.stringify(object);
+  return {
+    eparams: aesEncrypt(text, 'ecb', linuxapiKey, '', 'hex')
+  };
+};
+var eapi = function eapi(url, object) {
+  var text = crypto_typeof(object) === 'object' ? JSON.stringify(object) : object;
+  var message = "nobody".concat(url, "use").concat(text, "md5forencrypt");
+  var digest = CryptoJS.MD5(message).toString();
+  var data = "".concat(url, "-36cd479b6b5-").concat(text, "-36cd479b6b5-").concat(digest);
+  return {
+    params: aesEncrypt(data, 'ecb', eapiKey, '', 'hex')
+  };
+};
+var decrypt = function decrypt(cipher) {
+  var decipher = CryptoJS.AES.decrypt({
+    ciphertext: CryptoJS.enc.Hex.parse(cipher)
+  }, eapiKey, {
+    mode: CryptoJS.mode.ECB
+  });
+  var decryptedBytes = CryptoJS.enc.Utf8.stringify(decipher);
+  return decryptedBytes;
+};
+crypto_module.exports = {
+  weapi: weapi,
+  linuxapi: linuxapi,
+  eapi: eapi,
+  decrypt: decrypt,
+  aesEncrypt: aesEncrypt
+};
+/* harmony default export */ const util_crypto = (crypto_module.exports);
+;// CONCATENATED MODULE: ./corejs/util/afterRequest.js
+
+
+
+var afterRequest_module = {
+  exports: {}
+};
+var afterRequest_exports = afterRequest_module.exports;
+function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+// 处理请求
+// 要求返回数据的格式为
+/*
+* 
+@param:result:
+{
+    status: 200,
+    body: {},
+    cookie: []
+    headers: {
+        'set-cookie': [] | []
+
+    }
+}
+@param:crypto: "eapi", "weapi", "linuxapi"
+*/
+// import encrypt from "./crypto.js";
+// import afterRequestApi from "./afterRequestApi.js";
+// import { cookieToJson } from "./index.js";
+
+var encrypt = util_crypto;
+var afterRequest_afterRequestApi = afterRequestApi;
+var afterRequest_cookieToJson = util.cookieToJson;
+var USEJSON = false;
+function hasApi(name) {
+  return Object.keys(afterRequest_afterRequestApi).includes(name);
+}
+var afterRequest = function afterRequest(responseResult, crypto, apiName) {
+  // 兼容result为JSON格式
+  if (typeof responseResult === 'string') {
+    responseResult = JSON.parse(responseResult);
+    true, _readOnlyError("USEJSON");
+  }
+  var answer = {
+    status: 500,
+    body: {},
+    cookie: []
+  };
+  var body = responseResult.data;
+  var cookie;
+  for (var key in responseResult.headers) {
+    if (key.toLowerCase() === 'set-cookie') {
+      cookie = responseResult.headers[key];
+      break;
+    }
+  }
+
+  // 处理数组格式的 cookie
+  if (Array.isArray(cookie)) {
+    cookie = cookie.join(';');
+  }
+  answer.cookie = cookie || '';
+
+  // 去除Cookie的Domain属性
+  // answer.cookie = (cookie || []).map((x) =>
+  //   x.replace(/\s*Domain=[^(;|$)]+;*/, ''),
+  // )
+  answer.cookie = answer.cookie.replace(/\s*Domain=[^(;|$)]+;*/, '');
+  try {
+    if (crypto === 'eapi') {
+      answer.body = JSON.parse(encrypt.decrypt(body));
+    } else {
+      answer.body = body;
+    }
+    if (answer.body.code) {
+      answer.body.code = Number(answer.body.code);
+    }
+    answer.status = Number(answer.body.code || res.status);
+    if ([201, 302, 400, 502, 800, 801, 802, 803].indexOf(answer.body.code) > -1) {
+      // 特殊状态码
+      answer.status = 200;
+    }
+  } catch (e) {
+    // console.log(e)
+    try {
+      answer.body = JSON.parse(body.toString());
+    } catch (err) {
+      // console.log(err)
+      // can't decrypt and can't parse directly
+      answer.body = body;
+    }
+    answer.status = responseResult.status;
+  }
+  answer.status = 100 < answer.status && answer.status < 600 ? answer.status : 400;
+
+  // 处理特殊接口后续操作
+
+  if (hasApi(apiName)) {
+    var _result = afterRequest_afterRequestApi[apiName](answer);
+    if (_result.status) {
+      answer.status = _result.status;
+    }
+    if (_result.body) {
+      answer.body = _result.body;
+    }
+    if (_result.cookie) {
+      answer.cookie = _result.cookie;
+    }
+  }
+  var result;
+
+  // 返回数据
+  if (answer.status !== 200 || !answer.body) {
+    result = {
+      code: answer.status,
+      data: answer.body,
+      msg: answer.body.msg || '请求遇到问题',
+      others: {
+        status: answer.status,
+        body: answer.body
+      }
+    };
+  }
+  if (answer.body.code == '301') {
+    result = {
+      code: 301,
+      data: null,
+      msg: '需要登录'
+    };
+  }
+  if (answer.cookie) {
+    result = {
+      code: answer.body.code,
+      data: answer.body,
+      msg: answer.body.msg,
+      cookie: afterRequest_cookieToJson(answer.cookie)
+    };
+  } else {
+    result = {
+      code: answer.body.code,
+      data: answer.body,
+      msg: answer.body.msg
+    };
+  }
+  if (USEJSON) {
+    result = JSON.stringify(result);
+  }
+  return result;
+};
+afterRequest_module.exports = afterRequest;
+/* harmony default export */ const util_afterRequest = (afterRequest_module.exports);
+;// CONCATENATED MODULE: ./corejs/util/request_param.js
+
+
+
+var request_param_module = {
+  exports: {}
+};
+var request_param_exports = request_param_module.exports;
+function request_param_typeof(o) { "@babel/helpers - typeof"; return request_param_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, request_param_typeof(o); }
+function request_param_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function request_param_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? request_param_ownKeys(Object(t), !0).forEach(function (r) { request_param_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : request_param_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function request_param_defineProperty(obj, key, value) { key = request_param_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function request_param_toPropertyKey(t) { var i = request_param_toPrimitive(t, "string"); return "symbol" == request_param_typeof(i) ? i : String(i); }
+function request_param_toPrimitive(t, r) { if ("object" != request_param_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != request_param_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var request_param_encrypt = util_crypto;
+var request_param_CryptoJS = (crypto_js_default());
+var _require = util,
+  request_param_encodeURIComponent = _require.encodeURIComponent,
+  request_param_URLSearchParams = _require.URLSearchParams;
+var chooseUserAgent = function chooseUserAgent() {
+  var ua = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  var userAgentList = {
+    mobile: [
+    // iOS 13.5.1 14.0 beta with safari
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1', 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.',
+    // iOS with qq micromsg
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML like Gecko) Mobile/14A456 QQ/6.5.7.408 V1_IPH_SQ_6.5.7_1_APP_A Pixel/750 Core/UIWebView NetType/4G Mem/103', 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.15(0x17000f27) NetType/WIFI Language/zh',
+    // Android -> Huawei Xiaomi
+    'Mozilla/5.0 (Linux; Android 9; PCT-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.311 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; U; Android 9; zh-cn; Redmi Note 8 Build/PKQ1.190616.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.141 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.5.22',
+    // Android + qq micromsg
+    'Mozilla/5.0 (Linux; Android 10; YAL-AL00 Build/HUAWEIYAL-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.62 XWEB/2581 MMWEBSDK/200801 Mobile Safari/537.36 MMWEBID/3027 MicroMessenger/7.0.18.1740(0x27001235) Process/toolsmp WeChat/arm64 NetType/WIFI Language/zh_CN ABI/arm64', 'Mozilla/5.0 (Linux; U; Android 8.1.0; zh-cn; BKK-AL10 Build/HONORBKK-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/10.6 Mobile Safari/537.36'],
+    pc: [
+    // macOS 10.15.6  Firefox / Chrome / Safari
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko/20100101 Firefox/80.0', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.30 Safari/537.36', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15',
+    // Windows 10 Firefox / Chrome / Edge
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.30 Safari/537.36', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/13.10586'
+    // Linux 就算了
+    ]
+  };
+  var realUserAgentList = userAgentList[ua] || userAgentList.mobile.concat(userAgentList.pc);
+  return ['mobile', 'pc', false].indexOf(ua) > -1 ? realUserAgentList[Math.floor(Math.random() * realUserAgentList.length)] : ua;
+};
+var createRequestParam = function createRequestParam(method, url) {
+  var data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var options = arguments.length > 3 ? arguments[3] : undefined;
+  // 构建请求headers
+
+  var headers = {
+    'User-Agent': chooseUserAgent(options.ua)
+  };
+  options.headers = options.headers || {};
+  headers = request_param_objectSpread(request_param_objectSpread({}, headers), options.headers);
+  if (method.toUpperCase() === 'POST') headers['Content-Type'] = 'application/x-www-form-urlencoded';
+  if (url.includes('music.163.com')) headers['Referer'] = 'https://music.163.com';
+  var ip = options.realIP || options.ip || '';
+  // console.log(ip)
+  if (ip) {
+    headers['X-Real-IP'] = ip;
+    headers['X-Forwarded-For'] = ip;
+  }
+  // headers['X-Real-IP'] = '118.88.88.88'
+  if (request_param_typeof(options.cookie) === 'object') {
+    options.cookie = request_param_objectSpread(request_param_objectSpread({}, options.cookie), {}, {
+      __remember_me: true,
+      // NMTID: crypto.randomBytes(16).toString('hex'),
+      _ntes_nuid: request_param_CryptoJS.lib.WordArray.random(16).toString(request_param_CryptoJS.enc.Hex)
+    });
+    if (url.indexOf('login') === -1) {
+      options.cookie['NMTID'] = request_param_CryptoJS.lib.WordArray.random(16).toString(request_param_CryptoJS.enc.Hex);
+    }
+    // 移出游客登录到beforeRequest，在上一步就将游客登录cookie处理好
+    headers['Cookie'] = Object.keys(options.cookie).map(function (key) {
+      return request_param_encodeURIComponent(key) + '=' + request_param_encodeURIComponent(options.cookie[key]);
+    }).join('; ');
+  } else if (options.cookie) {
+    headers['Cookie'] = options.cookie;
+  } else {
+    headers['Cookie'] = '__remember_me=true; NMTID=xxx';
+  }
+
+  // 根据接口调整请求参数，构建params
+
+  if (options.crypto === 'weapi') {
+    headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69';
+    var csrfToken = (headers['Cookie'] || '').match(/_csrf=([^(;|$)]+)/);
+    data.csrf_token = csrfToken ? csrfToken[1] : '';
+    data = request_param_encrypt.weapi(data);
+    url = url.replace(/\w*api/, 'weapi');
+  } else if (options.crypto === 'linuxapi') {
+    data = request_param_encrypt.linuxapi({
+      method: method,
+      url: url.replace(/\w*api/, 'api'),
+      params: data
+    });
+    headers['User-Agent'] = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36';
+    url = 'https://music.163.com/api/linux/forward';
+  } else if (options.crypto === 'eapi') {
+    var cookie = options.cookie || {};
+    var _csrfToken = cookie['__csrf'] || '';
+    var header = {
+      osver: cookie.osver,
+      //系统版本
+      deviceId: cookie.deviceId,
+      //encrypt.base64.encode(imei + '\t02:00:00:00:00:00\t5106025eb79a5247\t70ffbaac7')
+      appver: cookie.appver || '8.9.70',
+      // app版本
+      versioncode: cookie.versioncode || '140',
+      //版本号
+      mobilename: cookie.mobilename,
+      //设备model
+      buildver: cookie.buildver || Date.now().toString().substr(0, 10),
+      resolution: cookie.resolution || '1920x1080',
+      //设备分辨率
+      __csrf: _csrfToken,
+      os: cookie.os || 'android',
+      channel: cookie.channel,
+      requestId: "".concat(Date.now(), "_").concat(Math.floor(Math.random() * 1000).toString().padStart(4, '0'))
+    };
+    if (cookie.MUSIC_U) header['MUSIC_U'] = cookie.MUSIC_U;
+    if (cookie.MUSIC_A) header['MUSIC_A'] = cookie.MUSIC_A;
+    headers['Cookie'] = Object.keys(header).map(function (key) {
+      return request_param_encodeURIComponent(key) + '=' + request_param_encodeURIComponent(header[key]);
+    }).join('; ');
+    data.header = header;
+    data = request_param_encrypt.eapi(options.url, data);
+    url = url.replace(/\w*api/, 'eapi');
+  }
+  var requestParams = {
+    method: method,
+    url: url,
+    headers: headers,
+    data: data // 这里直接返回一个对象，剩下的交由SDK自己处理
+  };
+  if (options.crypto === 'eapi') requestParams.encoding = null;
+
+  // 代理根据调用环境的请求方式自己配置
+  // requestParams.proxy = false;
+  // requestParams.httpAgent = null;
+  // requestParams.httpsAgent = null;
+
+  if (options.crypto === 'eapi') {
+    requestParams = request_param_objectSpread(request_param_objectSpread({}, requestParams), {}, {
+      responseType: 'arraybuffer'
+    });
+  }
+  requestParams['crypto'] = options.crypto;
+  requestParams['apiName'] = options.apiName;
+
+  // 返回请求需要的一些参数
+  return requestParams;
+};
+request_param_module.exports = createRequestParam;
+/* harmony default export */ const request_param = (request_param_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/activate_init_profile.js
+var activate_init_profile_module = {
+  exports: {}
+};
+var activate_init_profile_exports = activate_init_profile_module.exports;
 // 初始化名字
 
-/* harmony default export */ const activate_init_profile = ((query, request) => {
-  const data = {
-    nickname: query.nickname,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/eapi/activate/initProfile`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/activate/initProfile',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/aidj_content_rcmd.js
+activate_init_profile_module.exports = function (query, request) {
+  var data = {
+    nickname: query.nickname
+  };
+  return request('POST', "https://music.163.com/eapi/activate/initProfile", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/activate/initProfile'
+  });
+};
+/* harmony default export */ const activate_init_profile = (activate_init_profile_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/aidj_content_rcmd.js
+var aidj_content_rcmd_module = {
+  exports: {}
+};
+var aidj_content_rcmd_exports = aidj_content_rcmd_module.exports;
 // 私人 DJ
 
 // 实际请求参数如下, 部分内容省略, 敏感信息已进行混淆
 // 可按需修改此 API 的代码
 /* {"extInfo":"{\"lastRequestTimestamp\":1692358373509,\"lbsInfoList\":[{\"lat\":40.23076381,\"lon\":129.07545186,\"time\":1692358543},{\"lat\":40.23076381,\"lon\":129.07545186,\"time\":1692055283}],\"listenedTs\":false,\"noAidjToAidj\":true}","header":"{}","e_r":true} */
 
-/* harmony default export */ const aidj_content_rcmd = ((query, request) => {
-  var extInfo = {}
+aidj_content_rcmd_module.exports = function (query, request) {
+  var extInfo = {};
   if (query.latitude != undefined) {
-    extInfo.lbsInfoList = [
-      {
-        lat: query.latitude,
-        lon: query.longitude,
-        time: Date.parse(new Date()) / 1000,
-      },
-    ]
+    extInfo.lbsInfoList = [{
+      lat: query.latitude,
+      lon: query.longitude,
+      time: Date.parse(new Date()) / 1000
+    }];
   }
-  extInfo.noAidjToAidj = false
-  extInfo.lastRequestTimestamp = new Date().getTime()
-  extInfo.listenedTs = false
-  const data = {
-    extInfo: JSON.stringify(extInfo),
-  }
-  console.log(data)
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/aidj/content/rcmd/info`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/aidj/content/rcmd/info',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album.js
+  extInfo.noAidjToAidj = false;
+  extInfo.lastRequestTimestamp = new Date().getTime();
+  extInfo.listenedTs = false;
+  var data = {
+    extInfo: JSON.stringify(extInfo)
+  };
+  console.log(data);
+  return request('POST', "https://interface3.music.163.com/eapi/aidj/content/rcmd/info", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/aidj/content/rcmd/info'
+  });
+};
+/* harmony default export */ const aidj_content_rcmd = (aidj_content_rcmd_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album.js
+var album_module = {
+  exports: {}
+};
+var album_exports = album_module.exports;
 // 专辑内容
 
-/* harmony default export */ const album = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/album/${query.id}`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album_detail.js
+album_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/v1/album/".concat(query.id), {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album = (album_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_detail.js
+var album_detail_module = {
+  exports: {}
+};
+var album_detail_exports = album_detail_module.exports;
 // 数字专辑详情
-/* harmony default export */ const album_detail = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipmall/albumproduct/detail`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album_detail_dynamic.js
+album_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/vipmall/albumproduct/detail", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_detail = (album_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_detail_dynamic.js
+var album_detail_dynamic_module = {
+  exports: {}
+};
+var album_detail_dynamic_exports = album_detail_dynamic_module.exports;
 // 专辑动态信息
-/* harmony default export */ const album_detail_dynamic = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/album/detail/dynamic`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album_list.js
+album_detail_dynamic_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/api/album/detail/dynamic", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_detail_dynamic = (album_detail_dynamic_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_list.js
+var album_list_module = {
+  exports: {}
+};
+var album_list_exports = album_list_module.exports;
 // 数字专辑-新碟上架
-/* harmony default export */ const album_list = ((query, request) => {
-  const data = {
+album_list_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
     offset: query.offset || 0,
     total: true,
-    area: query.area || 'ALL', //ALL:全部,ZH:华语,EA:欧美,KR:韩国,JP:日本
-    type: query.type,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipmall/albumproduct/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album_list_style.js
+    area: query.area || 'ALL',
+    //ALL:全部,ZH:华语,EA:欧美,KR:韩国,JP:日本
+    type: query.type
+  };
+  return request('POST', "https://music.163.com/weapi/vipmall/albumproduct/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_list = (album_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_list_style.js
+var album_list_style_module = {
+  exports: {}
+};
+var album_list_style_exports = album_list_style_module.exports;
 // 数字专辑-语种风格馆
-/* harmony default export */ const album_list_style = ((query, request) => {
-  const data = {
+album_list_style_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 10,
     offset: query.offset || 0,
     total: true,
-    area: query.area || 'Z_H', //Z_H:华语,E_A:欧美,KR:韩国,JP:日本
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipmall/appalbum/album/style`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album_new.js
-// 全部新碟
-/* harmony default export */ const album_new = ((query, request) => {
-  const data = {
-    limit: query.limit || 30,
-    offset: query.offset || 0,
-    total: true,
-    area: query.area || 'ALL', //ALL:全部,ZH:华语,EA:欧美,KR:韩国,JP:日本
-  }
-  return request('POST', `https://music.163.com/weapi/album/new`, data, {
+    area: query.area || 'Z_H' //Z_H:华语,E_A:欧美,KR:韩国,JP:日本
+  };
+  return request('POST', "https://music.163.com/weapi/vipmall/appalbum/album/style", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/album_newest.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_list_style = (album_list_style_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_new.js
+var album_new_module = {
+  exports: {}
+};
+var album_new_exports = album_new_module.exports;
+// 全部新碟
+album_new_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 30,
+    offset: query.offset || 0,
+    total: true,
+    area: query.area || 'ALL' //ALL:全部,ZH:华语,EA:欧美,KR:韩国,JP:日本
+  };
+  return request('POST', "https://music.163.com/weapi/album/new", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_new = (album_new_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_newest.js
+var album_newest_module = {
+  exports: {}
+};
+var album_newest_exports = album_newest_module.exports;
 // 最新专辑
 
-/* harmony default export */ const album_newest = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/api/discovery/newAlbum`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album_songsaleboard.js
+album_newest_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/api/discovery/newAlbum", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_newest = (album_newest_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_songsaleboard.js
+var album_songsaleboard_module = {
+  exports: {}
+};
+var album_songsaleboard_exports = album_songsaleboard_module.exports;
+function album_songsaleboard_typeof(o) { "@babel/helpers - typeof"; return album_songsaleboard_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, album_songsaleboard_typeof(o); }
+function album_songsaleboard_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function album_songsaleboard_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? album_songsaleboard_ownKeys(Object(t), !0).forEach(function (r) { album_songsaleboard_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : album_songsaleboard_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function album_songsaleboard_defineProperty(obj, key, value) { key = album_songsaleboard_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function album_songsaleboard_toPropertyKey(t) { var i = album_songsaleboard_toPrimitive(t, "string"); return "symbol" == album_songsaleboard_typeof(i) ? i : String(i); }
+function album_songsaleboard_toPrimitive(t, r) { if ("object" != album_songsaleboard_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != album_songsaleboard_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 // 数字专辑&数字单曲-榜单
-/* harmony default export */ const album_songsaleboard = ((query, request) => {
-  let data = {
-    albumType: query.albumType || 0, //0为数字专辑,1为数字单曲
-  }
-  const type = query.type || 'daily' // daily,week,year,total
+album_songsaleboard_module.exports = function (query, request) {
+  var data = {
+    albumType: query.albumType || 0 //0为数字专辑,1为数字单曲
+  };
+  var type = query.type || 'daily'; // daily,week,year,total
   if (type === 'year') {
-    data = {
-      ...data,
-      year: query.year,
-    }
+    data = album_songsaleboard_objectSpread(album_songsaleboard_objectSpread({}, data), {}, {
+      year: query.year
+    });
   }
-  return request(
-    'POST',
-    `https://music.163.com/api/feealbum/songsaleboard/${type}/type`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/album_sub.js
+  return request('POST', "https://music.163.com/api/feealbum/songsaleboard/".concat(type, "/type"), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_songsaleboard = (album_songsaleboard_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_sub.js
+var album_sub_module = {
+  exports: {}
+};
+var album_sub_exports = album_sub_module.exports;
 // 收藏/取消收藏专辑
 
-/* harmony default export */ const album_sub = ((query, request) => {
-  query.t = query.t == 1 ? 'sub' : 'unsub'
-  const data = {
-    id: query.id,
-  }
-  return request('POST', `https://music.163.com/api/album/${query.t}`, data, {
+album_sub_module.exports = function (query, request) {
+  query.t = query.t == 1 ? 'sub' : 'unsub';
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/api/album/".concat(query.t), data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/album_sublist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_sub = (album_sub_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/album_sublist.js
+var album_sublist_module = {
+  exports: {}
+};
+var album_sublist_exports = album_sublist_module.exports;
 // 已收藏专辑列表
 
-/* harmony default export */ const album_sublist = ((query, request) => {
-  const data = {
+album_sublist_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 25,
     offset: query.offset || 0,
-    total: true,
-  }
-  return request('POST', `https://music.163.com/weapi/album/sublist`, data, {
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/album/sublist", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/artists.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const album_sublist = (album_sublist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artists.js
+var artists_module = {
+  exports: {}
+};
+var artists_exports = artists_module.exports;
 // 歌手单曲
 
-/* harmony default export */ const artists = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/artist/${query.id}`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_album.js
-// 歌手专辑列表
-
-/* harmony default export */ const artist_album = ((query, request) => {
-  const data = {
-    limit: query.limit || 30,
-    offset: query.offset || 0,
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/artist/albums/${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_desc.js
-// 歌手介绍
-
-/* harmony default export */ const artist_desc = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/artist/introduction`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_detail.js
-/* harmony default export */ const artist_detail = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/api/artist/head/info/get`,
-    {
-      id: query.id,
-    },
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_fans.js
-// 歌手粉丝
-
-/* harmony default export */ const artist_fans = ((query, request) => {
-  const data = {
-    id: query.id,
-    limit: query.limit || 20,
-    offset: query.offset || 0,
-  }
-  return request('POST', `https://music.163.com/weapi/artist/fans/get`, data, {
+artists_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/v1/artist/".concat(query.id), {}, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artists = (artists_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_album.js
+var artist_album_module = {
+  exports: {}
+};
+var artist_album_exports = artist_album_module.exports;
+// 歌手专辑列表
 
-;// CONCATENATED MODULE: ./module/artist_follow_count.js
+artist_album_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 30,
+    offset: query.offset || 0,
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/artist/albums/".concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_album = (artist_album_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_desc.js
+var artist_desc_module = {
+  exports: {}
+};
+var artist_desc_exports = artist_desc_module.exports;
+// 歌手介绍
+
+artist_desc_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/artist/introduction", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_desc = (artist_desc_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_detail.js
+var artist_detail_module = {
+  exports: {}
+};
+var artist_detail_exports = artist_detail_module.exports;
+artist_detail_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/api/artist/head/info/get", {
+    id: query.id
+  }, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_detail = (artist_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_fans.js
+var artist_fans_module = {
+  exports: {}
+};
+var artist_fans_exports = artist_fans_module.exports;
+// 歌手粉丝
+
+artist_fans_module.exports = function (query, request) {
+  var data = {
+    id: query.id,
+    limit: query.limit || 20,
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/artist/fans/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_fans = (artist_fans_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_follow_count.js
+var artist_follow_count_module = {
+  exports: {}
+};
+var artist_follow_count_exports = artist_follow_count_module.exports;
 // 歌手粉丝数量
 
-/* harmony default export */ const artist_follow_count = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/artist/follow/count/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_list.js
+artist_follow_count_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/artist/follow/count/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_follow_count = (artist_follow_count_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_list.js
+var artist_list_module = {
+  exports: {}
+};
+var artist_list_exports = artist_list_module.exports;
 // 歌手分类
 
 /* 
@@ -36190,790 +39911,4426 @@ __webpack_require__.d(__webpack_exports__, {
     initial 取值 a-z/A-Z
 */
 
-/* harmony default export */ const artist_list = ((query, request) => {
-  const data = {
-    initial: isNaN(query.initial)
-      ? (query.initial || '').toUpperCase().charCodeAt() || undefined
-      : query.initial,
+artist_list_module.exports = function (query, request) {
+  var data = {
+    initial: isNaN(query.initial) ? (query.initial || '').toUpperCase().charCodeAt() || undefined : query.initial,
     offset: query.offset || 0,
     limit: query.limit || 30,
     total: true,
     type: query.type || '1',
-    area: query.area,
-  }
-  return request('POST', `https://music.163.com/api/v1/artist/list`, data, {
+    area: query.area
+  };
+  return request('POST', "https://music.163.com/api/v1/artist/list", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/artist_mv.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_list = (artist_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_mv.js
+var artist_mv_module = {
+  exports: {}
+};
+var artist_mv_exports = artist_mv_module.exports;
 // 歌手相关MV
 
-/* harmony default export */ const artist_mv = ((query, request) => {
-  const data = {
+artist_mv_module.exports = function (query, request) {
+  var data = {
     artistId: query.id,
     limit: query.limit,
     offset: query.offset,
-    total: true,
-  }
-  return request('POST', `https://music.163.com/weapi/artist/mvs`, data, {
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/artist/mvs", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/artist_new_mv.js
-/* harmony default export */ const artist_new_mv = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_mv = (artist_mv_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_new_mv.js
+var artist_new_mv_module = {
+  exports: {}
+};
+var artist_new_mv_exports = artist_new_mv_module.exports;
+artist_new_mv_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     limit: query.limit || 20,
-    startTimestamp: query.before || Date.now(),
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/sub/artist/new/works/mv/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_new_song.js
-/* harmony default export */ const artist_new_song = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+    startTimestamp: query.before || Date.now()
+  };
+  return request('POST', "https://music.163.com/api/sub/artist/new/works/mv/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_new_mv = (artist_new_mv_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_new_song.js
+var artist_new_song_module = {
+  exports: {}
+};
+var artist_new_song_exports = artist_new_song_module.exports;
+artist_new_song_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     limit: query.limit || 20,
-    startTimestamp: query.before || Date.now(),
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/sub/artist/new/works/song/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_songs.js
-/* harmony default export */ const artist_songs = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+    startTimestamp: query.before || Date.now()
+  };
+  return request('POST', "https://music.163.com/api/sub/artist/new/works/song/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_new_song = (artist_new_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_songs.js
+var artist_songs_module = {
+  exports: {}
+};
+var artist_songs_exports = artist_songs_module.exports;
+artist_songs_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     id: query.id,
     private_cloud: 'true',
     work_type: 1,
-    order: query.order || 'hot', //hot,time
+    order: query.order || 'hot',
+    //hot,time
     offset: query.offset || 0,
-    limit: query.limit || 100,
-  }
-  return request('POST', `https://music.163.com/api/v1/artist/songs`, data, {
+    limit: query.limit || 100
+  };
+  return request('POST', "https://music.163.com/api/v1/artist/songs", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/artist_sub.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_songs = (artist_songs_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_sub.js
+var artist_sub_module = {
+  exports: {}
+};
+var artist_sub_exports = artist_sub_module.exports;
 // 收藏与取消收藏歌手
 
-/* harmony default export */ const artist_sub = ((query, request) => {
-  query.t = query.t == 1 ? 'sub' : 'unsub'
-  const data = {
+artist_sub_module.exports = function (query, request) {
+  query.t = query.t == 1 ? 'sub' : 'unsub';
+  var data = {
     artistId: query.id,
-    artistIds: '[' + query.id + ']',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/artist/${query.t}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/artist_sublist.js
+    artistIds: '[' + query.id + ']'
+  };
+  return request('POST', "https://music.163.com/weapi/artist/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_sub = (artist_sub_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_sublist.js
+var artist_sublist_module = {
+  exports: {}
+};
+var artist_sublist_exports = artist_sublist_module.exports;
 // 关注歌手列表
 
-/* harmony default export */ const artist_sublist = ((query, request) => {
-  const data = {
+artist_sublist_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 25,
     offset: query.offset || 0,
-    total: true,
-  }
-  return request('POST', `https://music.163.com/weapi/artist/sublist`, data, {
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/artist/sublist", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/artist_top_song.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_sublist = (artist_sublist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_top_song.js
+var artist_top_song_module = {
+  exports: {}
+};
+var artist_top_song_exports = artist_top_song_module.exports;
 // 歌手热门 50 首歌曲
-/* harmony default export */ const artist_top_song = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request('POST', `https://music.163.com/api/artist/top/song`, data, {
+artist_top_song_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/api/artist/top/song", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/artist_video.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_top_song = (artist_top_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/artist_video.js
+var artist_video_module = {
+  exports: {}
+};
+var artist_video_exports = artist_video_module.exports;
 // 歌手相关视频
 
-/* harmony default export */ const artist_video = ((query, request) => {
-  const data = {
+artist_video_module.exports = function (query, request) {
+  var data = {
     artistId: query.id,
     page: JSON.stringify({
       size: query.size || 10,
-      cursor: query.cursor || 0,
+      cursor: query.cursor || 0
     }),
     tab: 0,
-    order: query.order || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/mlog/artist/video`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/audio_match.js
+    order: query.order || 0
+  };
+  return request('POST', "https://music.163.com/weapi/mlog/artist/video", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const artist_video = (artist_video_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/audio_match.js
+var audio_match_module = {
+  exports: {}
+};
+var audio_match_exports = audio_match_module.exports;
 function createRandomString(len) {
-  const str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  let result = ''
-  for (let i = len; i > 0; --i)
-    result += str[Math.floor(Math.random() * str.length)]
-  return result
+  var str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var result = '';
+  for (var i = len; i > 0; --i) result += str[Math.floor(Math.random() * str.length)];
+  return result;
 }
-/* harmony default export */ const audio_match = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+audio_match_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     algorithmCode: 'shazam_v2',
     times: 1,
     sessionId: createRandomString(16),
     duration: Number(query.duration),
     from: 'recognize-song',
     decrypt: '1',
-    rawdata: query.audioFP,
-  }
-  return request('POST', `https://music.163.com/api/music/audio/match`, data, {
+    rawdata: query.audioFP
+  };
+  return request('POST', "https://music.163.com/api/music/audio/match", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const audio_match = (audio_match_module.exports);
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/bind.js
+
+
+function bind(fn, thisArg) {
+  return function wrap() {
+    return fn.apply(thisArg, arguments);
+  };
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/utils.js
+
+
+
+
+// utils is a library of generic helper functions non-specific to axios
+
+const {toString: utils_toString} = Object.prototype;
+const {getPrototypeOf} = Object;
+
+const kindOf = (cache => thing => {
+    const str = utils_toString.call(thing);
+    return cache[str] || (cache[str] = str.slice(8, -1).toLowerCase());
+})(Object.create(null));
+
+const kindOfTest = (type) => {
+  type = type.toLowerCase();
+  return (thing) => kindOf(thing) === type
+}
+
+const typeOfTest = type => thing => typeof thing === type;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ *
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+const {isArray} = Array;
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+const isUndefined = typeOfTest('undefined');
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
+    && isFunction(val.constructor.isBuffer) && val.constructor.isBuffer(val);
+}
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+const isArrayBuffer = kindOfTest('ArrayBuffer');
+
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  let result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (isArrayBuffer(val.buffer));
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+const isString = typeOfTest('string');
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {*} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+const isFunction = typeOfTest('function');
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+const isNumber = typeOfTest('number');
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {*} thing The value to test
+ *
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+const isObject = (thing) => thing !== null && typeof thing === 'object';
+
+/**
+ * Determine if a value is a Boolean
+ *
+ * @param {*} thing The value to test
+ * @returns {boolean} True if value is a Boolean, otherwise false
+ */
+const isBoolean = thing => thing === true || thing === false;
+
+/**
+ * Determine if a value is a plain Object
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a plain Object, otherwise false
+ */
+const isPlainObject = (val) => {
+  if (kindOf(val) !== 'object') {
+    return false;
+  }
+
+  const prototype = getPrototypeOf(val);
+  return (prototype === null || prototype === Object.prototype || Object.getPrototypeOf(prototype) === null) && !(Symbol.toStringTag in val) && !(Symbol.iterator in val);
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+const isDate = kindOfTest('Date');
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+const isFile = kindOfTest('File');
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+const isBlob = kindOfTest('Blob');
+
+/**
+ * Determine if a value is a FileList
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+const isFileList = kindOfTest('FileList');
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+const isStream = (val) => isObject(val) && isFunction(val.pipe);
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {*} thing The value to test
+ *
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+const isFormData = (thing) => {
+  let kind;
+  return thing && (
+    (typeof FormData === 'function' && thing instanceof FormData) || (
+      isFunction(thing.append) && (
+        (kind = kindOf(thing)) === 'formdata' ||
+        // detect form-data instance
+        (kind === 'object' && isFunction(thing.toString) && thing.toString() === '[object FormData]')
+      )
+    )
+  )
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+const isURLSearchParams = kindOfTest('URLSearchParams');
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ *
+ * @returns {String} The String freed of excess whitespace
+ */
+const trim = (str) => str.trim ?
+  str.trim() : str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ *
+ * @param {Boolean} [allOwnKeys = false]
+ * @returns {any}
+ */
+function forEach(obj, fn, {allOwnKeys = false} = {}) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  let i;
+  let l;
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    const keys = allOwnKeys ? Object.getOwnPropertyNames(obj) : Object.keys(obj);
+    const len = keys.length;
+    let key;
+
+    for (i = 0; i < len; i++) {
+      key = keys[i];
+      fn.call(null, obj[key], key, obj);
+    }
+  }
+}
+
+function findKey(obj, key) {
+  key = key.toLowerCase();
+  const keys = Object.keys(obj);
+  let i = keys.length;
+  let _key;
+  while (i-- > 0) {
+    _key = keys[i];
+    if (key === _key.toLowerCase()) {
+      return _key;
+    }
+  }
+  return null;
+}
+
+const _global = (() => {
+  /*eslint no-undef:0*/
+  if (typeof globalThis !== "undefined") return globalThis;
+  return typeof self !== "undefined" ? self : (typeof window !== 'undefined' ? window : global)
+})();
+
+const isContextDefined = (context) => !isUndefined(context) && context !== _global;
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ *
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  const {caseless} = isContextDefined(this) && this || {};
+  const result = {};
+  const assignValue = (val, key) => {
+    const targetKey = caseless && findKey(result, key) || key;
+    if (isPlainObject(result[targetKey]) && isPlainObject(val)) {
+      result[targetKey] = merge(result[targetKey], val);
+    } else if (isPlainObject(val)) {
+      result[targetKey] = merge({}, val);
+    } else if (isArray(val)) {
+      result[targetKey] = val.slice();
+    } else {
+      result[targetKey] = val;
+    }
+  }
+
+  for (let i = 0, l = arguments.length; i < l; i++) {
+    arguments[i] && forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ *
+ * @param {Boolean} [allOwnKeys]
+ * @returns {Object} The resulting value of object a
+ */
+const extend = (a, b, thisArg, {allOwnKeys}= {}) => {
+  forEach(b, (val, key) => {
+    if (thisArg && isFunction(val)) {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  }, {allOwnKeys});
+  return a;
+}
+
+/**
+ * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+ *
+ * @param {string} content with BOM
+ *
+ * @returns {string} content value without BOM
+ */
+const stripBOM = (content) => {
+  if (content.charCodeAt(0) === 0xFEFF) {
+    content = content.slice(1);
+  }
+  return content;
+}
+
+/**
+ * Inherit the prototype methods from one constructor into another
+ * @param {function} constructor
+ * @param {function} superConstructor
+ * @param {object} [props]
+ * @param {object} [descriptors]
+ *
+ * @returns {void}
+ */
+const inherits = (constructor, superConstructor, props, descriptors) => {
+  constructor.prototype = Object.create(superConstructor.prototype, descriptors);
+  constructor.prototype.constructor = constructor;
+  Object.defineProperty(constructor, 'super', {
+    value: superConstructor.prototype
+  });
+  props && Object.assign(constructor.prototype, props);
+}
+
+/**
+ * Resolve object with deep prototype chain to a flat object
+ * @param {Object} sourceObj source object
+ * @param {Object} [destObj]
+ * @param {Function|Boolean} [filter]
+ * @param {Function} [propFilter]
+ *
+ * @returns {Object}
+ */
+const toFlatObject = (sourceObj, destObj, filter, propFilter) => {
+  let props;
+  let i;
+  let prop;
+  const merged = {};
+
+  destObj = destObj || {};
+  // eslint-disable-next-line no-eq-null,eqeqeq
+  if (sourceObj == null) return destObj;
+
+  do {
+    props = Object.getOwnPropertyNames(sourceObj);
+    i = props.length;
+    while (i-- > 0) {
+      prop = props[i];
+      if ((!propFilter || propFilter(prop, sourceObj, destObj)) && !merged[prop]) {
+        destObj[prop] = sourceObj[prop];
+        merged[prop] = true;
+      }
+    }
+    sourceObj = filter !== false && getPrototypeOf(sourceObj);
+  } while (sourceObj && (!filter || filter(sourceObj, destObj)) && sourceObj !== Object.prototype);
+
+  return destObj;
+}
+
+/**
+ * Determines whether a string ends with the characters of a specified string
+ *
+ * @param {String} str
+ * @param {String} searchString
+ * @param {Number} [position= 0]
+ *
+ * @returns {boolean}
+ */
+const endsWith = (str, searchString, position) => {
+  str = String(str);
+  if (position === undefined || position > str.length) {
+    position = str.length;
+  }
+  position -= searchString.length;
+  const lastIndex = str.indexOf(searchString, position);
+  return lastIndex !== -1 && lastIndex === position;
+}
+
+
+/**
+ * Returns new array from array like object or null if failed
+ *
+ * @param {*} [thing]
+ *
+ * @returns {?Array}
+ */
+const toArray = (thing) => {
+  if (!thing) return null;
+  if (isArray(thing)) return thing;
+  let i = thing.length;
+  if (!isNumber(i)) return null;
+  const arr = new Array(i);
+  while (i-- > 0) {
+    arr[i] = thing[i];
+  }
+  return arr;
+}
+
+/**
+ * Checking if the Uint8Array exists and if it does, it returns a function that checks if the
+ * thing passed in is an instance of Uint8Array
+ *
+ * @param {TypedArray}
+ *
+ * @returns {Array}
+ */
+// eslint-disable-next-line func-names
+const isTypedArray = (TypedArray => {
+  // eslint-disable-next-line func-names
+  return thing => {
+    return TypedArray && thing instanceof TypedArray;
+  };
+})(typeof Uint8Array !== 'undefined' && getPrototypeOf(Uint8Array));
+
+/**
+ * For each entry in the object, call the function with the key and value.
+ *
+ * @param {Object<any, any>} obj - The object to iterate over.
+ * @param {Function} fn - The function to call for each entry.
+ *
+ * @returns {void}
+ */
+const forEachEntry = (obj, fn) => {
+  const generator = obj && obj[Symbol.iterator];
+
+  const iterator = generator.call(obj);
+
+  let result;
+
+  while ((result = iterator.next()) && !result.done) {
+    const pair = result.value;
+    fn.call(obj, pair[0], pair[1]);
+  }
+}
+
+/**
+ * It takes a regular expression and a string, and returns an array of all the matches
+ *
+ * @param {string} regExp - The regular expression to match against.
+ * @param {string} str - The string to search.
+ *
+ * @returns {Array<boolean>}
+ */
+const matchAll = (regExp, str) => {
+  let matches;
+  const arr = [];
+
+  while ((matches = regExp.exec(str)) !== null) {
+    arr.push(matches);
+  }
+
+  return arr;
+}
+
+/* Checking if the kindOfTest function returns true when passed an HTMLFormElement. */
+const isHTMLForm = kindOfTest('HTMLFormElement');
+
+const toCamelCase = str => {
+  return str.toLowerCase().replace(/[-_\s]([a-z\d])(\w*)/g,
+    function replacer(m, p1, p2) {
+      return p1.toUpperCase() + p2;
+    }
+  );
+};
+
+/* Creating a function that will check if an object has a property. */
+const utils_hasOwnProperty = (({hasOwnProperty}) => (obj, prop) => hasOwnProperty.call(obj, prop))(Object.prototype);
+
+/**
+ * Determine if a value is a RegExp object
+ *
+ * @param {*} val The value to test
+ *
+ * @returns {boolean} True if value is a RegExp object, otherwise false
+ */
+const isRegExp = kindOfTest('RegExp');
+
+const reduceDescriptors = (obj, reducer) => {
+  const descriptors = Object.getOwnPropertyDescriptors(obj);
+  const reducedDescriptors = {};
+
+  forEach(descriptors, (descriptor, name) => {
+    let ret;
+    if ((ret = reducer(descriptor, name, obj)) !== false) {
+      reducedDescriptors[name] = ret || descriptor;
+    }
+  });
+
+  Object.defineProperties(obj, reducedDescriptors);
+}
+
+/**
+ * Makes all methods read-only
+ * @param {Object} obj
+ */
+
+const freezeMethods = (obj) => {
+  reduceDescriptors(obj, (descriptor, name) => {
+    // skip restricted props in strict mode
+    if (isFunction(obj) && ['arguments', 'caller', 'callee'].indexOf(name) !== -1) {
+      return false;
+    }
+
+    const value = obj[name];
+
+    if (!isFunction(value)) return;
+
+    descriptor.enumerable = false;
+
+    if ('writable' in descriptor) {
+      descriptor.writable = false;
+      return;
+    }
+
+    if (!descriptor.set) {
+      descriptor.set = () => {
+        throw Error('Can not rewrite read-only method \'' + name + '\'');
+      };
+    }
+  });
+}
+
+const toObjectSet = (arrayOrString, delimiter) => {
+  const obj = {};
+
+  const define = (arr) => {
+    arr.forEach(value => {
+      obj[value] = true;
+    });
+  }
+
+  isArray(arrayOrString) ? define(arrayOrString) : define(String(arrayOrString).split(delimiter));
+
+  return obj;
+}
+
+const noop = () => {}
+
+const toFiniteNumber = (value, defaultValue) => {
+  value = +value;
+  return Number.isFinite(value) ? value : defaultValue;
+}
+
+const ALPHA = 'abcdefghijklmnopqrstuvwxyz'
+
+const DIGIT = '0123456789';
+
+const ALPHABET = {
+  DIGIT,
+  ALPHA,
+  ALPHA_DIGIT: ALPHA + ALPHA.toUpperCase() + DIGIT
+}
+
+const generateString = (size = 16, alphabet = ALPHABET.ALPHA_DIGIT) => {
+  let str = '';
+  const {length} = alphabet;
+  while (size--) {
+    str += alphabet[Math.random() * length|0]
+  }
+
+  return str;
+}
+
+/**
+ * If the thing is a FormData object, return true, otherwise return false.
+ *
+ * @param {unknown} thing - The thing to check.
+ *
+ * @returns {boolean}
+ */
+function isSpecCompliantForm(thing) {
+  return !!(thing && isFunction(thing.append) && thing[Symbol.toStringTag] === 'FormData' && thing[Symbol.iterator]);
+}
+
+const toJSONObject = (obj) => {
+  const stack = new Array(10);
+
+  const visit = (source, i) => {
+
+    if (isObject(source)) {
+      if (stack.indexOf(source) >= 0) {
+        return;
+      }
+
+      if(!('toJSON' in source)) {
+        stack[i] = source;
+        const target = isArray(source) ? [] : {};
+
+        forEach(source, (value, key) => {
+          const reducedValue = visit(value, i + 1);
+          !isUndefined(reducedValue) && (target[key] = reducedValue);
+        });
+
+        stack[i] = undefined;
+
+        return target;
+      }
+    }
+
+    return source;
+  }
+
+  return visit(obj, 0);
+}
+
+const isAsyncFn = kindOfTest('AsyncFunction');
+
+const isThenable = (thing) =>
+  thing && (isObject(thing) || isFunction(thing)) && isFunction(thing.then) && isFunction(thing.catch);
+
+/* harmony default export */ const utils = ({
+  isArray,
+  isArrayBuffer,
+  isBuffer,
+  isFormData,
+  isArrayBufferView,
+  isString,
+  isNumber,
+  isBoolean,
+  isObject,
+  isPlainObject,
+  isUndefined,
+  isDate,
+  isFile,
+  isBlob,
+  isRegExp,
+  isFunction,
+  isStream,
+  isURLSearchParams,
+  isTypedArray,
+  isFileList,
+  forEach,
+  merge,
+  extend,
+  trim,
+  stripBOM,
+  inherits,
+  toFlatObject,
+  kindOf,
+  kindOfTest,
+  endsWith,
+  toArray,
+  forEachEntry,
+  matchAll,
+  isHTMLForm,
+  hasOwnProperty: utils_hasOwnProperty,
+  hasOwnProp: utils_hasOwnProperty, // an alias to avoid ESLint no-prototype-builtins detection
+  reduceDescriptors,
+  freezeMethods,
+  toObjectSet,
+  toCamelCase,
+  noop,
+  toFiniteNumber,
+  findKey,
+  global: _global,
+  isContextDefined,
+  ALPHABET,
+  generateString,
+  isSpecCompliantForm,
+  toJSONObject,
+  isAsyncFn,
+  isThenable
 });
 
-;// CONCATENATED MODULE: ./module/banner.js
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/AxiosError.js
+
+
+
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [config] The config.
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ *
+ * @returns {Error} The created error.
+ */
+function AxiosError(message, code, config, request, response) {
+  Error.call(this);
+
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, this.constructor);
+  } else {
+    this.stack = (new Error()).stack;
+  }
+
+  this.message = message;
+  this.name = 'AxiosError';
+  code && (this.code = code);
+  config && (this.config = config);
+  request && (this.request = request);
+  response && (this.response = response);
+}
+
+utils.inherits(AxiosError, Error, {
+  toJSON: function toJSON() {
+    return {
+      // Standard
+      message: this.message,
+      name: this.name,
+      // Microsoft
+      description: this.description,
+      number: this.number,
+      // Mozilla
+      fileName: this.fileName,
+      lineNumber: this.lineNumber,
+      columnNumber: this.columnNumber,
+      stack: this.stack,
+      // Axios
+      config: utils.toJSONObject(this.config),
+      code: this.code,
+      status: this.response && this.response.status ? this.response.status : null
+    };
+  }
+});
+
+const AxiosError_prototype = AxiosError.prototype;
+const descriptors = {};
+
+[
+  'ERR_BAD_OPTION_VALUE',
+  'ERR_BAD_OPTION',
+  'ECONNABORTED',
+  'ETIMEDOUT',
+  'ERR_NETWORK',
+  'ERR_FR_TOO_MANY_REDIRECTS',
+  'ERR_DEPRECATED',
+  'ERR_BAD_RESPONSE',
+  'ERR_BAD_REQUEST',
+  'ERR_CANCELED',
+  'ERR_NOT_SUPPORT',
+  'ERR_INVALID_URL'
+// eslint-disable-next-line func-names
+].forEach(code => {
+  descriptors[code] = {value: code};
+});
+
+Object.defineProperties(AxiosError, descriptors);
+Object.defineProperty(AxiosError_prototype, 'isAxiosError', {value: true});
+
+// eslint-disable-next-line func-names
+AxiosError.from = (error, code, config, request, response, customProps) => {
+  const axiosError = Object.create(AxiosError_prototype);
+
+  utils.toFlatObject(error, axiosError, function filter(obj) {
+    return obj !== Error.prototype;
+  }, prop => {
+    return prop !== 'isAxiosError';
+  });
+
+  AxiosError.call(axiosError, error.message, code, config, request, response);
+
+  axiosError.cause = error;
+
+  axiosError.name = error.name;
+
+  customProps && Object.assign(axiosError, customProps);
+
+  return axiosError;
+};
+
+/* harmony default export */ const core_AxiosError = (AxiosError);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/null.js
+// eslint-disable-next-line strict
+/* harmony default export */ const helpers_null = (null);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/toFormData.js
+
+
+
+
+// temporary hotfix to avoid circular references until AxiosURLSearchParams is refactored
+
+
+/**
+ * Determines if the given thing is a array or js object.
+ *
+ * @param {string} thing - The object or array to be visited.
+ *
+ * @returns {boolean}
+ */
+function isVisitable(thing) {
+  return utils.isPlainObject(thing) || utils.isArray(thing);
+}
+
+/**
+ * It removes the brackets from the end of a string
+ *
+ * @param {string} key - The key of the parameter.
+ *
+ * @returns {string} the key without the brackets.
+ */
+function removeBrackets(key) {
+  return utils.endsWith(key, '[]') ? key.slice(0, -2) : key;
+}
+
+/**
+ * It takes a path, a key, and a boolean, and returns a string
+ *
+ * @param {string} path - The path to the current key.
+ * @param {string} key - The key of the current object being iterated over.
+ * @param {string} dots - If true, the key will be rendered with dots instead of brackets.
+ *
+ * @returns {string} The path to the current key.
+ */
+function renderKey(path, key, dots) {
+  if (!path) return key;
+  return path.concat(key).map(function each(token, i) {
+    // eslint-disable-next-line no-param-reassign
+    token = removeBrackets(token);
+    return !dots && i ? '[' + token + ']' : token;
+  }).join(dots ? '.' : '');
+}
+
+/**
+ * If the array is an array and none of its elements are visitable, then it's a flat array.
+ *
+ * @param {Array<any>} arr - The array to check
+ *
+ * @returns {boolean}
+ */
+function isFlatArray(arr) {
+  return utils.isArray(arr) && !arr.some(isVisitable);
+}
+
+const predicates = utils.toFlatObject(utils, {}, null, function filter(prop) {
+  return /^is[A-Z]/.test(prop);
+});
+
+/**
+ * Convert a data object to FormData
+ *
+ * @param {Object} obj
+ * @param {?Object} [formData]
+ * @param {?Object} [options]
+ * @param {Function} [options.visitor]
+ * @param {Boolean} [options.metaTokens = true]
+ * @param {Boolean} [options.dots = false]
+ * @param {?Boolean} [options.indexes = false]
+ *
+ * @returns {Object}
+ **/
+
+/**
+ * It converts an object into a FormData object
+ *
+ * @param {Object<any, any>} obj - The object to convert to form data.
+ * @param {string} formData - The FormData object to append to.
+ * @param {Object<string, any>} options
+ *
+ * @returns
+ */
+function toFormData(obj, formData, options) {
+  if (!utils.isObject(obj)) {
+    throw new TypeError('target must be an object');
+  }
+
+  // eslint-disable-next-line no-param-reassign
+  formData = formData || new (helpers_null || FormData)();
+
+  // eslint-disable-next-line no-param-reassign
+  options = utils.toFlatObject(options, {
+    metaTokens: true,
+    dots: false,
+    indexes: false
+  }, false, function defined(option, source) {
+    // eslint-disable-next-line no-eq-null,eqeqeq
+    return !utils.isUndefined(source[option]);
+  });
+
+  const metaTokens = options.metaTokens;
+  // eslint-disable-next-line no-use-before-define
+  const visitor = options.visitor || defaultVisitor;
+  const dots = options.dots;
+  const indexes = options.indexes;
+  const _Blob = options.Blob || typeof Blob !== 'undefined' && Blob;
+  const useBlob = _Blob && utils.isSpecCompliantForm(formData);
+
+  if (!utils.isFunction(visitor)) {
+    throw new TypeError('visitor must be a function');
+  }
+
+  function convertValue(value) {
+    if (value === null) return '';
+
+    if (utils.isDate(value)) {
+      return value.toISOString();
+    }
+
+    if (!useBlob && utils.isBlob(value)) {
+      throw new core_AxiosError('Blob is not supported. Use a Buffer instead.');
+    }
+
+    if (utils.isArrayBuffer(value) || utils.isTypedArray(value)) {
+      return useBlob && typeof Blob === 'function' ? new Blob([value]) : Buffer.from(value);
+    }
+
+    return value;
+  }
+
+  /**
+   * Default visitor.
+   *
+   * @param {*} value
+   * @param {String|Number} key
+   * @param {Array<String|Number>} path
+   * @this {FormData}
+   *
+   * @returns {boolean} return true to visit the each prop of the value recursively
+   */
+  function defaultVisitor(value, key, path) {
+    let arr = value;
+
+    if (value && !path && typeof value === 'object') {
+      if (utils.endsWith(key, '{}')) {
+        // eslint-disable-next-line no-param-reassign
+        key = metaTokens ? key : key.slice(0, -2);
+        // eslint-disable-next-line no-param-reassign
+        value = JSON.stringify(value);
+      } else if (
+        (utils.isArray(value) && isFlatArray(value)) ||
+        ((utils.isFileList(value) || utils.endsWith(key, '[]')) && (arr = utils.toArray(value))
+        )) {
+        // eslint-disable-next-line no-param-reassign
+        key = removeBrackets(key);
+
+        arr.forEach(function each(el, index) {
+          !(utils.isUndefined(el) || el === null) && formData.append(
+            // eslint-disable-next-line no-nested-ternary
+            indexes === true ? renderKey([key], index, dots) : (indexes === null ? key : key + '[]'),
+            convertValue(el)
+          );
+        });
+        return false;
+      }
+    }
+
+    if (isVisitable(value)) {
+      return true;
+    }
+
+    formData.append(renderKey(path, key, dots), convertValue(value));
+
+    return false;
+  }
+
+  const stack = [];
+
+  const exposedHelpers = Object.assign(predicates, {
+    defaultVisitor,
+    convertValue,
+    isVisitable
+  });
+
+  function build(value, path) {
+    if (utils.isUndefined(value)) return;
+
+    if (stack.indexOf(value) !== -1) {
+      throw Error('Circular reference detected in ' + path.join('.'));
+    }
+
+    stack.push(value);
+
+    utils.forEach(value, function each(el, key) {
+      const result = !(utils.isUndefined(el) || el === null) && visitor.call(
+        formData, el, utils.isString(key) ? key.trim() : key, path, exposedHelpers
+      );
+
+      if (result === true) {
+        build(el, path ? path.concat(key) : [key]);
+      }
+    });
+
+    stack.pop();
+  }
+
+  if (!utils.isObject(obj)) {
+    throw new TypeError('data must be an object');
+  }
+
+  build(obj);
+
+  return formData;
+}
+
+/* harmony default export */ const helpers_toFormData = (toFormData);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/AxiosURLSearchParams.js
+
+
+
+
+/**
+ * It encodes a string by replacing all characters that are not in the unreserved set with
+ * their percent-encoded equivalents
+ *
+ * @param {string} str - The string to encode.
+ *
+ * @returns {string} The encoded string.
+ */
+function encode(str) {
+  const charMap = {
+    '!': '%21',
+    "'": '%27',
+    '(': '%28',
+    ')': '%29',
+    '~': '%7E',
+    '%20': '+',
+    '%00': '\x00'
+  };
+  return encodeURIComponent(str).replace(/[!'()~]|%20|%00/g, function replacer(match) {
+    return charMap[match];
+  });
+}
+
+/**
+ * It takes a params object and converts it to a FormData object
+ *
+ * @param {Object<string, any>} params - The parameters to be converted to a FormData object.
+ * @param {Object<string, any>} options - The options object passed to the Axios constructor.
+ *
+ * @returns {void}
+ */
+function AxiosURLSearchParams(params, options) {
+  this._pairs = [];
+
+  params && helpers_toFormData(params, this, options);
+}
+
+const AxiosURLSearchParams_prototype = AxiosURLSearchParams.prototype;
+
+AxiosURLSearchParams_prototype.append = function append(name, value) {
+  this._pairs.push([name, value]);
+};
+
+AxiosURLSearchParams_prototype.toString = function toString(encoder) {
+  const _encode = encoder ? function(value) {
+    return encoder.call(this, value, encode);
+  } : encode;
+
+  return this._pairs.map(function each(pair) {
+    return _encode(pair[0]) + '=' + _encode(pair[1]);
+  }, '').join('&');
+};
+
+/* harmony default export */ const helpers_AxiosURLSearchParams = (AxiosURLSearchParams);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/buildURL.js
+
+
+
+
+
+/**
+ * It replaces all instances of the characters `:`, `$`, `,`, `+`, `[`, and `]` with their
+ * URI encoded counterparts
+ *
+ * @param {string} val The value to be encoded.
+ *
+ * @returns {string} The encoded value.
+ */
+function buildURL_encode(val) {
+  return encodeURIComponent(val).
+    replace(/%3A/gi, ':').
+    replace(/%24/g, '$').
+    replace(/%2C/gi, ',').
+    replace(/%20/g, '+').
+    replace(/%5B/gi, '[').
+    replace(/%5D/gi, ']');
+}
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @param {?object} options
+ *
+ * @returns {string} The formatted url
+ */
+function buildURL(url, params, options) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+  
+  const _encode = options && options.encode || buildURL_encode;
+
+  const serializeFn = options && options.serialize;
+
+  let serializedParams;
+
+  if (serializeFn) {
+    serializedParams = serializeFn(params, options);
+  } else {
+    serializedParams = utils.isURLSearchParams(params) ?
+      params.toString() :
+      new helpers_AxiosURLSearchParams(params, options).toString(_encode);
+  }
+
+  if (serializedParams) {
+    const hashmarkIndex = url.indexOf("#");
+
+    if (hashmarkIndex !== -1) {
+      url = url.slice(0, hashmarkIndex);
+    }
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+
+  return url;
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/InterceptorManager.js
+
+
+
+
+class InterceptorManager {
+  constructor() {
+    this.handlers = [];
+  }
+
+  /**
+   * Add a new interceptor to the stack
+   *
+   * @param {Function} fulfilled The function to handle `then` for a `Promise`
+   * @param {Function} rejected The function to handle `reject` for a `Promise`
+   *
+   * @return {Number} An ID used to remove interceptor later
+   */
+  use(fulfilled, rejected, options) {
+    this.handlers.push({
+      fulfilled,
+      rejected,
+      synchronous: options ? options.synchronous : false,
+      runWhen: options ? options.runWhen : null
+    });
+    return this.handlers.length - 1;
+  }
+
+  /**
+   * Remove an interceptor from the stack
+   *
+   * @param {Number} id The ID that was returned by `use`
+   *
+   * @returns {Boolean} `true` if the interceptor was removed, `false` otherwise
+   */
+  eject(id) {
+    if (this.handlers[id]) {
+      this.handlers[id] = null;
+    }
+  }
+
+  /**
+   * Clear all interceptors from the stack
+   *
+   * @returns {void}
+   */
+  clear() {
+    if (this.handlers) {
+      this.handlers = [];
+    }
+  }
+
+  /**
+   * Iterate over all the registered interceptors
+   *
+   * This method is particularly useful for skipping over any
+   * interceptors that may have become `null` calling `eject`.
+   *
+   * @param {Function} fn The function to call for each interceptor
+   *
+   * @returns {void}
+   */
+  forEach(fn) {
+    utils.forEach(this.handlers, function forEachHandler(h) {
+      if (h !== null) {
+        fn(h);
+      }
+    });
+  }
+}
+
+/* harmony default export */ const core_InterceptorManager = (InterceptorManager);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/defaults/transitional.js
+
+
+/* harmony default export */ const defaults_transitional = ({
+  silentJSONParsing: true,
+  forcedJSONParsing: true,
+  clarifyTimeoutError: false
+});
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/platform/browser/classes/URLSearchParams.js
+
+
+
+/* harmony default export */ const classes_URLSearchParams = (typeof URLSearchParams !== 'undefined' ? URLSearchParams : helpers_AxiosURLSearchParams);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/platform/browser/classes/FormData.js
+
+
+/* harmony default export */ const classes_FormData = (typeof FormData !== 'undefined' ? FormData : null);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/platform/browser/classes/Blob.js
+
+
+/* harmony default export */ const classes_Blob = (typeof Blob !== 'undefined' ? Blob : null);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/platform/browser/index.js
+
+
+
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ *
+ * @returns {boolean}
+ */
+const isStandardBrowserEnv = (() => {
+  let product;
+  if (typeof navigator !== 'undefined' && (
+    (product = navigator.product) === 'ReactNative' ||
+    product === 'NativeScript' ||
+    product === 'NS')
+  ) {
+    return false;
+  }
+
+  return typeof window !== 'undefined' && typeof document !== 'undefined';
+})();
+
+/**
+ * Determine if we're running in a standard browser webWorker environment
+ *
+ * Although the `isStandardBrowserEnv` method indicates that
+ * `allows axios to run in a web worker`, the WebWorker will still be
+ * filtered out due to its judgment standard
+ * `typeof window !== 'undefined' && typeof document !== 'undefined'`.
+ * This leads to a problem when axios post `FormData` in webWorker
+ */
+ const isStandardBrowserWebWorkerEnv = (() => {
+  return (
+    typeof WorkerGlobalScope !== 'undefined' &&
+    // eslint-disable-next-line no-undef
+    self instanceof WorkerGlobalScope &&
+    typeof self.importScripts === 'function'
+  );
+})();
+
+
+/* harmony default export */ const browser = ({
+  isBrowser: true,
+  classes: {
+    URLSearchParams: classes_URLSearchParams,
+    FormData: classes_FormData,
+    Blob: classes_Blob
+  },
+  isStandardBrowserEnv,
+  isStandardBrowserWebWorkerEnv,
+  protocols: ['http', 'https', 'file', 'blob', 'url', 'data']
+});
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/toURLEncodedForm.js
+
+
+
+
+
+
+function toURLEncodedForm(data, options) {
+  return helpers_toFormData(data, new browser.classes.URLSearchParams(), Object.assign({
+    visitor: function(value, key, path, helpers) {
+      if (browser.isNode && utils.isBuffer(value)) {
+        this.append(key, value.toString('base64'));
+        return false;
+      }
+
+      return helpers.defaultVisitor.apply(this, arguments);
+    }
+  }, options));
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/formDataToJSON.js
+
+
+
+
+/**
+ * It takes a string like `foo[x][y][z]` and returns an array like `['foo', 'x', 'y', 'z']
+ *
+ * @param {string} name - The name of the property to get.
+ *
+ * @returns An array of strings.
+ */
+function parsePropPath(name) {
+  // foo[x][y][z]
+  // foo.x.y.z
+  // foo-x-y-z
+  // foo x y z
+  return utils.matchAll(/\w+|\[(\w*)]/g, name).map(match => {
+    return match[0] === '[]' ? '' : match[1] || match[0];
+  });
+}
+
+/**
+ * Convert an array to an object.
+ *
+ * @param {Array<any>} arr - The array to convert to an object.
+ *
+ * @returns An object with the same keys and values as the array.
+ */
+function arrayToObject(arr) {
+  const obj = {};
+  const keys = Object.keys(arr);
+  let i;
+  const len = keys.length;
+  let key;
+  for (i = 0; i < len; i++) {
+    key = keys[i];
+    obj[key] = arr[key];
+  }
+  return obj;
+}
+
+/**
+ * It takes a FormData object and returns a JavaScript object
+ *
+ * @param {string} formData The FormData object to convert to JSON.
+ *
+ * @returns {Object<string, any> | null} The converted object.
+ */
+function formDataToJSON(formData) {
+  function buildPath(path, value, target, index) {
+    let name = path[index++];
+    const isNumericKey = Number.isFinite(+name);
+    const isLast = index >= path.length;
+    name = !name && utils.isArray(target) ? target.length : name;
+
+    if (isLast) {
+      if (utils.hasOwnProp(target, name)) {
+        target[name] = [target[name], value];
+      } else {
+        target[name] = value;
+      }
+
+      return !isNumericKey;
+    }
+
+    if (!target[name] || !utils.isObject(target[name])) {
+      target[name] = [];
+    }
+
+    const result = buildPath(path, value, target[name], index);
+
+    if (result && utils.isArray(target[name])) {
+      target[name] = arrayToObject(target[name]);
+    }
+
+    return !isNumericKey;
+  }
+
+  if (utils.isFormData(formData) && utils.isFunction(formData.entries)) {
+    const obj = {};
+
+    utils.forEachEntry(formData, (name, value) => {
+      buildPath(parsePropPath(name), value, obj, 0);
+    });
+
+    return obj;
+  }
+
+  return null;
+}
+
+/* harmony default export */ const helpers_formDataToJSON = (formDataToJSON);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/defaults/index.js
+
+
+
+
+
+
+
+
+
+
+/**
+ * It takes a string, tries to parse it, and if it fails, it returns the stringified version
+ * of the input
+ *
+ * @param {any} rawValue - The value to be stringified.
+ * @param {Function} parser - A function that parses a string into a JavaScript object.
+ * @param {Function} encoder - A function that takes a value and returns a string.
+ *
+ * @returns {string} A stringified version of the rawValue.
+ */
+function stringifySafely(rawValue, parser, encoder) {
+  if (utils.isString(rawValue)) {
+    try {
+      (parser || JSON.parse)(rawValue);
+      return utils.trim(rawValue);
+    } catch (e) {
+      if (e.name !== 'SyntaxError') {
+        throw e;
+      }
+    }
+  }
+
+  return (encoder || JSON.stringify)(rawValue);
+}
+
+const defaults = {
+
+  transitional: defaults_transitional,
+
+  adapter: ['xhr', 'http'],
+
+  transformRequest: [function transformRequest(data, headers) {
+    const contentType = headers.getContentType() || '';
+    const hasJSONContentType = contentType.indexOf('application/json') > -1;
+    const isObjectPayload = utils.isObject(data);
+
+    if (isObjectPayload && utils.isHTMLForm(data)) {
+      data = new FormData(data);
+    }
+
+    const isFormData = utils.isFormData(data);
+
+    if (isFormData) {
+      if (!hasJSONContentType) {
+        return data;
+      }
+      return hasJSONContentType ? JSON.stringify(helpers_formDataToJSON(data)) : data;
+    }
+
+    if (utils.isArrayBuffer(data) ||
+      utils.isBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      headers.setContentType('application/x-www-form-urlencoded;charset=utf-8', false);
+      return data.toString();
+    }
+
+    let isFileList;
+
+    if (isObjectPayload) {
+      if (contentType.indexOf('application/x-www-form-urlencoded') > -1) {
+        return toURLEncodedForm(data, this.formSerializer).toString();
+      }
+
+      if ((isFileList = utils.isFileList(data)) || contentType.indexOf('multipart/form-data') > -1) {
+        const _FormData = this.env && this.env.FormData;
+
+        return helpers_toFormData(
+          isFileList ? {'files[]': data} : data,
+          _FormData && new _FormData(),
+          this.formSerializer
+        );
+      }
+    }
+
+    if (isObjectPayload || hasJSONContentType ) {
+      headers.setContentType('application/json', false);
+      return stringifySafely(data);
+    }
+
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    const transitional = this.transitional || defaults.transitional;
+    const forcedJSONParsing = transitional && transitional.forcedJSONParsing;
+    const JSONRequested = this.responseType === 'json';
+
+    if (data && utils.isString(data) && ((forcedJSONParsing && !this.responseType) || JSONRequested)) {
+      const silentJSONParsing = transitional && transitional.silentJSONParsing;
+      const strictJSONParsing = !silentJSONParsing && JSONRequested;
+
+      try {
+        return JSON.parse(data);
+      } catch (e) {
+        if (strictJSONParsing) {
+          if (e.name === 'SyntaxError') {
+            throw core_AxiosError.from(e, core_AxiosError.ERR_BAD_RESPONSE, this, null, this.response);
+          }
+          throw e;
+        }
+      }
+    }
+
+    return data;
+  }],
+
+  /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+  maxBodyLength: -1,
+
+  env: {
+    FormData: browser.classes.FormData,
+    Blob: browser.classes.Blob
+  },
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  },
+
+  headers: {
+    common: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': undefined
+    }
+  }
+};
+
+utils.forEach(['delete', 'get', 'head', 'post', 'put', 'patch'], (method) => {
+  defaults.headers[method] = {};
+});
+
+/* harmony default export */ const lib_defaults = (defaults);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/parseHeaders.js
+
+
+
+
+// RawAxiosHeaders whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+const ignoreDuplicateOf = utils.toObjectSet([
+  'age', 'authorization', 'content-length', 'content-type', 'etag',
+  'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+  'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+  'referer', 'retry-after', 'user-agent'
+]);
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} rawHeaders Headers needing to be parsed
+ *
+ * @returns {Object} Headers parsed into an object
+ */
+/* harmony default export */ const parseHeaders = (rawHeaders => {
+  const parsed = {};
+  let key;
+  let val;
+  let i;
+
+  rawHeaders && rawHeaders.split('\n').forEach(function parser(line) {
+    i = line.indexOf(':');
+    key = line.substring(0, i).trim().toLowerCase();
+    val = line.substring(i + 1).trim();
+
+    if (!key || (parsed[key] && ignoreDuplicateOf[key])) {
+      return;
+    }
+
+    if (key === 'set-cookie') {
+      if (parsed[key]) {
+        parsed[key].push(val);
+      } else {
+        parsed[key] = [val];
+      }
+    } else {
+      parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+    }
+  });
+
+  return parsed;
+});
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/AxiosHeaders.js
+
+
+
+
+
+const $internals = Symbol('internals');
+
+function normalizeHeader(header) {
+  return header && String(header).trim().toLowerCase();
+}
+
+function normalizeValue(value) {
+  if (value === false || value == null) {
+    return value;
+  }
+
+  return utils.isArray(value) ? value.map(normalizeValue) : String(value);
+}
+
+function parseTokens(str) {
+  const tokens = Object.create(null);
+  const tokensRE = /([^\s,;=]+)\s*(?:=\s*([^,;]+))?/g;
+  let match;
+
+  while ((match = tokensRE.exec(str))) {
+    tokens[match[1]] = match[2];
+  }
+
+  return tokens;
+}
+
+const isValidHeaderName = (str) => /^[-_a-zA-Z0-9^`|~,!#$%&'*+.]+$/.test(str.trim());
+
+function matchHeaderValue(context, value, header, filter, isHeaderNameFilter) {
+  if (utils.isFunction(filter)) {
+    return filter.call(this, value, header);
+  }
+
+  if (isHeaderNameFilter) {
+    value = header;
+  }
+
+  if (!utils.isString(value)) return;
+
+  if (utils.isString(filter)) {
+    return value.indexOf(filter) !== -1;
+  }
+
+  if (utils.isRegExp(filter)) {
+    return filter.test(value);
+  }
+}
+
+function formatHeader(header) {
+  return header.trim()
+    .toLowerCase().replace(/([a-z\d])(\w*)/g, (w, char, str) => {
+      return char.toUpperCase() + str;
+    });
+}
+
+function buildAccessors(obj, header) {
+  const accessorName = utils.toCamelCase(' ' + header);
+
+  ['get', 'set', 'has'].forEach(methodName => {
+    Object.defineProperty(obj, methodName + accessorName, {
+      value: function(arg1, arg2, arg3) {
+        return this[methodName].call(this, header, arg1, arg2, arg3);
+      },
+      configurable: true
+    });
+  });
+}
+
+class AxiosHeaders {
+  constructor(headers) {
+    headers && this.set(headers);
+  }
+
+  set(header, valueOrRewrite, rewrite) {
+    const self = this;
+
+    function setHeader(_value, _header, _rewrite) {
+      const lHeader = normalizeHeader(_header);
+
+      if (!lHeader) {
+        throw new Error('header name must be a non-empty string');
+      }
+
+      const key = utils.findKey(self, lHeader);
+
+      if(!key || self[key] === undefined || _rewrite === true || (_rewrite === undefined && self[key] !== false)) {
+        self[key || _header] = normalizeValue(_value);
+      }
+    }
+
+    const setHeaders = (headers, _rewrite) =>
+      utils.forEach(headers, (_value, _header) => setHeader(_value, _header, _rewrite));
+
+    if (utils.isPlainObject(header) || header instanceof this.constructor) {
+      setHeaders(header, valueOrRewrite)
+    } else if(utils.isString(header) && (header = header.trim()) && !isValidHeaderName(header)) {
+      setHeaders(parseHeaders(header), valueOrRewrite);
+    } else {
+      header != null && setHeader(valueOrRewrite, header, rewrite);
+    }
+
+    return this;
+  }
+
+  get(header, parser) {
+    header = normalizeHeader(header);
+
+    if (header) {
+      const key = utils.findKey(this, header);
+
+      if (key) {
+        const value = this[key];
+
+        if (!parser) {
+          return value;
+        }
+
+        if (parser === true) {
+          return parseTokens(value);
+        }
+
+        if (utils.isFunction(parser)) {
+          return parser.call(this, value, key);
+        }
+
+        if (utils.isRegExp(parser)) {
+          return parser.exec(value);
+        }
+
+        throw new TypeError('parser must be boolean|regexp|function');
+      }
+    }
+  }
+
+  has(header, matcher) {
+    header = normalizeHeader(header);
+
+    if (header) {
+      const key = utils.findKey(this, header);
+
+      return !!(key && this[key] !== undefined && (!matcher || matchHeaderValue(this, this[key], key, matcher)));
+    }
+
+    return false;
+  }
+
+  delete(header, matcher) {
+    const self = this;
+    let deleted = false;
+
+    function deleteHeader(_header) {
+      _header = normalizeHeader(_header);
+
+      if (_header) {
+        const key = utils.findKey(self, _header);
+
+        if (key && (!matcher || matchHeaderValue(self, self[key], key, matcher))) {
+          delete self[key];
+
+          deleted = true;
+        }
+      }
+    }
+
+    if (utils.isArray(header)) {
+      header.forEach(deleteHeader);
+    } else {
+      deleteHeader(header);
+    }
+
+    return deleted;
+  }
+
+  clear(matcher) {
+    const keys = Object.keys(this);
+    let i = keys.length;
+    let deleted = false;
+
+    while (i--) {
+      const key = keys[i];
+      if(!matcher || matchHeaderValue(this, this[key], key, matcher, true)) {
+        delete this[key];
+        deleted = true;
+      }
+    }
+
+    return deleted;
+  }
+
+  normalize(format) {
+    const self = this;
+    const headers = {};
+
+    utils.forEach(this, (value, header) => {
+      const key = utils.findKey(headers, header);
+
+      if (key) {
+        self[key] = normalizeValue(value);
+        delete self[header];
+        return;
+      }
+
+      const normalized = format ? formatHeader(header) : String(header).trim();
+
+      if (normalized !== header) {
+        delete self[header];
+      }
+
+      self[normalized] = normalizeValue(value);
+
+      headers[normalized] = true;
+    });
+
+    return this;
+  }
+
+  concat(...targets) {
+    return this.constructor.concat(this, ...targets);
+  }
+
+  toJSON(asStrings) {
+    const obj = Object.create(null);
+
+    utils.forEach(this, (value, header) => {
+      value != null && value !== false && (obj[header] = asStrings && utils.isArray(value) ? value.join(', ') : value);
+    });
+
+    return obj;
+  }
+
+  [Symbol.iterator]() {
+    return Object.entries(this.toJSON())[Symbol.iterator]();
+  }
+
+  toString() {
+    return Object.entries(this.toJSON()).map(([header, value]) => header + ': ' + value).join('\n');
+  }
+
+  get [Symbol.toStringTag]() {
+    return 'AxiosHeaders';
+  }
+
+  static from(thing) {
+    return thing instanceof this ? thing : new this(thing);
+  }
+
+  static concat(first, ...targets) {
+    const computed = new this(first);
+
+    targets.forEach((target) => computed.set(target));
+
+    return computed;
+  }
+
+  static accessor(header) {
+    const internals = this[$internals] = (this[$internals] = {
+      accessors: {}
+    });
+
+    const accessors = internals.accessors;
+    const prototype = this.prototype;
+
+    function defineAccessor(_header) {
+      const lHeader = normalizeHeader(_header);
+
+      if (!accessors[lHeader]) {
+        buildAccessors(prototype, _header);
+        accessors[lHeader] = true;
+      }
+    }
+
+    utils.isArray(header) ? header.forEach(defineAccessor) : defineAccessor(header);
+
+    return this;
+  }
+}
+
+AxiosHeaders.accessor(['Content-Type', 'Content-Length', 'Accept', 'Accept-Encoding', 'User-Agent', 'Authorization']);
+
+// reserved names hotfix
+utils.reduceDescriptors(AxiosHeaders.prototype, ({value}, key) => {
+  let mapped = key[0].toUpperCase() + key.slice(1); // map `set` => `Set`
+  return {
+    get: () => value,
+    set(headerValue) {
+      this[mapped] = headerValue;
+    }
+  }
+});
+
+utils.freezeMethods(AxiosHeaders);
+
+/* harmony default export */ const core_AxiosHeaders = (AxiosHeaders);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/transformData.js
+
+
+
+
+
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Array|Function} fns A single function or Array of functions
+ * @param {?Object} response The response object
+ *
+ * @returns {*} The resulting transformed data
+ */
+function transformData(fns, response) {
+  const config = this || lib_defaults;
+  const context = response || config;
+  const headers = core_AxiosHeaders.from(context.headers);
+  let data = context.data;
+
+  utils.forEach(fns, function transform(fn) {
+    data = fn.call(config, data, headers.normalize(), response ? response.status : undefined);
+  });
+
+  headers.normalize();
+
+  return data;
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/cancel/isCancel.js
+
+
+function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/cancel/CanceledError.js
+
+
+
+
+
+/**
+ * A `CanceledError` is an object that is thrown when an operation is canceled.
+ *
+ * @param {string=} message The message.
+ * @param {Object=} config The config.
+ * @param {Object=} request The request.
+ *
+ * @returns {CanceledError} The created error.
+ */
+function CanceledError(message, config, request) {
+  // eslint-disable-next-line no-eq-null,eqeqeq
+  core_AxiosError.call(this, message == null ? 'canceled' : message, core_AxiosError.ERR_CANCELED, config, request);
+  this.name = 'CanceledError';
+}
+
+utils.inherits(CanceledError, core_AxiosError, {
+  __CANCEL__: true
+});
+
+/* harmony default export */ const cancel_CanceledError = (CanceledError);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/settle.js
+
+
+
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ *
+ * @returns {object} The response.
+ */
+function settle(resolve, reject, response) {
+  const validateStatus = response.config.validateStatus;
+  if (!response.status || !validateStatus || validateStatus(response.status)) {
+    resolve(response);
+  } else {
+    reject(new core_AxiosError(
+      'Request failed with status code ' + response.status,
+      [core_AxiosError.ERR_BAD_REQUEST, core_AxiosError.ERR_BAD_RESPONSE][Math.floor(response.status / 100) - 4],
+      response.config,
+      response.request,
+      response
+    ));
+  }
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/cookies.js
+
+
+
+
+
+/* harmony default export */ const cookies = (browser.isStandardBrowserEnv ?
+
+// Standard browser envs support document.cookie
+  (function standardBrowserEnv() {
+    return {
+      write: function write(name, value, expires, path, domain, secure) {
+        const cookie = [];
+        cookie.push(name + '=' + encodeURIComponent(value));
+
+        if (utils.isNumber(expires)) {
+          cookie.push('expires=' + new Date(expires).toGMTString());
+        }
+
+        if (utils.isString(path)) {
+          cookie.push('path=' + path);
+        }
+
+        if (utils.isString(domain)) {
+          cookie.push('domain=' + domain);
+        }
+
+        if (secure === true) {
+          cookie.push('secure');
+        }
+
+        document.cookie = cookie.join('; ');
+      },
+
+      read: function read(name) {
+        const match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+        return (match ? decodeURIComponent(match[3]) : null);
+      },
+
+      remove: function remove(name) {
+        this.write(name, '', Date.now() - 86400000);
+      }
+    };
+  })() :
+
+// Non standard browser env (web workers, react-native) lack needed support.
+  (function nonStandardBrowserEnv() {
+    return {
+      write: function write() {},
+      read: function read() { return null; },
+      remove: function remove() {}
+    };
+  })());
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/isAbsoluteURL.js
+
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ *
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url);
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/combineURLs.js
+
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ *
+ * @returns {string} The combined URL
+ */
+function combineURLs(baseURL, relativeURL) {
+  return relativeURL
+    ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+    : baseURL;
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/buildFullPath.js
+
+
+
+
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ *
+ * @returns {string} The combined full path
+ */
+function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/isURLSameOrigin.js
+
+
+
+
+
+/* harmony default export */ const isURLSameOrigin = (browser.isStandardBrowserEnv ?
+
+// Standard browser envs have full support of the APIs needed to test
+// whether the request URL is of the same origin as current location.
+  (function standardBrowserEnv() {
+    const msie = /(msie|trident)/i.test(navigator.userAgent);
+    const urlParsingNode = document.createElement('a');
+    let originURL;
+
+    /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+    function resolveURL(url) {
+      let href = url;
+
+      if (msie) {
+        // IE needs attribute set twice to normalize properties
+        urlParsingNode.setAttribute('href', href);
+        href = urlParsingNode.href;
+      }
+
+      urlParsingNode.setAttribute('href', href);
+
+      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+      return {
+        href: urlParsingNode.href,
+        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+        host: urlParsingNode.host,
+        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+        hostname: urlParsingNode.hostname,
+        port: urlParsingNode.port,
+        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+          urlParsingNode.pathname :
+          '/' + urlParsingNode.pathname
+      };
+    }
+
+    originURL = resolveURL(window.location.href);
+
+    /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+    return function isURLSameOrigin(requestURL) {
+      const parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+      return (parsed.protocol === originURL.protocol &&
+          parsed.host === originURL.host);
+    };
+  })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+  (function nonStandardBrowserEnv() {
+    return function isURLSameOrigin() {
+      return true;
+    };
+  })());
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/parseProtocol.js
+
+
+function parseProtocol(url) {
+  const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
+  return match && match[1] || '';
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/speedometer.js
+
+
+/**
+ * Calculate data maxRate
+ * @param {Number} [samplesCount= 10]
+ * @param {Number} [min= 1000]
+ * @returns {Function}
+ */
+function speedometer(samplesCount, min) {
+  samplesCount = samplesCount || 10;
+  const bytes = new Array(samplesCount);
+  const timestamps = new Array(samplesCount);
+  let head = 0;
+  let tail = 0;
+  let firstSampleTS;
+
+  min = min !== undefined ? min : 1000;
+
+  return function push(chunkLength) {
+    const now = Date.now();
+
+    const startedAt = timestamps[tail];
+
+    if (!firstSampleTS) {
+      firstSampleTS = now;
+    }
+
+    bytes[head] = chunkLength;
+    timestamps[head] = now;
+
+    let i = tail;
+    let bytesCount = 0;
+
+    while (i !== head) {
+      bytesCount += bytes[i++];
+      i = i % samplesCount;
+    }
+
+    head = (head + 1) % samplesCount;
+
+    if (head === tail) {
+      tail = (tail + 1) % samplesCount;
+    }
+
+    if (now - firstSampleTS < min) {
+      return;
+    }
+
+    const passed = startedAt && now - startedAt;
+
+    return passed ? Math.round(bytesCount * 1000 / passed) : undefined;
+  };
+}
+
+/* harmony default export */ const helpers_speedometer = (speedometer);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/adapters/xhr.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function progressEventReducer(listener, isDownloadStream) {
+  let bytesNotified = 0;
+  const _speedometer = helpers_speedometer(50, 250);
+
+  return e => {
+    const loaded = e.loaded;
+    const total = e.lengthComputable ? e.total : undefined;
+    const progressBytes = loaded - bytesNotified;
+    const rate = _speedometer(progressBytes);
+    const inRange = loaded <= total;
+
+    bytesNotified = loaded;
+
+    const data = {
+      loaded,
+      total,
+      progress: total ? (loaded / total) : undefined,
+      bytes: progressBytes,
+      rate: rate ? rate : undefined,
+      estimated: rate && total && inRange ? (total - loaded) / rate : undefined,
+      event: e
+    };
+
+    data[isDownloadStream ? 'download' : 'upload'] = true;
+
+    listener(data);
+  };
+}
+
+const isXHRAdapterSupported = typeof XMLHttpRequest !== 'undefined';
+
+/* harmony default export */ const xhr = (isXHRAdapterSupported && function (config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    let requestData = config.data;
+    const requestHeaders = core_AxiosHeaders.from(config.headers).normalize();
+    const responseType = config.responseType;
+    let onCanceled;
+    function done() {
+      if (config.cancelToken) {
+        config.cancelToken.unsubscribe(onCanceled);
+      }
+
+      if (config.signal) {
+        config.signal.removeEventListener('abort', onCanceled);
+      }
+    }
+
+    let contentType;
+
+    if (utils.isFormData(requestData)) {
+      if (browser.isStandardBrowserEnv || browser.isStandardBrowserWebWorkerEnv) {
+        requestHeaders.setContentType(false); // Let the browser set it
+      } else if(!requestHeaders.getContentType(/^\s*multipart\/form-data/)){
+        requestHeaders.setContentType('multipart/form-data'); // mobile/desktop app frameworks
+      } else if(utils.isString(contentType = requestHeaders.getContentType())){
+        // fix semicolon duplication issue for ReactNative FormData implementation
+        requestHeaders.setContentType(contentType.replace(/^\s*(multipart\/form-data);+/, '$1'))
+      }
+    }
+
+    let request = new XMLHttpRequest();
+
+    // HTTP basic authentication
+    if (config.auth) {
+      const username = config.auth.username || '';
+      const password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
+      requestHeaders.set('Authorization', 'Basic ' + btoa(username + ':' + password));
+    }
+
+    const fullPath = buildFullPath(config.baseURL, config.url);
+
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+
+    function onloadend() {
+      if (!request) {
+        return;
+      }
+      // Prepare the response
+      const responseHeaders = core_AxiosHeaders.from(
+        'getAllResponseHeaders' in request && request.getAllResponseHeaders()
+      );
+      const responseData = !responseType || responseType === 'text' || responseType === 'json' ?
+        request.responseText : request.response;
+      const response = {
+        data: responseData,
+        status: request.status,
+        statusText: request.statusText,
+        headers: responseHeaders,
+        config,
+        request
+      };
+
+      settle(function _resolve(value) {
+        resolve(value);
+        done();
+      }, function _reject(err) {
+        reject(err);
+        done();
+      }, response);
+
+      // Clean up request
+      request = null;
+    }
+
+    if ('onloadend' in request) {
+      // Use onloadend if available
+      request.onloadend = onloadend;
+    } else {
+      // Listen for ready state to emulate onloadend
+      request.onreadystatechange = function handleLoad() {
+        if (!request || request.readyState !== 4) {
+          return;
+        }
+
+        // The request errored out and we didn't get a response, this will be
+        // handled by onerror instead
+        // With one exception: request that using file: protocol, most browsers
+        // will return status as 0 even though it's a successful request
+        if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+          return;
+        }
+        // readystate handler is calling before onerror or ontimeout handlers,
+        // so we should call onloadend on the next 'tick'
+        setTimeout(onloadend);
+      };
+    }
+
+    // Handle browser request cancellation (as opposed to a manual cancellation)
+    request.onabort = function handleAbort() {
+      if (!request) {
+        return;
+      }
+
+      reject(new core_AxiosError('Request aborted', core_AxiosError.ECONNABORTED, config, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle low level network errors
+    request.onerror = function handleError() {
+      // Real errors are hidden from us by the browser
+      // onerror should only fire if it's a network error
+      reject(new core_AxiosError('Network Error', core_AxiosError.ERR_NETWORK, config, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle timeout
+    request.ontimeout = function handleTimeout() {
+      let timeoutErrorMessage = config.timeout ? 'timeout of ' + config.timeout + 'ms exceeded' : 'timeout exceeded';
+      const transitional = config.transitional || defaults_transitional;
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(new core_AxiosError(
+        timeoutErrorMessage,
+        transitional.clarifyTimeoutError ? core_AxiosError.ETIMEDOUT : core_AxiosError.ECONNABORTED,
+        config,
+        request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if (browser.isStandardBrowserEnv) {
+      // Add xsrf header
+      const xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath))
+        && config.xsrfCookieName && cookies.read(config.xsrfCookieName);
+
+      if (xsrfValue) {
+        requestHeaders.set(config.xsrfHeaderName, xsrfValue);
+      }
+    }
+
+    // Remove Content-Type if data is undefined
+    requestData === undefined && requestHeaders.setContentType(null);
+
+    // Add headers to the request
+    if ('setRequestHeader' in request) {
+      utils.forEach(requestHeaders.toJSON(), function setRequestHeader(val, key) {
+        request.setRequestHeader(key, val);
+      });
+    }
+
+    // Add withCredentials to request if needed
+    if (!utils.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
+    }
+
+    // Add responseType to request if needed
+    if (responseType && responseType !== 'json') {
+      request.responseType = config.responseType;
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', progressEventReducer(config.onDownloadProgress, true));
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', progressEventReducer(config.onUploadProgress));
+    }
+
+    if (config.cancelToken || config.signal) {
+      // Handle cancellation
+      // eslint-disable-next-line func-names
+      onCanceled = cancel => {
+        if (!request) {
+          return;
+        }
+        reject(!cancel || cancel.type ? new cancel_CanceledError(null, config, request) : cancel);
+        request.abort();
+        request = null;
+      };
+
+      config.cancelToken && config.cancelToken.subscribe(onCanceled);
+      if (config.signal) {
+        config.signal.aborted ? onCanceled() : config.signal.addEventListener('abort', onCanceled);
+      }
+    }
+
+    const protocol = parseProtocol(fullPath);
+
+    if (protocol && browser.protocols.indexOf(protocol) === -1) {
+      reject(new core_AxiosError('Unsupported protocol ' + protocol + ':', core_AxiosError.ERR_BAD_REQUEST, config));
+      return;
+    }
+
+
+    // Send the request
+    request.send(requestData || null);
+  });
+});
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/adapters/adapters.js
+
+
+
+
+
+const knownAdapters = {
+  http: helpers_null,
+  xhr: xhr
+}
+
+utils.forEach(knownAdapters, (fn, value) => {
+  if (fn) {
+    try {
+      Object.defineProperty(fn, 'name', {value});
+    } catch (e) {
+      // eslint-disable-next-line no-empty
+    }
+    Object.defineProperty(fn, 'adapterName', {value});
+  }
+});
+
+const renderReason = (reason) => `- ${reason}`;
+
+const isResolvedHandle = (adapter) => utils.isFunction(adapter) || adapter === null || adapter === false;
+
+/* harmony default export */ const adapters = ({
+  getAdapter: (adapters) => {
+    adapters = utils.isArray(adapters) ? adapters : [adapters];
+
+    const {length} = adapters;
+    let nameOrAdapter;
+    let adapter;
+
+    const rejectedReasons = {};
+
+    for (let i = 0; i < length; i++) {
+      nameOrAdapter = adapters[i];
+      let id;
+
+      adapter = nameOrAdapter;
+
+      if (!isResolvedHandle(nameOrAdapter)) {
+        adapter = knownAdapters[(id = String(nameOrAdapter)).toLowerCase()];
+
+        if (adapter === undefined) {
+          throw new core_AxiosError(`Unknown adapter '${id}'`);
+        }
+      }
+
+      if (adapter) {
+        break;
+      }
+
+      rejectedReasons[id || '#' + i] = adapter;
+    }
+
+    if (!adapter) {
+
+      const reasons = Object.entries(rejectedReasons)
+        .map(([id, state]) => `adapter ${id} ` +
+          (state === false ? 'is not supported by the environment' : 'is not available in the build')
+        );
+
+      let s = length ?
+        (reasons.length > 1 ? 'since :\n' + reasons.map(renderReason).join('\n') : ' ' + renderReason(reasons[0])) :
+        'as no adapter specified';
+
+      throw new core_AxiosError(
+        `There is no suitable adapter to dispatch the request ` + s,
+        'ERR_NOT_SUPPORT'
+      );
+    }
+
+    return adapter;
+  },
+  adapters: knownAdapters
+});
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/dispatchRequest.js
+
+
+
+
+
+
+
+
+
+/**
+ * Throws a `CanceledError` if cancellation has been requested.
+ *
+ * @param {Object} config The config that is to be used for the request
+ *
+ * @returns {void}
+ */
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+
+  if (config.signal && config.signal.aborted) {
+    throw new cancel_CanceledError(null, config);
+  }
+}
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ *
+ * @returns {Promise} The Promise to be fulfilled
+ */
+function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+
+  config.headers = core_AxiosHeaders.from(config.headers);
+
+  // Transform request data
+  config.data = transformData.call(
+    config,
+    config.transformRequest
+  );
+
+  if (['post', 'put', 'patch'].indexOf(config.method) !== -1) {
+    config.headers.setContentType('application/x-www-form-urlencoded', false);
+  }
+
+  const adapter = adapters.getAdapter(config.adapter || lib_defaults.adapter);
+
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+
+    // Transform response data
+    response.data = transformData.call(
+      config,
+      config.transformResponse,
+      response
+    );
+
+    response.headers = core_AxiosHeaders.from(response.headers);
+
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+
+      // Transform response data
+      if (reason && reason.response) {
+        reason.response.data = transformData.call(
+          config,
+          config.transformResponse,
+          reason.response
+        );
+        reason.response.headers = core_AxiosHeaders.from(reason.response.headers);
+      }
+    }
+
+    return Promise.reject(reason);
+  });
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/mergeConfig.js
+
+
+
+
+
+const headersToObject = (thing) => thing instanceof core_AxiosHeaders ? thing.toJSON() : thing;
+
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ *
+ * @returns {Object} New object resulting from merging config2 to config1
+ */
+function mergeConfig(config1, config2) {
+  // eslint-disable-next-line no-param-reassign
+  config2 = config2 || {};
+  const config = {};
+
+  function getMergedValue(target, source, caseless) {
+    if (utils.isPlainObject(target) && utils.isPlainObject(source)) {
+      return utils.merge.call({caseless}, target, source);
+    } else if (utils.isPlainObject(source)) {
+      return utils.merge({}, source);
+    } else if (utils.isArray(source)) {
+      return source.slice();
+    }
+    return source;
+  }
+
+  // eslint-disable-next-line consistent-return
+  function mergeDeepProperties(a, b, caseless) {
+    if (!utils.isUndefined(b)) {
+      return getMergedValue(a, b, caseless);
+    } else if (!utils.isUndefined(a)) {
+      return getMergedValue(undefined, a, caseless);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function valueFromConfig2(a, b) {
+    if (!utils.isUndefined(b)) {
+      return getMergedValue(undefined, b);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function defaultToConfig2(a, b) {
+    if (!utils.isUndefined(b)) {
+      return getMergedValue(undefined, b);
+    } else if (!utils.isUndefined(a)) {
+      return getMergedValue(undefined, a);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function mergeDirectKeys(a, b, prop) {
+    if (prop in config2) {
+      return getMergedValue(a, b);
+    } else if (prop in config1) {
+      return getMergedValue(undefined, a);
+    }
+  }
+
+  const mergeMap = {
+    url: valueFromConfig2,
+    method: valueFromConfig2,
+    data: valueFromConfig2,
+    baseURL: defaultToConfig2,
+    transformRequest: defaultToConfig2,
+    transformResponse: defaultToConfig2,
+    paramsSerializer: defaultToConfig2,
+    timeout: defaultToConfig2,
+    timeoutMessage: defaultToConfig2,
+    withCredentials: defaultToConfig2,
+    adapter: defaultToConfig2,
+    responseType: defaultToConfig2,
+    xsrfCookieName: defaultToConfig2,
+    xsrfHeaderName: defaultToConfig2,
+    onUploadProgress: defaultToConfig2,
+    onDownloadProgress: defaultToConfig2,
+    decompress: defaultToConfig2,
+    maxContentLength: defaultToConfig2,
+    maxBodyLength: defaultToConfig2,
+    beforeRedirect: defaultToConfig2,
+    transport: defaultToConfig2,
+    httpAgent: defaultToConfig2,
+    httpsAgent: defaultToConfig2,
+    cancelToken: defaultToConfig2,
+    socketPath: defaultToConfig2,
+    responseEncoding: defaultToConfig2,
+    validateStatus: mergeDirectKeys,
+    headers: (a, b) => mergeDeepProperties(headersToObject(a), headersToObject(b), true)
+  };
+
+  utils.forEach(Object.keys(Object.assign({}, config1, config2)), function computeConfigValue(prop) {
+    const merge = mergeMap[prop] || mergeDeepProperties;
+    const configValue = merge(config1[prop], config2[prop], prop);
+    (utils.isUndefined(configValue) && merge !== mergeDirectKeys) || (config[prop] = configValue);
+  });
+
+  return config;
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/env/data.js
+const VERSION = "1.5.1";
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/validator.js
+
+
+
+
+
+const validators = {};
+
+// eslint-disable-next-line func-names
+['object', 'boolean', 'number', 'function', 'string', 'symbol'].forEach((type, i) => {
+  validators[type] = function validator(thing) {
+    return typeof thing === type || 'a' + (i < 1 ? 'n ' : ' ') + type;
+  };
+});
+
+const deprecatedWarnings = {};
+
+/**
+ * Transitional option validator
+ *
+ * @param {function|boolean?} validator - set to false if the transitional option has been removed
+ * @param {string?} version - deprecated version / removed since version
+ * @param {string?} message - some message with additional info
+ *
+ * @returns {function}
+ */
+validators.transitional = function transitional(validator, version, message) {
+  function formatMessage(opt, desc) {
+    return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
+  }
+
+  // eslint-disable-next-line func-names
+  return (value, opt, opts) => {
+    if (validator === false) {
+      throw new core_AxiosError(
+        formatMessage(opt, ' has been removed' + (version ? ' in ' + version : '')),
+        core_AxiosError.ERR_DEPRECATED
+      );
+    }
+
+    if (version && !deprecatedWarnings[opt]) {
+      deprecatedWarnings[opt] = true;
+      // eslint-disable-next-line no-console
+      console.warn(
+        formatMessage(
+          opt,
+          ' has been deprecated since v' + version + ' and will be removed in the near future'
+        )
+      );
+    }
+
+    return validator ? validator(value, opt, opts) : true;
+  };
+};
+
+/**
+ * Assert object's properties type
+ *
+ * @param {object} options
+ * @param {object} schema
+ * @param {boolean?} allowUnknown
+ *
+ * @returns {object}
+ */
+
+function assertOptions(options, schema, allowUnknown) {
+  if (typeof options !== 'object') {
+    throw new core_AxiosError('options must be an object', core_AxiosError.ERR_BAD_OPTION_VALUE);
+  }
+  const keys = Object.keys(options);
+  let i = keys.length;
+  while (i-- > 0) {
+    const opt = keys[i];
+    const validator = schema[opt];
+    if (validator) {
+      const value = options[opt];
+      const result = value === undefined || validator(value, opt, options);
+      if (result !== true) {
+        throw new core_AxiosError('option ' + opt + ' must be ' + result, core_AxiosError.ERR_BAD_OPTION_VALUE);
+      }
+      continue;
+    }
+    if (allowUnknown !== true) {
+      throw new core_AxiosError('Unknown option ' + opt, core_AxiosError.ERR_BAD_OPTION);
+    }
+  }
+}
+
+/* harmony default export */ const validator = ({
+  assertOptions,
+  validators
+});
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/core/Axios.js
+
+
+
+
+
+
+
+
+
+
+
+const Axios_validators = validator.validators;
+
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ *
+ * @return {Axios} A new instance of Axios
+ */
+class Axios {
+  constructor(instanceConfig) {
+    this.defaults = instanceConfig;
+    this.interceptors = {
+      request: new core_InterceptorManager(),
+      response: new core_InterceptorManager()
+    };
+  }
+
+  /**
+   * Dispatch a request
+   *
+   * @param {String|Object} configOrUrl The config specific for this request (merged with this.defaults)
+   * @param {?Object} config
+   *
+   * @returns {Promise} The Promise to be fulfilled
+   */
+  request(configOrUrl, config) {
+    /*eslint no-param-reassign:0*/
+    // Allow for axios('example/url'[, config]) a la fetch API
+    if (typeof configOrUrl === 'string') {
+      config = config || {};
+      config.url = configOrUrl;
+    } else {
+      config = configOrUrl || {};
+    }
+
+    config = mergeConfig(this.defaults, config);
+
+    const {transitional, paramsSerializer, headers} = config;
+
+    if (transitional !== undefined) {
+      validator.assertOptions(transitional, {
+        silentJSONParsing: Axios_validators.transitional(Axios_validators.boolean),
+        forcedJSONParsing: Axios_validators.transitional(Axios_validators.boolean),
+        clarifyTimeoutError: Axios_validators.transitional(Axios_validators.boolean)
+      }, false);
+    }
+
+    if (paramsSerializer != null) {
+      if (utils.isFunction(paramsSerializer)) {
+        config.paramsSerializer = {
+          serialize: paramsSerializer
+        }
+      } else {
+        validator.assertOptions(paramsSerializer, {
+          encode: Axios_validators.function,
+          serialize: Axios_validators.function
+        }, true);
+      }
+    }
+
+    // Set config.method
+    config.method = (config.method || this.defaults.method || 'get').toLowerCase();
+
+    // Flatten headers
+    let contextHeaders = headers && utils.merge(
+      headers.common,
+      headers[config.method]
+    );
+
+    headers && utils.forEach(
+      ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+      (method) => {
+        delete headers[method];
+      }
+    );
+
+    config.headers = core_AxiosHeaders.concat(contextHeaders, headers);
+
+    // filter out skipped interceptors
+    const requestInterceptorChain = [];
+    let synchronousRequestInterceptors = true;
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+      if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) {
+        return;
+      }
+
+      synchronousRequestInterceptors = synchronousRequestInterceptors && interceptor.synchronous;
+
+      requestInterceptorChain.unshift(interceptor.fulfilled, interceptor.rejected);
+    });
+
+    const responseInterceptorChain = [];
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+      responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
+    });
+
+    let promise;
+    let i = 0;
+    let len;
+
+    if (!synchronousRequestInterceptors) {
+      const chain = [dispatchRequest.bind(this), undefined];
+      chain.unshift.apply(chain, requestInterceptorChain);
+      chain.push.apply(chain, responseInterceptorChain);
+      len = chain.length;
+
+      promise = Promise.resolve(config);
+
+      while (i < len) {
+        promise = promise.then(chain[i++], chain[i++]);
+      }
+
+      return promise;
+    }
+
+    len = requestInterceptorChain.length;
+
+    let newConfig = config;
+
+    i = 0;
+
+    while (i < len) {
+      const onFulfilled = requestInterceptorChain[i++];
+      const onRejected = requestInterceptorChain[i++];
+      try {
+        newConfig = onFulfilled(newConfig);
+      } catch (error) {
+        onRejected.call(this, error);
+        break;
+      }
+    }
+
+    try {
+      promise = dispatchRequest.call(this, newConfig);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+
+    i = 0;
+    len = responseInterceptorChain.length;
+
+    while (i < len) {
+      promise = promise.then(responseInterceptorChain[i++], responseInterceptorChain[i++]);
+    }
+
+    return promise;
+  }
+
+  getUri(config) {
+    config = mergeConfig(this.defaults, config);
+    const fullPath = buildFullPath(config.baseURL, config.url);
+    return buildURL(fullPath, config.params, config.paramsSerializer);
+  }
+}
+
+// Provide aliases for supported request methods
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, config) {
+    return this.request(mergeConfig(config || {}, {
+      method,
+      url,
+      data: (config || {}).data
+    }));
+  };
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  /*eslint func-names:0*/
+
+  function generateHTTPMethod(isForm) {
+    return function httpMethod(url, data, config) {
+      return this.request(mergeConfig(config || {}, {
+        method,
+        headers: isForm ? {
+          'Content-Type': 'multipart/form-data'
+        } : {},
+        url,
+        data
+      }));
+    };
+  }
+
+  Axios.prototype[method] = generateHTTPMethod();
+
+  Axios.prototype[method + 'Form'] = generateHTTPMethod(true);
+});
+
+/* harmony default export */ const core_Axios = (Axios);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/cancel/CancelToken.js
+
+
+
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @param {Function} executor The executor function.
+ *
+ * @returns {CancelToken}
+ */
+class CancelToken {
+  constructor(executor) {
+    if (typeof executor !== 'function') {
+      throw new TypeError('executor must be a function.');
+    }
+
+    let resolvePromise;
+
+    this.promise = new Promise(function promiseExecutor(resolve) {
+      resolvePromise = resolve;
+    });
+
+    const token = this;
+
+    // eslint-disable-next-line func-names
+    this.promise.then(cancel => {
+      if (!token._listeners) return;
+
+      let i = token._listeners.length;
+
+      while (i-- > 0) {
+        token._listeners[i](cancel);
+      }
+      token._listeners = null;
+    });
+
+    // eslint-disable-next-line func-names
+    this.promise.then = onfulfilled => {
+      let _resolve;
+      // eslint-disable-next-line func-names
+      const promise = new Promise(resolve => {
+        token.subscribe(resolve);
+        _resolve = resolve;
+      }).then(onfulfilled);
+
+      promise.cancel = function reject() {
+        token.unsubscribe(_resolve);
+      };
+
+      return promise;
+    };
+
+    executor(function cancel(message, config, request) {
+      if (token.reason) {
+        // Cancellation has already been requested
+        return;
+      }
+
+      token.reason = new cancel_CanceledError(message, config, request);
+      resolvePromise(token.reason);
+    });
+  }
+
+  /**
+   * Throws a `CanceledError` if cancellation has been requested.
+   */
+  throwIfRequested() {
+    if (this.reason) {
+      throw this.reason;
+    }
+  }
+
+  /**
+   * Subscribe to the cancel signal
+   */
+
+  subscribe(listener) {
+    if (this.reason) {
+      listener(this.reason);
+      return;
+    }
+
+    if (this._listeners) {
+      this._listeners.push(listener);
+    } else {
+      this._listeners = [listener];
+    }
+  }
+
+  /**
+   * Unsubscribe from the cancel signal
+   */
+
+  unsubscribe(listener) {
+    if (!this._listeners) {
+      return;
+    }
+    const index = this._listeners.indexOf(listener);
+    if (index !== -1) {
+      this._listeners.splice(index, 1);
+    }
+  }
+
+  /**
+   * Returns an object that contains a new `CancelToken` and a function that, when called,
+   * cancels the `CancelToken`.
+   */
+  static source() {
+    let cancel;
+    const token = new CancelToken(function executor(c) {
+      cancel = c;
+    });
+    return {
+      token,
+      cancel
+    };
+  }
+}
+
+/* harmony default export */ const cancel_CancelToken = (CancelToken);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/spread.js
+
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ *
+ * @returns {Function}
+ */
+function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/isAxiosError.js
+
+
+
+
+/**
+ * Determines whether the payload is an error thrown by Axios
+ *
+ * @param {*} payload The value to test
+ *
+ * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
+ */
+function isAxiosError(payload) {
+  return utils.isObject(payload) && (payload.isAxiosError === true);
+}
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/helpers/HttpStatusCode.js
+const HttpStatusCode = {
+  Continue: 100,
+  SwitchingProtocols: 101,
+  Processing: 102,
+  EarlyHints: 103,
+  Ok: 200,
+  Created: 201,
+  Accepted: 202,
+  NonAuthoritativeInformation: 203,
+  NoContent: 204,
+  ResetContent: 205,
+  PartialContent: 206,
+  MultiStatus: 207,
+  AlreadyReported: 208,
+  ImUsed: 226,
+  MultipleChoices: 300,
+  MovedPermanently: 301,
+  Found: 302,
+  SeeOther: 303,
+  NotModified: 304,
+  UseProxy: 305,
+  Unused: 306,
+  TemporaryRedirect: 307,
+  PermanentRedirect: 308,
+  BadRequest: 400,
+  Unauthorized: 401,
+  PaymentRequired: 402,
+  Forbidden: 403,
+  NotFound: 404,
+  MethodNotAllowed: 405,
+  NotAcceptable: 406,
+  ProxyAuthenticationRequired: 407,
+  RequestTimeout: 408,
+  Conflict: 409,
+  Gone: 410,
+  LengthRequired: 411,
+  PreconditionFailed: 412,
+  PayloadTooLarge: 413,
+  UriTooLong: 414,
+  UnsupportedMediaType: 415,
+  RangeNotSatisfiable: 416,
+  ExpectationFailed: 417,
+  ImATeapot: 418,
+  MisdirectedRequest: 421,
+  UnprocessableEntity: 422,
+  Locked: 423,
+  FailedDependency: 424,
+  TooEarly: 425,
+  UpgradeRequired: 426,
+  PreconditionRequired: 428,
+  TooManyRequests: 429,
+  RequestHeaderFieldsTooLarge: 431,
+  UnavailableForLegalReasons: 451,
+  InternalServerError: 500,
+  NotImplemented: 501,
+  BadGateway: 502,
+  ServiceUnavailable: 503,
+  GatewayTimeout: 504,
+  HttpVersionNotSupported: 505,
+  VariantAlsoNegotiates: 506,
+  InsufficientStorage: 507,
+  LoopDetected: 508,
+  NotExtended: 510,
+  NetworkAuthenticationRequired: 511,
+};
+
+Object.entries(HttpStatusCode).forEach(([key, value]) => {
+  HttpStatusCode[value] = key;
+});
+
+/* harmony default export */ const helpers_HttpStatusCode = (HttpStatusCode);
+
+;// CONCATENATED MODULE: ./node_modules/axios/lib/axios.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ *
+ * @returns {Axios} A new instance of Axios
+ */
+function createInstance(defaultConfig) {
+  const context = new core_Axios(defaultConfig);
+  const instance = bind(core_Axios.prototype.request, context);
+
+  // Copy axios.prototype to instance
+  utils.extend(instance, core_Axios.prototype, context, {allOwnKeys: true});
+
+  // Copy context to instance
+  utils.extend(instance, context, null, {allOwnKeys: true});
+
+  // Factory for creating new instances
+  instance.create = function create(instanceConfig) {
+    return createInstance(mergeConfig(defaultConfig, instanceConfig));
+  };
+
+  return instance;
+}
+
+// Create the default instance to be exported
+const axios = createInstance(lib_defaults);
+
+// Expose Axios class to allow class inheritance
+axios.Axios = core_Axios;
+
+// Expose Cancel & CancelToken
+axios.CanceledError = cancel_CanceledError;
+axios.CancelToken = cancel_CancelToken;
+axios.isCancel = isCancel;
+axios.VERSION = VERSION;
+axios.toFormData = helpers_toFormData;
+
+// Expose AxiosError class
+axios.AxiosError = core_AxiosError;
+
+// alias for CanceledError for backward compatibility
+axios.Cancel = axios.CanceledError;
+
+// Expose all/spread
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+
+axios.spread = spread;
+
+// Expose isAxiosError
+axios.isAxiosError = isAxiosError;
+
+// Expose mergeConfig
+axios.mergeConfig = mergeConfig;
+
+axios.AxiosHeaders = core_AxiosHeaders;
+
+axios.formToJSON = thing => helpers_formDataToJSON(utils.isHTMLForm(thing) ? new FormData(thing) : thing);
+
+axios.getAdapter = adapters.getAdapter;
+
+axios.HttpStatusCode = helpers_HttpStatusCode;
+
+axios.default = axios;
+
+// this module should only have a default export
+/* harmony default export */ const lib_axios = (axios);
+
+;// CONCATENATED MODULE: ./corejs/plugins/upload.js
+function upload_typeof(o) { "@babel/helpers - typeof"; return upload_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, upload_typeof(o); }
+
+var upload_module = {
+  exports: {}
+};
+var upload_exports = upload_module.exports;
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == upload_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(upload_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+var upload_require = lib_axios,
+  upload_axios = upload_require["default"];
+upload_module.exports = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(query, request) {
+    var data, res, res2, imgSize, imgX, imgY, res3;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          data = {
+            bucket: 'yyimgs',
+            ext: 'jpg',
+            filename: query.imgFile.name,
+            local: false,
+            nos_product: 0,
+            return_body: "{\"code\":200,\"size\":\"$(ObjectSize)\"}",
+            type: 'other'
+          }; //   获取key和token
+          _context.next = 3;
+          return request('POST', "https://music.163.com/weapi/nos/token/alloc", data, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy
+          });
+        case 3:
+          res = _context.sent;
+          _context.next = 6;
+          return upload_axios({
+            method: 'post',
+            url: "https://nosup-hz1.127.net/yyimgs/".concat(res.body.result.objectKey, "?offset=0&complete=true&version=1.0"),
+            headers: {
+              'x-nos-token': res.body.result.token,
+              'Content-Type': 'image/jpeg'
+            },
+            data: query.imgFile.data
+          });
+        case 6:
+          res2 = _context.sent;
+          //   获取裁剪后图片的id
+          imgSize = query.imgSize || 300;
+          imgX = query.imgX || 0;
+          imgY = query.imgY || 0;
+          _context.next = 12;
+          return request('POST', "https://music.163.com/upload/img/op?id=".concat(res.body.result.docId, "&op=").concat(imgX, "y").concat(imgY, "y").concat(imgSize, "y").concat(imgSize), {}, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy
+          });
+        case 12:
+          res3 = _context.sent;
+          return _context.abrupt("return", {
+            // ...res.body.result,
+            // ...res2.data,
+            // ...res3.body,
+            url_pre: 'https://p1.music.126.net/' + res.body.result.objectKey,
+            url: res3.body.url,
+            imgId: res3.body.id
+          });
+        case 14:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const upload = (upload_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/avatar_upload.js
+function avatar_upload_typeof(o) { "@babel/helpers - typeof"; return avatar_upload_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, avatar_upload_typeof(o); }
+
+var avatar_upload_module = {
+  exports: {}
+};
+var avatar_upload_exports = avatar_upload_module.exports;
+function avatar_upload_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ avatar_upload_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == avatar_upload_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(avatar_upload_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function avatar_upload_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function avatar_upload_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? avatar_upload_ownKeys(Object(t), !0).forEach(function (r) { avatar_upload_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : avatar_upload_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function avatar_upload_defineProperty(obj, key, value) { key = avatar_upload_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function avatar_upload_toPropertyKey(t) { var i = avatar_upload_toPrimitive(t, "string"); return "symbol" == avatar_upload_typeof(i) ? i : String(i); }
+function avatar_upload_toPrimitive(t, r) { if ("object" != avatar_upload_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != avatar_upload_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function avatar_upload_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function avatar_upload_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { avatar_upload_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { avatar_upload_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+var uploadPlugin = upload;
+avatar_upload_module.exports = /*#__PURE__*/function () {
+  var _ref = avatar_upload_asyncToGenerator( /*#__PURE__*/avatar_upload_regeneratorRuntime().mark(function _callee(query, request) {
+    var uploadInfo, res;
+    return avatar_upload_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return uploadPlugin(query, request);
+        case 2:
+          uploadInfo = _context.sent;
+          _context.next = 5;
+          return request('POST', "https://music.163.com/weapi/user/avatar/upload/v1", {
+            imgid: uploadInfo.imgId
+          }, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 5:
+          res = _context.sent;
+          return _context.abrupt("return", {
+            status: 200,
+            body: {
+              code: 200,
+              data: avatar_upload_objectSpread(avatar_upload_objectSpread({}, uploadInfo), res.body)
+            }
+          });
+        case 7:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const avatar_upload = (avatar_upload_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/banner.js
+var banner_module = {
+  exports: {}
+};
+var banner_exports = banner_module.exports;
 // 首页轮播图
 
-/* harmony default export */ const banner = ((query, request) => {
-  const type =
-    {
-      0: 'pc',
-      1: 'android',
-      2: 'iphone',
-      3: 'ipad',
-    }[query.type || 0] || 'pc'
-  return request(
-    'POST',
-    `https://music.163.com/api/v2/banner/get`,
-    { clientType: type },
-    { crypto: 'api', proxy: query.proxy, realIP: query.realIP },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/batch.js
+banner_module.exports = function (query, request) {
+  var type = {
+    0: 'pc',
+    1: 'android',
+    2: 'iphone',
+    3: 'ipad'
+  }[query.type || 0] || 'pc';
+  return request('POST', "https://music.163.com/api/v2/banner/get", {
+    clientType: type
+  }, {
+    crypto: 'api',
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const banner = (banner_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/batch.js
+var batch_module = {
+  exports: {}
+};
+var batch_exports = batch_module.exports;
 // 批量请求接口
 
-/* harmony default export */ const batch = ((query, request) => {
-  const data = {
-    e_r: true,
-  }
-  Object.keys(query).forEach((i) => {
+batch_module.exports = function (query, request) {
+  var data = {
+    e_r: true
+  };
+  Object.keys(query).forEach(function (i) {
     if (/^\/api\//.test(i)) {
-      data[i] = query[i]
+      data[i] = query[i];
     }
-  })
-  return request('POST', `https://music.163.com/eapi/batch`, data, {
+  });
+  return request('POST', "https://music.163.com/eapi/batch", data, {
     crypto: 'eapi',
     proxy: query.proxy,
     url: '/api/batch',
     cookie: query.cookie,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/calendar.js
-/* harmony default export */ const calendar = ((query, request) => {
-  const data = {
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const batch = (batch_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/calendar.js
+var calendar_module = {
+  exports: {}
+};
+var calendar_exports = calendar_module.exports;
+calendar_module.exports = function (query, request) {
+  var data = {
     startTime: query.startTime || Date.now(),
-    endTime: query.endTime || Date.now(),
-  }
-  return request('POST', `https://music.163.com/api/mcalendar/detail`, data, {
+    endTime: query.endTime || Date.now()
+  };
+  return request('POST', "https://music.163.com/api/mcalendar/detail", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/captcha_sent.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const calendar = (calendar_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/captcha_sent.js
+var captcha_sent_module = {
+  exports: {}
+};
+var captcha_sent_exports = captcha_sent_module.exports;
 // 发送验证码
 
-/* harmony default export */ const captcha_sent = ((query, request) => {
-  const data = {
+captcha_sent_module.exports = function (query, request) {
+  var data = {
     ctcode: query.ctcode || '86',
-    cellphone: query.phone,
-  }
-  return request('POST', `https://music.163.com/api/sms/captcha/sent`, data, {
+    cellphone: query.phone
+  };
+  return request('POST', "https://music.163.com/api/sms/captcha/sent", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/captcha_verify.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const captcha_sent = (captcha_sent_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/captcha_verify.js
+var captcha_verify_module = {
+  exports: {}
+};
+var captcha_verify_exports = captcha_verify_module.exports;
 // 校验验证码
 
-/* harmony default export */ const captcha_verify = ((query, request) => {
-  const data = {
+captcha_verify_module.exports = function (query, request) {
+  var data = {
     ctcode: query.ctcode || '86',
     cellphone: query.phone,
-    captcha: query.captcha,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/sms/captcha/verify`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/cellphone_existence_check.js
+    captcha: query.captcha
+  };
+  return request('POST', "https://music.163.com/weapi/sms/captcha/verify", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const captcha_verify = (captcha_verify_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/cellphone_existence_check.js
+var cellphone_existence_check_module = {
+  exports: {}
+};
+var cellphone_existence_check_exports = cellphone_existence_check_module.exports;
 // 检测手机号码是否已注册
 
-/* harmony default export */ const cellphone_existence_check = ((query, request) => {
-  const data = {
+cellphone_existence_check_module.exports = function (query, request) {
+  var data = {
     cellphone: query.phone,
-    countrycode: query.countrycode,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/eapi/cellphone/existence/check`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/cellphone/existence/check',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/check_music.js
-/* harmony default export */ const check_music = ((query, request) => {
-  const data = {
-    ids: "[" + parseInt(query.id) + "]",
-    br: parseInt(query.br || 999000),
+    countrycode: query.countrycode
   };
-  return request(
-    "POST",
-    `https://music.163.com/weapi/song/enhance/player/url`,
-    data,
-    {
-      crypto: "weapi",
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    }
-  );
-});
-
-;// CONCATENATED MODULE: ./module/cloudsearch.js
+  return request('POST', "https://music.163.com/eapi/cellphone/existence/check", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/cellphone/existence/check',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const cellphone_existence_check = (cellphone_existence_check_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/check_music.js
+var module_check_music_module = {
+  exports: {}
+};
+var module_check_music_exports = module_check_music_module.exports;
+module_check_music_module.exports = function (query, request) {
+  var data = {
+    ids: '[' + parseInt(query.id) + ']',
+    br: parseInt(query.br || 999000)
+  };
+  return request('POST', "https://music.163.com/weapi/song/enhance/player/url", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const module_check_music = (module_check_music_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/cloudsearch.js
+var cloudsearch_module = {
+  exports: {}
+};
+var cloudsearch_exports = cloudsearch_module.exports;
 // 搜索
 
-/* harmony default export */ const cloudsearch = ((query, request) => {
-  const data = {
+cloudsearch_module.exports = function (query, request) {
+  var data = {
     s: query.keywords,
-    type: query.type || 1, // 1: 单曲, 10: 专辑, 100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 1009: 电台, 1014: 视频
+    type: query.type || 1,
+    // 1: 单曲, 10: 专辑, 100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 1009: 电台, 1014: 视频
     limit: query.limit || 30,
     offset: query.offset || 0,
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/eapi/cloudsearch/pc`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/cloudsearch/pc',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/cloud_match.js
-/* harmony default export */ const cloud_match = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+    total: true
+  };
+  return request('POST', "https://interface.music.163.com/eapi/cloudsearch/pc", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/cloudsearch/pc',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const cloudsearch = (cloudsearch_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/cloud_match.js
+var cloud_match_module = {
+  exports: {}
+};
+var cloud_match_exports = cloud_match_module.exports;
+cloud_match_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     userId: query.uid,
     songId: query.sid,
-    adjustSongId: query.asid,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/cloud/user/song/match`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    adjustSongId: query.asid
+  };
+  return request('POST', "https://music.163.com/api/cloud/user/song/match", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const cloud_match = (cloud_match_module.exports);
+;// CONCATENATED MODULE: ./corejs/util/config.json
+const config_namespaceObject = JSON.parse('{"resourceTypeMap":{"0":"R_SO_4_","1":"R_MV_5_","2":"A_PL_0_","3":"R_AL_3_","4":"A_DJ_1_","5":"R_VI_62_","6":"A_EV_2_","7":"A_DR_14_"}}');
+;// CONCATENATED MODULE: ./corejs/module/comment.js
 
-;// CONCATENATED MODULE: ./util/config.json
-const config_namespaceObject = JSON.parse('{"A":{"0":"R_SO_4_","1":"R_MV_5_","2":"A_PL_0_","3":"R_AL_3_","4":"A_DJ_1_","5":"R_VI_62_","6":"A_EV_2_","7":"A_DR_14_"}}');
-;// CONCATENATED MODULE: ./module/comment.js
-const resourceTypeMap = config_namespaceObject.A;
+var comment_module = {
+  exports: {}
+};
+var comment_exports = comment_module.exports;
+var comment_require = config_namespaceObject,
+  resourceTypeMap = comment_require.resourceTypeMap;
 // 发送与删除评论
 
-/* harmony default export */ const comment = ((query, request) => {
-  query.cookie.os = 'android'
+comment_module.exports = function (query, request) {
+  query.cookie.os = 'android';
   query.t = {
     1: 'add',
     0: 'delete',
-    2: 'reply',
-  }[query.t]
-  query.type = resourceTypeMap[query.type]
-  const data = {
-    threadId: query.type + query.id,
-  }
-
+    2: 'reply'
+  }[query.t];
+  query.type = resourceTypeMap[query.type];
+  var data = {
+    threadId: query.type + query.id
+  };
   if (query.type == 'A_EV_2_') {
-    data.threadId = query.threadId
+    data.threadId = query.threadId;
   }
-  if (query.t == 'add') data.content = query.content
-  else if (query.t == 'delete') data.commentId = query.commentId
-  else if (query.t == 'reply') {
-    data.commentId = query.commentId
-    data.content = query.content
+  if (query.t == 'add') data.content = query.content;else if (query.t == 'delete') data.commentId = query.commentId;else if (query.t == 'reply') {
+    data.commentId = query.commentId;
+    data.content = query.content;
   }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/resource/comments/${query.t}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/comment_album.js
+  return request('POST', "https://music.163.com/weapi/resource/comments/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment = (comment_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_album.js
+var comment_album_module = {
+  exports: {}
+};
+var comment_album_exports = comment_album_module.exports;
 // 专辑评论
 
-/* harmony default export */ const comment_album = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+comment_album_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     rid: query.id,
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/resource/comments/R_AL_3_${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/comment_dj.js
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/resource/comments/R_AL_3_".concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_album = (comment_album_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_dj.js
+var comment_dj_module = {
+  exports: {}
+};
+var comment_dj_exports = comment_dj_module.exports;
 // 电台评论
 
-/* harmony default export */ const comment_dj = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+comment_dj_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     rid: query.id,
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/resource/comments/A_DJ_1_${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/comment_event.js
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/resource/comments/A_DJ_1_".concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_dj = (comment_dj_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_event.js
+var comment_event_module = {
+  exports: {}
+};
+var comment_event_exports = comment_event_module.exports;
 // 获取动态评论
 
-/* harmony default export */ const comment_event = ((query, request) => {
-  const data = {
+comment_event_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/resource/comments/${query.threadId}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/resource/comments/".concat(query.threadId), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_event = (comment_event_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_floor.js
 
-;// CONCATENATED MODULE: ./module/comment_floor.js
-const comment_floor_resourceTypeMap = config_namespaceObject.A;
-/* harmony default export */ const comment_floor = ((query, request) => {
-  query.type = comment_floor_resourceTypeMap[query.type]
-  const data = {
+var comment_floor_module = {
+  exports: {}
+};
+var comment_floor_exports = comment_floor_module.exports;
+var comment_floor_require = config_namespaceObject,
+  comment_floor_resourceTypeMap = comment_floor_require.resourceTypeMap;
+comment_floor_module.exports = function (query, request) {
+  query.type = comment_floor_resourceTypeMap[query.type];
+  var data = {
     parentCommentId: query.parentCommentId,
     threadId: query.type + query.id,
     time: query.time || -1,
-    limit: query.limit || 20,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/resource/comment/floor/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    limit: query.limit || 20
+  };
+  return request('POST', "https://music.163.com/api/resource/comment/floor/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_floor = (comment_floor_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_hot.js
 
-;// CONCATENATED MODULE: ./module/comment_hot.js
-const comment_hot_resourceTypeMap = config_namespaceObject.A;
+var comment_hot_module = {
+  exports: {}
+};
+var comment_hot_exports = comment_hot_module.exports;
+var comment_hot_require = config_namespaceObject,
+  comment_hot_resourceTypeMap = comment_hot_require.resourceTypeMap;
 // 热门评论
 
-/* harmony default export */ const comment_hot = ((query, request) => {
-  query.cookie.os = 'pc'
-  query.type = comment_hot_resourceTypeMap[query.type]
-  const data = {
+comment_hot_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  query.type = comment_hot_resourceTypeMap[query.type];
+  var data = {
     rid: query.id,
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/resource/hotcomments/${query.type}${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/resource/hotcomments/".concat(query.type).concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_hot = (comment_hot_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_hug_list.js
 
-;// CONCATENATED MODULE: ./module/comment_hug_list.js
-const comment_hug_list_resourceTypeMap = config_namespaceObject.A;
-/* harmony default export */ const comment_hug_list = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  query.type = comment_hug_list_resourceTypeMap[query.type || 0]
-  const threadId = query.type + query.sid
-  const data = {
+var comment_hug_list_module = {
+  exports: {}
+};
+var comment_hug_list_exports = comment_hug_list_module.exports;
+var comment_hug_list_require = config_namespaceObject,
+  comment_hug_list_resourceTypeMap = comment_hug_list_require.resourceTypeMap;
+comment_hug_list_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  query.type = comment_hug_list_resourceTypeMap[query.type || 0];
+  var threadId = query.type + query.sid;
+  var data = {
     targetUserId: query.uid,
     commentId: query.cid,
     cursor: query.cursor || '-1',
     threadId: threadId,
     pageNo: query.page || 1,
     idCursor: query.idCursor || -1,
-    pageSize: query.pageSize || 100,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/v2/resource/comments/hug/list`,
-    data,
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    pageSize: query.pageSize || 100
+  };
+  return request('POST', "https://music.163.com/api/v2/resource/comments/hug/list", data, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_hug_list = (comment_hug_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_like.js
 
-;// CONCATENATED MODULE: ./module/comment_like.js
-const comment_like_resourceTypeMap = config_namespaceObject.A;
+var comment_like_module = {
+  exports: {}
+};
+var comment_like_exports = comment_like_module.exports;
+var comment_like_require = config_namespaceObject,
+  comment_like_resourceTypeMap = comment_like_require.resourceTypeMap;
 // 点赞与取消点赞评论
 
-/* harmony default export */ const comment_like = ((query, request) => {
-  query.cookie.os = 'pc'
-  query.t = query.t == 1 ? 'like' : 'unlike'
-  query.type = comment_like_resourceTypeMap[query.type]
-  const data = {
+comment_like_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  query.t = query.t == 1 ? 'like' : 'unlike';
+  query.type = comment_like_resourceTypeMap[query.type];
+  var data = {
     threadId: query.type + query.id,
-    commentId: query.cid,
-  }
+    commentId: query.cid
+  };
   if (query.type == 'A_EV_2_') {
-    data.threadId = query.threadId
+    data.threadId = query.threadId;
   }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/comment/${query.t}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/comment_music.js
+  return request('POST', "https://music.163.com/weapi/v1/comment/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_like = (comment_like_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_music.js
+var comment_music_module = {
+  exports: {}
+};
+var comment_music_exports = comment_music_module.exports;
 // 歌曲评论
 
-/* harmony default export */ const comment_music = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+comment_music_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     rid: query.id,
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/v1/resource/comments/R_SO_4_${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/comment_mv.js
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/api/v1/resource/comments/R_SO_4_".concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_music = (comment_music_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_mv.js
+var comment_mv_module = {
+  exports: {}
+};
+var comment_mv_exports = comment_mv_module.exports;
 // MV评论
 
-/* harmony default export */ const comment_mv = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+comment_mv_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     rid: query.id,
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/resource/comments/R_MV_5_${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/resource/comments/R_MV_5_".concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_mv = (comment_mv_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_new.js
 
-;// CONCATENATED MODULE: ./module/comment_new.js
-const comment_new_resourceTypeMap = config_namespaceObject.A;
+var comment_new_module = {
+  exports: {}
+};
+var comment_new_exports = comment_new_module.exports;
+var comment_new_require = config_namespaceObject,
+  comment_new_resourceTypeMap = comment_new_require.resourceTypeMap;
 // 评论
 
-/* harmony default export */ const comment_new = ((query, request) => {
-  query.cookie.os = 'pc'
-  query.type = comment_new_resourceTypeMap[query.type]
-  const threadId = query.type + query.id
-  const pageSize = query.pageSize || 20
-  const pageNo = query.pageNo || 1
-  let sortType = Number(query.sortType) || 99
+comment_new_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  query.type = comment_new_resourceTypeMap[query.type];
+  var threadId = query.type + query.id;
+  var pageSize = query.pageSize || 20;
+  var pageNo = query.pageNo || 1;
+  var sortType = Number(query.sortType) || 99;
   if (sortType === 1) {
-    sortType = 99
+    sortType = 99;
   }
-  let cursor = ''
+  var cursor = '';
   switch (sortType) {
     case 99:
-      cursor = (pageNo - 1) * pageSize
-      break
+      cursor = (pageNo - 1) * pageSize;
+      break;
     case 2:
-      cursor = 'normalHot#' + (pageNo - 1) * pageSize
-      break
+      cursor = 'normalHot#' + (pageNo - 1) * pageSize;
+      break;
     case 3:
-      cursor = query.cursor || '0'
-      break
+      cursor = query.cursor || '0';
+      break;
     default:
-      break
+      break;
   }
-  const data = {
+  var data = {
     threadId: threadId,
-    pageNo,
+    pageNo: pageNo,
     showInner: query.showInner || true,
-    pageSize,
+    pageSize: pageSize,
     cursor: cursor,
-    sortType: sortType, //99:按推荐排序,2:按热度排序,3:按时间排序
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/v2/resource/comments`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/v2/resource/comments',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/comment_playlist.js
+    sortType: sortType //99:按推荐排序,2:按热度排序,3:按时间排序
+  };
+  return request('POST', "https://music.163.com/api/v2/resource/comments", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/v2/resource/comments'
+  });
+};
+/* harmony default export */ const comment_new = (comment_new_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_playlist.js
+var comment_playlist_module = {
+  exports: {}
+};
+var comment_playlist_exports = comment_playlist_module.exports;
 // 歌单评论
 
-/* harmony default export */ const comment_playlist = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+comment_playlist_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     rid: query.id,
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/resource/comments/A_PL_0_${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/comment_video.js
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/resource/comments/A_PL_0_".concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_playlist = (comment_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/comment_video.js
+var comment_video_module = {
+  exports: {}
+};
+var comment_video_exports = comment_video_module.exports;
 // 视频评论
 
-/* harmony default export */ const comment_video = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+comment_video_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     rid: query.id,
     limit: query.limit || 20,
     offset: query.offset || 0,
-    beforeTime: query.before || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/resource/comments/R_VI_62_${query.id}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/countries_code_list.js
+    beforeTime: query.before || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/resource/comments/R_VI_62_".concat(query.id), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const comment_video = (comment_video_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/countries_code_list.js
+var countries_code_list_module = {
+  exports: {}
+};
+var countries_code_list_exports = countries_code_list_module.exports;
 // 国家编码列表
-/* harmony default export */ const countries_code_list = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/lbs/countries/v1`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/lbs/countries/v1',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/creator_authinfo_get.js
+countries_code_list_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://interface3.music.163.com/eapi/lbs/countries/v1", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/lbs/countries/v1',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const countries_code_list = (countries_code_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/creator_authinfo_get.js
+var creator_authinfo_get_module = {
+  exports: {}
+};
+var creator_authinfo_get_exports = creator_authinfo_get_module.exports;
 // 获取达人用户信息
-
-/* harmony default export */ const creator_authinfo_get = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/user/creator/authinfo/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/user/creator/authinfo/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/daily_signin.js
+creator_authinfo_get_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://interface.music.163.com/weapi/user/creator/authinfo/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/user/creator/authinfo/get'
+  });
+};
+/* harmony default export */ const creator_authinfo_get = (creator_authinfo_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/daily_signin.js
+var daily_signin_module = {
+  exports: {}
+};
+var daily_signin_exports = daily_signin_module.exports;
 // 签到
 
 /*
@@ -36983,409 +44340,370 @@ const comment_new_resourceTypeMap = config_namespaceObject.A;
     未登录 {'android': {'code': 301}, 'web': {'code': 301}}
 */
 
-/* harmony default export */ const daily_signin = ((query, request) => {
-  const data = {
-    type: query.type || 0,
-  }
-  return request('POST', `https://music.163.com/weapi/point/dailyTask`, data, {
+daily_signin_module.exports = function (query, request) {
+  var data = {
+    type: query.type || 0
+  };
+  return request('POST', "https://music.163.com/weapi/point/dailyTask", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/digitalAlbum_detail.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const daily_signin = (daily_signin_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/digitalAlbum_detail.js
+var digitalAlbum_detail_module = {
+  exports: {}
+};
+var digitalAlbum_detail_exports = digitalAlbum_detail_module.exports;
 // 数字专辑详情
 
-/* harmony default export */ const digitalAlbum_detail = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipmall/albumproduct/detail`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/digitalAlbum_ordering.js
+digitalAlbum_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/vipmall/albumproduct/detail", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const digitalAlbum_detail = (digitalAlbum_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/digitalAlbum_ordering.js
+var digitalAlbum_ordering_module = {
+  exports: {}
+};
+var digitalAlbum_ordering_exports = digitalAlbum_ordering_module.exports;
 // 购买数字专辑
 
-/* harmony default export */ const digitalAlbum_ordering = ((query, request) => {
-  const data = {
+digitalAlbum_ordering_module.exports = function (query, request) {
+  var data = {
     business: 'Album',
     paymentMethod: query.payment,
-    digitalResources: JSON.stringify([
-      {
-        business: 'Album',
-        resourceID: query.id,
-        quantity: query.quantity,
-      },
-    ]),
-    from: 'web',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/ordering/web/digital`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/digitalAlbum_purchased.js
+    digitalResources: JSON.stringify([{
+      business: 'Album',
+      resourceID: query.id,
+      quantity: query.quantity
+    }]),
+    from: 'web'
+  };
+  return request('POST', "https://music.163.com/api/ordering/web/digital", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const digitalAlbum_ordering = (digitalAlbum_ordering_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/digitalAlbum_purchased.js
+var digitalAlbum_purchased_module = {
+  exports: {}
+};
+var digitalAlbum_purchased_exports = digitalAlbum_purchased_module.exports;
 // 我的数字专辑
 
-/* harmony default export */ const digitalAlbum_purchased = ((query, request) => {
-  const data = {
+digitalAlbum_purchased_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
     offset: query.offset || 0,
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/digitalAlbum/purchased`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/digitalAlbum_sales.js
+    total: true
+  };
+  return request('POST', "https://music.163.com/api/digitalAlbum/purchased", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const digitalAlbum_purchased = (digitalAlbum_purchased_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/digitalAlbum_sales.js
+var digitalAlbum_sales_module = {
+  exports: {}
+};
+var digitalAlbum_sales_exports = digitalAlbum_sales_module.exports;
 // 数字专辑销量
 
-/* harmony default export */ const digitalAlbum_sales = ((query, request) => {
-  const data = {
-    albumIds: query.ids,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipmall/albumproduct/album/query/sales`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_banner.js
+digitalAlbum_sales_module.exports = function (query, request) {
+  var data = {
+    albumIds: query.ids
+  };
+  return request('POST', "https://music.163.com/weapi/vipmall/albumproduct/album/query/sales", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const digitalAlbum_sales = (digitalAlbum_sales_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_banner.js
+var dj_banner_module = {
+  exports: {}
+};
+var dj_banner_exports = dj_banner_module.exports;
 // 电台banner
 
-/* harmony default export */ const dj_banner = ((query, request) => {
-  const data = {}
-  query.cookie.os = 'pc'
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/banner/get`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_category_excludehot.js
+dj_banner_module.exports = function (query, request) {
+  var data = {};
+  query.cookie.os = 'pc';
+  return request('POST', "https://music.163.com/weapi/djradio/banner/get", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_banner = (dj_banner_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_category_excludehot.js
+var dj_category_excludehot_module = {
+  exports: {}
+};
+var dj_category_excludehot_exports = dj_category_excludehot_module.exports;
 // 电台非热门类型
 
-/* harmony default export */ const dj_category_excludehot = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/category/excludehot`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_category_recommend.js
+dj_category_excludehot_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/djradio/category/excludehot", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_category_excludehot = (dj_category_excludehot_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_category_recommend.js
+var dj_category_recommend_module = {
+  exports: {}
+};
+var dj_category_recommend_exports = dj_category_recommend_module.exports;
 // 电台推荐类型
 
-/* harmony default export */ const dj_category_recommend = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/home/category/recommend`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_catelist.js
+dj_category_recommend_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/djradio/home/category/recommend", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_category_recommend = (dj_category_recommend_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_catelist.js
+var dj_catelist_module = {
+  exports: {}
+};
+var dj_catelist_exports = dj_catelist_module.exports;
 // 电台分类列表
 
-/* harmony default export */ const dj_catelist = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/category/get`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_detail.js
+dj_catelist_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/djradio/category/get", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_catelist = (dj_catelist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_detail.js
+var dj_detail_module = {
+  exports: {}
+};
+var dj_detail_exports = dj_detail_module.exports;
 // 电台详情
 
-/* harmony default export */ const dj_detail = ((query, request) => {
-  const data = {
-    id: query.rid,
-  }
-  return request('POST', `https://music.163.com/api/djradio/v2/get`, data, {
+dj_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.rid
+  };
+  return request('POST', "https://music.163.com/api/djradio/v2/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_hot.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_detail = (dj_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_hot.js
+var dj_hot_module = {
+  exports: {}
+};
+var dj_hot_exports = dj_hot_module.exports;
 // 热门电台
 
-/* harmony default export */ const dj_hot = ((query, request) => {
-  const data = {
+dj_hot_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
-    offset: query.offset || 0,
-  }
-  return request('POST', `https://music.163.com/weapi/djradio/hot/v1`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/djradio/hot/v1", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_paygift.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_hot = (dj_hot_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_paygift.js
+var dj_paygift_module = {
+  exports: {}
+};
+var dj_paygift_exports = dj_paygift_module.exports;
 // 付费电台
 
-/* harmony default export */ const dj_paygift = ((query, request) => {
-  const data = {
+dj_paygift_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/home/paygift/list?_nmclfl=1`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_personalize_recommend.js
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/djradio/home/paygift/list?_nmclfl=1", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_paygift = (dj_paygift_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_personalize_recommend.js
+var dj_personalize_recommend_module = {
+  exports: {}
+};
+var dj_personalize_recommend_exports = dj_personalize_recommend_module.exports;
 // 电台个性推荐
 
-/* harmony default export */ const dj_personalize_recommend = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/api/djradio/personalize/rcmd`,
-    {
-      limit: query.limit || 6,
-    },
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+dj_personalize_recommend_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/api/djradio/personalize/rcmd", {
+    limit: query.limit || 6
+  }, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_personalize_recommend = (dj_personalize_recommend_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_program.js
 
-;// CONCATENATED MODULE: ./util/index.js
-function toBoolean (val) {
-  if (typeof val === 'boolean') return val
-  if (val === '') return val
-  return val === 'true' || val == '1'
-}
-
-function cookieToJson(cookie) {
-  // python的requests模块返回的多个cookie会用','分隔但是set-cookie的值里面也有','
-  // 先用';'分隔开，再用','分隔开
-  // 如果分割结果里面有'='，那么就是一个完整的cookie。如果不包含等号
-  // 那么这个部分应该与前一个部分合并，因为它是前一个cookie的一部分。
-  if (!cookie) return {}
-
-  let cookies = [];
-  cookies = cookie.split(';')
-
-  let cookieArr = []
-  cookies.forEach((i) => {
-    let parts = i.split(',')
-
-    parts.forEach((part, i) => {
-      if (part.includes('=')) {
-        cookieArr.push(part)
-      } else {
-        cookieArr[cookieArr.length - 1] += ',' + part
-      }
-    })
-  })
-
-  let obj = {}
-  cookieArr.forEach((i) => {
-    let arr = i.split('=')
-    if (arr.length === 2) {
-      obj[arr[0].trim()] = arr[1]
-    } else {
-      obj[arr[0].trim()] = ""
-    }
-  })
-  return obj
-}
-
-function getRandom(num) {
-  var random = Math.floor(
-    (Math.random() + Math.floor(Math.random() * 9 + 1)) *
-      Math.pow(10, num - 1),
-  )
-  return random
-}
-
-;// CONCATENATED MODULE: ./module/dj_program.js
+var dj_program_module = {
+  exports: {}
+};
+var dj_program_exports = dj_program_module.exports;
 // 电台节目列表
-
-/* harmony default export */ const dj_program = ((query, request) => {
-  const data = {
+// import { toBoolean } from '../util/index.js'
+var dj_program_toBoolean = util.toBoolean;
+dj_program_module.exports = function (query, request) {
+  var data = {
     radioId: query.rid,
     limit: query.limit || 30,
     offset: query.offset || 0,
-    asc: toBoolean(query.asc),
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/dj/program/byradio`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_program_detail.js
+    asc: dj_program_toBoolean(query.asc)
+  };
+  return request('POST', "https://music.163.com/weapi/dj/program/byradio", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_program = (dj_program_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_program_detail.js
+var dj_program_detail_module = {
+  exports: {}
+};
+var dj_program_detail_exports = dj_program_detail_module.exports;
 // 电台节目详情
 
-/* harmony default export */ const dj_program_detail = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request('POST', `https://music.163.com/api/dj/program/detail`, data, {
+dj_program_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/api/dj/program/detail", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_program_toplist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_program_detail = (dj_program_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_program_toplist.js
+var dj_program_toplist_module = {
+  exports: {}
+};
+var dj_program_toplist_exports = dj_program_toplist_module.exports;
 // 电台节目榜
 
-/* harmony default export */ const dj_program_toplist = ((query, request) => {
-  const data = {
+dj_program_toplist_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 100,
-    offset: query.offset || 0,
-  }
-  return request('POST', `https://music.163.com/api/program/toplist/v1`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/api/program/toplist/v1", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_program_toplist_hours.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_program_toplist = (dj_program_toplist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_program_toplist_hours.js
+var dj_program_toplist_hours_module = {
+  exports: {}
+};
+var dj_program_toplist_hours_exports = dj_program_toplist_hours_module.exports;
 // 电台24小时节目榜
-/* harmony default export */ const dj_program_toplist_hours = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
+dj_program_toplist_hours_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
     // 不支持 offset
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/djprogram/toplist/hours`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_radio_hot.js
+  };
+  return request('POST', "https://music.163.com/api/djprogram/toplist/hours", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_program_toplist_hours = (dj_program_toplist_hours_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_radio_hot.js
+var dj_radio_hot_module = {
+  exports: {}
+};
+var dj_radio_hot_exports = dj_radio_hot_module.exports;
 // 类别热门电台
 
-/* harmony default export */ const dj_radio_hot = ((query, request) => {
-  const data = {
+dj_radio_hot_module.exports = function (query, request) {
+  var data = {
     cateId: query.cateId,
     limit: query.limit || 30,
-    offset: query.offset || 0,
-  }
-  return request('POST', `https://music.163.com/api/djradio/hot`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/api/djradio/hot", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_recommend.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_radio_hot = (dj_radio_hot_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_recommend.js
+var dj_recommend_module = {
+  exports: {}
+};
+var dj_recommend_exports = dj_recommend_module.exports;
 // 精选电台
 
-/* harmony default export */ const dj_recommend = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/recommend/v1`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_recommend_type.js
+dj_recommend_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/djradio/recommend/v1", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_recommend = (dj_recommend_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_recommend_type.js
+var dj_recommend_type_module = {
+  exports: {}
+};
+var dj_recommend_type_exports = dj_recommend_type_module.exports;
 // 精选电台分类
 
 /*
@@ -37411,628 +44729,655 @@ function getRandom(num) {
     旅途|城市 12
 */
 
-/* harmony default export */ const dj_recommend_type = ((query, request) => {
-  const data = {
-    cateId: query.type,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/recommend`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_sub.js
+dj_recommend_type_module.exports = function (query, request) {
+  var data = {
+    cateId: query.type
+  };
+  return request('POST', "https://music.163.com/weapi/djradio/recommend", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_recommend_type = (dj_recommend_type_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_sub.js
+var dj_sub_module = {
+  exports: {}
+};
+var dj_sub_exports = dj_sub_module.exports;
 // 订阅与取消电台
 
-/* harmony default export */ const dj_sub = ((query, request) => {
-  query.t = query.t == 1 ? 'sub' : 'unsub'
-  const data = {
-    id: query.rid,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/${query.t}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_sublist.js
+dj_sub_module.exports = function (query, request) {
+  query.t = query.t == 1 ? 'sub' : 'unsub';
+  var data = {
+    id: query.rid
+  };
+  return request('POST', "https://music.163.com/weapi/djradio/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_sub = (dj_sub_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_sublist.js
+var dj_sublist_module = {
+  exports: {}
+};
+var dj_sublist_exports = dj_sublist_module.exports;
 // 订阅电台列表
 
-/* harmony default export */ const dj_sublist = ((query, request) => {
-  const data = {
+dj_sublist_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
     offset: query.offset || 0,
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/get/subed`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_subscriber.js
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/djradio/get/subed", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_sublist = (dj_sublist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_subscriber.js
+var dj_subscriber_module = {
+  exports: {}
+};
+var dj_subscriber_exports = dj_subscriber_module.exports;
 // 电台详情
 
-/* harmony default export */ const dj_subscriber = ((query, request) => {
-  const data = {
+dj_subscriber_module.exports = function (query, request) {
+  var data = {
     time: query.time || '-1',
     id: query.id,
     limit: query.limit || '20',
-    total: 'true',
-  }
-  return request('POST', `https://music.163.com/api/djradio/subscriber`, data, {
+    total: 'true'
+  };
+  return request('POST', "https://music.163.com/api/djradio/subscriber", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_today_perfered.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_subscriber = (dj_subscriber_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_today_perfered.js
+var dj_today_perfered_module = {
+  exports: {}
+};
+var dj_today_perfered_exports = dj_today_perfered_module.exports;
 // 电台今日优选
 
-/* harmony default export */ const dj_today_perfered = ((query, request) => {
-  const data = {
-    page: query.page || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/home/today/perfered`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_toplist.js
-// 新晋电台榜/热门电台榜
-const typeMap = {
-  new: 0,
-  hot: 1,
-}
-/* harmony default export */ const dj_toplist = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
-    offset: query.offset || 0,
-    type: typeMap[query.type || 'new'] || '0', //0为新晋,1为热门
-  }
-  return request('POST', `https://music.163.com/api/djradio/toplist`, data, {
+dj_today_perfered_module.exports = function (query, request) {
+  var data = {
+    page: query.page || 0
+  };
+  return request('POST', "https://music.163.com/weapi/djradio/home/today/perfered", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_toplist_hours.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_today_perfered = (dj_today_perfered_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_toplist.js
+var dj_toplist_module = {
+  exports: {}
+};
+var dj_toplist_exports = dj_toplist_module.exports;
+// 新晋电台榜/热门电台榜
+var typeMap = {
+  "new": 0,
+  hot: 1
+};
+dj_toplist_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100,
+    offset: query.offset || 0,
+    type: typeMap[query.type || 'new'] || '0' //0为新晋,1为热门
+  };
+  return request('POST', "https://music.163.com/api/djradio/toplist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_toplist = (dj_toplist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_toplist_hours.js
+var dj_toplist_hours_module = {
+  exports: {}
+};
+var dj_toplist_hours_exports = dj_toplist_hours_module.exports;
 // 电台24小时主播榜
 
-/* harmony default export */ const dj_toplist_hours = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
+dj_toplist_hours_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
     // 不支持 offset
-  }
-  return request('POST', `https://music.163.com/api/dj/toplist/hours`, data, {
+  };
+  return request('POST', "https://music.163.com/api/dj/toplist/hours", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/dj_toplist_newcomer.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_toplist_hours = (dj_toplist_hours_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_toplist_newcomer.js
+var dj_toplist_newcomer_module = {
+  exports: {}
+};
+var dj_toplist_newcomer_exports = dj_toplist_newcomer_module.exports;
 // 电台新人榜
-/* harmony default export */ const dj_toplist_newcomer = ((query, request) => {
-  const data = {
+dj_toplist_newcomer_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 100,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/dj/toplist/newcomer`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_toplist_pay.js
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/api/dj/toplist/newcomer", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_toplist_newcomer = (dj_toplist_newcomer_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_toplist_pay.js
+var dj_toplist_pay_module = {
+  exports: {}
+};
+var dj_toplist_pay_exports = dj_toplist_pay_module.exports;
 // 付费精品
-/* harmony default export */ const dj_toplist_pay = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
+dj_toplist_pay_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
     // 不支持 offset
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/djradio/toplist/pay`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/dj_toplist_popular.js
+  };
+  return request('POST', "https://music.163.com/api/djradio/toplist/pay", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_toplist_pay = (dj_toplist_pay_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/dj_toplist_popular.js
+var dj_toplist_popular_module = {
+  exports: {}
+};
+var dj_toplist_popular_exports = dj_toplist_popular_module.exports;
 // 电台最热主播榜
 
-/* harmony default export */ const dj_toplist_popular = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
+dj_toplist_popular_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
     // 不支持 offset
-  }
-  return request('POST', `https://music.163.com/api/dj/toplist/popular`, data, {
+  };
+  return request('POST', "https://music.163.com/api/dj/toplist/popular", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/event.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const dj_toplist_popular = (dj_toplist_popular_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/event.js
+var event_module = {
+  exports: {}
+};
+var event_exports = event_module.exports;
 // 动态
 
-/* harmony default export */ const module_event = ((query, request) => {
-  const data = {
+event_module.exports = function (query, request) {
+  var data = {
     pagesize: query.pagesize || 20,
-    lasttime: query.lasttime || -1,
-  }
-  return request('POST', `https://music.163.com/weapi/v1/event/get`, data, {
+    lasttime: query.lasttime || -1
+  };
+  return request('POST', "https://music.163.com/weapi/v1/event/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/event_del.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const module_event = (event_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/event_del.js
+var event_del_module = {
+  exports: {}
+};
+var event_del_exports = event_del_module.exports;
 // 删除动态
 
-/* harmony default export */ const event_del = ((query, request) => {
-  const data = {
-    id: query.evId,
-  }
-  return request('POST', `https://music.163.com/eapi/event/delete`, data, {
+event_del_module.exports = function (query, request) {
+  var data = {
+    id: query.evId
+  };
+  return request('POST', "https://music.163.com/eapi/event/delete", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const event_del = (event_del_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/event_forward.js
+var event_forward_module = {
+  exports: {}
+};
+var event_forward_exports = event_forward_module.exports;
+// 转发动态
 
-;// CONCATENATED MODULE: ./module/event_forward.js
-﻿// 转发动态
-
-/* harmony default export */ const event_forward = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+event_forward_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     forwards: query.forwards,
     id: query.evId,
-    eventUserId: query.uid,
-  }
-  return request('POST', `https://music.163.com/weapi/event/forward`, data, {
+    eventUserId: query.uid
+  };
+  return request('POST', "https://music.163.com/weapi/event/forward", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/fanscenter_basicinfo_age_get.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const event_forward = (event_forward_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/fanscenter_basicinfo_age_get.js
+var fanscenter_basicinfo_age_get_module = {
+  exports: {}
+};
+var fanscenter_basicinfo_age_get_exports = fanscenter_basicinfo_age_get_module.exports;
 // 粉丝年龄比例
-
-/* harmony default export */ const fanscenter_basicinfo_age_get = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/fanscenter/basicinfo/age/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/fanscenter/basicinfo/age/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/fanscenter_basicinfo_gender_get.js
+fanscenter_basicinfo_age_get_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://interface.music.163.com/weapi/fanscenter/basicinfo/age/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/fanscenter/basicinfo/age/get'
+  });
+};
+/* harmony default export */ const fanscenter_basicinfo_age_get = (fanscenter_basicinfo_age_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/fanscenter_basicinfo_gender_get.js
+var fanscenter_basicinfo_gender_get_module = {
+  exports: {}
+};
+var fanscenter_basicinfo_gender_get_exports = fanscenter_basicinfo_gender_get_module.exports;
 // 粉丝性别比例
-
-/* harmony default export */ const fanscenter_basicinfo_gender_get = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/fanscenter/basicinfo/gender/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/fanscenter/basicinfo/gender/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/fanscenter_basicinfo_province_get.js
+fanscenter_basicinfo_gender_get_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://interface.music.163.com/weapi/fanscenter/basicinfo/gender/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/fanscenter/basicinfo/gender/get'
+  });
+};
+/* harmony default export */ const fanscenter_basicinfo_gender_get = (fanscenter_basicinfo_gender_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/fanscenter_basicinfo_province_get.js
+var fanscenter_basicinfo_province_get_module = {
+  exports: {}
+};
+var fanscenter_basicinfo_province_get_exports = fanscenter_basicinfo_province_get_module.exports;
 // 粉丝省份比例
-
-/* harmony default export */ const fanscenter_basicinfo_province_get = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/fanscenter/basicinfo/province/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/fanscenter/basicinfo/province/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/fanscenter_overview_get.js
+fanscenter_basicinfo_province_get_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://interface.music.163.com/weapi/fanscenter/basicinfo/province/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/fanscenter/basicinfo/province/get'
+  });
+};
+/* harmony default export */ const fanscenter_basicinfo_province_get = (fanscenter_basicinfo_province_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/fanscenter_overview_get.js
+var fanscenter_overview_get_module = {
+  exports: {}
+};
+var fanscenter_overview_get_exports = fanscenter_overview_get_module.exports;
 // 粉丝数量
-
-/* harmony default export */ const fanscenter_overview_get = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/fanscenter/overview/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/fanscenter/overview/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/fanscenter_trend_list.js
+fanscenter_overview_get_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://interface.music.163.com/weapi/fanscenter/overview/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/fanscenter/overview/get'
+  });
+};
+/* harmony default export */ const fanscenter_overview_get = (fanscenter_overview_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/fanscenter_trend_list.js
+var fanscenter_trend_list_module = {
+  exports: {}
+};
+var fanscenter_trend_list_exports = fanscenter_trend_list_module.exports;
 // 粉丝来源
-
-/* harmony default export */ const fanscenter_trend_list = ((query, request) => {
-  const data = {
+fanscenter_trend_list_module.exports = function (query, request) {
+  var data = {
     startTime: query.startTime || Date.now() - 7 * 24 * 3600 * 1000,
     endTime: query.endTime || Date.now(),
-    type: query.type || 0, //新增关注:0 新增取关:1
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/fanscenter/trend/list`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/fanscenter/trend/list',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/fm_trash.js
-// 垃圾桶
-
-/* harmony default export */ const fm_trash = ((query, request) => {
-  const data = {
-    songId: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/radio/trash/add?alg=RT&songId=${
-      query.id
-    }&time=${query.time || 25}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/follow.js
-// 关注与取消关注用户
-
-/* harmony default export */ const follow = ((query, request) => {
-  query.cookie.os = 'pc'
-  query.t = query.t == 1 ? 'follow' : 'delfollow'
-  return request(
-    'POST',
-    `https://music.163.com/weapi/user/${query.t}/${query.id}`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/get_userids.js
-/* harmony default export */ const get_userids = ((query, request) => {
-  const data = {
-    nicknames: query.nicknames,
-  }
-  return request('POST', `https://music.163.com/api/user/getUserIds`, data, {
-    crypto: 'weapi',
+    type: query.type || 0 //新增关注:0 新增取关:1
+  };
+  return request('POST', "https://interface.music.163.com/weapi/fanscenter/trend/list", data, {
+    crypto: 'eapi',
     cookie: query.cookie,
     proxy: query.proxy,
     realIP: query.realIP,
-  })
-});
+    url: '/api/fanscenter/trend/list'
+  });
+};
+/* harmony default export */ const fanscenter_trend_list = (fanscenter_trend_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/fm_trash.js
+var fm_trash_module = {
+  exports: {}
+};
+var fm_trash_exports = fm_trash_module.exports;
+// 垃圾桶
 
-;// CONCATENATED MODULE: ./module/history_recommend_songs.js
+fm_trash_module.exports = function (query, request) {
+  var data = {
+    songId: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/radio/trash/add?alg=RT&songId=".concat(query.id, "&time=").concat(query.time || 25), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const fm_trash = (fm_trash_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/follow.js
+var follow_module = {
+  exports: {}
+};
+var follow_exports = follow_module.exports;
+// 关注与取消关注用户
+
+follow_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  query.t = query.t == 1 ? 'follow' : 'delfollow';
+  return request('POST', "https://music.163.com/weapi/user/".concat(query.t, "/").concat(query.id), {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const follow = (follow_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/get_userids.js
+var get_userids_module = {
+  exports: {}
+};
+var get_userids_exports = get_userids_module.exports;
+get_userids_module.exports = function (query, request) {
+  var data = {
+    nicknames: query.nicknames
+  };
+  return request('POST', "https://music.163.com/api/user/getUserIds", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const get_userids = (get_userids_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/history_recommend_songs.js
+var history_recommend_songs_module = {
+  exports: {}
+};
+var history_recommend_songs_exports = history_recommend_songs_module.exports;
 // 历史每日推荐歌曲
 
-/* harmony default export */ const history_recommend_songs = ((query, request) => {
-  query.cookie.os = 'ios'
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/discovery/recommend/songs/history/recent`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/history_recommend_songs_detail.js
+history_recommend_songs_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  var data = {};
+  return request('POST', "https://music.163.com/api/discovery/recommend/songs/history/recent", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const history_recommend_songs = (history_recommend_songs_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/history_recommend_songs_detail.js
+var history_recommend_songs_detail_module = {
+  exports: {}
+};
+var history_recommend_songs_detail_exports = history_recommend_songs_detail_module.exports;
 // 历史每日推荐歌曲详情
 
-/* harmony default export */ const history_recommend_songs_detail = ((query, request) => {
-  query.cookie.os = 'ios'
-  const data = {
-    date: query.date || '',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/discovery/recommend/songs/history/detail`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/homepage_block_page.js
+history_recommend_songs_detail_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  var data = {
+    date: query.date || ''
+  };
+  return request('POST', "https://music.163.com/api/discovery/recommend/songs/history/detail", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const history_recommend_songs_detail = (history_recommend_songs_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/homepage_block_page.js
+var homepage_block_page_module = {
+  exports: {}
+};
+var homepage_block_page_exports = homepage_block_page_module.exports;
 // 首页-发现 block page
 // 这个接口为移动端接口，首页-发现页，数据结构可以参考 https://github.com/hcanyz/flutter-netease-music-api/blob/master/lib/src/api/uncategorized/bean.dart#L259 HomeBlockPageWrap
 // query.refresh 是否刷新数据
-/* harmony default export */ const homepage_block_page = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = { refresh: query.refresh || false, cursor: query.cursor }
-  return request(
-    'POST',
-    `https://music.163.com/api/homepage/block/page`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/homepage_dragon_ball.js
+homepage_block_page_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
+    refresh: query.refresh || false,
+    cursor: query.cursor
+  };
+  return request('POST', "https://music.163.com/api/homepage/block/page", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const homepage_block_page = (homepage_block_page_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/homepage_dragon_ball.js
+var homepage_dragon_ball_module = {
+  exports: {}
+};
+var homepage_dragon_ball_exports = homepage_dragon_ball_module.exports;
 // 首页-发现 dragon ball
 // 这个接口为移动端接口，首页-发现页（每日推荐、歌单、排行榜 那些入口）
 // 数据结构可以参考 https://github.com/hcanyz/flutter-netease-music-api/blob/master/lib/src/api/uncategorized/bean.dart#L290 HomeDragonBallWrap
 // !需要登录或者游客登录，非登录返回 []
-/* harmony default export */ const homepage_dragon_ball = ((query, request) => {
-  const data = {}
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  return request(
-    'POST',
-    `https://music.163.com/eapi/homepage/dragon/ball/static`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/homepage/dragon/ball/static',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/hot_topic.js
+homepage_dragon_ball_module.exports = function (query, request) {
+  var data = {};
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  return request('POST', "https://music.163.com/eapi/homepage/dragon/ball/static", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/homepage/dragon/ball/static',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const homepage_dragon_ball = (homepage_dragon_ball_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/hot_topic.js
+var hot_topic_module = {
+  exports: {}
+};
+var hot_topic_exports = hot_topic_module.exports;
 //热门话题
 
-/* harmony default export */ const hot_topic = ((query, request) => {
-  const data = {
+hot_topic_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 20,
-    offset: query.offset || 0,
-  }
-  return request('POST', `https://music.163.com/api/act/hot`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/api/act/hot", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const hot_topic = (hot_topic_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/hug_comment.js
 
-;// CONCATENATED MODULE: ./module/hug_comment.js
-const hug_comment_resourceTypeMap = config_namespaceObject.A;
-/* harmony default export */ const hug_comment = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  query.type = hug_comment_resourceTypeMap[query.type || 0]
-  const threadId = query.type + query.sid
-  const data = {
+var hug_comment_module = {
+  exports: {}
+};
+var hug_comment_exports = hug_comment_module.exports;
+var hug_comment_require = config_namespaceObject,
+  hug_comment_resourceTypeMap = hug_comment_require.resourceTypeMap;
+hug_comment_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  query.type = hug_comment_resourceTypeMap[query.type || 0];
+  var threadId = query.type + query.sid;
+  var data = {
     targetUserId: query.uid,
     commentId: query.cid,
-    threadId: threadId,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/v2/resource/comments/hug/listener`,
-    data,
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
+    threadId: threadId
+  };
+  return request('POST', "https://music.163.com/api/v2/resource/comments/hug/listener", data, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const hug_comment = (hug_comment_module.exports);
 ;// CONCATENATED MODULE: ./package.json
-const package_namespaceObject = {"i8":"0.1.2"};
-;// CONCATENATED MODULE: ./module/inner_version.js
+const package_namespaceObject = JSON.parse('{"name":"NeteaseCloudMusicApi","version":"4.14.0","description":"网易云音乐 NodeJS 版 API","scripts":{"build":"webpack","start":"node app.js","test":"mocha -r intelli-espower-loader -t 60000 server.test.js main.test.js --exit","lint":"eslint \\"**/*.{js,ts}\\"","lint-fix":"eslint --fix \\"**/*.{js,ts}\\"","prepare":"husky install","pkgwin":"pkg . -t node14-win-x64 -C GZip -o bin/app --no-bytecode","pkglinux":"pkg . -t node14-linux-x64 -C GZip -o bin/app --no-bytecode","pkgmacos":"pkg . -t node14-macos-x64 -C GZip -o bin/app --no-bytecode"},"bin":"./app.js","pkg":{"scripts":"module/*.js","assets":["node_modules/axios","node_modules/express","node_modules/express-fileupload","node_modules/md5","node_modules/music-metadata","node_modules/pac-proxy-agent","node_modules/qrcode","node_modules/safe-decode-uri-component","node_modules/tunnel","node_modules/yargs","node_modules/tslib","node_modules/vm2","module","public"]},"keywords":["网易云音乐","网易云","音乐","网易云音乐nodejs"],"main":"main.js","types":"./interface.d.ts","engines":{"node":">=12"},"lint-staged":{"*.js":["eslint --fix","git add"]},"author":"binaryify","license":"MIT","files":["module","util","plugins","main.d.ts","interface.d.ts","module_types","server.js","generateConfig.js","public"],"dependencies":{"axios":"^1.2.2","crypto-js":"^4.2.0","express":"^4.17.1","express-fileupload":"^1.1.9","md5":"^2.3.0","music-metadata":"^7.5.3","node-forge":"^1.3.1","pac-proxy-agent":"^7.0.0","qrcode":"^1.4.4","safe-decode-uri-component":"^1.2.1","tunnel":"^0.0.6","xml2js":"^0.6.2","yargs":"^17.1.1"},"devDependencies":{"@babel/core":"^7.23.6","@babel/plugin-syntax-import-assertions":"^7.23.3","@babel/preset-env":"^7.23.6","@types/express":"^4.17.13","@types/express-fileupload":"^1.2.2","@types/mocha":"^9.1.0","@types/node":"16.11.19","@typescript-eslint/eslint-plugin":"5.0.0","@typescript-eslint/parser":"5.0.0","babel-loader":"^9.1.3","babel-plugin-transform-commonjs":"^1.1.6","eslint":"8.7.0","eslint-config-prettier":"8.5.0","eslint-plugin-html":"7.1.0","eslint-plugin-prettier":"4.0.0","husky":"7.0.4","intelli-espower-loader":"1.1.0","lint-staged":"12.1.7","mocha":"10.0.0","pkg":"^5.8.0","power-assert":"1.6.1","prettier":"2.7.1","rollup-pluginutils":"^2.8.2","typescript":"4.5.2","webpack":"^5.89.0","webpack-cli":"^5.1.4"}}');
+;// CONCATENATED MODULE: ./corejs/module/inner_version.js
 
-/* harmony default export */ const inner_version = ((query, request) => {
-  return new Promise((resolve) => {
+var inner_version_module = {
+  exports: {}
+};
+var inner_version_exports = inner_version_module.exports;
+var pkg = package_namespaceObject;
+inner_version_module.exports = function (query, request) {
+  return new Promise(function (resolve) {
     return resolve({
       code: 200,
       status: 200,
       body: {
         code: 200,
         data: {
-          version: package_namespaceObject.i8,
-        },
-      },
-    })
-  })
-});
-
-;// CONCATENATED MODULE: ./module/like.js
+          version: pkg.version
+        }
+      }
+    });
+  });
+};
+/* harmony default export */ const inner_version = (inner_version_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/like.js
+var like_module = {
+  exports: {}
+};
+var like_exports = like_module.exports;
 // 红心与取消红心歌曲
 
-/* harmony default export */ const like = ((query, request) => {
-  query.cookie.os = 'pc'
-  query.cookie.appver = '2.9.7'
-  query.like = query.like == 'false' ? false : true
-  const data = {
+like_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  query.cookie.appver = '2.9.7';
+  query.like = query.like == 'false' ? false : true;
+  var data = {
     alg: 'itembased',
     trackId: query.id,
     like: query.like,
-    time: '3',
-  }
-  return request('POST', `https://music.163.com/api/radio/like`, data, {
+    time: '3'
+  };
+  return request('POST', "https://music.163.com/api/radio/like", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/likelist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const like = (like_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/likelist.js
+var likelist_module = {
+  exports: {}
+};
+var likelist_exports = likelist_module.exports;
 // 喜欢的歌曲(无序)
 
-/* harmony default export */ const likelist = ((query, request) => {
-  const data = {
-    uid: query.uid,
-  }
-  return request('POST', `https://music.163.com/weapi/song/like/get`, data, {
+likelist_module.exports = function (query, request) {
+  var data = {
+    uid: query.uid
+  };
+  return request('POST', "https://music.163.com/weapi/song/like/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_end.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const likelist = (likelist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_end.js
+var listentogether_end_module = {
+  exports: {}
+};
+var listentogether_end_exports = listentogether_end_module.exports;
 // 一起听 结束房间
 
-/* harmony default export */ const listentogether_end = ((query, request) => {
-  const data = {
-    roomId: query.roomId,
-  }
-  return request(
-    'POST',
-    `http://interface.music.163.com/eapi/listen/together/end/v2`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/listen/together/end/v2',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_heatbeat.js
+listentogether_end_module.exports = function (query, request) {
+  var data = {
+    roomId: query.roomId
+  };
+  return request('POST', "http://interface.music.163.com/eapi/listen/together/end/v2", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/listen/together/end/v2'
+  });
+};
+/* harmony default export */ const listentogether_end = (listentogether_end_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_heatbeat.js
+var listentogether_heatbeat_module = {
+  exports: {}
+};
+var listentogether_heatbeat_exports = listentogether_heatbeat_module.exports;
 // 一起听 发送心跳
 
-/* harmony default export */ const listentogether_heatbeat = ((query, request) => {
-  const data = {
+listentogether_heatbeat_module.exports = function (query, request) {
+  var data = {
     roomId: query.roomId,
     songId: query.songId,
     playStatus: query.playStatus,
-    progress: query.progress,
-  }
-  return request(
-    'POST',
-    `http://interface.music.163.com/eapi/listen/together/heartbeat`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/listen/together/heartbeat',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_play_command.js
+    progress: query.progress
+  };
+  return request('POST', "http://interface.music.163.com/eapi/listen/together/heartbeat", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/listen/together/heartbeat'
+  });
+};
+/* harmony default export */ const listentogether_heatbeat = (listentogether_heatbeat_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_play_command.js
+var listentogether_play_command_module = {
+  exports: {}
+};
+var listentogether_play_command_exports = listentogether_play_command_module.exports;
 // 一起听 发送播放状态
 
-/* harmony default export */ const listentogether_play_command = ((query, request) => {
-  const data = {
+listentogether_play_command_module.exports = function (query, request) {
+  var data = {
     roomId: query.roomId,
     commandInfo: JSON.stringify({
       commandType: query.commandType,
@@ -38040,385 +45385,519 @@ const package_namespaceObject = {"i8":"0.1.2"};
       playStatus: query.playStatus,
       formerSongId: query.formerSongId,
       targetSongId: query.targetSongId,
-      clientSeq: query.clientSeq,
-    }),
-  }
-  return request(
-    'POST',
-    `http://interface.music.163.com/eapi/listen/together/play/command/report`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/listen/together/play/command/report',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_room_check.js
+      clientSeq: query.clientSeq
+    })
+  };
+  return request('POST', "http://interface.music.163.com/eapi/listen/together/play/command/report", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/listen/together/play/command/report'
+  });
+};
+/* harmony default export */ const listentogether_play_command = (listentogether_play_command_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_room_check.js
+var listentogether_room_check_module = {
+  exports: {}
+};
+var listentogether_room_check_exports = listentogether_room_check_module.exports;
 // 一起听 房间情况
 
-/* harmony default export */ const listentogether_room_check = ((query, request) => {
-  const data = {
-    roomId: query.roomId,
-  }
-  return request(
-    'POST',
-    `http://interface.music.163.com/eapi/listen/together/room/check`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/listen/together/room/check',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_room_create.js
+listentogether_room_check_module.exports = function (query, request) {
+  var data = {
+    roomId: query.roomId
+  };
+  return request('POST', "http://interface.music.163.com/eapi/listen/together/room/check", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/listen/together/room/check'
+  });
+};
+/* harmony default export */ const listentogether_room_check = (listentogether_room_check_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_room_create.js
+var listentogether_room_create_module = {
+  exports: {}
+};
+var listentogether_room_create_exports = listentogether_room_create_module.exports;
 // 一起听创建房间
 
-/* harmony default export */ const listentogether_room_create = ((query, request) => {
-  const data = {
-    refer: 'songplay_more',
-  }
-  return request(
-    'POST',
-    `http://interface.music.163.com/eapi/listen/together/room/create`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/listen/together/room/create',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_status.js
+listentogether_room_create_module.exports = function (query, request) {
+  var data = {
+    refer: 'songplay_more'
+  };
+  return request('POST', "http://interface.music.163.com/eapi/listen/together/room/create", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/listen/together/room/create'
+  });
+};
+/* harmony default export */ const listentogether_room_create = (listentogether_room_create_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_status.js
+var listentogether_status_module = {
+  exports: {}
+};
+var listentogether_status_exports = listentogether_status_module.exports;
 // 一起听状态
 
-/* harmony default export */ const listentogether_status = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/api/listen/together/status/get`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_sync_list_command.js
+listentogether_status_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/api/listen/together/status/get", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const listentogether_status = (listentogether_status_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_sync_list_command.js
+var listentogether_sync_list_command_module = {
+  exports: {}
+};
+var listentogether_sync_list_command_exports = listentogether_sync_list_command_module.exports;
 // 一起听 更新播放列表
 
-/* harmony default export */ const listentogether_sync_list_command = ((query, request) => {
-  const data = {
+listentogether_sync_list_command_module.exports = function (query, request) {
+  var data = {
     roomId: query.roomId,
     playlistParam: JSON.stringify({
       commandType: query.commandType,
-      version: [
-        {
-          userId: query.userId,
-          version: query.version,
-        },
-      ],
+      version: [{
+        userId: query.userId,
+        version: query.version
+      }],
       anchorSongId: '',
       anchorPosition: -1,
       randomList: query.randomList.split(','),
-      displayList: query.displayList.split(','),
-    }),
-  }
-  return request(
-    'POST',
-    `http://interface.music.163.com/eapi/listen/together/sync/list/command/report`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/listen/together/sync/list/command/report',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/listentogether_sync_playlist_get.js
+      displayList: query.displayList.split(',')
+    })
+  };
+  return request('POST', "http://interface.music.163.com/eapi/listen/together/sync/list/command/report", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/listen/together/sync/list/command/report'
+  });
+};
+/* harmony default export */ const listentogether_sync_list_command = (listentogether_sync_list_command_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/listentogether_sync_playlist_get.js
+var listentogether_sync_playlist_get_module = {
+  exports: {}
+};
+var listentogether_sync_playlist_get_exports = listentogether_sync_playlist_get_module.exports;
 // 一起听 当前列表获取
 
-/* harmony default export */ const listentogether_sync_playlist_get = ((query, request) => {
-  const data = {
-    roomId: query.roomId,
-  }
-  return request(
-    'POST',
-    `http://interface.music.163.com/eapi/listen/together/sync/playlist/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/listen/together/sync/playlist/get',
-    },
-  )
-});
+listentogether_sync_playlist_get_module.exports = function (query, request) {
+  var data = {
+    roomId: query.roomId
+  };
+  return request('POST', "http://interface.music.163.com/eapi/listen/together/sync/playlist/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/listen/together/sync/playlist/get'
+  });
+};
+/* harmony default export */ const listentogether_sync_playlist_get = (listentogether_sync_playlist_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/login.js
+function login_typeof(o) { "@babel/helpers - typeof"; return login_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, login_typeof(o); }
 
-;// CONCATENATED MODULE: ./module/login.js
+var login_module = {
+  exports: {}
+};
+var login_exports = login_module.exports;
+function login_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ login_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == login_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(login_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function login_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function login_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? login_ownKeys(Object(t), !0).forEach(function (r) { login_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : login_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function login_defineProperty(obj, key, value) { key = login_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function login_toPropertyKey(t) { var i = login_toPrimitive(t, "string"); return "symbol" == login_typeof(i) ? i : String(i); }
+function login_toPrimitive(t, r) { if ("object" != login_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != login_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function login_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function login_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { login_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { login_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 // 邮箱登录
 
+var login_CryptoJS = (crypto_js_default());
+login_module.exports = /*#__PURE__*/function () {
+  var _ref = login_asyncToGenerator( /*#__PURE__*/login_regeneratorRuntime().mark(function _callee(query, request) {
+    var data, result;
+    return login_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          query.cookie.os = 'ios';
+          query.cookie.appver = '8.10.90';
+          data = {
+            username: query.email,
+            password: query.md5_password || login_CryptoJS.MD5(query.password).toString(),
+            rememberLogin: 'true'
+          };
+          _context.next = 5;
+          return request('POST', "https://music.163.com/api/login", data, {
+            crypto: 'weapi',
+            ua: 'pc',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 5:
+          result = _context.sent;
+          if (!(result.body.code === 502)) {
+            _context.next = 8;
+            break;
+          }
+          return _context.abrupt("return", {
+            status: 200,
+            body: {
+              msg: '账号或密码错误',
+              code: 502,
+              message: '账号或密码错误'
+            }
+          });
+        case 8:
+          if (result.body.code === 200) {
+            result = {
+              status: 200,
+              body: login_objectSpread(login_objectSpread({}, JSON.parse(JSON.stringify(result.body).replace(/avatarImgId_str/g, 'avatarImgIdStr'))), {}, {
+                cookie: result.cookie.join(';')
+              }),
+              cookie: result.cookie
+            };
+          }
+          return _context.abrupt("return", result);
+        case 10:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const login = (login_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/login_cellphone.js
 
+var module_login_cellphone_module = {
+  exports: {}
+};
+var module_login_cellphone_exports = module_login_cellphone_module.exports;
+function module_login_cellphone_typeof(o) { "@babel/helpers - typeof"; return module_login_cellphone_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, module_login_cellphone_typeof(o); }
+function login_cellphone_defineProperty(obj, key, value) { key = login_cellphone_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function login_cellphone_toPropertyKey(t) { var i = login_cellphone_toPrimitive(t, "string"); return "symbol" == module_login_cellphone_typeof(i) ? i : String(i); }
+function login_cellphone_toPrimitive(t, r) { if ("object" != module_login_cellphone_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != module_login_cellphone_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+// 手机登录
 
-/* harmony default export */ const login = (async (query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
-    username: query.email,
-    password:
-      query.md5_password ||
-      crypto.createHash('md5').update(query.password).digest('hex'),
-    rememberLogin: 'true',
-  }
-  let result = await request('POST', `https://music.163.com/api/login`, data, {
+// import CryptoJS from 'crypto-js'
+var login_cellphone_CryptoJS = (crypto_js_default());
+module_login_cellphone_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = login_cellphone_defineProperty(login_cellphone_defineProperty({
+    phone: query.phone,
+    countrycode: query.countrycode || '86',
+    captcha: query.captcha
+  }, query.captcha ? 'captcha' : 'password', query.captcha ? query.captcha : query.md5_password ||
+  //crypto.createHash('md5').update(query.password).digest('hex'),
+  login_cellphone_CryptoJS.MD5(query.password).toString()), "rememberLogin", 'true');
+  return request('POST', "https://music.163.com/weapi/login/cellphone", data, {
     crypto: 'weapi',
     ua: 'pc',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-  if (result.body.code === 502) {
-    return {
-      status: 200,
-      body: {
-        msg: '账号或密码错误',
-        code: 502,
-        message: '账号或密码错误',
-      },
-    }
-  }
-  if (result.body.code === 200) {
-    result = {
-      status: 200,
-      body: {
-        ...JSON.parse(
-          JSON.stringify(result.body).replace(
-            /avatarImgId_str/g,
-            'avatarImgIdStr',
-          ),
-        ),
-        cookie: result.cookie.join(';'),
-      },
-      cookie: result.cookie,
-    }
-  }
-  return result
-});
-
-// EXTERNAL MODULE: ./node_modules/.store/crypto-js@4.2.0/node_modules/crypto-js/index.js
-var crypto_js = __webpack_require__(1292);
-;// CONCATENATED MODULE: ./module/login_cellphone.js
-// 手机登录
-
-
-
-/* harmony default export */ const login_cellphone = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
-    phone: query.phone,
-    countrycode: query.countrycode || '86',
-    captcha: query.captcha,
-    [query.captcha ? 'captcha' : 'password']: query.captcha
-      ? query.captcha
-      : query.md5_password ||
-        //crypto.createHash('md5').update(query.password).digest('hex'),
-        crypto_js.MD5(query.password).toString(),
-    rememberLogin: 'true',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/login/cellphone`,
-    data,
-    {
-      crypto: 'weapi',
-      ua: 'pc',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/login_qr_check.js
-/* harmony default export */ const login_qr_check = (async (query, request) => {
-  const data = {
-    key: query.key,
-    type: 1,
-  }
-  try {
-    let result = await request(
-      'POST',
-      `https://music.163.com/weapi/login/qrcode/client/login`,
-      data,
-      {
-        crypto: 'weapi',
-        cookie: query.cookie,
-        proxy: query.proxy,
-        realIP: query.realIP,
-      },
-    )
-    result = {
-      status: 200,
-      body: {
-        ...result.body,
-        cookie: result.cookie.join(';'),
-      },
-      cookie: result.cookie,
-    }
-    return result
-  } catch (error) {
-    return {
-      status: 200,
-      body: {},
-      cookie: result.cookie,
-    }
-  }
-});
-
-;// CONCATENATED MODULE: ./module/login_qr_create.js
-/* harmony default export */ const login_qr_create = ((query, request) => {
-  return {'url': `https://music.163.com/login?codekey=${query.key}`}
-//   return new Promise(async (resolve) => {
-//     const url = `https://music.163.com/login?codekey=${query.key}`
-//     return resolve({
-//       code: 200,
-//       status: 200,
-//       body: {
-//         code: 200,
-//         data: {
-//           qrurl: url,
-//           qrimg: query.qrimg ? await QRCode.toDataURL(url) : '',
-//         },
-//       },
-//     })
-//   })
-});
-;// CONCATENATED MODULE: ./module/login_qr_key.js
-/* harmony default export */ const login_qr_key = (async (query, request) => {
-  const data = {
-    type: 1,
-  }
-  const result = await request(
-    'POST',
-    `https://music.163.com/weapi/login/qrcode/unikey`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-  return {
-    status: 200,
-    body: {
-      data: result.body,
-      code: 200,
-    },
-    cookie: result.cookie,
-  }
-});
-
-;// CONCATENATED MODULE: ./module/login_refresh.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const module_login_cellphone = (module_login_cellphone_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/login_qr_check.js
+function login_qr_check_typeof(o) { "@babel/helpers - typeof"; return login_qr_check_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, login_qr_check_typeof(o); }
+var login_qr_check_module = {
+  exports: {}
+};
+var login_qr_check_exports = login_qr_check_module.exports;
+function login_qr_check_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ login_qr_check_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == login_qr_check_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(login_qr_check_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function login_qr_check_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function login_qr_check_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? login_qr_check_ownKeys(Object(t), !0).forEach(function (r) { login_qr_check_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : login_qr_check_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function login_qr_check_defineProperty(obj, key, value) { key = login_qr_check_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function login_qr_check_toPropertyKey(t) { var i = login_qr_check_toPrimitive(t, "string"); return "symbol" == login_qr_check_typeof(i) ? i : String(i); }
+function login_qr_check_toPrimitive(t, r) { if ("object" != login_qr_check_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != login_qr_check_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function login_qr_check_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function login_qr_check_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { login_qr_check_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { login_qr_check_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+login_qr_check_module.exports = /*#__PURE__*/function () {
+  var _ref = login_qr_check_asyncToGenerator( /*#__PURE__*/login_qr_check_regeneratorRuntime().mark(function _callee(query, request) {
+    var data, _result;
+    return login_qr_check_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          data = {
+            key: query.key,
+            type: 1
+          };
+          _context.prev = 1;
+          _context.next = 4;
+          return request('POST', "https://music.163.com/weapi/login/qrcode/client/login", data, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 4:
+          _result = _context.sent;
+          _result = {
+            status: 200,
+            body: login_qr_check_objectSpread(login_qr_check_objectSpread({}, _result.body), {}, {
+              cookie: _result.cookie.join(';')
+            }),
+            cookie: _result.cookie
+          };
+          return _context.abrupt("return", _result);
+        case 9:
+          _context.prev = 9;
+          _context.t0 = _context["catch"](1);
+          return _context.abrupt("return", {
+            status: 200,
+            body: {},
+            cookie: result.cookie
+          });
+        case 12:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee, null, [[1, 9]]);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const login_qr_check = (login_qr_check_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/login_qr_create.js
+function login_qr_create_typeof(o) { "@babel/helpers - typeof"; return login_qr_create_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, login_qr_create_typeof(o); }
+var login_qr_create_module = {
+  exports: {}
+};
+var login_qr_create_exports = login_qr_create_module.exports;
+function login_qr_create_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ login_qr_create_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == login_qr_create_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(login_qr_create_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function login_qr_create_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function login_qr_create_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { login_qr_create_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { login_qr_create_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+// Todo
+var QRCode = '';
+login_qr_create_module.exports = function (query, request) {
+  return new Promise( /*#__PURE__*/function () {
+    var _ref = login_qr_create_asyncToGenerator( /*#__PURE__*/login_qr_create_regeneratorRuntime().mark(function _callee(resolve) {
+      var url;
+      return login_qr_create_regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            url = "https://music.163.com/login?codekey=".concat(query.key);
+            _context.t0 = resolve;
+            _context.t1 = url;
+            if (!query.qrimg) {
+              _context.next = 9;
+              break;
+            }
+            _context.next = 6;
+            return QRCode.toDataURL(url);
+          case 6:
+            _context.t2 = _context.sent;
+            _context.next = 10;
+            break;
+          case 9:
+            _context.t2 = '';
+          case 10:
+            _context.t3 = _context.t2;
+            _context.t4 = {
+              qrurl: _context.t1,
+              qrimg: _context.t3
+            };
+            _context.t5 = {
+              code: 200,
+              data: _context.t4
+            };
+            _context.t6 = {
+              code: 200,
+              status: 200,
+              body: _context.t5
+            };
+            return _context.abrupt("return", (0, _context.t0)(_context.t6));
+          case 15:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
+};
+/* harmony default export */ const login_qr_create = (login_qr_create_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/login_qr_key.js
+function login_qr_key_typeof(o) { "@babel/helpers - typeof"; return login_qr_key_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, login_qr_key_typeof(o); }
+var login_qr_key_module = {
+  exports: {}
+};
+var login_qr_key_exports = login_qr_key_module.exports;
+function login_qr_key_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ login_qr_key_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == login_qr_key_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(login_qr_key_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function login_qr_key_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function login_qr_key_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { login_qr_key_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { login_qr_key_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+login_qr_key_module.exports = /*#__PURE__*/function () {
+  var _ref = login_qr_key_asyncToGenerator( /*#__PURE__*/login_qr_key_regeneratorRuntime().mark(function _callee(query, request) {
+    var data, result;
+    return login_qr_key_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          data = {
+            type: 1
+          };
+          _context.next = 3;
+          return request('POST', "https://music.163.com/weapi/login/qrcode/unikey", data, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 3:
+          result = _context.sent;
+          return _context.abrupt("return", {
+            status: 200,
+            body: {
+              data: result.body,
+              code: 200
+            },
+            cookie: result.cookie
+          });
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const login_qr_key = (login_qr_key_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/login_refresh.js
+function login_refresh_typeof(o) { "@babel/helpers - typeof"; return login_refresh_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, login_refresh_typeof(o); }
+var login_refresh_module = {
+  exports: {}
+};
+var login_refresh_exports = login_refresh_module.exports;
+function login_refresh_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ login_refresh_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == login_refresh_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(login_refresh_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function login_refresh_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function login_refresh_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? login_refresh_ownKeys(Object(t), !0).forEach(function (r) { login_refresh_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : login_refresh_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function login_refresh_defineProperty(obj, key, value) { key = login_refresh_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function login_refresh_toPropertyKey(t) { var i = login_refresh_toPrimitive(t, "string"); return "symbol" == login_refresh_typeof(i) ? i : String(i); }
+function login_refresh_toPrimitive(t, r) { if ("object" != login_refresh_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != login_refresh_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function login_refresh_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function login_refresh_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { login_refresh_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { login_refresh_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 // 登录刷新
 
-/* harmony default export */ const login_refresh = ((query, request) => {
-  return request(
-    "POST",
-    `https://music.163.com/weapi/login/token/refresh`,
-    {},
-    {
-      crypto: "weapi",
-      ua: "pc",
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    }
-  );
-});
-
-;// CONCATENATED MODULE: ./module/login_status.js
-/* harmony default export */ const login_status = ((query, request) => {
-    const data = {}
-    return request(
-      'POST',
-      `https://music.163.com/weapi/w/nuser/account/get`,
-      data,
-      {
-        crypto: 'weapi',
-        cookie: query.cookie,
-        proxy: query.proxy,
-        realIP: query.realIP,
-      },
-    )
+login_refresh_module.exports = /*#__PURE__*/function () {
+  var _ref = login_refresh_asyncToGenerator( /*#__PURE__*/login_refresh_regeneratorRuntime().mark(function _callee(query, request) {
+    var result;
+    return login_refresh_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return request('POST', "https://music.163.com/weapi/login/token/refresh", {}, {
+            crypto: 'weapi',
+            ua: 'pc',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 2:
+          result = _context.sent;
+          if (result.body.code === 200) {
+            result = {
+              status: 200,
+              body: login_refresh_objectSpread(login_refresh_objectSpread({}, result.body), {}, {
+                cookie: result.cookie.join(';')
+              }),
+              cookie: result.cookie
+            };
+          }
+          return _context.abrupt("return", result);
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const login_refresh = (login_refresh_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/login_status.js
+var module_login_status_module = {
+  exports: {}
+};
+var module_login_status_exports = module_login_status_module.exports;
+module_login_status_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/w/nuser/account/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
   });
-  
-;// CONCATENATED MODULE: ./module/logout.js
+};
+/* harmony default export */ const module_login_status = (module_login_status_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/logout.js
+var logout_module = {
+  exports: {}
+};
+var logout_exports = logout_module.exports;
 // 退出登录
 
-/* harmony default export */ const logout = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/logout`,
-    {},
-    {
-      crypto: 'weapi',
-      ua: 'pc',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/lyric.js
+logout_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/logout", {}, {
+    crypto: 'weapi',
+    ua: 'pc',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const logout = (logout_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/lyric.js
+var lyric_module = {
+  exports: {}
+};
+var lyric_exports = lyric_module.exports;
 // 歌词
 
-/* harmony default export */ const lyric = ((query, request) => {
-  query.cookie.os = 'ios'
-
-  const data = {
+lyric_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  var data = {
     id: query.id,
     tv: -1,
     lv: -1,
     rv: -1,
-    kv: -1,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/song/lyric?_nmclfl=1`,
-    data,
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/lyric_new.js
+    kv: -1
+  };
+  return request('POST', "https://music.163.com/api/song/lyric?_nmclfl=1", data, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const lyric = (lyric_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/lyric_new.js
+var lyric_new_module = {
+  exports: {}
+};
+var lyric_new_exports = lyric_new_module.exports;
 // 新版歌词 - 包含逐字歌词
 
-/* harmony default export */ const lyric_new = ((query, request) => {
-  const data = {
+lyric_new_module.exports = function (query, request) {
+  var data = {
     id: query.id,
     cp: false,
     tv: 0,
@@ -38427,5024 +45906,5114 @@ var crypto_js = __webpack_require__(1292);
     kv: 0,
     yv: 0,
     ytv: 0,
-    yrv: 0,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/song/lyric/v1`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/song/lyric/v1',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mlog_music_rcmd.js
+    yrv: 0
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/song/lyric/v1", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/song/lyric/v1'
+  });
+};
+/* harmony default export */ const lyric_new = (lyric_new_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mlog_music_rcmd.js
+var mlog_music_rcmd_module = {
+  exports: {}
+};
+var mlog_music_rcmd_exports = mlog_music_rcmd_module.exports;
 // 歌曲相关视频
 
-/* harmony default export */ const mlog_music_rcmd = ((query, request) => {
-  const data = {
+mlog_music_rcmd_module.exports = function (query, request) {
+  var data = {
     id: query.mvid || 0,
     type: 2,
     rcmdType: 20,
     limit: query.limit || 10,
-    extInfo: JSON.stringify({ songId: query.songid }),
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/eapi/mlog/rcmd/feed/list`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/mlog/rcmd/feed/list',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mlog_to_video.js
+    extInfo: JSON.stringify({
+      songId: query.songid
+    })
+  };
+  return request('POST', "https://interface.music.163.com/eapi/mlog/rcmd/feed/list", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/mlog/rcmd/feed/list',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mlog_music_rcmd = (mlog_music_rcmd_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mlog_to_video.js
+var mlog_to_video_module = {
+  exports: {}
+};
+var mlog_to_video_exports = mlog_to_video_module.exports;
 // 将mlog id转为video id
 
-/* harmony default export */ const mlog_to_video = ((query, request) => {
-  const data = {
-    mlogId: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/mlog/video/convert/id`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mlog_url.js
-// mlog链接
-
-/* harmony default export */ const mlog_url = ((query, request) => {
-  const data = {
-    id: query.id,
-    resolution: query.res || 1080,
-    type: 1,
-  }
-  return request('POST', `https://music.163.com/weapi/mlog/detail/v1`, data, {
+mlog_to_video_module.exports = function (query, request) {
+  var data = {
+    mlogId: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/mlog/video/convert/id", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mlog_to_video = (mlog_to_video_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mlog_url.js
+var mlog_url_module = {
+  exports: {}
+};
+var mlog_url_exports = mlog_url_module.exports;
+// mlog链接
 
-;// CONCATENATED MODULE: ./module/msg_comments.js
+mlog_url_module.exports = function (query, request) {
+  var data = {
+    id: query.id,
+    resolution: query.res || 1080,
+    type: 1
+  };
+  return request('POST', "https://music.163.com/weapi/mlog/detail/v1", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mlog_url = (mlog_url_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/msg_comments.js
+var msg_comments_module = {
+  exports: {}
+};
+var msg_comments_exports = msg_comments_module.exports;
 // 评论
 
-/* harmony default export */ const msg_comments = ((query, request) => {
-  const data = {
+msg_comments_module.exports = function (query, request) {
+  var data = {
     beforeTime: query.before || '-1',
     limit: query.limit || 30,
     total: 'true',
-    uid: query.uid,
-  }
-
-  return request(
-    'POST',
-    `https://music.163.com/api/v1/user/comments/${query.uid}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/msg_forwards.js
+    uid: query.uid
+  };
+  return request('POST', "https://music.163.com/api/v1/user/comments/".concat(query.uid), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const msg_comments = (msg_comments_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/msg_forwards.js
+var msg_forwards_module = {
+  exports: {}
+};
+var msg_forwards_exports = msg_forwards_module.exports;
 // @我
 
-/* harmony default export */ const msg_forwards = ((query, request) => {
-  const data = {
+msg_forwards_module.exports = function (query, request) {
+  var data = {
     offset: query.offset || 0,
     limit: query.limit || 30,
-    total: 'true',
-  }
-  return request('POST', `https://music.163.com/api/forwards/get`, data, {
+    total: 'true'
+  };
+  return request('POST', "https://music.163.com/api/forwards/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/msg_notices.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const msg_forwards = (msg_forwards_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/msg_notices.js
+var msg_notices_module = {
+  exports: {}
+};
+var msg_notices_exports = msg_notices_module.exports;
 // 通知
 
-/* harmony default export */ const msg_notices = ((query, request) => {
-  const data = {
+msg_notices_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
-    time: query.lasttime || -1,
-  }
-  return request('POST', `https://music.163.com/api/msg/notices`, data, {
+    time: query.lasttime || -1
+  };
+  return request('POST', "https://music.163.com/api/msg/notices", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/msg_private.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const msg_notices = (msg_notices_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/msg_private.js
+var msg_private_module = {
+  exports: {}
+};
+var msg_private_exports = msg_private_module.exports;
 // 私信
 
-/* harmony default export */ const msg_private = ((query, request) => {
-  const data = {
+msg_private_module.exports = function (query, request) {
+  var data = {
     offset: query.offset || 0,
     limit: query.limit || 30,
-    total: 'true',
-  }
-  return request('POST', `https://music.163.com/api/msg/private/users`, data, {
+    total: 'true'
+  };
+  return request('POST', "https://music.163.com/api/msg/private/users", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/msg_private_history.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const msg_private = (msg_private_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/msg_private_history.js
+var msg_private_history_module = {
+  exports: {}
+};
+var msg_private_history_exports = msg_private_history_module.exports;
 // 私信内容
 
-/* harmony default export */ const msg_private_history = ((query, request) => {
-  const data = {
+msg_private_history_module.exports = function (query, request) {
+  var data = {
     userId: query.uid,
     limit: query.limit || 30,
     time: query.before || 0,
-    total: 'true',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/msg/private/history`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/msg_recentcontact.js
-// 最近联系
-
-/* harmony default export */ const msg_recentcontact = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/msg/recentcontact/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/musician_cloudbean.js
-// 账号云豆数
-
-/* harmony default export */ const musician_cloudbean = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/weapi/cloudbean/get`, data, {
+    total: 'true'
+  };
+  return request('POST', "https://music.163.com/api/msg/private/history", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const msg_private_history = (msg_private_history_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/msg_recentcontact.js
+var msg_recentcontact_module = {
+  exports: {}
+};
+var msg_recentcontact_exports = msg_recentcontact_module.exports;
+// 最近联系
 
-;// CONCATENATED MODULE: ./module/musician_cloudbean_obtain.js
+msg_recentcontact_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/msg/recentcontact/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const msg_recentcontact = (msg_recentcontact_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/musician_cloudbean.js
+var musician_cloudbean_module = {
+  exports: {}
+};
+var musician_cloudbean_exports = musician_cloudbean_module.exports;
+// 账号云豆数
+
+musician_cloudbean_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/cloudbean/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const musician_cloudbean = (musician_cloudbean_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/musician_cloudbean_obtain.js
+var musician_cloudbean_obtain_module = {
+  exports: {}
+};
+var musician_cloudbean_obtain_exports = musician_cloudbean_obtain_module.exports;
 // 领取云豆
 
-/* harmony default export */ const musician_cloudbean_obtain = ((query, request) => {
-  const data = {
+musician_cloudbean_obtain_module.exports = function (query, request) {
+  var data = {
     userMissionId: query.id,
-    period: query.period,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/nmusician/workbench/mission/reward/obtain/new`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/musician_data_overview.js
+    period: query.period
+  };
+  return request('POST', "https://music.163.com/weapi/nmusician/workbench/mission/reward/obtain/new", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const musician_cloudbean_obtain = (musician_cloudbean_obtain_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/musician_data_overview.js
+var musician_data_overview_module = {
+  exports: {}
+};
+var musician_data_overview_exports = musician_data_overview_module.exports;
 // 音乐人数据概况
 
-/* harmony default export */ const musician_data_overview = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/creator/musician/statistic/data/overview/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/musician_play_trend.js
+musician_data_overview_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/creator/musician/statistic/data/overview/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const musician_data_overview = (musician_data_overview_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/musician_play_trend.js
+var musician_play_trend_module = {
+  exports: {}
+};
+var musician_play_trend_exports = musician_play_trend_module.exports;
 // 音乐人歌曲播放趋势
 
-/* harmony default export */ const musician_play_trend = ((query, request) => {
-  const data = {
+musician_play_trend_module.exports = function (query, request) {
+  var data = {
     startTime: query.startTime,
-    endTime: query.endTime,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/creator/musician/play/count/statistic/data/trend/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/musician_sign.js
+    endTime: query.endTime
+  };
+  return request('POST', "https://music.163.com/weapi/creator/musician/play/count/statistic/data/trend/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const musician_play_trend = (musician_play_trend_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/musician_sign.js
+var musician_sign_module = {
+  exports: {}
+};
+var musician_sign_exports = musician_sign_module.exports;
 // 音乐人签到
 
-/* harmony default export */ const musician_sign = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/creator/user/access`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/musician_tasks.js
+musician_sign_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/creator/user/access", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const musician_sign = (musician_sign_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/musician_tasks.js
+var musician_tasks_module = {
+  exports: {}
+};
+var musician_tasks_exports = musician_tasks_module.exports;
 // 获取音乐人任务
 
-/* harmony default export */ const musician_tasks = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/nmusician/workbench/mission/cycle/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/musician_tasks_new.js
+musician_tasks_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/nmusician/workbench/mission/cycle/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const musician_tasks = (musician_tasks_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/musician_tasks_new.js
+var musician_tasks_new_module = {
+  exports: {}
+};
+var musician_tasks_new_exports = musician_tasks_new_module.exports;
 // 获取音乐人任务
 
-/* harmony default export */ const musician_tasks_new = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/nmusician/workbench/mission/stage/list `,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/music_first_listen_info.js
+musician_tasks_new_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/nmusician/workbench/mission/stage/list ", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const musician_tasks_new = (musician_tasks_new_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/music_first_listen_info.js
+var music_first_listen_info_module = {
+  exports: {}
+};
+var music_first_listen_info_exports = music_first_listen_info_module.exports;
 // 回忆坐标
 
-/* harmony default export */ const music_first_listen_info = ((query, request) => {
-  const data = {
-    songId: query.id,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/api/content/activity/music/first/listen/info`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mv_all.js
+music_first_listen_info_module.exports = function (query, request) {
+  var data = {
+    songId: query.id
+  };
+  return request('POST', "https://interface3.music.163.com/api/content/activity/music/first/listen/info", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const music_first_listen_info = (music_first_listen_info_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_all.js
+var mv_all_module = {
+  exports: {}
+};
+var mv_all_exports = mv_all_module.exports;
 // 全部MV
 
-/* harmony default export */ const mv_all = ((query, request) => {
-  const data = {
+mv_all_module.exports = function (query, request) {
+  var data = {
     tags: JSON.stringify({
       地区: query.area || '全部',
       类型: query.type || '全部',
-      排序: query.order || '上升最快',
+      排序: query.order || '上升最快'
     }),
     offset: query.offset || 0,
     total: 'true',
-    limit: query.limit || 30,
-  }
-  return request('POST', `https://interface.music.163.com/api/mv/all`, data, {
+    limit: query.limit || 30
+  };
+  return request('POST', "https://interface.music.163.com/api/mv/all", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/mv_detail.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_all = (mv_all_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_detail.js
+var mv_detail_module = {
+  exports: {}
+};
+var mv_detail_exports = mv_detail_module.exports;
 // MV详情
 
-/* harmony default export */ const mv_detail = ((query, request) => {
-  const data = {
-    id: query.mvid,
-  }
-  return request('POST', `https://music.163.com/api/v1/mv/detail`, data, {
+mv_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.mvid
+  };
+  return request('POST', "https://music.163.com/api/v1/mv/detail", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/mv_detail_info.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_detail = (mv_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_detail_info.js
+var mv_detail_info_module = {
+  exports: {}
+};
+var mv_detail_info_exports = mv_detail_info_module.exports;
 // MV 点赞转发评论数数据
 
-/* harmony default export */ const mv_detail_info = ((query, request) => {
-  const data = {
-    threadid: `R_MV_5_${query.mvid}`,
-    composeliked: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/comment/commentthread/info`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mv_exclusive_rcmd.js
+mv_detail_info_module.exports = function (query, request) {
+  var data = {
+    threadid: "R_MV_5_".concat(query.mvid),
+    composeliked: true
+  };
+  return request('POST', "https://music.163.com/api/comment/commentthread/info", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_detail_info = (mv_detail_info_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_exclusive_rcmd.js
+var mv_exclusive_rcmd_module = {
+  exports: {}
+};
+var mv_exclusive_rcmd_exports = mv_exclusive_rcmd_module.exports;
 // 网易出品
 
-/* harmony default export */ const mv_exclusive_rcmd = ((query, request) => {
-  const data = {
+mv_exclusive_rcmd_module.exports = function (query, request) {
+  var data = {
     offset: query.offset || 0,
-    limit: query.limit || 30,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/api/mv/exclusive/rcmd`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mv_first.js
+    limit: query.limit || 30
+  };
+  return request('POST', "https://interface.music.163.com/api/mv/exclusive/rcmd", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_exclusive_rcmd = (mv_exclusive_rcmd_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_first.js
+var mv_first_module = {
+  exports: {}
+};
+var mv_first_exports = mv_first_module.exports;
 // 最新MV
 
-/* harmony default export */ const mv_first = ((query, request) => {
-  const data = {
+mv_first_module.exports = function (query, request) {
+  var data = {
     // 'offset': query.offset || 0,
     area: query.area || '',
     limit: query.limit || 30,
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/mv/first`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mv_sub.js
-// 收藏与取消收藏MV
-
-/* harmony default export */ const mv_sub = ((query, request) => {
-  query.t = query.t == 1 ? 'sub' : 'unsub'
-  const data = {
-    mvId: query.mvid,
-    mvIds: '["' + query.mvid + '"]',
-  }
-  return request('POST', `https://music.163.com/weapi/mv/${query.t}`, data, {
+    total: true
+  };
+  return request('POST', "https://interface.music.163.com/weapi/mv/first", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_first = (mv_first_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_sub.js
+var mv_sub_module = {
+  exports: {}
+};
+var mv_sub_exports = mv_sub_module.exports;
+// 收藏与取消收藏MV
 
-;// CONCATENATED MODULE: ./module/mv_sublist.js
+mv_sub_module.exports = function (query, request) {
+  query.t = query.t == 1 ? 'sub' : 'unsub';
+  var data = {
+    mvId: query.mvid,
+    mvIds: '["' + query.mvid + '"]'
+  };
+  return request('POST', "https://music.163.com/weapi/mv/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_sub = (mv_sub_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_sublist.js
+var mv_sublist_module = {
+  exports: {}
+};
+var mv_sublist_exports = mv_sublist_module.exports;
 // 已收藏MV列表
 
-/* harmony default export */ const mv_sublist = ((query, request) => {
-  const data = {
+mv_sublist_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 25,
     offset: query.offset || 0,
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/cloudvideo/allvideo/sublist`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/mv_url.js
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/cloudvideo/allvideo/sublist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_sublist = (mv_sublist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/mv_url.js
+var mv_url_module = {
+  exports: {}
+};
+var mv_url_exports = mv_url_module.exports;
 // MV链接
 
-/* harmony default export */ const mv_url = ((query, request) => {
-  const data = {
+mv_url_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    r: query.r || 1080,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/song/enhance/play/mv/url`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/nickname_check.js
-/* harmony default export */ const nickname_check = ((query, request) => {
-  const data = {
-    nickname: query.nickname,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/nickname/duplicated`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/personalized.js
+    r: query.r || 1080
+  };
+  return request('POST', "https://music.163.com/weapi/song/enhance/play/mv/url", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const mv_url = (mv_url_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/nickname_check.js
+var nickname_check_module = {
+  exports: {}
+};
+var nickname_check_exports = nickname_check_module.exports;
+nickname_check_module.exports = function (query, request) {
+  var data = {
+    nickname: query.nickname
+  };
+  return request('POST', "https://music.163.com/api/nickname/duplicated", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const nickname_check = (nickname_check_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/personalized.js
+var personalized_module = {
+  exports: {}
+};
+var personalized_exports = personalized_module.exports;
 // 推荐歌单
 
-/* harmony default export */ const personalized = ((query, request) => {
-  const data = {
+personalized_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
     // offset: query.offset || 0,
     total: true,
-    n: 1000,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/personalized/playlist`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/personalized_djprogram.js
+    n: 1000
+  };
+  return request('POST', "https://music.163.com/weapi/personalized/playlist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const personalized = (personalized_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/personalized_djprogram.js
+var personalized_djprogram_module = {
+  exports: {}
+};
+var personalized_djprogram_exports = personalized_djprogram_module.exports;
 // 推荐电台
 
-/* harmony default export */ const personalized_djprogram = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/personalized/djprogram`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/personalized_mv.js
+personalized_djprogram_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/personalized/djprogram", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const personalized_djprogram = (personalized_djprogram_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/personalized_mv.js
+var personalized_mv_module = {
+  exports: {}
+};
+var personalized_mv_exports = personalized_mv_module.exports;
 // 推荐MV
 
-/* harmony default export */ const personalized_mv = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/personalized/mv`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/personalized_newsong.js
+personalized_mv_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/personalized/mv", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const personalized_mv = (personalized_mv_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/personalized_newsong.js
+var personalized_newsong_module = {
+  exports: {}
+};
+var personalized_newsong_exports = personalized_newsong_module.exports;
 // 推荐新歌
 
-/* harmony default export */ const personalized_newsong = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+personalized_newsong_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     type: 'recommend',
     limit: query.limit || 10,
-    areaId: query.areaId || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/personalized/newsong`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/personalized_privatecontent.js
+    areaId: query.areaId || 0
+  };
+  return request('POST', "https://music.163.com/api/personalized/newsong", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const personalized_newsong = (personalized_newsong_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/personalized_privatecontent.js
+var personalized_privatecontent_module = {
+  exports: {}
+};
+var personalized_privatecontent_exports = personalized_privatecontent_module.exports;
 // 独家放送
 
-/* harmony default export */ const personalized_privatecontent = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/personalized/privatecontent`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/personalized_privatecontent_list.js
+personalized_privatecontent_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/personalized/privatecontent", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const personalized_privatecontent = (personalized_privatecontent_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/personalized_privatecontent_list.js
+var personalized_privatecontent_list_module = {
+  exports: {}
+};
+var personalized_privatecontent_list_exports = personalized_privatecontent_list_module.exports;
 // 独家放送列表
 
-/* harmony default export */ const personalized_privatecontent_list = ((query, request) => {
-  const data = {
+personalized_privatecontent_list_module.exports = function (query, request) {
+  var data = {
     offset: query.offset || 0,
     total: 'true',
-    limit: query.limit || 60,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/v2/privatecontent/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/personal_fm.js
+    limit: query.limit || 60
+  };
+  return request('POST', "https://music.163.com/api/v2/privatecontent/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const personalized_privatecontent_list = (personalized_privatecontent_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/personal_fm.js
+var personal_fm_module = {
+  exports: {}
+};
+var personal_fm_exports = personal_fm_module.exports;
 // 私人FM
 
-/* harmony default export */ const personal_fm = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/radio/get`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_catlist.js
+personal_fm_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/v1/radio/get", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const personal_fm = (personal_fm_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_catlist.js
+var playlist_catlist_module = {
+  exports: {}
+};
+var playlist_catlist_exports = playlist_catlist_module.exports;
 // 全部歌单分类
 
-/* harmony default export */ const playlist_catlist = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/playlist/catalogue`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+playlist_catlist_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/playlist/catalogue", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_catlist = (playlist_catlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_cover_update.js
+function playlist_cover_update_typeof(o) { "@babel/helpers - typeof"; return playlist_cover_update_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, playlist_cover_update_typeof(o); }
 
-;// CONCATENATED MODULE: ./module/playlist_create.js
+var playlist_cover_update_module = {
+  exports: {}
+};
+var playlist_cover_update_exports = playlist_cover_update_module.exports;
+function playlist_cover_update_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ playlist_cover_update_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == playlist_cover_update_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(playlist_cover_update_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function playlist_cover_update_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function playlist_cover_update_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? playlist_cover_update_ownKeys(Object(t), !0).forEach(function (r) { playlist_cover_update_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : playlist_cover_update_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function playlist_cover_update_defineProperty(obj, key, value) { key = playlist_cover_update_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function playlist_cover_update_toPropertyKey(t) { var i = playlist_cover_update_toPrimitive(t, "string"); return "symbol" == playlist_cover_update_typeof(i) ? i : String(i); }
+function playlist_cover_update_toPrimitive(t, r) { if ("object" != playlist_cover_update_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != playlist_cover_update_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function playlist_cover_update_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function playlist_cover_update_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { playlist_cover_update_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { playlist_cover_update_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+var playlist_cover_update_uploadPlugin = upload;
+playlist_cover_update_module.exports = /*#__PURE__*/function () {
+  var _ref = playlist_cover_update_asyncToGenerator( /*#__PURE__*/playlist_cover_update_regeneratorRuntime().mark(function _callee(query, request) {
+    var uploadInfo, res;
+    return playlist_cover_update_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          if (query.imgFile) {
+            _context.next = 2;
+            break;
+          }
+          return _context.abrupt("return", {
+            status: 400,
+            body: {
+              code: 400,
+              msg: 'imgFile is required'
+            }
+          });
+        case 2:
+          _context.next = 4;
+          return playlist_cover_update_uploadPlugin(query, request);
+        case 4:
+          uploadInfo = _context.sent;
+          _context.next = 7;
+          return request('POST', "https://music.163.com/weapi/playlist/cover/update", {
+            id: query.id,
+            coverImgId: uploadInfo.imgId
+          }, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 7:
+          res = _context.sent;
+          return _context.abrupt("return", {
+            status: 200,
+            body: {
+              code: 200,
+              data: playlist_cover_update_objectSpread(playlist_cover_update_objectSpread({}, uploadInfo), res.body)
+            }
+          });
+        case 9:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const playlist_cover_update = (playlist_cover_update_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_create.js
+var playlist_create_module = {
+  exports: {}
+};
+var playlist_create_exports = playlist_create_module.exports;
 // 创建歌单
 
-/* harmony default export */ const playlist_create = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+playlist_create_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     name: query.name,
-    privacy: query.privacy, //0 为普通歌单，10 为隐私歌单
-    type: query.type || 'NORMAL', // NORMAL|VIDEO|SHARED
-  }
-  return request('POST', `https://music.163.com/api/playlist/create`, data, {
+    privacy: query.privacy,
+    //0 为普通歌单，10 为隐私歌单
+    type: query.type || 'NORMAL' // NORMAL|VIDEO|SHARED
+  };
+  return request('POST', "https://music.163.com/api/playlist/create", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/playlist_delete.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_create = (playlist_create_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_delete.js
+var playlist_delete_module = {
+  exports: {}
+};
+var playlist_delete_exports = playlist_delete_module.exports;
 // 删除歌单
 
-/* harmony default export */ const playlist_delete = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
-    ids: '[' + query.id + ']',
-  }
-  return request('POST', `https://music.163.com/weapi/playlist/remove`, data, {
+playlist_delete_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
+    ids: '[' + query.id + ']'
+  };
+  return request('POST', "https://music.163.com/weapi/playlist/remove", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/playlist_desc_update.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_delete = (playlist_delete_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_desc_update.js
+var playlist_desc_update_module = {
+  exports: {}
+};
+var playlist_desc_update_exports = playlist_desc_update_module.exports;
 // 更新歌单描述
 
-/* harmony default export */ const playlist_desc_update = ((query, request) => {
-  const data = {
+playlist_desc_update_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    desc: query.desc,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/playlist/desc/update`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/playlist/desc/update',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_detail.js
+    desc: query.desc
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/playlist/desc/update", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/playlist/desc/update',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_desc_update = (playlist_desc_update_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_detail.js
+var playlist_detail_module = {
+  exports: {}
+};
+var playlist_detail_exports = playlist_detail_module.exports;
 // 歌单详情
 
-/* harmony default export */ const playlist_detail = ((query, request) => {
-  const data = {
+playlist_detail_module.exports = function (query, request) {
+  var data = {
     id: query.id,
     n: 100000,
-    s: query.s || 8,
-  }
-  return request('POST', `https://music.163.com/api/v6/playlist/detail`, data, {
+    s: query.s || 8
+  };
+  return request('POST', "https://music.163.com/api/v6/playlist/detail", data, {
     crypto: 'api',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/playlist_detail_dynamic.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_detail = (playlist_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_detail_dynamic.js
+var playlist_detail_dynamic_module = {
+  exports: {}
+};
+var playlist_detail_dynamic_exports = playlist_detail_dynamic_module.exports;
 // 初始化名字
 
-/* harmony default export */ const playlist_detail_dynamic = ((query, request) => {
-  const data = {
+playlist_detail_dynamic_module.exports = function (query, request) {
+  var data = {
     id: query.id,
     n: 100000,
-    s: query.s || 8,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/playlist/detail/dynamic`,
-    data,
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_highquality_tags.js
+    s: query.s || 8
+  };
+  return request('POST', "https://music.163.com/api/playlist/detail/dynamic", data, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_detail_dynamic = (playlist_detail_dynamic_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_highquality_tags.js
+var playlist_highquality_tags_module = {
+  exports: {}
+};
+var playlist_highquality_tags_exports = playlist_highquality_tags_module.exports;
 // 精品歌单 tags
-/* harmony default export */ const playlist_highquality_tags = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/playlist/highquality/tags`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_hot.js
+playlist_highquality_tags_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/playlist/highquality/tags", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_highquality_tags = (playlist_highquality_tags_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_hot.js
+var playlist_hot_module = {
+  exports: {}
+};
+var playlist_hot_exports = playlist_hot_module.exports;
 // 热门歌单分类
 
-/* harmony default export */ const playlist_hot = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/playlist/hottags`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_mylike.js
-/* harmony default export */ const playlist_mylike = ((query, request) => {
-  const data = {
+playlist_hot_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/playlist/hottags", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_hot = (playlist_hot_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_mylike.js
+var playlist_mylike_module = {
+  exports: {}
+};
+var playlist_mylike_exports = playlist_mylike_module.exports;
+playlist_mylike_module.exports = function (query, request) {
+  var data = {
     time: query.time || '-1',
-    limit: query.limit || '12',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/mlog/playlist/mylike/bytime/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_name_update.js
+    limit: query.limit || '12'
+  };
+  return request('POST', "https://music.163.com/api/mlog/playlist/mylike/bytime/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_mylike = (playlist_mylike_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_name_update.js
+var playlist_name_update_module = {
+  exports: {}
+};
+var playlist_name_update_exports = playlist_name_update_module.exports;
 // 更新歌单名
 
-/* harmony default export */ const playlist_name_update = ((query, request) => {
-  const data = {
+playlist_name_update_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    name: query.name,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/playlist/update/name`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/playlist/update/name',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_order_update.js
+    name: query.name
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/playlist/update/name", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/playlist/update/name',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_name_update = (playlist_name_update_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_order_update.js
+var playlist_order_update_module = {
+  exports: {}
+};
+var playlist_order_update_exports = playlist_order_update_module.exports;
 // 编辑歌单顺序
 
-/* harmony default export */ const playlist_order_update = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
-    ids: query.ids,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/playlist/order/update`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_privacy.js
+playlist_order_update_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
+    ids: query.ids
+  };
+  return request('POST', "https://music.163.com/api/playlist/order/update", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_order_update = (playlist_order_update_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_privacy.js
+var playlist_privacy_module = {
+  exports: {}
+};
+var playlist_privacy_exports = playlist_privacy_module.exports;
 // 公开隐私歌单
 
-/* harmony default export */ const playlist_privacy = ((query, request) => {
-  const data = {
+playlist_privacy_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    privacy: 0,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/eapi/playlist/update/privacy`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/playlist/update/privacy',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_subscribe.js
+    privacy: 0
+  };
+  return request('POST', "https://interface.music.163.com/eapi/playlist/update/privacy", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/playlist/update/privacy'
+  });
+};
+/* harmony default export */ const playlist_privacy = (playlist_privacy_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_subscribe.js
+var playlist_subscribe_module = {
+  exports: {}
+};
+var playlist_subscribe_exports = playlist_subscribe_module.exports;
 // 收藏与取消收藏歌单
 
-/* harmony default export */ const playlist_subscribe = ((query, request) => {
-  query.t = query.t == 1 ? 'subscribe' : 'unsubscribe'
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/playlist/${query.t}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_subscribers.js
+playlist_subscribe_module.exports = function (query, request) {
+  query.t = query.t == 1 ? 'subscribe' : 'unsubscribe';
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/playlist/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_subscribe = (playlist_subscribe_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_subscribers.js
+var playlist_subscribers_module = {
+  exports: {}
+};
+var playlist_subscribers_exports = playlist_subscribers_module.exports;
 // 歌单收藏者
 
-/* harmony default export */ const playlist_subscribers = ((query, request) => {
-  const data = {
+playlist_subscribers_module.exports = function (query, request) {
+  var data = {
     id: query.id,
     limit: query.limit || 20,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/playlist/subscribers`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_tags_update.js
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/playlist/subscribers", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_subscribers = (playlist_subscribers_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_tags_update.js
+var playlist_tags_update_module = {
+  exports: {}
+};
+var playlist_tags_update_exports = playlist_tags_update_module.exports;
 // 更新歌单标签
 
-/* harmony default export */ const playlist_tags_update = ((query, request) => {
-  const data = {
+playlist_tags_update_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    tags: query.tags,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/playlist/tags/update`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/playlist/tags/update',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_tracks.js
+    tags: query.tags
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/playlist/tags/update", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/playlist/tags/update',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_tags_update = (playlist_tags_update_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_tracks.js
+function playlist_tracks_typeof(o) { "@babel/helpers - typeof"; return playlist_tracks_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, playlist_tracks_typeof(o); }
+var playlist_tracks_module = {
+  exports: {}
+};
+var playlist_tracks_exports = playlist_tracks_module.exports;
+function playlist_tracks_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ playlist_tracks_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == playlist_tracks_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(playlist_tracks_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || playlist_tracks_unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function playlist_tracks_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return playlist_tracks_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return playlist_tracks_arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return playlist_tracks_arrayLikeToArray(arr); }
+function playlist_tracks_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function playlist_tracks_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function playlist_tracks_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? playlist_tracks_ownKeys(Object(t), !0).forEach(function (r) { playlist_tracks_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : playlist_tracks_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function playlist_tracks_defineProperty(obj, key, value) { key = playlist_tracks_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function playlist_tracks_toPropertyKey(t) { var i = playlist_tracks_toPrimitive(t, "string"); return "symbol" == playlist_tracks_typeof(i) ? i : String(i); }
+function playlist_tracks_toPrimitive(t, r) { if ("object" != playlist_tracks_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != playlist_tracks_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function playlist_tracks_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function playlist_tracks_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { playlist_tracks_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { playlist_tracks_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 // 收藏单曲到歌单 从歌单删除歌曲
 
-/* harmony default export */ const playlist_tracks = (async (query, request) => {
-  // query.cookie.os = 'pc'
-  const tracks = query.tracks.split(',')
-  const data = {
-    op: query.op, // del,add
-    pid: query.pid, // 歌单id
-    trackIds: JSON.stringify(tracks), // 歌曲id
-    imme: 'true',
-  }
-
-  try {
-    const res = await request(
-      'POST',
-      `https://music.163.com/weapi/playlist/manipulate/tracks`,
-      data,
-      {
-        crypto: 'weapi',
-        cookie: query.cookie,
-        proxy: query.proxy,
-        realIP: query.realIP,
-      },
-    )
-    return {
-      status: 200,
-      body: {
-        ...res,
-      },
-    }
-  } catch (error) {
-    if (error.body.code === 512) {
-      return request(
-        'POST',
-        `https://music.163.com/api/playlist/manipulate/tracks`,
-        {
-          op: query.op, // del,add
-          pid: query.pid, // 歌单id
-          trackIds: JSON.stringify([...tracks, ...tracks]),
-          imme: 'true',
-        },
-        {
-          crypto: 'weapi',
-          cookie: query.cookie,
-          proxy: query.proxy,
-          realIP: query.realIP,
-        },
-      )
-    } else {
-      return {
-        status: 200,
-        body: error.body,
+playlist_tracks_module.exports = /*#__PURE__*/function () {
+  var _ref = playlist_tracks_asyncToGenerator( /*#__PURE__*/playlist_tracks_regeneratorRuntime().mark(function _callee(query, request) {
+    var tracks, data, res;
+    return playlist_tracks_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          // query.cookie.os = 'pc'
+          tracks = query.tracks.split(',');
+          data = {
+            op: query.op,
+            // del,add
+            pid: query.pid,
+            // 歌单id
+            trackIds: JSON.stringify(tracks),
+            // 歌曲id
+            imme: 'true'
+          };
+          _context.prev = 2;
+          _context.next = 5;
+          return request('POST', "https://music.163.com/weapi/playlist/manipulate/tracks", data, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 5:
+          res = _context.sent;
+          return _context.abrupt("return", {
+            status: 200,
+            body: playlist_tracks_objectSpread({}, res)
+          });
+        case 9:
+          _context.prev = 9;
+          _context.t0 = _context["catch"](2);
+          if (!(_context.t0.body.code === 512)) {
+            _context.next = 15;
+            break;
+          }
+          return _context.abrupt("return", request('POST', "https://music.163.com/api/playlist/manipulate/tracks", {
+            op: query.op,
+            // del,add
+            pid: query.pid,
+            // 歌单id
+            trackIds: JSON.stringify([].concat(_toConsumableArray(tracks), _toConsumableArray(tracks))),
+            imme: 'true'
+          }, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          }));
+        case 15:
+          return _context.abrupt("return", {
+            status: 200,
+            body: _context.t0.body
+          });
+        case 16:
+        case "end":
+          return _context.stop();
       }
-    }
-  }
-});
+    }, _callee, null, [[2, 9]]);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const playlist_tracks = (playlist_tracks_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_track_add.js
+var playlist_track_add_module = {
+  exports: {}
+};
+var playlist_track_add_exports = playlist_track_add_module.exports;
+playlist_track_add_module.exports = function (query, request) {
+  // console.log("query", query)
+  query.cookie.os = 'pc';
+  query.ids = query.ids || '';
+  var data = {
+    id: query.pid,
+    tracks: JSON.stringify(query.ids.split(',').map(function (item) {
+      return {
+        type: 3,
+        id: item
+      };
+    }))
+  };
+  // console.log(data)
 
-;// CONCATENATED MODULE: ./module/playlist_track_add.js
-/* harmony default export */ const playlist_track_add = ((query, request) => {
-    // console.log("query", query)
-    query.cookie.os = 'pc'
-    query.ids = query.ids || ''
-    const data = {
-      id: query.pid,
-      tracks: JSON.stringify(
-        query.ids.split(',').map((item) => {
-          return { type: 3, id: item }
-        }),
-      ),
-    }
-    // console.log(data)
-  
-    return request('POST', `https://music.163.com/api/playlist/track/add`, data, {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    })
+  return request('POST', "https://music.163.com/api/playlist/track/add", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
   });
-  
-;// CONCATENATED MODULE: ./module/playlist_track_all.js
+};
+/* harmony default export */ const playlist_track_add = (playlist_track_add_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_track_all.js
+var playlist_track_all_module = {
+  exports: {}
+};
+var playlist_track_all_exports = playlist_track_all_module.exports;
 // 通过传过来的歌单id拿到所有歌曲数据
 // 支持传递参数limit来限制获取歌曲的数据数量 例如: /playlist/track/all?id=7044354223&limit=10
 
-/* harmony default export */ const playlist_track_all = ((query, request) => {
+playlist_track_all_module.exports = function (query, request) {
   //不放在data里面避免请求带上无用的数据
-  let limit = parseInt(query.limit) || Infinity;
-  let offset = parseInt(query.offset) || 0;
-
-  let trackIds;
+  var limit = parseInt(query.limit) || Infinity;
+  var offset = parseInt(query.offset) || 0;
+  var trackIds;
 
   // 拿到playlist/detail的返回的接口数据
   if (query.trackIds) {
     trackIds = JSON.parse(query.trackIds);
   } else {
-    let response = query.detail_result;
+    var response = query.detail_result;
     response = JSON.parse(response);
     trackIds = response.data.playlist.trackIds;
   }
-
-  let idsData = {
-    c:
-      "[" +
-      trackIds
-        .slice(offset, offset + limit)
-        .map((item) => '{"id":' + item.id + "}")
-        .join(",") +
-      "]",
+  var idsData = {
+    c: '[' + trackIds.slice(offset, offset + limit).map(function (item) {
+      return '{"id":' + item.id + '}';
+    }).join(',') + ']'
   };
-
-  return request("POST", `https://music.163.com/api/v3/song/detail`, idsData, {
-    crypto: "weapi",
-    cookie: query.cookie,
-    proxy: query.proxy,
-    realIP: query.realIP,
-  });
-});
-
-;// CONCATENATED MODULE: ./module/playlist_track_delete.js
-// 收藏单曲到歌单 从歌单删除歌曲
-
-/* harmony default export */ const playlist_track_delete = ((query, request) => {
-    query.cookie.os = 'pc'
-    query.ids = query.ids || ''
-    const data = {
-      id: query.id,
-      tracks: JSON.stringify(
-        query.ids.split(',').map((item) => {
-          return { type: 3, id: item }
-        }),
-      ),
-    }
-  
-    return request(
-      'POST',
-      `https://music.163.com/api/playlist/track/delete`,
-      data,
-      {
-        crypto: 'weapi',
-        cookie: query.cookie,
-        proxy: query.proxy,
-        realIP: query.realIP,
-      },
-    )
-  });
-  
-;// CONCATENATED MODULE: ./module/playlist_update.js
-// 编辑歌单
-
-/* harmony default export */ const playlist_update = ((query, request) => {
-  query.cookie.os = 'pc'
-  query.desc = query.desc || ''
-  query.tags = query.tags || ''
-  const data = {
-    '/api/playlist/desc/update': `{"id":${query.id},"desc":"${query.desc}"}`,
-    '/api/playlist/tags/update': `{"id":${query.id},"tags":"${query.tags}"}`,
-    '/api/playlist/update/name': `{"id":${query.id},"name":"${query.name}"}`,
-  }
-  return request('POST', `https://music.163.com/weapi/batch`, data, {
+  return request('POST', "https://music.163.com/api/v3/song/detail", idsData, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_track_all = (playlist_track_all_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_track_delete.js
+var playlist_track_delete_module = {
+  exports: {}
+};
+var playlist_track_delete_exports = playlist_track_delete_module.exports;
+// 收藏单曲到歌单 从歌单删除歌曲
 
-;// CONCATENATED MODULE: ./module/playlist_update_playcount.js
+playlist_track_delete_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  query.ids = query.ids || '';
+  var data = {
+    id: query.id,
+    tracks: JSON.stringify(query.ids.split(',').map(function (item) {
+      return {
+        type: 3,
+        id: item
+      };
+    }))
+  };
+  return request('POST', "https://music.163.com/api/playlist/track/delete", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_track_delete = (playlist_track_delete_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_update.js
+var playlist_update_module = {
+  exports: {}
+};
+var playlist_update_exports = playlist_update_module.exports;
+// 编辑歌单
+
+playlist_update_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  query.desc = query.desc || '';
+  query.tags = query.tags || '';
+  var data = {
+    '/api/playlist/desc/update': "{\"id\":".concat(query.id, ",\"desc\":\"").concat(query.desc, "\"}"),
+    '/api/playlist/tags/update': "{\"id\":".concat(query.id, ",\"tags\":\"").concat(query.tags, "\"}"),
+    '/api/playlist/update/name': "{\"id\":".concat(query.id, ",\"name\":\"").concat(query.name, "\"}")
+  };
+  return request('POST', "https://music.163.com/weapi/batch", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_update = (playlist_update_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_update_playcount.js
+var playlist_update_playcount_module = {
+  exports: {}
+};
+var playlist_update_playcount_exports = playlist_update_playcount_module.exports;
 // 歌单打卡
 
-/* harmony default export */ const playlist_update_playcount = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/playlist/update/playcount`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playlist_video_recent.js
-/* harmony default export */ const playlist_video_recent = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/playlist/video/recent`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playmode_intelligence_list.js
+playlist_update_playcount_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/api/playlist/update/playcount", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_update_playcount = (playlist_update_playcount_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playlist_video_recent.js
+var playlist_video_recent_module = {
+  exports: {}
+};
+var playlist_video_recent_exports = playlist_video_recent_module.exports;
+playlist_video_recent_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/playlist/video/recent", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playlist_video_recent = (playlist_video_recent_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playmode_intelligence_list.js
+var playmode_intelligence_list_module = {
+  exports: {}
+};
+var playmode_intelligence_list_exports = playmode_intelligence_list_module.exports;
 // 智能播放
 
-/* harmony default export */ const playmode_intelligence_list = ((query, request) => {
-  const data = {
+playmode_intelligence_list_module.exports = function (query, request) {
+  var data = {
     songId: query.id,
     type: 'fromPlayOne',
     playlistId: query.pid,
     startMusicId: query.sid || query.id,
-    count: query.count || 1,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/playmode/intelligence/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/playmode_song_vector.js
-// 云随机播放
-
-/* harmony default export */ const playmode_song_vector = ((query, request) => {
-  const data = {
-    ids: query.ids,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/playmode/song/vector/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/playmode/song/vector/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/pl_count.js
-// 数字专辑-新碟上架
-/* harmony default export */ const pl_count = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/weapi/pl/count`, data, {
+    count: query.count || 1
+  };
+  return request('POST', "https://music.163.com/weapi/playmode/intelligence/list", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const playmode_intelligence_list = (playmode_intelligence_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/playmode_song_vector.js
+var playmode_song_vector_module = {
+  exports: {}
+};
+var playmode_song_vector_exports = playmode_song_vector_module.exports;
+// 云随机播放
+playmode_song_vector_module.exports = function (query, request) {
+  var data = {
+    ids: query.ids
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/playmode/song/vector/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
     realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/program_recommend.js
+    url: '/api/playmode/song/vector/get'
+  });
+};
+/* harmony default export */ const playmode_song_vector = (playmode_song_vector_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/pl_count.js
+var pl_count_module = {
+  exports: {}
+};
+var pl_count_exports = pl_count_module.exports;
+// 数字专辑-新碟上架
+pl_count_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/pl/count", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const pl_count = (pl_count_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/program_recommend.js
+var program_recommend_module = {
+  exports: {}
+};
+var program_recommend_exports = program_recommend_module.exports;
 // 推荐节目
 
-/* harmony default export */ const program_recommend = ((query, request) => {
-  const data = {
+program_recommend_module.exports = function (query, request) {
+  var data = {
     cateId: query.type,
     limit: query.limit || 10,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/program/recommend/v1`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/rebind.js
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/program/recommend/v1", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const program_recommend = (program_recommend_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/rebind.js
+var rebind_module = {
+  exports: {}
+};
+var rebind_exports = rebind_module.exports;
 // 更换手机
 
-/* harmony default export */ const rebind = ((query, request) => {
-  const data = {
+rebind_module.exports = function (query, request) {
+  var data = {
     captcha: query.captcha,
     phone: query.phone,
     oldcaptcha: query.oldcaptcha,
-    ctcode: query.ctcode || '86',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/user/replaceCellphone`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/recommend_resource.js
+    ctcode: query.ctcode || '86'
+  };
+  return request('POST', "https://music.163.com/api/user/replaceCellphone", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const rebind = (rebind_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/recommend_resource.js
+var recommend_resource_module = {
+  exports: {}
+};
+var recommend_resource_exports = recommend_resource_module.exports;
 // 每日推荐歌单
 
-/* harmony default export */ const recommend_resource = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/discovery/recommend/resource`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/recommend_songs.js
+recommend_resource_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/v1/discovery/recommend/resource", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const recommend_resource = (recommend_resource_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/recommend_songs.js
+var recommend_songs_module = {
+  exports: {}
+};
+var recommend_songs_exports = recommend_songs_module.exports;
 // 每日推荐歌曲
 
-/* harmony default export */ const recommend_songs = ((query, request) => {
-  query.cookie.os = 'ios'
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/v3/discovery/recommend/songs`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/recommend_songs_dislike.js
+recommend_songs_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  var data = {};
+  return request('POST', "https://music.163.com/api/v3/discovery/recommend/songs", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const recommend_songs = (recommend_songs_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/recommend_songs_dislike.js
+var recommend_songs_dislike_module = {
+  exports: {}
+};
+var recommend_songs_dislike_exports = recommend_songs_dislike_module.exports;
 // 每日推荐歌曲-不感兴趣
-/* harmony default export */ const recommend_songs_dislike = ((query, request) => {
-  const data = {
-    resId: query.id, // 日推歌曲id
+recommend_songs_dislike_module.exports = function (query, request) {
+  var data = {
+    resId: query.id,
+    // 日推歌曲id
     resType: 4,
-    sceneType: 1,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v2/discovery/recommend/dislike`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    sceneType: 1
+  };
+  return request('POST', "https://music.163.com/weapi/v2/discovery/recommend/dislike", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const recommend_songs_dislike = (recommend_songs_dislike_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/record_recent_album.js
+var record_recent_album_module = {
+  exports: {}
+};
+var record_recent_album_exports = record_recent_album_module.exports;
+record_recent_album_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
+  };
+  return request('POST', "https://music.163.com/api/play-record/album/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const record_recent_album = (record_recent_album_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/record_recent_dj.js
+var record_recent_dj_module = {
+  exports: {}
+};
+var record_recent_dj_exports = record_recent_dj_module.exports;
+record_recent_dj_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
+  };
+  return request('POST', "https://music.163.com/api/play-record/djradio/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const record_recent_dj = (record_recent_dj_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/record_recent_playlist.js
+var record_recent_playlist_module = {
+  exports: {}
+};
+var record_recent_playlist_exports = record_recent_playlist_module.exports;
+record_recent_playlist_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
+  };
+  return request('POST', "https://music.163.com/api/play-record/playlist/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const record_recent_playlist = (record_recent_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/record_recent_song.js
+var record_recent_song_module = {
+  exports: {}
+};
+var record_recent_song_exports = record_recent_song_module.exports;
+record_recent_song_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
+  };
+  return request('POST', "https://music.163.com/api/play-record/song/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const record_recent_song = (record_recent_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/record_recent_video.js
+var record_recent_video_module = {
+  exports: {}
+};
+var record_recent_video_exports = record_recent_video_module.exports;
+record_recent_video_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
+  };
+  return request('POST', "https://music.163.com/api/play-record/newvideo/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const record_recent_video = (record_recent_video_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/record_recent_voice.js
+var record_recent_voice_module = {
+  exports: {}
+};
+var record_recent_voice_exports = record_recent_voice_module.exports;
+record_recent_voice_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 100
+  };
+  return request('POST', "https://music.163.com/api/play-record/voice/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const record_recent_voice = (record_recent_voice_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/register_cellphone.js
 
-;// CONCATENATED MODULE: ./module/record_recent_album.js
-/* harmony default export */ const record_recent_album = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/play-record/album/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/record_recent_dj.js
-/* harmony default export */ const record_recent_dj = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/play-record/djradio/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/record_recent_playlist.js
-/* harmony default export */ const record_recent_playlist = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/play-record/playlist/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/record_recent_song.js
-/* harmony default export */ const record_recent_song = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/play-record/song/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/record_recent_video.js
-/* harmony default export */ const record_recent_video = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/play-record/newvideo/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/record_recent_voice.js
-/* harmony default export */ const record_recent_voice = ((query, request) => {
-  const data = {
-    limit: query.limit || 100,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/play-record/voice/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/register_cellphone.js
+var register_cellphone_module = {
+  exports: {}
+};
+var register_cellphone_exports = register_cellphone_module.exports;
 // 注册账号
-
-
-/* harmony default export */ const register_cellphone = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+// import CryptoJS from 'crypto-js'
+var register_cellphone_CryptoJS = (crypto_js_default());
+register_cellphone_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     captcha: query.captcha,
     phone: query.phone,
-    password:  crypto_js.MD5(query.password).toString(),//crypto.createHash('md5').update(query.password).digest('hex'),
+    password: register_cellphone_CryptoJS.MD5(query.password).toString(),
+    //crypto.createHash('md5').update(query.password).digest('hex'),
     nickname: query.nickname,
-    countrycode: query.countrycode || '86',
-  }
-  return request('POST', `https://music.163.com/api/register/cellphone`, data, {
+    countrycode: query.countrycode || '86'
+  };
+  return request('POST', "https://music.163.com/api/register/cellphone", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-;// CONCATENATED MODULE: ./module/related_allvideo.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const register_cellphone = (register_cellphone_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/related_allvideo.js
+var related_allvideo_module = {
+  exports: {}
+};
+var related_allvideo_exports = related_allvideo_module.exports;
 // 相关视频
 
-/* harmony default export */ const related_allvideo = ((query, request) => {
-  const data = {
+related_allvideo_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    type: /^\d+$/.test(query.id) ? 0 : 1,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/cloudvideo/v1/allvideo/rcmd`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/related_playlist.js
-// 相关歌单
-
-/* harmony default export */ const related_playlist = ((query, request) => {
-  return request(
-    "GET",
-    `https://music.163.com/playlist?id=${query.id}`,
-    {},
-    {
-      ua: "pc",
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    }
-  )
-});
-
-;// CONCATENATED MODULE: ./module/resource_like.js
-// 点赞与取消点赞资源
-const resource_like_resourceTypeMap = config_namespaceObject.A;
-/* harmony default export */ const resource_like = ((query, request) => {
-  query.cookie.os = 'android'
-  query.t = query.t == 1 ? 'like' : 'unlike'
-  query.type = resource_like_resourceTypeMap[query.type]
-  const data = {
-    threadId: query.type + query.id,
-  }
-  if (query.type === 'A_EV_2_') {
-    data.threadId = query.threadId
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/resource/${query.t}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/scrobble.js
-// 听歌打卡
-
-/* harmony default export */ const scrobble = ((query, request) => {
-  const data = {
-    logs: JSON.stringify([
-      {
-        action: 'play',
-        json: {
-          download: 0,
-          end: 'playend',
-          id: query.id,
-          sourceId: query.sourceid,
-          time: query.time,
-          type: 'song',
-          wifi: 0,
-          source: 'list',
-        },
-      },
-    ]),
-  }
-
-  return request('POST', `https://music.163.com/weapi/feedback/weblog`, data, {
+    type: /^\d+$/.test(query.id) ? 0 : 1
+  };
+  return request('POST', "https://music.163.com/weapi/cloudvideo/v1/allvideo/rcmd", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const related_allvideo = (related_allvideo_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/related_playlist.js
+var module_related_playlist_module = {
+  exports: {}
+};
+var module_related_playlist_exports = module_related_playlist_module.exports;
+// 相关歌单
 
-;// CONCATENATED MODULE: ./module/search.js
+module_related_playlist_module.exports = function (query, request) {
+  return request('GET', "https://music.163.com/playlist?id=".concat(query.id), {}, {
+    ua: 'pc',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const module_related_playlist = (module_related_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/resource_like.js
+
+var resource_like_module = {
+  exports: {}
+};
+var resource_like_exports = resource_like_module.exports;
+// 点赞与取消点赞资源
+var resource_like_require = config_namespaceObject,
+  resource_like_resourceTypeMap = resource_like_require.resourceTypeMap;
+resource_like_module.exports = function (query, request) {
+  query.cookie.os = 'android';
+  query.t = query.t == 1 ? 'like' : 'unlike';
+  query.type = resource_like_resourceTypeMap[query.type];
+  var data = {
+    threadId: query.type + query.id
+  };
+  if (query.type === 'A_EV_2_') {
+    data.threadId = query.threadId;
+  }
+  return request('POST', "https://music.163.com/weapi/resource/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const resource_like = (resource_like_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/scrobble.js
+var scrobble_module = {
+  exports: {}
+};
+var scrobble_exports = scrobble_module.exports;
+// 听歌打卡
+
+scrobble_module.exports = function (query, request) {
+  var data = {
+    logs: JSON.stringify([{
+      action: 'play',
+      json: {
+        download: 0,
+        end: 'playend',
+        id: query.id,
+        sourceId: query.sourceid,
+        time: query.time,
+        type: 'song',
+        wifi: 0,
+        source: 'list'
+      }
+    }])
+  };
+  return request('POST', "https://music.163.com/weapi/feedback/weblog", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const scrobble = (scrobble_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/search.js
+var search_module = {
+  exports: {}
+};
+var search_exports = search_module.exports;
 // 搜索
 
-/* harmony default export */ const search = ((query, request) => {
+search_module.exports = function (query, request) {
   if (query.type && query.type == '2000') {
-    const data = {
+    var _data = {
       keyword: query.keywords,
       scene: 'normal',
       limit: query.limit || 30,
-      offset: query.offset || 0,
-    }
-    return request('POST', `https://music.163.com/api/search/voice/get`, data, {
+      offset: query.offset || 0
+    };
+    return request('POST', "https://music.163.com/api/search/voice/get", _data, {
       crypto: 'weapi',
       cookie: query.cookie,
       proxy: query.proxy,
-      realIP: query.realIP,
-    })
+      realIP: query.realIP
+    });
   }
-  const data = {
+  var data = {
     s: query.keywords,
-    type: query.type || 1, // 1: 单曲, 10: 专辑, 100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 1009: 电台, 1014: 视频
+    type: query.type || 1,
+    // 1: 单曲, 10: 专辑, 100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 1009: 电台, 1014: 视频
     limit: query.limit || 30,
-    offset: query.offset || 0,
-  }
-  return request('POST', `https://music.163.com/weapi/search/get`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/search/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/search_default.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const search = (search_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/search_default.js
+var search_default_module = {
+  exports: {}
+};
+var search_default_exports = search_default_module.exports;
 // 默认搜索关键词
 
-/* harmony default export */ const search_default = ((query, request) => {
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/search/defaultkeyword/get`,
-    {},
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/search/defaultkeyword/get',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/search_hot.js
+search_default_module.exports = function (query, request) {
+  return request('POST', "https://interface3.music.163.com/eapi/search/defaultkeyword/get", {}, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/search/defaultkeyword/get',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const search_default = (search_default_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/search_hot.js
+var search_hot_module = {
+  exports: {}
+};
+var search_hot_exports = search_hot_module.exports;
 // 热门搜索
 
-/* harmony default export */ const search_hot = ((query, request) => {
-  const data = {
-    type: 1111,
-  }
-  return request('POST', `https://music.163.com/weapi/search/hot`, data, {
+search_hot_module.exports = function (query, request) {
+  var data = {
+    type: 1111
+  };
+  return request('POST', "https://music.163.com/weapi/search/hot", data, {
     crypto: 'weapi',
     ua: 'mobile',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/search_hot_detail.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const search_hot = (search_hot_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/search_hot_detail.js
+var search_hot_detail_module = {
+  exports: {}
+};
+var search_hot_detail_exports = search_hot_detail_module.exports;
 // 热搜列表
-/* harmony default export */ const search_hot_detail = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/hotsearchlist/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+search_hot_detail_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/hotsearchlist/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const search_hot_detail = (search_hot_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/search_match.js
+var search_match_module = {
+  exports: {}
+};
+var search_match_exports = search_match_module.exports;
+// 本地歌曲匹配音乐信息
 
-;// CONCATENATED MODULE: ./module/search_multimatch.js
+search_match_module.exports = function (query, request) {
+  var songs = [{
+    title: query.title || '',
+    album: query.album || '',
+    artist: query.artist || '',
+    duration: query.duration || 0,
+    persistId: query.md5
+  }];
+  var data = {
+    songs: JSON.stringify(songs)
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/search/match/new", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/search/match/new',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const search_match = (search_match_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/search_multimatch.js
+var search_multimatch_module = {
+  exports: {}
+};
+var search_multimatch_exports = search_multimatch_module.exports;
 // 多类型搜索
 
-/* harmony default export */ const search_multimatch = ((query, request) => {
-  const data = {
+search_multimatch_module.exports = function (query, request) {
+  var data = {
     type: query.type || 1,
-    s: query.keywords || '',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/search/suggest/multimatch`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/search_suggest.js
+    s: query.keywords || ''
+  };
+  return request('POST', "https://music.163.com/weapi/search/suggest/multimatch", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const search_multimatch = (search_multimatch_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/search_suggest.js
+var search_suggest_module = {
+  exports: {}
+};
+var search_suggest_exports = search_suggest_module.exports;
 // 搜索建议
 
-/* harmony default export */ const search_suggest = ((query, request) => {
-  const data = {
-    s: query.keywords || '',
-  }
-  let type = query.type == 'mobile' ? 'keyword' : 'web'
-  return request(
-    'POST',
-    `https://music.163.com/weapi/search/suggest/` + type,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/send_album.js
+search_suggest_module.exports = function (query, request) {
+  var data = {
+    s: query.keywords || ''
+  };
+  var type = query.type == 'mobile' ? 'keyword' : 'web';
+  return request('POST', "https://music.163.com/weapi/search/suggest/" + type, data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const search_suggest = (search_suggest_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/send_album.js
+var send_album_module = {
+  exports: {}
+};
+var send_album_exports = send_album_module.exports;
 // 私信专辑
 
-/* harmony default export */ const send_album = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+send_album_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     id: query.id,
     msg: query.msg || '',
     type: 'album',
-    userIds: '[' + query.user_ids + ']',
-  }
-  return request('POST', `https://music.163.com/api/msg/private/send`, data, {
+    userIds: '[' + query.user_ids + ']'
+  };
+  return request('POST', "https://music.163.com/api/msg/private/send", data, {
     crypto: 'api',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/send_playlist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const send_album = (send_album_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/send_playlist.js
+var send_playlist_module = {
+  exports: {}
+};
+var send_playlist_exports = send_playlist_module.exports;
 // 私信歌单
 
-/* harmony default export */ const send_playlist = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+send_playlist_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     id: query.playlist,
     type: 'playlist',
     msg: query.msg,
-    userIds: '[' + query.user_ids + ']',
-  }
-  return request('POST', `https://music.163.com/weapi/msg/private/send`, data, {
+    userIds: '[' + query.user_ids + ']'
+  };
+  return request('POST', "https://music.163.com/weapi/msg/private/send", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/send_song.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const send_playlist = (send_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/send_song.js
+var send_song_module = {
+  exports: {}
+};
+var send_song_exports = send_song_module.exports;
 // 私信歌曲
 
-/* harmony default export */ const send_song = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+send_song_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     id: query.id,
     msg: query.msg || '',
     type: 'song',
-    userIds: '[' + query.user_ids + ']',
-  }
-  return request('POST', `https://music.163.com/api/msg/private/send`, data, {
+    userIds: '[' + query.user_ids + ']'
+  };
+  return request('POST', "https://music.163.com/api/msg/private/send", data, {
     crypto: 'api',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/send_text.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const send_song = (send_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/send_text.js
+var send_text_module = {
+  exports: {}
+};
+var send_text_exports = send_text_module.exports;
 // 私信
 
-/* harmony default export */ const send_text = ((query, request) => {
-  query.cookie.os = 'pc'
-  const data = {
+send_text_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var data = {
     type: 'text',
     msg: query.msg,
-    userIds: '[' + query.user_ids + ']',
-  }
-  return request('POST', `https://music.163.com/weapi/msg/private/send`, data, {
+    userIds: '[' + query.user_ids + ']'
+  };
+  return request('POST', "https://music.163.com/weapi/msg/private/send", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/setting.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const send_text = (send_text_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/setting.js
+var setting_module = {
+  exports: {}
+};
+var setting_exports = setting_module.exports;
 // 设置
 
-/* harmony default export */ const setting = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/api/user/setting`, data, {
+setting_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/user/setting", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/share_resource.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const setting = (setting_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/share_resource.js
+var share_resource_module = {
+  exports: {}
+};
+var share_resource_exports = share_resource_module.exports;
 // 分享歌曲到动态
 
-/* harmony default export */ const share_resource = ((query, request) => {
-  const data = {
-    type: query.type || 'song', // song,playlist,mv,djprogram,djradio,noresource
+share_resource_module.exports = function (query, request) {
+  var data = {
+    type: query.type || 'song',
+    // song,playlist,mv,djprogram,djradio,noresource
     msg: query.msg || '',
-    id: query.id || '',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/share/friends/resource`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/sheet_list.js
+    id: query.id || ''
+  };
+  return request('POST', "https://music.163.com/weapi/share/friends/resource", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const share_resource = (share_resource_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/sheet_list.js
+var sheet_list_module = {
+  exports: {}
+};
+var sheet_list_exports = sheet_list_module.exports;
 // 乐谱列表
-
-/* harmony default export */ const sheet_list = ((query, request) => {
-  const data = {
+sheet_list_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    abTest: query.ab || 'b',
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/music/sheet/list/v1`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/music/sheet/list/v1',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/sheet_preview.js
+    abTest: query.ab || 'b'
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/music/sheet/list/v1", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/music/sheet/list/v1'
+  });
+};
+/* harmony default export */ const sheet_list = (sheet_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/sheet_preview.js
+var sheet_preview_module = {
+  exports: {}
+};
+var sheet_preview_exports = sheet_preview_module.exports;
 // 乐谱预览
-
-/* harmony default export */ const sheet_preview = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi//music/sheet/preview/info?id=${query.id}`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api//music/sheet/preview/info', // 我没写错! 他们就是这么请求的!
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/signin_progress.js
+sheet_preview_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://interface3.music.163.com/eapi//music/sheet/preview/info?id=".concat(query.id), data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api//music/sheet/preview/info' // 我没写错! 他们就是这么请求的!
+  });
+};
+/* harmony default export */ const sheet_preview = (sheet_preview_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/signin_progress.js
+var signin_progress_module = {
+  exports: {}
+};
+var signin_progress_exports = signin_progress_module.exports;
 // 签到进度
 
-/* harmony default export */ const signin_progress = ((query, request) => {
-  const data = {
-    moduleId: query.moduleId || '1207signin-1207signin',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/act/modules/signin/v2/progress`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/sign_happy_info.js
-/* harmony default export */ const sign_happy_info = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/api/sign/happy/info`, data, {
+signin_progress_module.exports = function (query, request) {
+  var data = {
+    moduleId: query.moduleId || '1207signin-1207signin'
+  };
+  return request('POST', "https://music.163.com/weapi/act/modules/signin/v2/progress", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const signin_progress = (signin_progress_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/sign_happy_info.js
+var sign_happy_info_module = {
+  exports: {}
+};
+var sign_happy_info_exports = sign_happy_info_module.exports;
+sign_happy_info_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/sign/happy/info", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const sign_happy_info = (sign_happy_info_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/simi_artist.js
 
-;// CONCATENATED MODULE: ./module/simi_artist.js
+var simi_artist_module = {
+  exports: {}
+};
+var simi_artist_exports = simi_artist_module.exports;
 // 相似歌手
-
-/* harmony default export */ const simi_artist = ((query, request) => {
-  const data = {
-    artistid: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/discovery/simiArtist`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/simi_mv.js
+var config = (/* unused pure expression or super */ null && (_utilConfigJson));
+simi_artist_module.exports = function (query, request) {
+  var data = {
+    artistid: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/discovery/simiArtist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const simi_artist = (simi_artist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/simi_mv.js
+var simi_mv_module = {
+  exports: {}
+};
+var simi_mv_exports = simi_mv_module.exports;
 // 相似MV
 
-/* harmony default export */ const simi_mv = ((query, request) => {
-  const data = {
-    mvid: query.mvid,
-  }
-  return request('POST', `https://music.163.com/weapi/discovery/simiMV`, data, {
+simi_mv_module.exports = function (query, request) {
+  var data = {
+    mvid: query.mvid
+  };
+  return request('POST', "https://music.163.com/weapi/discovery/simiMV", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/simi_playlist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const simi_mv = (simi_mv_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/simi_playlist.js
+var simi_playlist_module = {
+  exports: {}
+};
+var simi_playlist_exports = simi_playlist_module.exports;
 // 相似歌单
 
-/* harmony default export */ const simi_playlist = ((query, request) => {
-  const data = {
+simi_playlist_module.exports = function (query, request) {
+  var data = {
     songid: query.id,
     limit: query.limit || 50,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/discovery/simiPlaylist`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/simi_song.js
-// 相似歌曲
-
-/* harmony default export */ const simi_song = ((query, request) => {
-  const data = {
-    songid: query.id,
-    limit: query.limit || 50,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/discovery/simiSong`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/simi_user.js
-// 相似用户
-
-/* harmony default export */ const simi_user = ((query, request) => {
-  const data = {
-    songid: query.id,
-    limit: query.limit || 50,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/discovery/simiUser`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/song_detail.js
-// 歌曲详情
-
-/* harmony default export */ const song_detail = ((query, request) => {
-  query.ids = query.ids.split(/\s*,\s*/)
-  const data = {
-    c: '[' + query.ids.map((id) => '{"id":' + id + '}').join(',') + ']',
-  }
-  return request('POST', `https://music.163.com/api/v3/song/detail`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/discovery/simiPlaylist", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const simi_playlist = (simi_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/simi_song.js
+var simi_song_module = {
+  exports: {}
+};
+var simi_song_exports = simi_song_module.exports;
+// 相似歌曲
 
-;// CONCATENATED MODULE: ./module/song_download_url.js
+simi_song_module.exports = function (query, request) {
+  var data = {
+    songid: query.id,
+    limit: query.limit || 50,
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/v1/discovery/simiSong", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const simi_song = (simi_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/simi_user.js
+var simi_user_module = {
+  exports: {}
+};
+var simi_user_exports = simi_user_module.exports;
+// 相似用户
+
+simi_user_module.exports = function (query, request) {
+  var data = {
+    songid: query.id,
+    limit: query.limit || 50,
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/discovery/simiUser", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const simi_user = (simi_user_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_detail.js
+var song_detail_module = {
+  exports: {}
+};
+var song_detail_exports = song_detail_module.exports;
+// 歌曲详情
+
+song_detail_module.exports = function (query, request) {
+  query.ids = query.ids.split(/\s*,\s*/);
+  var data = {
+    c: '[' + query.ids.map(function (id) {
+      return '{"id":' + id + '}';
+    }).join(',') + ']'
+  };
+  return request('POST', "https://music.163.com/api/v3/song/detail", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const song_detail = (song_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_download_url.js
+var song_download_url_module = {
+  exports: {}
+};
+var song_download_url_exports = song_download_url_module.exports;
 // 获取客户端歌曲下载链接
 
-/* harmony default export */ const song_download_url = ((query, request) => {
-  const data = {
+song_download_url_module.exports = function (query, request) {
+  var data = {
     id: query.id,
-    br: parseInt(query.br || 999000),
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/eapi/song/enhance/download/url`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/song/enhance/download/url',
-    },
-  )
-});
+    br: parseInt(query.br || 999000)
+  };
+  return request('POST', "https://interface.music.163.com/eapi/song/enhance/download/url", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/song/enhance/download/url'
+  });
+};
+/* harmony default export */ const song_download_url = (song_download_url_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_music_detail.js
+var song_music_detail_module = {
+  exports: {}
+};
+var song_music_detail_exports = song_music_detail_module.exports;
+// 歌曲音质详情
 
-;// CONCATENATED MODULE: ./module/song_order_update.js
+song_music_detail_module.exports = function (query, request) {
+  var data = {
+    songId: query.id
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/song/music/detail/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/song/music/detail/get',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const song_music_detail = (song_music_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_order_update.js
+var song_order_update_module = {
+  exports: {}
+};
+var song_order_update_exports = song_order_update_module.exports;
 // 更新歌曲顺序
 
-/* harmony default export */ const song_order_update = ((query, request) => {
-  const data = {
+song_order_update_module.exports = function (query, request) {
+  var data = {
     pid: query.pid,
     trackIds: query.ids,
-    op: 'update',
-  }
-
-  return request(
-    'POST',
-    `http://interface.music.163.com/api/playlist/manipulate/tracks`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/playlist/desc/update',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/song_purchased.js
+    op: 'update'
+  };
+  return request('POST', "http://interface.music.163.com/api/playlist/manipulate/tracks", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/playlist/desc/update',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const song_order_update = (song_order_update_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_purchased.js
+var song_purchased_module = {
+  exports: {}
+};
+var song_purchased_exports = song_purchased_module.exports;
 // 已购单曲
 
-/* harmony default export */ const song_purchased = ((query, request) => {
-  const data = {
+song_purchased_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 20,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/single/mybought/song/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/single/mybought/song/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const song_purchased = (song_purchased_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_red_count.js
+var song_red_count_module = {
+  exports: {}
+};
+var song_red_count_exports = song_red_count_module.exports;
+// 歌曲红心数量
 
-;// CONCATENATED MODULE: ./module/song_url.js
+song_red_count_module.exports = function (query, request) {
+  var data = {
+    songId: query.id
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/song/red/count", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/song/red/count',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const song_red_count = (song_red_count_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_url.js
+var module_song_url_module = {
+  exports: {}
+};
+var module_song_url_exports = module_song_url_module.exports;
 // 歌曲链接
-/* harmony default export */ const song_url = (async (query, request) => {
-  query.cookie.os = 'pc'
-  const ids = String(query.id).split(',')
-  const data = {
+module_song_url_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
+  var ids = String(query.id).split(',');
+  var data = {
     ids: JSON.stringify(ids),
-    br: parseInt(query.br || 999000),
-  }
-  const res = await request(
-    'POST',
-    `https://interface3.music.163.com/eapi/song/enhance/player/url`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/song/enhance/player/url',
-    },
-  )
-  // 根据id排序
-  const result = res.body.data
-  result.sort((a, b) => {
-    return ids.indexOf(String(a.id)) - ids.indexOf(String(b.id))
-  })
-  return {
-    status: 200,
-    body: {
-      code: 200,
-      data: result,
-    },
-  }
-});
-
-;// CONCATENATED MODULE: ./module/song_url_v1.js
+    br: parseInt(query.br || 999000)
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/song/enhance/player/url", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/song/enhance/player/url'
+  });
+};
+/* harmony default export */ const module_song_url = (module_song_url_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_url_v1.js
+var song_url_v1_module = {
+  exports: {}
+};
+var song_url_v1_exports = song_url_v1_module.exports;
 // 歌曲链接 - v1
 // 此版本不再采用 br 作为音质区分的标准
 // 而是采用 standard, exhigh, lossless, hires, jyeffect(高清环绕声), sky(沉浸环绕声), jymaster(超清母带) 进行音质判断
 
-
-/* harmony default export */ const song_url_v1 = ((query, request) => {
-  query.cookie.os = 'android'
-  query.cookie.appver = '8.10.05'
-  const data = {
+song_url_v1_module.exports = function (query, request) {
+  query.cookie.os = 'android';
+  query.cookie.appver = '8.10.05';
+  var data = {
     ids: '[' + query.id + ']',
     level: query.level,
-    encodeType: 'flac',
-  }
+    encodeType: 'flac'
+  };
   if (data.level == 'sky') {
-    data.immerseType = 'c51'
+    data.immerseType = 'c51';
   }
-  return request(
-    'POST',
-    `https://interface.music.163.com/eapi/song/enhance/player/url/v1`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/song/enhance/player/url/v1',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/song_wiki_summary.js
+  return request('POST', "https://interface.music.163.com/eapi/song/enhance/player/url/v1", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/song/enhance/player/url/v1'
+  });
+};
+/* harmony default export */ const song_url_v1 = (song_url_v1_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/song_wiki_summary.js
+var song_wiki_summary_module = {
+  exports: {}
+};
+var song_wiki_summary_exports = song_wiki_summary_module.exports;
 // 音乐百科基础信息
-
-/* harmony default export */ const song_wiki_summary = ((query, request) => {
-  const data = {
-    songId: query.id,
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/music/wiki/home/song/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/song/play/about/block/page',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/starpick_comments_summary.js
+song_wiki_summary_module.exports = function (query, request) {
+  var data = {
+    songId: query.id
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/music/wiki/home/song/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/song/play/about/block/page'
+  });
+};
+/* harmony default export */ const song_wiki_summary = (song_wiki_summary_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/starpick_comments_summary.js
+var starpick_comments_summary_module = {
+  exports: {}
+};
+var starpick_comments_summary_exports = starpick_comments_summary_module.exports;
 // 云村星评馆 - 简要评论列表
-/* harmony default export */ const starpick_comments_summary = ((query, request) => {
-  const data = {
+starpick_comments_summary_module.exports = function (query, request) {
+  var data = {
     cursor: JSON.stringify({
       offset: 0,
       blockCodeOrderList: ['HOMEPAGE_BLOCK_NEW_HOT_COMMENT'],
-      refresh: true,
-    }),
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/eapi/homepage/block/page`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/homepage/block/page',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/style_album.js
+      refresh: true
+    })
+  };
+  return request('POST', "https://interface3.music.163.com/eapi/homepage/block/page", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/homepage/block/page',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const starpick_comments_summary = (starpick_comments_summary_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/style_album.js
+var style_album_module = {
+  exports: {}
+};
+var style_album_exports = style_album_module.exports;
 // 曲风-专辑
 
-/* harmony default export */ const style_album = ((query, request) => {
-  const data = {
+style_album_module.exports = function (query, request) {
+  var data = {
     cursor: query.cursor || 0,
     size: query.size || 20,
     tagId: query.tagId,
-    sort: query.sort || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/style-tag/home/album`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/style_artist.js
+    sort: query.sort || 0
+  };
+  return request('POST', "https://music.163.com/api/style-tag/home/album", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const style_album = (style_album_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/style_artist.js
+var style_artist_module = {
+  exports: {}
+};
+var style_artist_exports = style_artist_module.exports;
 // 曲风-歌手
 
-/* harmony default export */ const style_artist = ((query, request) => {
-  const data = {
+style_artist_module.exports = function (query, request) {
+  var data = {
     cursor: query.cursor || 0,
     size: query.size || 20,
     tagId: query.tagId,
-    sort: 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/style-tag/home/artist`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/style_detail.js
+    sort: 0
+  };
+  return request('POST', "https://music.163.com/api/style-tag/home/artist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const style_artist = (style_artist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/style_detail.js
+var style_detail_module = {
+  exports: {}
+};
+var style_detail_exports = style_detail_module.exports;
 // 曲风详情
 
-/* harmony default export */ const style_detail = ((query, request) => {
-  const data = {
-    tagId: query.tagId,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/style-tag/home/head`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/style_list.js
+style_detail_module.exports = function (query, request) {
+  var data = {
+    tagId: query.tagId
+  };
+  return request('POST', "https://music.163.com/api/style-tag/home/head", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const style_detail = (style_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/style_list.js
+var style_list_module = {
+  exports: {}
+};
+var style_list_exports = style_list_module.exports;
 // 曲风列表
 
-/* harmony default export */ const style_list = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/api/tag/list/get`, data, {
+style_list_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/tag/list/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/style_playlist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const style_list = (style_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/style_playlist.js
+var style_playlist_module = {
+  exports: {}
+};
+var style_playlist_exports = style_playlist_module.exports;
 // 曲风-歌单
 
-/* harmony default export */ const style_playlist = ((query, request) => {
-  const data = {
+style_playlist_module.exports = function (query, request) {
+  var data = {
     cursor: query.cursor || 0,
     size: query.size || 20,
     tagId: query.tagId,
-    sort: 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/style-tag/home/playlist`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/style_preference.js
+    sort: 0
+  };
+  return request('POST', "https://music.163.com/api/style-tag/home/playlist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const style_playlist = (style_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/style_preference.js
+var style_preference_module = {
+  exports: {}
+};
+var style_preference_exports = style_preference_module.exports;
 // 曲风偏好
 
-/* harmony default export */ const style_preference = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/tag/my/preference/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/style_song.js
+style_preference_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/tag/my/preference/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const style_preference = (style_preference_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/style_song.js
+var style_song_module = {
+  exports: {}
+};
+var style_song_exports = style_song_module.exports;
 // 曲风-歌曲
 
-/* harmony default export */ const style_song = ((query, request) => {
-  const data = {
+style_song_module.exports = function (query, request) {
+  var data = {
     cursor: query.cursor || 0,
     size: query.size || 20,
     tagId: query.tagId,
-    sort: query.sort || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/style-tag/home/song`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/summary_annual.js
+    sort: query.sort || 0
+  };
+  return request('POST', "https://music.163.com/api/style-tag/home/song", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const style_song = (style_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/summary_annual.js
+var summary_annual_module = {
+  exports: {}
+};
+var summary_annual_exports = summary_annual_module.exports;
 // 年度听歌报告2017-2022
-
-/* harmony default export */ const summary_annual = ((query, request) => {
-  const data = {}
-  const key =
-    ['2017', '2018', '2019'].indexOf(query.year) > -1 ? 'userdata' : 'data'
-  return request(
-    'POST',
-    `https://music.163.com/weapi/activity/summary/annual/${query.year}/${key}`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: `/api/activity/summary/annual/${query.year}/${key}`,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/threshold_detail_get.js
+summary_annual_module.exports = function (query, request) {
+  var data = {};
+  var key = ['2017', '2018', '2019'].indexOf(query.year) > -1 ? 'userdata' : 'data';
+  return request('POST', "https://music.163.com/weapi/activity/summary/annual/".concat(query.year, "/").concat(key), data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: "/api/activity/summary/annual/".concat(query.year, "/").concat(key)
+  });
+};
+/* harmony default export */ const summary_annual = (summary_annual_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/threshold_detail_get.js
+var threshold_detail_get_module = {
+  exports: {}
+};
+var threshold_detail_get_exports = threshold_detail_get_module.exports;
 // 获取达人达标信息
-
-/* harmony default export */ const threshold_detail_get = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/influencer/web/apply/threshold/detail/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/influencer/web/apply/threshold/detail/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/topic_detail.js
-/* harmony default export */ const topic_detail = ((query, request) => {
-  const data = {
-    actid: query.actid,
-  }
-  return request('POST', `https://music.163.com/api/act/detail`, data, {
-    crypto: 'weapi',
+threshold_detail_get_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/influencer/web/apply/threshold/detail/get", data, {
+    crypto: 'eapi',
     cookie: query.cookie,
     proxy: query.proxy,
     realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/topic_detail_event_hot.js
-/* harmony default export */ const topic_detail_event_hot = ((query, request) => {
-  const data = {
-    actid: query.actid,
-  }
-  return request('POST', `https://music.163.com/api/act/event/hot`, data, {
+    url: '/api/influencer/web/apply/threshold/detail/get'
+  });
+};
+/* harmony default export */ const threshold_detail_get = (threshold_detail_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/topic_detail.js
+var topic_detail_module = {
+  exports: {}
+};
+var topic_detail_exports = topic_detail_module.exports;
+topic_detail_module.exports = function (query, request) {
+  var data = {
+    actid: query.actid
+  };
+  return request('POST', "https://music.163.com/api/act/detail", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/topic_sublist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const topic_detail = (topic_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/topic_detail_event_hot.js
+var topic_detail_event_hot_module = {
+  exports: {}
+};
+var topic_detail_event_hot_exports = topic_detail_event_hot_module.exports;
+topic_detail_event_hot_module.exports = function (query, request) {
+  var data = {
+    actid: query.actid
+  };
+  return request('POST', "https://music.163.com/api/act/event/hot", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const topic_detail_event_hot = (topic_detail_event_hot_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/topic_sublist.js
+var topic_sublist_module = {
+  exports: {}
+};
+var topic_sublist_exports = topic_sublist_module.exports;
 // 收藏的专栏
 
-/* harmony default export */ const topic_sublist = ((query, request) => {
-  const data = {
+topic_sublist_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 50,
     offset: query.offset || 0,
-    total: true,
-  }
-  return request('POST', `https://music.163.com/api/topic/sublist`, data, {
+    total: true
+  };
+  return request('POST', "https://music.163.com/api/topic/sublist", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/toplist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const topic_sublist = (topic_sublist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/toplist.js
+var toplist_module = {
+  exports: {}
+};
+var toplist_exports = toplist_module.exports;
 // 所有榜单介绍
 
-/* harmony default export */ const toplist = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/api/toplist`,
-    {},
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/toplist_artist.js
+toplist_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/api/toplist", {}, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const toplist = (toplist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/toplist_artist.js
+var toplist_artist_module = {
+  exports: {}
+};
+var toplist_artist_exports = toplist_artist_module.exports;
 // 歌手榜
 
-/* harmony default export */ const toplist_artist = ((query, request) => {
-  const data = {
+toplist_artist_module.exports = function (query, request) {
+  var data = {
     type: query.type || 1,
     limit: 100,
     offset: 0,
-    total: true,
-  }
-  return request('POST', `https://music.163.com/weapi/toplist/artist`, data, {
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/toplist/artist", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/toplist_detail.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const toplist_artist = (toplist_artist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/toplist_detail.js
+var toplist_detail_module = {
+  exports: {}
+};
+var toplist_detail_exports = toplist_detail_module.exports;
 // 所有榜单内容摘要
 
-/* harmony default export */ const toplist_detail = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/toplist/detail`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/top_album.js
+toplist_detail_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/toplist/detail", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const toplist_detail = (toplist_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/top_album.js
+var top_album_module = {
+  exports: {}
+};
+var top_album_exports = top_album_module.exports;
 // 新碟上架
 
-/* harmony default export */ const top_album = ((query, request) => {
-  const date = new Date()
-
-  const data = {
-    area: query.area || 'ALL', // //ALL:全部,ZH:华语,EA:欧美,KR:韩国,JP:日本
+top_album_module.exports = function (query, request) {
+  var date = new Date();
+  var data = {
+    area: query.area || 'ALL',
+    // //ALL:全部,ZH:华语,EA:欧美,KR:韩国,JP:日本
     limit: query.limit || 50,
     offset: query.offset || 0,
     type: query.type || 'new',
     year: query.year || date.getFullYear(),
     month: query.month || date.getMonth() + 1,
     total: false,
-    rcmd: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/discovery/new/albums/area`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/top_artists.js
-// 热门歌手
-
-/* harmony default export */ const top_artists = ((query, request) => {
-  const data = {
-    limit: query.limit || 50,
-    offset: query.offset || 0,
-    total: true,
-  }
-  return request('POST', `https://music.163.com/weapi/artist/top`, data, {
+    rcmd: true
+  };
+  return request('POST', "https://music.163.com/api/discovery/new/albums/area", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const top_album = (top_album_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/top_artists.js
+var top_artists_module = {
+  exports: {}
+};
+var top_artists_exports = top_artists_module.exports;
+// 热门歌手
 
-;// CONCATENATED MODULE: ./module/top_list.js
+top_artists_module.exports = function (query, request) {
+  var data = {
+    limit: query.limit || 50,
+    offset: query.offset || 0,
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/artist/top", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const top_artists = (top_artists_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/top_list.js
+var top_list_module = {
+  exports: {}
+};
+var top_list_exports = top_list_module.exports;
 // 排行榜
-/* harmony default export */ const top_list = ((query, request) => {
-  query.cookie.os = 'pc'
+top_list_module.exports = function (query, request) {
+  query.cookie.os = 'pc';
   if (query.idx) {
     return Promise.resolve({
       status: 500,
       body: {
         code: 500,
-        msg: '不支持此方式调用,只支持id调用',
-      },
-    })
+        msg: '不支持此方式调用,只支持id调用'
+      }
+    });
   }
-
-  const data = {
+  var data = {
     id: query.id,
     n: '500',
-    s: '0',
-  }
-  return request(
-    'POST',
-    `https://interface3.music.163.com/api/playlist/v4/detail`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/top_mv.js
-// MV排行榜
-
-/* harmony default export */ const top_mv = ((query, request) => {
-  const data = {
-    area: query.area || '',
-    limit: query.limit || 30,
-    offset: query.offset || 0,
-    total: true,
-  }
-  return request('POST', `https://music.163.com/weapi/mv/toplist`, data, {
+    s: '0'
+  };
+  return request('POST', "https://interface3.music.163.com/api/playlist/v4/detail", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const top_list = (top_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/top_mv.js
+var top_mv_module = {
+  exports: {}
+};
+var top_mv_exports = top_mv_module.exports;
+// MV排行榜
 
-;// CONCATENATED MODULE: ./module/top_playlist.js
+top_mv_module.exports = function (query, request) {
+  var data = {
+    area: query.area || '',
+    limit: query.limit || 30,
+    offset: query.offset || 0,
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/mv/toplist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const top_mv = (top_mv_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/top_playlist.js
+var module_top_playlist_module = {
+  exports: {}
+};
+var module_top_playlist_exports = module_top_playlist_module.exports;
 // 分类歌单
 
-/* harmony default export */ const top_playlist = ((query, request) => {
-  const data = {
-    cat: query.cat || "全部", // 全部,华语,欧美,日语,韩语,粤语,小语种,流行,摇滚,民谣,电子,舞曲,说唱,轻音乐,爵士,乡村,R&B/Soul,古典,民族,英伦,金属,朋克,蓝调,雷鬼,世界音乐,拉丁,另类/独立,New Age,古风,后摇,Bossa Nova,清晨,夜晚,学习,工作,午休,下午茶,地铁,驾车,运动,旅行,散步,酒吧,怀旧,清新,浪漫,性感,伤感,治愈,放松,孤独,感动,兴奋,快乐,安静,思念,影视原声,ACG,儿童,校园,游戏,70后,80后,90后,网络歌曲,KTV,经典,翻唱,吉他,钢琴,器乐,榜单,00后
-    order: query.order || "hot", // hot,new
+module_top_playlist_module.exports = function (query, request) {
+  var data = {
+    cat: query.cat || '全部',
+    // 全部,华语,欧美,日语,韩语,粤语,小语种,流行,摇滚,民谣,电子,舞曲,说唱,轻音乐,爵士,乡村,R&B/Soul,古典,民族,英伦,金属,朋克,蓝调,雷鬼,世界音乐,拉丁,另类/独立,New Age,古风,后摇,Bossa Nova,清晨,夜晚,学习,工作,午休,下午茶,地铁,驾车,运动,旅行,散步,酒吧,怀旧,清新,浪漫,性感,伤感,治愈,放松,孤独,感动,兴奋,快乐,安静,思念,影视原声,ACG,儿童,校园,游戏,70后,80后,90后,网络歌曲,KTV,经典,翻唱,吉他,钢琴,器乐,榜单,00后
+    order: query.order || 'hot',
+    // hot,new
     limit: query.limit || 50,
     offset: query.offset || 0,
-    total: true,
+    total: true
   };
-  return request("POST", `https://music.163.com/weapi/playlist/list`, data, {
-    crypto: "weapi",
+  return request('POST', "https://music.163.com/weapi/playlist/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const module_top_playlist = (module_top_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/top_playlist_highquality.js
+var top_playlist_highquality_module = {
+  exports: {}
+};
+var top_playlist_highquality_exports = top_playlist_highquality_module.exports;
+// 精品歌单
+
+top_playlist_highquality_module.exports = function (query, request) {
+  var data = {
+    cat: query.cat || '全部',
+    // 全部,华语,欧美,韩语,日语,粤语,小语种,运动,ACG,影视原声,流行,摇滚,后摇,古风,民谣,轻音乐,电子,器乐,说唱,古典,爵士
+    limit: query.limit || 50,
+    lasttime: query.before || 0,
+    // 歌单updateTime
+    total: true
+  };
+  return request('POST', "https://music.163.com/api/playlist/highquality/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const top_playlist_highquality = (top_playlist_highquality_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/top_song.js
+var top_song_module = {
+  exports: {}
+};
+var top_song_exports = top_song_module.exports;
+// 新歌速递
+
+top_song_module.exports = function (query, request) {
+  var data = {
+    areaId: query.type || 0,
+    // 全部:0 华语:7 欧美:96 日本:8 韩国:16
+    // limit: query.limit || 100,
+    // offset: query.offset || 0,
+    total: true
+  };
+  return request('POST', "https://music.163.com/weapi/v1/discovery/new/songs", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const top_song = (top_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/ugc_album_get.js
+var ugc_album_get_module = {
+  exports: {}
+};
+var ugc_album_get_exports = ugc_album_get_module.exports;
+// 专辑简要百科信息
+ugc_album_get_module.exports = function (query, request) {
+  var data = {
+    albumId: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/rep/ugc/album/get", data, {
+    crypto: 'eapi',
     cookie: query.cookie,
     proxy: query.proxy,
     realIP: query.realIP,
+    url: '/api/rep/ugc/album/get'
   });
-});
-
-;// CONCATENATED MODULE: ./module/top_playlist_highquality.js
-// 精品歌单
-
-/* harmony default export */ const top_playlist_highquality = ((query, request) => {
-  const data = {
-    cat: query.cat || '全部', // 全部,华语,欧美,韩语,日语,粤语,小语种,运动,ACG,影视原声,流行,摇滚,后摇,古风,民谣,轻音乐,电子,器乐,说唱,古典,爵士
-    limit: query.limit || 50,
-    lasttime: query.before || 0, // 歌单updateTime
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/playlist/highquality/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/top_song.js
-// 新歌速递
-
-/* harmony default export */ const top_song = ((query, request) => {
-  const data = {
-    areaId: query.type || 0, // 全部:0 华语:7 欧美:96 日本:8 韩国:16
-    // limit: query.limit || 100,
-    // offset: query.offset || 0,
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/discovery/new/songs`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/ugc_album_get.js
-// 专辑简要百科信息
-
-/* harmony default export */ const ugc_album_get = ((query, request) => {
-  const data = {
-    albumId: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/rep/ugc/album/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/rep/ugc/album/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/ugc_artist_get.js
+};
+/* harmony default export */ const ugc_album_get = (ugc_album_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/ugc_artist_get.js
+var ugc_artist_get_module = {
+  exports: {}
+};
+var ugc_artist_get_exports = ugc_artist_get_module.exports;
 // 歌手简要百科信息
-
-/* harmony default export */ const ugc_artist_get = ((query, request) => {
-  const data = {
-    artistId: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/rep/ugc/artist/get`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/rep/ugc/artist/get',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/ugc_artist_search.js
+ugc_artist_get_module.exports = function (query, request) {
+  var data = {
+    artistId: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/rep/ugc/artist/get", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/rep/ugc/artist/get'
+  });
+};
+/* harmony default export */ const ugc_artist_get = (ugc_artist_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/ugc_artist_search.js
+var ugc_artist_search_module = {
+  exports: {}
+};
+var ugc_artist_search_exports = ugc_artist_search_module.exports;
 // 搜索歌手
 // 可传关键字或者歌手id
-
-/* harmony default export */ const ugc_artist_search = ((query, request) => {
-  const data = {
+ugc_artist_search_module.exports = function (query, request) {
+  var data = {
     keyword: query.keyword,
-    limit: query.limit || 40,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/rep/ugc/artist/search`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/rep/ugc/artist/search',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/ugc_detail.js
+    limit: query.limit || 40
+  };
+  return request('POST', "https://music.163.com/api/rep/ugc/artist/search", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/rep/ugc/artist/search'
+  });
+};
+/* harmony default export */ const ugc_artist_search = (ugc_artist_search_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/ugc_detail.js
+var ugc_detail_module = {
+  exports: {}
+};
+var ugc_detail_exports = ugc_detail_module.exports;
 // 用户贡献内容
-/* harmony default export */ const ugc_detail = ((query, request) => {
-  const data = {
+ugc_detail_module.exports = function (query, request) {
+  var data = {
     auditStatus: query.auditStatus || '',
     //待审核:0 未采纳:-5 审核中:1 部分审核通过:4 审核通过:5
     //WAIT:0 REJECT:-5 AUDITING:1 PARTLY_APPROVED:4 PASS:5
     limit: query.limit || 10,
     offset: query.offset || 0,
-    order: query.order || 'desc', //asc
+    order: query.order || 'desc',
+    //asc
     sortBy: query.sortBy || 'createTime',
-    type: query.type || 1,
+    type: query.type || 1
     //曲库纠错 ARTIST:1 ALBUM:2 SONG:3 MV:4 LYRIC:5 TLYRIC:6
     //曲库补充 ALBUM:101 MV:103
-  }
-  return request('POST', `https://music.163.com/weapi/rep/ugc/detail`, data, {
+  };
+  return request('POST', "https://music.163.com/weapi/rep/ugc/detail", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/ugc_mv_get.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const ugc_detail = (ugc_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/ugc_mv_get.js
+var ugc_mv_get_module = {
+  exports: {}
+};
+var ugc_mv_get_exports = ugc_mv_get_module.exports;
 // mv简要百科信息
-
-/* harmony default export */ const ugc_mv_get = ((query, request) => {
-  const data = {
-    mvId: query.id,
-  }
-  return request('POST', `https://music.163.com/weapi/rep/ugc/mv/get`, data, {
+ugc_mv_get_module.exports = function (query, request) {
+  var data = {
+    mvId: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/rep/ugc/mv/get", data, {
     crypto: 'eapi',
     cookie: query.cookie,
     proxy: query.proxy,
     realIP: query.realIP,
-    url: '/api/rep/ugc/mv/get',
-  })
-});
-
-;// CONCATENATED MODULE: ./module/ugc_song_get.js
+    url: '/api/rep/ugc/mv/get'
+  });
+};
+/* harmony default export */ const ugc_mv_get = (ugc_mv_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/ugc_song_get.js
+var ugc_song_get_module = {
+  exports: {}
+};
+var ugc_song_get_exports = ugc_song_get_module.exports;
 // 歌曲简要百科信息
-
-/* harmony default export */ const ugc_song_get = ((query, request) => {
-  const data = {
-    songId: query.id,
-  }
-  return request('POST', `https://music.163.com/weapi/rep/ugc/song/get`, data, {
+ugc_song_get_module.exports = function (query, request) {
+  var data = {
+    songId: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/rep/ugc/song/get", data, {
     crypto: 'eapi',
     cookie: query.cookie,
     proxy: query.proxy,
     realIP: query.realIP,
-    url: '/api/rep/ugc/song/get',
-  })
-});
-
-;// CONCATENATED MODULE: ./module/ugc_user_devote.js
+    url: '/api/rep/ugc/song/get'
+  });
+};
+/* harmony default export */ const ugc_song_get = (ugc_song_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/ugc_user_devote.js
+var ugc_user_devote_module = {
+  exports: {}
+};
+var ugc_user_devote_exports = ugc_user_devote_module.exports;
 // 用户贡献条目、积分、云贝数量
-
-/* harmony default export */ const ugc_user_devote = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/rep/ugc/user/devote`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-      url: '/api/rep/ugc/user/devote',
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_account.js
-/* harmony default export */ const user_account = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/api/nuser/account/get`, data, {
+ugc_user_devote_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/rep/ugc/user/devote", data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP,
+    url: '/api/rep/ugc/user/devote'
+  });
+};
+/* harmony default export */ const ugc_user_devote = (ugc_user_devote_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_account.js
+var user_account_module = {
+  exports: {}
+};
+var user_account_exports = user_account_module.exports;
+user_account_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/nuser/account/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/user_audio.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_account = (user_account_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_audio.js
+var user_audio_module = {
+  exports: {}
+};
+var user_audio_exports = user_audio_module.exports;
 // 用户创建的电台
 
-/* harmony default export */ const user_audio = ((query, request) => {
-  const data = {
-    userId: query.uid,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/djradio/get/byuser`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_binding.js
-/* harmony default export */ const user_binding = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/v1/user/bindings/${query.uid}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_bindingcellphone.js
-/* harmony default export */ const user_bindingcellphone = ((query, request) => {
-  const data = {
+user_audio_module.exports = function (query, request) {
+  var data = {
+    userId: query.uid
+  };
+  return request('POST', "https://music.163.com/weapi/djradio/get/byuser", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_audio = (user_audio_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_binding.js
+var user_binding_module = {
+  exports: {}
+};
+var user_binding_exports = user_binding_module.exports;
+user_binding_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/v1/user/bindings/".concat(query.uid), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_binding = (user_binding_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_bindingcellphone.js
+var user_bindingcellphone_module = {
+  exports: {}
+};
+var user_bindingcellphone_exports = user_bindingcellphone_module.exports;
+user_bindingcellphone_module.exports = function (query, request) {
+  var data = {
     phone: query.phone,
     countrycode: query.countrycode || '86',
     captcha: query.captcha,
-    password: query.password
-      ? crypto.createHash('md5').update(query.password).digest('hex')
-      : '',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/user/bindingCellphone`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_cloud.js
+    password: query.password ? crypto.createHash('md5').update(query.password).digest('hex') : ''
+  };
+  return request('POST', "https://music.163.com/api/user/bindingCellphone", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_bindingcellphone = (user_bindingcellphone_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_cloud.js
+var user_cloud_module = {
+  exports: {}
+};
+var user_cloud_exports = user_cloud_module.exports;
 // 云盘数据
 
-/* harmony default export */ const user_cloud = ((query, request) => {
-  const data = {
+user_cloud_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
-    offset: query.offset || 0,
-  }
-  return request('POST', `https://music.163.com/api/v1/cloud/get`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/api/v1/cloud/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/user_cloud_del.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_cloud = (user_cloud_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_cloud_del.js
+var user_cloud_del_module = {
+  exports: {}
+};
+var user_cloud_del_exports = user_cloud_del_module.exports;
 // 云盘歌曲删除
 
-/* harmony default export */ const user_cloud_del = ((query, request) => {
-  const data = {
-    songIds: [query.id],
-  }
-  return request('POST', `https://music.163.com/weapi/cloud/del`, data, {
+user_cloud_del_module.exports = function (query, request) {
+  var data = {
+    songIds: [query.id]
+  };
+  return request('POST', "https://music.163.com/weapi/cloud/del", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/user_cloud_detail.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_cloud_del = (user_cloud_del_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_cloud_detail.js
+var user_cloud_detail_module = {
+  exports: {}
+};
+var user_cloud_detail_exports = user_cloud_detail_module.exports;
 // 云盘数据详情
 
-/* harmony default export */ const user_cloud_detail = ((query, request) => {
-  const id = query.id.replace(/\s/g, '').split(',')
-  const data = {
-    songIds: id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/v1/cloud/get/byids`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_comment_history.js
-/* harmony default export */ const user_comment_history = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+user_cloud_detail_module.exports = function (query, request) {
+  var id = query.id.replace(/\s/g, '').split(',');
+  var data = {
+    songIds: id
+  };
+  return request('POST', "https://music.163.com/weapi/v1/cloud/get/byids", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_cloud_detail = (user_cloud_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_comment_history.js
+var user_comment_history_module = {
+  exports: {}
+};
+var user_comment_history_exports = user_comment_history_module.exports;
+user_comment_history_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     compose_reminder: 'true',
     compose_hot_comment: 'true',
     limit: query.limit || 10,
     user_id: query.uid,
-    time: query.time || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/comment/user/comment/history`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_detail.js
+    time: query.time || 0
+  };
+  return request('POST', "https://music.163.com/api/comment/user/comment/history", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_comment_history = (user_comment_history_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_detail.js
+var module_user_detail_module = {
+  exports: {}
+};
+var module_user_detail_exports = module_user_detail_module.exports;
 // 用户详情
 
-/* harmony default export */ const user_detail = ((query, request) => {
-  return request(
-    "POST",
-    `https://music.163.com/weapi/v1/user/detail/${query.uid}`,
-    {},
-    {
-      crypto: "weapi",
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    }
-  );
-});
-
-;// CONCATENATED MODULE: ./module/user_dj.js
+module_user_detail_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/v1/user/detail/".concat(query.uid), {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const module_user_detail = (module_user_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_dj.js
+var user_dj_module = {
+  exports: {}
+};
+var user_dj_exports = user_dj_module.exports;
 // 用户电台节目
 
-/* harmony default export */ const user_dj = ((query, request) => {
-  const data = {
+user_dj_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 30,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/dj/program/${query.uid}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_event.js
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/dj/program/".concat(query.uid), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_dj = (user_dj_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_event.js
+var user_event_module = {
+  exports: {}
+};
+var user_event_exports = user_event_module.exports;
 // 用户动态
 
-/* harmony default export */ const user_event = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+user_event_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     getcounts: true,
     time: query.lasttime || -1,
     limit: query.limit || 30,
-    total: false,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/event/get/${query.uid}`,
-    data,
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_followeds.js
+    total: false
+  };
+  return request('POST', "https://music.163.com/api/event/get/".concat(query.uid), data, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_event = (user_event_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_followeds.js
+var user_followeds_module = {
+  exports: {}
+};
+var user_followeds_exports = user_followeds_module.exports;
 // 关注TA的人(粉丝)
 
-/* harmony default export */ const user_followeds = ((query, request) => {
-  const data = {
+user_followeds_module.exports = function (query, request) {
+  var data = {
     userId: query.uid,
     time: '0',
     limit: query.limit || 30,
     offset: query.offset || 0,
-    getcounts: 'true',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/eapi/user/getfolloweds/${query.uid}`,
-    data,
-    {
-      crypto: 'eapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      url: '/api/user/getfolloweds',
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_follows.js
+    getcounts: 'true'
+  };
+  return request('POST', "https://music.163.com/eapi/user/getfolloweds/".concat(query.uid), data, {
+    crypto: 'eapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    url: '/api/user/getfolloweds',
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_followeds = (user_followeds_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_follows.js
+var user_follows_module = {
+  exports: {}
+};
+var user_follows_exports = user_follows_module.exports;
 // TA关注的人(关注)
 
-/* harmony default export */ const user_follows = ((query, request) => {
-  const data = {
+user_follows_module.exports = function (query, request) {
+  var data = {
     offset: query.offset || 0,
     limit: query.limit || 30,
-    order: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/user/getfollows/${query.uid}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_level.js
+    order: true
+  };
+  return request('POST', "https://music.163.com/weapi/user/getfollows/".concat(query.uid), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_follows = (user_follows_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_level.js
+var user_level_module = {
+  exports: {}
+};
+var user_level_exports = user_level_module.exports;
 // 类别热门电台
 
-/* harmony default export */ const user_level = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/weapi/user/level`, data, {
+user_level_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/user/level", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/user_playlist.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_level = (user_level_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_playlist.js
+var user_playlist_module = {
+  exports: {}
+};
+var user_playlist_exports = user_playlist_module.exports;
 // 用户歌单
 
-/* harmony default export */ const user_playlist = ((query, request) => {
-  const data = {
+user_playlist_module.exports = function (query, request) {
+  var data = {
     uid: query.uid,
     limit: query.limit || 30,
     offset: query.offset || 0,
-    includeVideo: true,
-  }
-  return request('POST', `https://music.163.com/api/user/playlist`, data, {
+    includeVideo: true
+  };
+  return request('POST', "https://music.163.com/api/user/playlist", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/user_record.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_playlist = (user_playlist_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_record.js
+var user_record_module = {
+  exports: {}
+};
+var user_record_exports = user_record_module.exports;
 // 听歌排行
 
-/* harmony default export */ const user_record = ((query, request) => {
-  const data = {
+user_record_module.exports = function (query, request) {
+  var data = {
     uid: query.uid,
-    type: query.type || 0, // 1: 最近一周, 0: 所有时间
-  }
-  return request('POST', `https://music.163.com/weapi/v1/play/record`, data, {
+    type: query.type || 0 // 1: 最近一周, 0: 所有时间
+  };
+  return request('POST', "https://music.163.com/weapi/v1/play/record", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/user_replacephone.js
-/* harmony default export */ const user_replacephone = ((query, request) => {
-  const data = {
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_record = (user_record_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_replacephone.js
+var user_replacephone_module = {
+  exports: {}
+};
+var user_replacephone_exports = user_replacephone_module.exports;
+user_replacephone_module.exports = function (query, request) {
+  var data = {
     phone: query.phone,
     captcha: query.captcha,
     oldcaptcha: query.oldcaptcha,
-    countrycode: query.countrycode || '86',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/user/replaceCellphone`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_subcount.js
+    countrycode: query.countrycode || '86'
+  };
+  return request('POST', "https://music.163.com/api/user/replaceCellphone", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_replacephone = (user_replacephone_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_subcount.js
+var user_subcount_module = {
+  exports: {}
+};
+var user_subcount_exports = user_subcount_module.exports;
 // 收藏计数
 
-/* harmony default export */ const user_subcount = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/subcount`,
-    {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/user_update.js
+user_subcount_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/subcount", {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_subcount = (user_subcount_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/user_update.js
+var user_update_module = {
+  exports: {}
+};
+var user_update_exports = user_update_module.exports;
 // 编辑用户信息
 
-/* harmony default export */ const user_update = ((query, request) => {
-  query.cookie.os = 'ios'
-  query.cookie.appver = '8.10.90'
-  const data = {
+user_update_module.exports = function (query, request) {
+  query.cookie.os = 'ios';
+  query.cookie.appver = '8.10.90';
+  var data = {
     // avatarImgId: '0',
     birthday: query.birthday,
     city: query.city,
     gender: query.gender,
     nickname: query.nickname,
     province: query.province,
-    signature: query.signature,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/user/profile/update`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
+    signature: query.signature
+  };
+  return request('POST', "https://music.163.com/api/user/profile/update", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const user_update = (user_update_module.exports);
+// EXTERNAL MODULE: ./node_modules/qrcode/lib/browser.js
+var lib_browser = __webpack_require__(2592);
+;// CONCATENATED MODULE: ./corejs/module/verify_getQr.js
+function verify_getQr_typeof(o) { "@babel/helpers - typeof"; return verify_getQr_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, verify_getQr_typeof(o); }
 
-;// CONCATENATED MODULE: ./module/verify_qrcodestatus.js
-/* harmony default export */ const verify_qrcodestatus = (async (query, request) => {
-  const data = {
-    qrCode: query.qr,
-  }
-  const res = await request(
-    'POST',
-    `https://music.163.com/weapi/frontrisk/verify/qrcodestatus`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-  return res
-});
-
-;// CONCATENATED MODULE: ./module/video_category_list.js
+var verify_getQr_module = {
+  exports: {}
+};
+var verify_getQr_exports = verify_getQr_module.exports;
+function verify_getQr_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ verify_getQr_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == verify_getQr_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(verify_getQr_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function verify_getQr_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function verify_getQr_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { verify_getQr_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { verify_getQr_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+var verify_getQr_QRCode = lib_browser;
+verify_getQr_module.exports = /*#__PURE__*/function () {
+  var _ref = verify_getQr_asyncToGenerator( /*#__PURE__*/verify_getQr_regeneratorRuntime().mark(function _callee(query, request) {
+    var data, res, result;
+    return verify_getQr_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          data = {
+            verifyConfigId: query.vid,
+            verifyType: query.type,
+            token: query.token,
+            params: JSON.stringify({
+              event_id: query.evid,
+              sign: query.sign
+            }),
+            size: 150
+          };
+          _context.next = 3;
+          return request('POST', "https://music.163.com/weapi/frontrisk/verify/getqrcode", data, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 3:
+          res = _context.sent;
+          result = "https://st.music.163.com/encrypt-pages?qrCode=".concat(res.body.data.qrCode, "&verifyToken=").concat(query.token, "&verifyId=").concat(query.vid, "&verifyType=").concat(query.type, "&params=").concat(JSON.stringify({
+            event_id: query.evid,
+            sign: query.sign
+          }));
+          _context.t0 = res.body.data.qrCode;
+          _context.t1 = result;
+          _context.next = 9;
+          return verify_getQr_QRCode.toDataURL(result);
+        case 9:
+          _context.t2 = _context.sent;
+          _context.t3 = {
+            qrCode: _context.t0,
+            qrurl: _context.t1,
+            qrimg: _context.t2
+          };
+          _context.t4 = {
+            code: 200,
+            data: _context.t3
+          };
+          return _context.abrupt("return", {
+            status: 200,
+            body: _context.t4
+          });
+        case 13:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const verify_getQr = (verify_getQr_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/verify_qrcodestatus.js
+function verify_qrcodestatus_typeof(o) { "@babel/helpers - typeof"; return verify_qrcodestatus_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, verify_qrcodestatus_typeof(o); }
+var verify_qrcodestatus_module = {
+  exports: {}
+};
+var verify_qrcodestatus_exports = verify_qrcodestatus_module.exports;
+function verify_qrcodestatus_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ verify_qrcodestatus_regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == verify_qrcodestatus_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(verify_qrcodestatus_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function verify_qrcodestatus_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function verify_qrcodestatus_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { verify_qrcodestatus_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { verify_qrcodestatus_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+verify_qrcodestatus_module.exports = /*#__PURE__*/function () {
+  var _ref = verify_qrcodestatus_asyncToGenerator( /*#__PURE__*/verify_qrcodestatus_regeneratorRuntime().mark(function _callee(query, request) {
+    var data, res;
+    return verify_qrcodestatus_regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          data = {
+            qrCode: query.qr
+          };
+          _context.next = 3;
+          return request('POST', "https://music.163.com/weapi/frontrisk/verify/qrcodestatus", data, {
+            crypto: 'weapi',
+            cookie: query.cookie,
+            proxy: query.proxy,
+            realIP: query.realIP
+          });
+        case 3:
+          res = _context.sent;
+          return _context.abrupt("return", res);
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+/* harmony default export */ const verify_qrcodestatus = (verify_qrcodestatus_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_category_list.js
+var video_category_list_module = {
+  exports: {}
+};
+var video_category_list_exports = video_category_list_module.exports;
 // 视频分类列表
 
-/* harmony default export */ const video_category_list = ((query, request) => {
-  const data = {
+video_category_list_module.exports = function (query, request) {
+  var data = {
     offset: query.offset || 0,
     total: 'true',
-    limit: query.limit || 99,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/cloudvideo/category/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/video_detail.js
+    limit: query.limit || 99
+  };
+  return request('POST', "https://music.163.com/api/cloudvideo/category/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_category_list = (video_category_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_detail.js
+var video_detail_module = {
+  exports: {}
+};
+var video_detail_exports = video_detail_module.exports;
 // 视频详情
 
-/* harmony default export */ const video_detail = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/cloudvideo/v1/video/detail`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/video_detail_info.js
+video_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/cloudvideo/v1/video/detail", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_detail = (video_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_detail_info.js
+var video_detail_info_module = {
+  exports: {}
+};
+var video_detail_info_exports = video_detail_info_module.exports;
 // 视频点赞转发评论数数据
 
-/* harmony default export */ const video_detail_info = ((query, request) => {
-  const data = {
-    threadid: `R_VI_62_${query.vid}`,
-    composeliked: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/comment/commentthread/info`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/video_group.js
+video_detail_info_module.exports = function (query, request) {
+  var data = {
+    threadid: "R_VI_62_".concat(query.vid),
+    composeliked: true
+  };
+  return request('POST', "https://music.163.com/api/comment/commentthread/info", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_detail_info = (video_detail_info_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_group.js
+var video_group_module = {
+  exports: {}
+};
+var video_group_exports = video_group_module.exports;
 // 视频标签/分类下的视频
 
-/* harmony default export */ const video_group = ((query, request) => {
-  const data = {
+video_group_module.exports = function (query, request) {
+  var data = {
     groupId: query.id,
     offset: query.offset || 0,
     need_preview_url: 'true',
-    total: true,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/videotimeline/videogroup/otherclient/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/video_group_list.js
+    total: true
+  };
+  return request('POST', "https://music.163.com/api/videotimeline/videogroup/otherclient/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_group = (video_group_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_group_list.js
+var video_group_list_module = {
+  exports: {}
+};
+var video_group_list_exports = video_group_list_module.exports;
 // 视频标签列表
 
-/* harmony default export */ const video_group_list = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/cloudvideo/group/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/video_sub.js
+video_group_list_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/cloudvideo/group/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_group_list = (video_group_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_sub.js
+var video_sub_module = {
+  exports: {}
+};
+var video_sub_exports = video_sub_module.exports;
 // 收藏与取消收藏视频
 
-/* harmony default export */ const video_sub = ((query, request) => {
-  query.t = query.t == 1 ? 'sub' : 'unsub'
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/cloudvideo/video/${query.t}`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/video_timeline_all.js
+video_sub_module.exports = function (query, request) {
+  query.t = query.t == 1 ? 'sub' : 'unsub';
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://music.163.com/weapi/cloudvideo/video/".concat(query.t), data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_sub = (video_sub_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_timeline_all.js
+var video_timeline_all_module = {
+  exports: {}
+};
+var video_timeline_all_exports = video_timeline_all_module.exports;
 // 全部视频列表
 
-/* harmony default export */ const video_timeline_all = ((query, request) => {
-  const data = {
+video_timeline_all_module.exports = function (query, request) {
+  var data = {
     groupId: 0,
     offset: query.offset || 0,
     need_preview_url: 'true',
-    total: true,
-  }
+    total: true
+  };
   //   /api/videotimeline/otherclient/get
-  return request(
-    'POST',
-    `https://music.163.com/api/videotimeline/otherclient/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/video_timeline_recommend.js
+  return request('POST', "https://music.163.com/api/videotimeline/otherclient/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_timeline_all = (video_timeline_all_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_timeline_recommend.js
+var video_timeline_recommend_module = {
+  exports: {}
+};
+var video_timeline_recommend_exports = video_timeline_recommend_module.exports;
 // 推荐视频
 
-/* harmony default export */ const video_timeline_recommend = ((query, request) => {
-  const data = {
+video_timeline_recommend_module.exports = function (query, request) {
+  var data = {
     offset: query.offset || 0,
     filterLives: '[]',
     withProgramInfo: 'true',
     needUrl: '1',
-    resolution: '480',
-  }
-  return request('POST', `https://music.163.com/api/videotimeline/get`, data, {
+    resolution: '480'
+  };
+  return request('POST', "https://music.163.com/api/videotimeline/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/video_url.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_timeline_recommend = (video_timeline_recommend_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/video_url.js
+var video_url_module = {
+  exports: {}
+};
+var video_url_exports = video_url_module.exports;
 // 视频链接
 
-/* harmony default export */ const video_url = ((query, request) => {
-  const data = {
+video_url_module.exports = function (query, request) {
+  var data = {
     ids: '["' + query.id + '"]',
-    resolution: query.res || 1080,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/cloudvideo/playurl`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/vip_growthpoint.js
+    resolution: query.res || 1080
+  };
+  return request('POST', "https://music.163.com/weapi/cloudvideo/playurl", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const video_url = (video_url_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/vip_growthpoint.js
+var vip_growthpoint_module = {
+  exports: {}
+};
+var vip_growthpoint_exports = vip_growthpoint_module.exports;
 // 会员成长值
 
-/* harmony default export */ const vip_growthpoint = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipnewcenter/app/level/growhpoint/basic`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/vip_growthpoint_details.js
+vip_growthpoint_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/vipnewcenter/app/level/growhpoint/basic", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const vip_growthpoint = (vip_growthpoint_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/vip_growthpoint_details.js
+var vip_growthpoint_details_module = {
+  exports: {}
+};
+var vip_growthpoint_details_exports = vip_growthpoint_details_module.exports;
 // 会员成长值领取记录
 
-/* harmony default export */ const vip_growthpoint_details = ((query, request) => {
-  const data = {
+vip_growthpoint_details_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 20,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipnewcenter/app/level/growth/details`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/vip_growthpoint_get.js
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/weapi/vipnewcenter/app/level/growth/details", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const vip_growthpoint_details = (vip_growthpoint_details_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/vip_growthpoint_get.js
+var vip_growthpoint_get_module = {
+  exports: {}
+};
+var vip_growthpoint_get_exports = vip_growthpoint_get_module.exports;
 // 领取会员成长值
 
-/* harmony default export */ const vip_growthpoint_get = ((query, request) => {
-  const data = {
-    taskIds: query.ids,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipnewcenter/app/level/task/reward/get`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/vip_info.js
+vip_growthpoint_get_module.exports = function (query, request) {
+  var data = {
+    taskIds: query.ids
+  };
+  return request('POST', "https://music.163.com/weapi/vipnewcenter/app/level/task/reward/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const vip_growthpoint_get = (vip_growthpoint_get_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/vip_info.js
+var vip_info_module = {
+  exports: {}
+};
+var vip_info_exports = vip_info_module.exports;
 // 获取 VIP 信息
 
-/* harmony default export */ const vip_info = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/music-vip-membership/front/vip/info`,
-    {
-      userId: query.uid || '',
-    },
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/vip_info_v2.js
+vip_info_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/music-vip-membership/front/vip/info", {
+    userId: query.uid || ''
+  }, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const vip_info = (vip_info_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/vip_info_v2.js
+var vip_info_v2_module = {
+  exports: {}
+};
+var vip_info_v2_exports = vip_info_v2_module.exports;
 // 获取 VIP 信息
 
-/* harmony default export */ const vip_info_v2 = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/api/music-vip-membership/client/vip/info`,
-    {
-      userId: query.uid || '',
-    },
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/vip_tasks.js
+vip_info_v2_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/api/music-vip-membership/client/vip/info", {
+    userId: query.uid || ''
+  }, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const vip_info_v2 = (vip_info_v2_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/vip_tasks.js
+var vip_tasks_module = {
+  exports: {}
+};
+var vip_tasks_exports = vip_tasks_module.exports;
 // 会员任务
 
-/* harmony default export */ const vip_tasks = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipnewcenter/app/level/task/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/vip_timemachine.js
+vip_tasks_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/weapi/vipnewcenter/app/level/task/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const vip_tasks = (vip_tasks_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/vip_timemachine.js
+var vip_timemachine_module = {
+  exports: {}
+};
+var vip_timemachine_exports = vip_timemachine_module.exports;
 // 黑胶时光机
 
-/* harmony default export */ const vip_timemachine = ((query, request) => {
-  const data = {}
+vip_timemachine_module.exports = function (query, request) {
+  var data = {};
   if (query.startTime && query.endTime) {
-    data.startTime = query.startTime
-    data.endTime = query.endTime
-    data.type = 1
-    data.limit = query.limit || 60
+    data.startTime = query.startTime;
+    data.endTime = query.endTime;
+    data.type = 1;
+    data.limit = query.limit || 60;
   }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/vipmusic/newrecord/weekflow`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/voicelist_detail.js
-/* harmony default export */ const voicelist_detail = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/voice/workbench/voicelist/detail`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/voicelist_list.js
-/* harmony default export */ const voicelist_list = ((query, request) => {
-  const data = {
+  return request('POST', "https://music.163.com/weapi/vipmusic/newrecord/weekflow", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const vip_timemachine = (vip_timemachine_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/voicelist_detail.js
+var voicelist_detail_module = {
+  exports: {}
+};
+var voicelist_detail_exports = voicelist_detail_module.exports;
+voicelist_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://interface.music.163.com/weapi/voice/workbench/voicelist/detail", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const voicelist_detail = (voicelist_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/voicelist_list.js
+var voicelist_list_module = {
+  exports: {}
+};
+var voicelist_list_exports = voicelist_list_module.exports;
+voicelist_list_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || '200',
     offset: query.offset || '0',
-    voiceListId: query.voiceListId,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/voice/workbench/voices/by/voicelist`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/voicelist_list_search.js
+    voiceListId: query.voiceListId
+  };
+  return request('POST', "https://interface.music.163.com/weapi/voice/workbench/voices/by/voicelist", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const voicelist_list = (voicelist_list_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/voicelist_list_search.js
+var voicelist_list_search_module = {
+  exports: {}
+};
+var voicelist_list_search_exports = voicelist_list_search_module.exports;
 //声音搜索
-/* harmony default export */ const voicelist_list_search = ((query, request) => {
-  const data = {
+voicelist_list_search_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || '200',
     offset: query.offset || '0',
     name: query.name || null,
     displayStatus: query.displayStatus || null,
     type: query.type || null,
     voiceFeeType: query.voiceFeeType || null,
-    radioId: query.voiceListId,
-  }
-  return request(
-    'POST',
-    'https://interface.music.163.com/api/voice/workbench/voice/list',
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/voicelist_search.js
-/* harmony default export */ const voicelist_search = ((query, request) => {
-  const data = {
+    radioId: query.voiceListId
+  };
+  return request('POST', 'https://interface.music.163.com/api/voice/workbench/voice/list', data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const voicelist_list_search = (voicelist_list_search_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/voicelist_search.js
+var voicelist_search_module = {
+  exports: {}
+};
+var voicelist_search_exports = voicelist_search_module.exports;
+voicelist_search_module.exports = function (query, request) {
+  var data = {
     fee: '-1',
     limit: query.limit || '200',
     offset: query.offset || '0',
-    podcastName: query.podcastName || '',
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/voice/workbench/voicelist/search`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/voicelist_trans.js
-/* harmony default export */ const voicelist_trans = ((query, request) => {
-  const data = {
+    podcastName: query.podcastName || ''
+  };
+  return request('POST', "https://interface.music.163.com/weapi/voice/workbench/voicelist/search", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const voicelist_search = (voicelist_search_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/voicelist_trans.js
+var voicelist_trans_module = {
+  exports: {}
+};
+var voicelist_trans_exports = voicelist_trans_module.exports;
+voicelist_trans_module.exports = function (query, request) {
+  var data = {
     position: query.position,
     programId: query.programId,
-    radioId: query.radioId,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/voice/workbench/radio/program/trans`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/voice_detail.js
-/* harmony default export */ const voice_detail = ((query, request) => {
-  const data = {
-    id: query.id,
-  }
-  return request(
-    'POST',
-    `https://interface.music.163.com/weapi/voice/workbench/voice/detail`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/weblog.js
+    radioId: query.radioId
+  };
+  return request('POST', "https://interface.music.163.com/weapi/voice/workbench/radio/program/trans", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const voicelist_trans = (voicelist_trans_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/voice_detail.js
+var voice_detail_module = {
+  exports: {}
+};
+var voice_detail_exports = voice_detail_module.exports;
+voice_detail_module.exports = function (query, request) {
+  var data = {
+    id: query.id
+  };
+  return request('POST', "https://interface.music.163.com/weapi/voice/workbench/voice/detail", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const voice_detail = (voice_detail_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/weblog.js
+var weblog_module = {
+  exports: {}
+};
+var weblog_exports = weblog_module.exports;
 // 操作记录
 
-/* harmony default export */ const weblog = ((query, request) => {
-  return request(
-    'POST',
-    `https://music.163.com/weapi/feedback/weblog`,
-    query.data || {},
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei.js
-/* harmony default export */ const yunbei = ((query, request) => {
-  const data = {}
+weblog_module.exports = function (query, request) {
+  return request('POST', "https://music.163.com/weapi/feedback/weblog", query.data || {}, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const weblog = (weblog_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei.js
+var yunbei_module = {
+  exports: {}
+};
+var yunbei_exports = yunbei_module.exports;
+yunbei_module.exports = function (query, request) {
+  var data = {};
   // /api/point/today/get
-  return request('POST', `https://music.163.com/api/point/signed/get`, data, {
+  return request('POST', "https://music.163.com/api/point/signed/get", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_expense.js
-/* harmony default export */ const yunbei_expense = ((query, request) => {
-  const data = {
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei = (yunbei_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_expense.js
+var yunbei_expense_module = {
+  exports: {}
+};
+var yunbei_expense_exports = yunbei_expense_module.exports;
+yunbei_expense_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 10,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/store/api/point/expense`,
-    data,
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_info.js
-/* harmony default export */ const yunbei_info = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/api/v1/user/info`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/store/api/point/expense", data, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_expense = (yunbei_expense_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_info.js
+var yunbei_info_module = {
+  exports: {}
+};
+var yunbei_info_exports = yunbei_info_module.exports;
+yunbei_info_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/v1/user/info", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_rcmd_song.js
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_info = (yunbei_info_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_rcmd_song.js
+var yunbei_rcmd_song_module = {
+  exports: {}
+};
+var yunbei_rcmd_song_exports = yunbei_rcmd_song_module.exports;
 // 云贝推歌
 
-/* harmony default export */ const yunbei_rcmd_song = ((query, request) => {
-  const data = {
+yunbei_rcmd_song_module.exports = function (query, request) {
+  var data = {
     songId: query.id,
     reason: query.reason || '好歌献给你',
     scene: '',
     fromUserId: -1,
-    yunbeiNum: query.yunbeiNum || 10,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/yunbei/rcmd/song/submit`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_rcmd_song_history.js
+    yunbeiNum: query.yunbeiNum || 10
+  };
+  return request('POST', "https://music.163.com/weapi/yunbei/rcmd/song/submit", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_rcmd_song = (yunbei_rcmd_song_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_rcmd_song_history.js
+var yunbei_rcmd_song_history_module = {
+  exports: {}
+};
+var yunbei_rcmd_song_history_exports = yunbei_rcmd_song_history_module.exports;
 // 云贝推歌历史记录
 
-/* harmony default export */ const yunbei_rcmd_song_history = ((query, request) => {
-  const data = {
+yunbei_rcmd_song_history_module.exports = function (query, request) {
+  var data = {
     page: JSON.stringify({
       size: query.size || 20,
-      cursor: query.cursor || '',
-    }),
-  }
-  return request(
-    'POST',
-    `https://music.163.com/weapi/yunbei/rcmd/song/history/list`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_receipt.js
-/* harmony default export */ const yunbei_receipt = ((query, request) => {
-  const data = {
+      cursor: query.cursor || ''
+    })
+  };
+  return request('POST', "https://music.163.com/weapi/yunbei/rcmd/song/history/list", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_rcmd_song_history = (yunbei_rcmd_song_history_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_receipt.js
+var yunbei_receipt_module = {
+  exports: {}
+};
+var yunbei_receipt_exports = yunbei_receipt_module.exports;
+yunbei_receipt_module.exports = function (query, request) {
+  var data = {
     limit: query.limit || 10,
-    offset: query.offset || 0,
-  }
-  return request(
-    'POST',
-    `https://music.163.com/store/api/point/receipt`,
-    data,
-    {
-      crypto: 'api',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_sign.js
-/* harmony default export */ const yunbei_sign = ((query, request) => {
-  const data = {
-    type: '0',
-  }
-  return request('POST', `https://music.163.com/api/point/dailyTask`, data, {
+    offset: query.offset || 0
+  };
+  return request('POST', "https://music.163.com/store/api/point/receipt", data, {
+    crypto: 'api',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_receipt = (yunbei_receipt_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_sign.js
+var yunbei_sign_module = {
+  exports: {}
+};
+var yunbei_sign_exports = yunbei_sign_module.exports;
+yunbei_sign_module.exports = function (query, request) {
+  var data = {
+    type: '0'
+  };
+  return request('POST', "https://music.163.com/api/point/dailyTask", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_tasks.js
-/* harmony default export */ const yunbei_tasks = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/usertool/task/list/all`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_tasks_todo.js
-/* harmony default export */ const yunbei_tasks_todo = ((query, request) => {
-  const data = {}
-  return request(
-    'POST',
-    `https://music.163.com/api/usertool/task/todo/query`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_task_finish.js
-/* harmony default export */ const yunbei_task_finish = ((query, request) => {
-  const data = {
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_sign = (yunbei_sign_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_tasks.js
+var yunbei_tasks_module = {
+  exports: {}
+};
+var yunbei_tasks_exports = yunbei_tasks_module.exports;
+yunbei_tasks_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/usertool/task/list/all", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_tasks = (yunbei_tasks_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_tasks_todo.js
+var yunbei_tasks_todo_module = {
+  exports: {}
+};
+var yunbei_tasks_todo_exports = yunbei_tasks_todo_module.exports;
+yunbei_tasks_todo_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/usertool/task/todo/query", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_tasks_todo = (yunbei_tasks_todo_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_task_finish.js
+var yunbei_task_finish_module = {
+  exports: {}
+};
+var yunbei_task_finish_exports = yunbei_task_finish_module.exports;
+yunbei_task_finish_module.exports = function (query, request) {
+  var data = {
     userTaskId: query.userTaskId,
-    depositCode: query.depositCode || '0',
-  }
-  return request(
-    'POST',
-    `https://music.163.com/api/usertool/task/point/receive`,
-    data,
-    {
-      crypto: 'weapi',
-      cookie: query.cookie,
-      proxy: query.proxy,
-      realIP: query.realIP,
-    },
-  )
-});
-
-;// CONCATENATED MODULE: ./module/yunbei_today.js
-/* harmony default export */ const yunbei_today = ((query, request) => {
-  const data = {}
-  return request('POST', `https://music.163.com/api/point/today/get`, data, {
+    depositCode: query.depositCode || '0'
+  };
+  return request('POST', "https://music.163.com/api/usertool/task/point/receive", data, {
     crypto: 'weapi',
     cookie: query.cookie,
     proxy: query.proxy,
-    realIP: query.realIP,
-  })
-});
-
-;// CONCATENATED MODULE: ./util/api.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* harmony default export */ const api = ({
-    'activate_init_profile':activate_init_profile,
-    'aidj_content_rcmd':aidj_content_rcmd,
-    'album':album,
-    'album_detail':album_detail,
-    'album_detail_dynamic':album_detail_dynamic,
-    'album_list':album_list,
-    'album_list_style':album_list_style,
-    'album_new':album_new,
-    'album_newest':album_newest,
-    'album_songsaleboard':album_songsaleboard,
-    'album_sub':album_sub,
-    'album_sublist':album_sublist,
-    'artists':artists,
-    'artist_album':artist_album,
-    'artist_desc':artist_desc,
-    'artist_detail':artist_detail,
-    'artist_fans':artist_fans,
-    'artist_follow_count':artist_follow_count,
-    'artist_list':artist_list,
-    'artist_mv':artist_mv,
-    'artist_new_mv':artist_new_mv,
-    'artist_new_song':artist_new_song,
-    'artist_songs':artist_songs,
-    'artist_sub':artist_sub,
-    'artist_sublist':artist_sublist,
-    'artist_top_song':artist_top_song,
-    'artist_video':artist_video,
-    'audio_match':audio_match,
-    'banner':banner,
-    'batch':batch,
-    'calendar':calendar,
-    'captcha_sent':captcha_sent,
-    'captcha_verify':captcha_verify,
-    'cellphone_existence_check':cellphone_existence_check,
-    'check_music':check_music,
-    'cloudsearch':cloudsearch,
-    'cloud_match':cloud_match,
-    'comment':comment,
-    'comment_album':comment_album,
-    'comment_dj':comment_dj,
-    'comment_event':comment_event,
-    'comment_floor':comment_floor,
-    'comment_hot':comment_hot,
-    'comment_hug_list':comment_hug_list,
-    'comment_like':comment_like,
-    'comment_music':comment_music,
-    'comment_mv':comment_mv,
-    'comment_new':comment_new,
-    'comment_playlist':comment_playlist,
-    'comment_video':comment_video,
-    'countries_code_list':countries_code_list,
-    'creator_authinfo_get':creator_authinfo_get,
-    'daily_signin':daily_signin,
-    'digitalAlbum_detail':digitalAlbum_detail,
-    'digitalAlbum_ordering':digitalAlbum_ordering,
-    'digitalAlbum_purchased':digitalAlbum_purchased,
-    'digitalAlbum_sales':digitalAlbum_sales,
-    'dj_banner':dj_banner,
-    'dj_category_excludehot':dj_category_excludehot,
-    'dj_category_recommend':dj_category_recommend,
-    'dj_catelist':dj_catelist,
-    'dj_detail':dj_detail,
-    'dj_hot':dj_hot,
-    'dj_paygift':dj_paygift,
-    'dj_personalize_recommend':dj_personalize_recommend,
-    'dj_program':dj_program,
-    'dj_program_detail':dj_program_detail,
-    'dj_program_toplist':dj_program_toplist,
-    'dj_program_toplist_hours':dj_program_toplist_hours,
-    'dj_radio_hot':dj_radio_hot,
-    'dj_recommend':dj_recommend,
-    'dj_recommend_type':dj_recommend_type,
-    'dj_sub':dj_sub,
-    'dj_sublist':dj_sublist,
-    'dj_subscriber':dj_subscriber,
-    'dj_today_perfered':dj_today_perfered,
-    'dj_toplist':dj_toplist,
-    'dj_toplist_hours':dj_toplist_hours,
-    'dj_toplist_newcomer':dj_toplist_newcomer,
-    'dj_toplist_pay':dj_toplist_pay,
-    'dj_toplist_popular':dj_toplist_popular,
-    'event':module_event,
-    'event_del':event_del,
-    'event_forward':event_forward,
-    'fanscenter_basicinfo_age_get':fanscenter_basicinfo_age_get,
-    'fanscenter_basicinfo_gender_get':fanscenter_basicinfo_gender_get,
-    'fanscenter_basicinfo_province_get':fanscenter_basicinfo_province_get,
-    'fanscenter_overview_get':fanscenter_overview_get,
-    'fanscenter_trend_list':fanscenter_trend_list,
-    'fm_trash':fm_trash,
-    'follow':follow,
-    'get_userids':get_userids,
-    'history_recommend_songs':history_recommend_songs,
-    'history_recommend_songs_detail':history_recommend_songs_detail,
-    'homepage_block_page':homepage_block_page,
-    'homepage_dragon_ball':homepage_dragon_ball,
-    'hot_topic':hot_topic,
-    'hug_comment':hug_comment,
-    'inner_version':inner_version,
-    'like':like,
-    'likelist':likelist,
-    'listentogether_end':listentogether_end,
-    'listentogether_heatbeat':listentogether_heatbeat,
-    'listentogether_play_command':listentogether_play_command,
-    'listentogether_room_check':listentogether_room_check,
-    'listentogether_room_create':listentogether_room_create,
-    'listentogether_status':listentogether_status,
-    'listentogether_sync_list_command':listentogether_sync_list_command,
-    'listentogether_sync_playlist_get':listentogether_sync_playlist_get,
-    'login':login,
-    'login_cellphone':login_cellphone,
-    'login_qr_check':login_qr_check,
-    'login_qr_create':login_qr_create,
-    'login_qr_key':login_qr_key,
-    'login_refresh':login_refresh,
-    'login_status':login_status,
-    'logout':logout,
-    'lyric':lyric,
-    'lyric_new':lyric_new,
-    'mlog_music_rcmd':mlog_music_rcmd,
-    'mlog_to_video':mlog_to_video,
-    'mlog_url':mlog_url,
-    'msg_comments':msg_comments,
-    'msg_forwards':msg_forwards,
-    'msg_notices':msg_notices,
-    'msg_private':msg_private,
-    'msg_private_history':msg_private_history,
-    'msg_recentcontact':msg_recentcontact,
-    'musician_cloudbean':musician_cloudbean,
-    'musician_cloudbean_obtain':musician_cloudbean_obtain,
-    'musician_data_overview':musician_data_overview,
-    'musician_play_trend':musician_play_trend,
-    'musician_sign':musician_sign,
-    'musician_tasks':musician_tasks,
-    'musician_tasks_new':musician_tasks_new,
-    'music_first_listen_info':music_first_listen_info,
-    'mv_all':mv_all,
-    'mv_detail':mv_detail,
-    'mv_detail_info':mv_detail_info,
-    'mv_exclusive_rcmd':mv_exclusive_rcmd,
-    'mv_first':mv_first,
-    'mv_sub':mv_sub,
-    'mv_sublist':mv_sublist,
-    'mv_url':mv_url,
-    'nickname_check':nickname_check,
-    'personalized':personalized,
-    'personalized_djprogram':personalized_djprogram,
-    'personalized_mv':personalized_mv,
-    'personalized_newsong':personalized_newsong,
-    'personalized_privatecontent':personalized_privatecontent,
-    'personalized_privatecontent_list':personalized_privatecontent_list,
-    'personal_fm':personal_fm,
-    'playlist_catlist':playlist_catlist,
-    'playlist_create':playlist_create,
-    'playlist_delete':playlist_delete,
-    'playlist_desc_update':playlist_desc_update,
-    'playlist_detail':playlist_detail,
-    'playlist_detail_dynamic':playlist_detail_dynamic,
-    'playlist_highquality_tags':playlist_highquality_tags,
-    'playlist_hot':playlist_hot,
-    'playlist_mylike':playlist_mylike,
-    'playlist_name_update':playlist_name_update,
-    'playlist_order_update':playlist_order_update,
-    'playlist_privacy':playlist_privacy,
-    'playlist_subscribe':playlist_subscribe,
-    'playlist_subscribers':playlist_subscribers,
-    'playlist_tags_update':playlist_tags_update,
-    'playlist_tracks':playlist_tracks,
-    'playlist_track_add':playlist_track_add,
-    'playlist_track_all':playlist_track_all,
-    'playlist_track_delete':playlist_track_delete,
-    'playlist_update':playlist_update,
-    'playlist_update_playcount':playlist_update_playcount,
-    'playlist_video_recent':playlist_video_recent,
-    'playmode_intelligence_list':playmode_intelligence_list,
-    'playmode_song_vector':playmode_song_vector,
-    'pl_count':pl_count,
-    'program_recommend':program_recommend,
-    'rebind':rebind,
-    'recommend_resource':recommend_resource,
-    'recommend_songs':recommend_songs,
-    'recommend_songs_dislike':recommend_songs_dislike,
-    'record_recent_album':record_recent_album,
-    'record_recent_dj':record_recent_dj,
-    'record_recent_playlist':record_recent_playlist,
-    'record_recent_song':record_recent_song,
-    'record_recent_video':record_recent_video,
-    'record_recent_voice':record_recent_voice,
-    'register_cellphone':register_cellphone,
-    'related_allvideo':related_allvideo,
-    'related_playlist':related_playlist,
-    'resource_like':resource_like,
-    'scrobble':scrobble,
-    'search':search,
-    'search_default':search_default,
-    'search_hot':search_hot,
-    'search_hot_detail':search_hot_detail,
-    'search_multimatch':search_multimatch,
-    'search_suggest':search_suggest,
-    'send_album':send_album,
-    'send_playlist':send_playlist,
-    'send_song':send_song,
-    'send_text':send_text,
-    'setting':setting,
-    'share_resource':share_resource,
-    'sheet_list':sheet_list,
-    'sheet_preview':sheet_preview,
-    'signin_progress':signin_progress,
-    'sign_happy_info':sign_happy_info,
-    'simi_artist':simi_artist,
-    'simi_mv':simi_mv,
-    'simi_playlist':simi_playlist,
-    'simi_song':simi_song,
-    'simi_user':simi_user,
-    'song_detail':song_detail,
-    'song_download_url':song_download_url,
-    'song_order_update':song_order_update,
-    'song_purchased':song_purchased,
-    'song_url':song_url,
-    'song_url_v1':song_url_v1,
-    'song_wiki_summary':song_wiki_summary,
-    'starpick_comments_summary':starpick_comments_summary,
-    'style_album':style_album,
-    'style_artist':style_artist,
-    'style_detail':style_detail,
-    'style_list':style_list,
-    'style_playlist':style_playlist,
-    'style_preference':style_preference,
-    'style_song':style_song,
-    'summary_annual':summary_annual,
-    'threshold_detail_get':threshold_detail_get,
-    'topic_detail':topic_detail,
-    'topic_detail_event_hot':topic_detail_event_hot,
-    'topic_sublist':topic_sublist,
-    'toplist':toplist,
-    'toplist_artist':toplist_artist,
-    'toplist_detail':toplist_detail,
-    'top_album':top_album,
-    'top_artists':top_artists,
-    'top_list':top_list,
-    'top_mv':top_mv,
-    'top_playlist':top_playlist,
-    'top_playlist_highquality':top_playlist_highquality,
-    'top_song':top_song,
-    'ugc_album_get':ugc_album_get,
-    'ugc_artist_get':ugc_artist_get,
-    'ugc_artist_search':ugc_artist_search,
-    'ugc_detail':ugc_detail,
-    'ugc_mv_get':ugc_mv_get,
-    'ugc_song_get':ugc_song_get,
-    'ugc_user_devote':ugc_user_devote,
-    'user_account':user_account,
-    'user_audio':user_audio,
-    'user_binding':user_binding,
-    'user_bindingcellphone':user_bindingcellphone,
-    'user_cloud':user_cloud,
-    'user_cloud_del':user_cloud_del,
-    'user_cloud_detail':user_cloud_detail,
-    'user_comment_history':user_comment_history,
-    'user_detail':user_detail,
-    'user_dj':user_dj,
-    'user_event':user_event,
-    'user_followeds':user_followeds,
-    'user_follows':user_follows,
-    'user_level':user_level,
-    'user_playlist':user_playlist,
-    'user_record':user_record,
-    'user_replacephone':user_replacephone,
-    'user_subcount':user_subcount,
-    'user_update':user_update,
-    'verify_qrcodestatus':verify_qrcodestatus,
-    'video_category_list':video_category_list,
-    'video_detail':video_detail,
-    'video_detail_info':video_detail_info,
-    'video_group':video_group,
-    'video_group_list':video_group_list,
-    'video_sub':video_sub,
-    'video_timeline_all':video_timeline_all,
-    'video_timeline_recommend':video_timeline_recommend,
-    'video_url':video_url,
-    'vip_growthpoint':vip_growthpoint,
-    'vip_growthpoint_details':vip_growthpoint_details,
-    'vip_growthpoint_get':vip_growthpoint_get,
-    'vip_info':vip_info,
-    'vip_info_v2':vip_info_v2,
-    'vip_tasks':vip_tasks,
-    'vip_timemachine':vip_timemachine,
-    'voicelist_detail':voicelist_detail,
-    'voicelist_list':voicelist_list,
-    'voicelist_list_search':voicelist_list_search,
-    'voicelist_search':voicelist_search,
-    'voicelist_trans':voicelist_trans,
-    'voice_detail':voice_detail,
-    'weblog':weblog,
-    'yunbei':yunbei,
-    'yunbei_expense':yunbei_expense,
-    'yunbei_info':yunbei_info,
-    'yunbei_rcmd_song':yunbei_rcmd_song,
-    'yunbei_rcmd_song_history':yunbei_rcmd_song_history,
-    'yunbei_receipt':yunbei_receipt,
-    'yunbei_sign':yunbei_sign,
-    'yunbei_tasks':yunbei_tasks,
-    'yunbei_tasks_todo':yunbei_tasks_todo,
-    'yunbei_task_finish':yunbei_task_finish,
-    'yunbei_today':yunbei_today,
-});
-// EXTERNAL MODULE: ./node_modules/.store/node-forge@1.3.1/node_modules/node-forge/lib/index.js
-var lib = __webpack_require__(2795);
-;// CONCATENATED MODULE: ./util/crypto.js
-
-
-
-const iv = '0102030405060708'
-const presetKey = '0CoJUm6Qyw8W8jud'
-const linuxapiKey = 'rFgB&h#%2?^eDg:Q'
-const base62 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-const publicKey = `-----BEGIN PUBLIC KEY-----
-MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgtQn2JZ34ZC28NWYpAUd98iZ37BUrX/aKzmFbt7clFSs6sXqHauqKWqdtLkF2KexO40H1YTX8z2lSgBBOAxLsvaklV8k4cBFK9snQXE9/DDaFt6Rr7iVZMldczhC0JNgTz+SHXT6CBHuX3e9SdB1Ua44oncaTWz7OBGLbCiK45wIDAQAB
------END PUBLIC KEY-----`
-const eapiKey = 'e82ckenh8dichen8'
-
-const aesEncrypt = (text, mode, key, iv, format = 'base64') => {
-  let encrypted = crypto_js.AES.encrypt(
-    crypto_js.enc.Utf8.parse(text),
-    crypto_js.enc.Utf8.parse(key),
-    {
-      iv: crypto_js.enc.Utf8.parse(iv),
-      mode: crypto_js.mode[mode.toUpperCase()],
-      padding: crypto_js.pad.Pkcs7,
-    },
-  )
-  if (format === 'base64') {
-    return encrypted.toString()
-  }
-
-  return encrypted.ciphertext.toString().toUpperCase()
-}
-
-const rsaEncrypt = (str, key) => {
-  const forgePublicKey = lib.pki.publicKeyFromPem(key)
-  const encrypted = forgePublicKey.encrypt(str, 'NONE')
-  return lib.util.bytesToHex(encrypted)
-}
-
-const weapi = (object) => {
-  const text = JSON.stringify(object)
-  let secretKey = ''
-  for (let i = 0; i < 16; i++) {
-    secretKey += base62.charAt(Math.round(Math.random() * 61))
-  }
-  
-  return {
-    params: aesEncrypt(
-      aesEncrypt(text, 'cbc', presetKey, iv),
-      'cbc',
-      secretKey,
-      iv,
-    ),
-    encSecKey: rsaEncrypt(secretKey.split('').reverse().join(''), publicKey),
-  }
-}
-
-const linuxapi = (object) => {
-  const text = JSON.stringify(object)
-  return {
-    eparams: aesEncrypt(text, 'ecb', linuxapiKey, '', 'hex'),
-  }
-}
-
-const eapi = (url, object) => {
-  const text = typeof object === 'object' ? JSON.stringify(object) : object
-  const message = `nobody${url}use${text}md5forencrypt`
-  const digest = crypto_js.MD5(message).toString()
-  const data = `${url}-36cd479b6b5-${text}-36cd479b6b5-${digest}`
-  return {
-    params: aesEncrypt(data, 'ecb', eapiKey, '', 'hex'),
-  }
-}
-
-const decrypt = (cipher) => {
-  const decipher = crypto_js.AES.decrypt(
-    {
-      ciphertext: crypto_js.enc.Hex.parse(cipher),
-    },
-    eapiKey,
-    {
-      mode: crypto_js.mode.ECB,
-    },
-  )
-  const decryptedBytes = crypto_js.enc.Utf8.stringify(decipher)
-  return decryptedBytes
-}
-
-/* harmony default export */ const util_crypto = ({ weapi, linuxapi, eapi, decrypt, aesEncrypt });
-
-;// CONCATENATED MODULE: ./util/request_param.js
-
-
-
-// request.debug = true // 开启可看到更详细信息
-
-const chooseUserAgent = (ua = false) => {
-  const userAgentList = {
-    mobile: [
-      // iOS 13.5.1 14.0 beta with safari
-      "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1",
-      "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.",
-      // iOS with qq micromsg
-      "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML like Gecko) Mobile/14A456 QQ/6.5.7.408 V1_IPH_SQ_6.5.7_1_APP_A Pixel/750 Core/UIWebView NetType/4G Mem/103",
-      "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.15(0x17000f27) NetType/WIFI Language/zh",
-      // Android -> Huawei Xiaomi
-      "Mozilla/5.0 (Linux; Android 9; PCT-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.64 HuaweiBrowser/10.0.3.311 Mobile Safari/537.36",
-      "Mozilla/5.0 (Linux; U; Android 9; zh-cn; Redmi Note 8 Build/PKQ1.190616.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.141 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.5.22",
-      // Android + qq micromsg
-      "Mozilla/5.0 (Linux; Android 10; YAL-AL00 Build/HUAWEIYAL-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.62 XWEB/2581 MMWEBSDK/200801 Mobile Safari/537.36 MMWEBID/3027 MicroMessenger/7.0.18.1740(0x27001235) Process/toolsmp WeChat/arm64 NetType/WIFI Language/zh_CN ABI/arm64",
-      "Mozilla/5.0 (Linux; U; Android 8.1.0; zh-cn; BKK-AL10 Build/HONORBKK-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/10.6 Mobile Safari/537.36",
-    ],
-    pc: [
-      // macOS 10.15.6  Firefox / Chrome / Safari
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko/20100101 Firefox/80.0",
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.30 Safari/537.36",
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15",
-      // Windows 10 Firefox / Chrome / Edge
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0",
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.30 Safari/537.36",
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/13.10586",
-      // Linux 就算了
-    ],
-  };
-  let realUserAgentList =
-    userAgentList[ua] || userAgentList.mobile.concat(userAgentList.pc);
-  return ["mobile", "pc", false].indexOf(ua) > -1
-    ? realUserAgentList[Math.floor(Math.random() * realUserAgentList.length)]
-    : ua;
+    realIP: query.realIP
+  });
 };
-const createRequestParam = (method, url, data = {}, options) => {
-  // 构建请求headers
-
-  let headers = { "User-Agent": chooseUserAgent(options.ua) };
-  options.headers = options.headers || {};
-  headers = {
-    ...headers,
-    ...options.headers,
-  };
-  if (method.toUpperCase() === "POST")
-    headers["Content-Type"] = "application/x-www-form-urlencoded";
-  if (url.includes("music.163.com"))
-    headers["Referer"] = "https://music.163.com";
-  let ip = options.realIP || options.ip || "";
-  // console.log(ip)
-  if (ip) {
-    headers["X-Real-IP"] = ip;
-    headers["X-Forwarded-For"] = ip;
-  }
-  // headers['X-Real-IP'] = '118.88.88.88'
-  if (typeof options.cookie === "object") {
-    options.cookie = {
-      ...options.cookie,
-      __remember_me: true,
-      // NMTID: crypto.randomBytes(16).toString('hex'),
-      _ntes_nuid: crypto_js.lib.WordArray.random(16).toString(crypto_js.enc.Hex),
-    };
-    if (url.indexOf("login") === -1) {
-      options.cookie["NMTID"] = crypto_js.lib.WordArray.random(16).toString(
-        crypto_js.enc.Hex
-      );
-    }
-    if (!options.cookie.MUSIC_U) {
-      // 游客
-      if (!options.cookie.MUSIC_A) {
-        options.cookie.MUSIC_A = "";
-        options.cookie.os = options.cookie.os || "ios";
-        options.cookie.appver = options.cookie.appver || "8.10.90";
-      }
-    }
-    headers["Cookie"] = Object.keys(options.cookie)
-      .map(
-        (key) =>
-          encodeURIComponent(key) +
-          "=" +
-          encodeURIComponent(options.cookie[key])
-      )
-      .join("; ");
-  } else if (options.cookie) {
-    headers["Cookie"] = options.cookie;
-  } else {
-    headers["Cookie"] = "__remember_me=true; NMTID=xxx";
-  }
-
-  // 根据接口调整请求参数，构建params
-
-  if (options.crypto === "weapi") {
-    headers["User-Agent"] =
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69";
-    let csrfToken = (headers["Cookie"] || "").match(/_csrf=([^(;|$)]+)/);
-    data.csrf_token = csrfToken ? csrfToken[1] : "";
-    data = util_crypto.weapi(data);
-    url = url.replace(/\w*api/, "weapi");
-  } else if (options.crypto === "linuxapi") {
-    data = util_crypto.linuxapi({
-      method: method,
-      url: url.replace(/\w*api/, "api"),
-      params: data,
-    });
-    headers["User-Agent"] =
-      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36";
-    url = "https://music.163.com/api/linux/forward";
-  } else if (options.crypto === "eapi") {
-    const cookie = options.cookie || {};
-    const csrfToken = cookie["__csrf"] || "";
-    const header = {
-      osver: cookie.osver, //系统版本
-      deviceId: cookie.deviceId, //encrypt.base64.encode(imei + '\t02:00:00:00:00:00\t5106025eb79a5247\t70ffbaac7')
-      appver: cookie.appver || "8.9.70", // app版本
-      versioncode: cookie.versioncode || "140", //版本号
-      mobilename: cookie.mobilename, //设备model
-      buildver: cookie.buildver || Date.now().toString().substr(0, 10),
-      resolution: cookie.resolution || "1920x1080", //设备分辨率
-      __csrf: csrfToken,
-      os: cookie.os || "android",
-      channel: cookie.channel,
-      requestId: `${Date.now()}_${Math.floor(Math.random() * 1000)
-        .toString()
-        .padStart(4, "0")}`,
-    };
-    if (cookie.MUSIC_U) header["MUSIC_U"] = cookie.MUSIC_U;
-    if (cookie.MUSIC_A) header["MUSIC_A"] = cookie.MUSIC_A;
-    headers["Cookie"] = Object.keys(header)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(header[key])
-      )
-      .join("; ");
-    data.header = header;
-    data = util_crypto.eapi(options.url, data);
-    url = url.replace(/\w*api/, "eapi");
-  }
-
-  let requestParams = {
-    method: method,
-    url: url,
-    headers: headers,
-    data: new URLSearchParams(data).toString(),
-    // keepAlive: true, // 长连接
-  };
-
-  if (options.crypto === "eapi") requestParams.encoding = null;
-
-  // 代理根据调用环境的请求方式自己配置
-  // requestParams.proxy = false;
-  // requestParams.httpAgent = null;
-  // requestParams.httpsAgent = null;
-
-  if (options.crypto === "eapi") {
-    requestParams = {
-      ...requestParams,
-      responseType: "arraybuffer",
-    };
-  }
-
-  requestParams['crypto'] = options.crypto;
-  requestParams['apiName'] = options.apiName;
-
-  // 返回请求需要的一些参数
-  return requestParams;
+/* harmony default export */ const yunbei_task_finish = (yunbei_task_finish_module.exports);
+;// CONCATENATED MODULE: ./corejs/module/yunbei_today.js
+var yunbei_today_module = {
+  exports: {}
 };
+var yunbei_today_exports = yunbei_today_module.exports;
+yunbei_today_module.exports = function (query, request) {
+  var data = {};
+  return request('POST', "https://music.163.com/api/point/today/get", data, {
+    crypto: 'weapi',
+    cookie: query.cookie,
+    proxy: query.proxy,
+    realIP: query.realIP
+  });
+};
+/* harmony default export */ const yunbei_today = (yunbei_today_module.exports);
+;// CONCATENATED MODULE: ./corejs/util/api.js
 
-/* harmony default export */ const request_param = (createRequestParam);
-// export default createRequestParam;
-
-;// CONCATENATED MODULE: ./util/beforeRequest.js
 
 
 
 
-function hasApi(name) {
-  return Object.keys(api).includes(name);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var api_module = {
+  exports: {}
+};
+var api_exports = api_module.exports;
+var api_yunbei_today = yunbei_today;
+var api_yunbei_task_finish = yunbei_task_finish;
+var api_yunbei_tasks_todo = yunbei_tasks_todo;
+var api_yunbei_tasks = yunbei_tasks;
+var api_yunbei_sign = yunbei_sign;
+var api_yunbei_receipt = yunbei_receipt;
+var api_yunbei_rcmd_song_history = yunbei_rcmd_song_history;
+var api_yunbei_rcmd_song = yunbei_rcmd_song;
+var api_yunbei_info = yunbei_info;
+var api_yunbei_expense = yunbei_expense;
+var api_yunbei = yunbei;
+var api_weblog = weblog;
+var api_voice_detail = voice_detail;
+var api_voicelist_trans = voicelist_trans;
+var api_voicelist_search = voicelist_search;
+var api_voicelist_list_search = voicelist_list_search;
+var api_voicelist_list = voicelist_list;
+var api_voicelist_detail = voicelist_detail;
+var api_vip_timemachine = vip_timemachine;
+var api_vip_tasks = vip_tasks;
+var api_vip_info_v2 = vip_info_v2;
+var api_vip_info = vip_info;
+var api_vip_growthpoint_get = vip_growthpoint_get;
+var api_vip_growthpoint_details = vip_growthpoint_details;
+var api_vip_growthpoint = vip_growthpoint;
+var api_video_url = video_url;
+var api_video_timeline_recommend = video_timeline_recommend;
+var api_video_timeline_all = video_timeline_all;
+var api_video_sub = video_sub;
+var api_video_group_list = video_group_list;
+var api_video_group = video_group;
+var api_video_detail_info = video_detail_info;
+var api_video_detail = video_detail;
+var api_video_category_list = video_category_list;
+var api_verify_qrcodestatus = verify_qrcodestatus;
+var api_verify_getQr = verify_getQr;
+var api_user_update = user_update;
+var api_user_subcount = user_subcount;
+var api_user_replacephone = user_replacephone;
+var api_user_record = user_record;
+var api_user_playlist = user_playlist;
+var api_user_level = user_level;
+var api_user_follows = user_follows;
+var api_user_followeds = user_followeds;
+var api_user_event = user_event;
+var api_user_dj = user_dj;
+var api_user_detail = module_user_detail;
+var api_user_comment_history = user_comment_history;
+var api_user_cloud_detail = user_cloud_detail;
+var api_user_cloud_del = user_cloud_del;
+var api_user_cloud = user_cloud;
+var api_user_bindingcellphone = user_bindingcellphone;
+var api_user_binding = user_binding;
+var api_user_audio = user_audio;
+var api_user_account = user_account;
+var api_ugc_user_devote = ugc_user_devote;
+var api_ugc_song_get = ugc_song_get;
+var api_ugc_mv_get = ugc_mv_get;
+var api_ugc_detail = ugc_detail;
+var api_ugc_artist_search = ugc_artist_search;
+var api_ugc_artist_get = ugc_artist_get;
+var api_ugc_album_get = ugc_album_get;
+var api_top_song = top_song;
+var api_top_playlist_highquality = top_playlist_highquality;
+var api_top_playlist = module_top_playlist;
+var api_top_mv = top_mv;
+var api_top_list = top_list;
+var api_top_artists = top_artists;
+var api_top_album = top_album;
+var api_toplist_detail = toplist_detail;
+var api_toplist_artist = toplist_artist;
+var api_toplist = toplist;
+var api_topic_sublist = topic_sublist;
+var api_topic_detail_event_hot = topic_detail_event_hot;
+var api_topic_detail = topic_detail;
+var api_threshold_detail_get = threshold_detail_get;
+var api_summary_annual = summary_annual;
+var api_style_song = style_song;
+var api_style_preference = style_preference;
+var api_style_playlist = style_playlist;
+var api_style_list = style_list;
+var api_style_detail = style_detail;
+var api_style_artist = style_artist;
+var api_style_album = style_album;
+var api_starpick_comments_summary = starpick_comments_summary;
+var api_song_wiki_summary = song_wiki_summary;
+var api_song_url_v1 = song_url_v1;
+var api_song_url = module_song_url;
+var api_song_red_count = song_red_count;
+var api_song_purchased = song_purchased;
+var api_song_order_update = song_order_update;
+var api_song_music_detail = song_music_detail;
+var api_song_download_url = song_download_url;
+var api_song_detail = song_detail;
+var api_simi_user = simi_user;
+var api_simi_song = simi_song;
+var api_simi_playlist = simi_playlist;
+var api_simi_mv = simi_mv;
+var api_simi_artist = simi_artist;
+var api_sign_happy_info = sign_happy_info;
+var api_signin_progress = signin_progress;
+var api_sheet_preview = sheet_preview;
+var api_sheet_list = sheet_list;
+var api_share_resource = share_resource;
+var api_setting = setting;
+var api_send_text = send_text;
+var api_send_song = send_song;
+var api_send_playlist = send_playlist;
+var api_send_album = send_album;
+var api_search_suggest = search_suggest;
+var api_search_multimatch = search_multimatch;
+var api_search_match = search_match;
+var api_search_hot_detail = search_hot_detail;
+var api_search_hot = search_hot;
+var api_search_default = search_default;
+var api_search = search;
+var api_scrobble = scrobble;
+var api_resource_like = resource_like;
+var api_related_playlist = module_related_playlist;
+var api_related_allvideo = related_allvideo;
+var api_register_cellphone = register_cellphone;
+var api_record_recent_voice = record_recent_voice;
+var api_record_recent_video = record_recent_video;
+var api_record_recent_song = record_recent_song;
+var api_record_recent_playlist = record_recent_playlist;
+var api_record_recent_dj = record_recent_dj;
+var api_record_recent_album = record_recent_album;
+var api_recommend_songs_dislike = recommend_songs_dislike;
+var api_recommend_songs = recommend_songs;
+var api_recommend_resource = recommend_resource;
+var api_rebind = rebind;
+var api_program_recommend = program_recommend;
+var api_pl_count = pl_count;
+var api_playmode_song_vector = playmode_song_vector;
+var api_playmode_intelligence_list = playmode_intelligence_list;
+var api_playlist_video_recent = playlist_video_recent;
+var api_playlist_update_playcount = playlist_update_playcount;
+var api_playlist_update = playlist_update;
+var api_playlist_track_delete = playlist_track_delete;
+var api_playlist_track_all = playlist_track_all;
+var api_playlist_track_add = playlist_track_add;
+var api_playlist_tracks = playlist_tracks;
+var api_playlist_tags_update = playlist_tags_update;
+var api_playlist_subscribers = playlist_subscribers;
+var api_playlist_subscribe = playlist_subscribe;
+var api_playlist_privacy = playlist_privacy;
+var api_playlist_order_update = playlist_order_update;
+var api_playlist_name_update = playlist_name_update;
+var api_playlist_mylike = playlist_mylike;
+var api_playlist_hot = playlist_hot;
+var api_playlist_highquality_tags = playlist_highquality_tags;
+var api_playlist_detail_dynamic = playlist_detail_dynamic;
+var api_playlist_detail = playlist_detail;
+var api_playlist_desc_update = playlist_desc_update;
+var api_playlist_delete = playlist_delete;
+var api_playlist_create = playlist_create;
+var api_playlist_cover_update = playlist_cover_update;
+var api_playlist_catlist = playlist_catlist;
+var api_personal_fm = personal_fm;
+var api_personalized_privatecontent_list = personalized_privatecontent_list;
+var api_personalized_privatecontent = personalized_privatecontent;
+var api_personalized_newsong = personalized_newsong;
+var api_personalized_mv = personalized_mv;
+var api_personalized_djprogram = personalized_djprogram;
+var api_personalized = personalized;
+var api_nickname_check = nickname_check;
+var api_mv_url = mv_url;
+var api_mv_sublist = mv_sublist;
+var api_mv_sub = mv_sub;
+var api_mv_first = mv_first;
+var api_mv_exclusive_rcmd = mv_exclusive_rcmd;
+var api_mv_detail_info = mv_detail_info;
+var api_mv_detail = mv_detail;
+var api_mv_all = mv_all;
+var api_music_first_listen_info = music_first_listen_info;
+var api_musician_tasks_new = musician_tasks_new;
+var api_musician_tasks = musician_tasks;
+var api_musician_sign = musician_sign;
+var api_musician_play_trend = musician_play_trend;
+var api_musician_data_overview = musician_data_overview;
+var api_musician_cloudbean_obtain = musician_cloudbean_obtain;
+var api_musician_cloudbean = musician_cloudbean;
+var api_msg_recentcontact = msg_recentcontact;
+var api_msg_private_history = msg_private_history;
+var api_msg_private = msg_private;
+var api_msg_notices = msg_notices;
+var api_msg_forwards = msg_forwards;
+var api_msg_comments = msg_comments;
+var api_mlog_url = mlog_url;
+var api_mlog_to_video = mlog_to_video;
+var api_mlog_music_rcmd = mlog_music_rcmd;
+var api_lyric_new = lyric_new;
+var api_lyric = lyric;
+var api_logout = logout;
+var api_login_status = module_login_status;
+var api_login_refresh = login_refresh;
+var api_login_qr_key = login_qr_key;
+var api_login_qr_create = login_qr_create;
+var api_login_qr_check = login_qr_check;
+var api_login_cellphone = module_login_cellphone;
+var api_login = login;
+var api_listentogether_sync_playlist_get = listentogether_sync_playlist_get;
+var api_listentogether_sync_list_command = listentogether_sync_list_command;
+var api_listentogether_status = listentogether_status;
+var api_listentogether_room_create = listentogether_room_create;
+var api_listentogether_room_check = listentogether_room_check;
+var api_listentogether_play_command = listentogether_play_command;
+var api_listentogether_heatbeat = listentogether_heatbeat;
+var api_listentogether_end = listentogether_end;
+var api_likelist = likelist;
+var api_like = like;
+var api_inner_version = inner_version;
+var api_hug_comment = hug_comment;
+var api_hot_topic = hot_topic;
+var api_homepage_dragon_ball = homepage_dragon_ball;
+var api_homepage_block_page = homepage_block_page;
+var api_history_recommend_songs_detail = history_recommend_songs_detail;
+var api_history_recommend_songs = history_recommend_songs;
+var api_get_userids = get_userids;
+var api_follow = follow;
+var api_fm_trash = fm_trash;
+var api_fanscenter_trend_list = fanscenter_trend_list;
+var api_fanscenter_overview_get = fanscenter_overview_get;
+var api_fanscenter_basicinfo_province_get = fanscenter_basicinfo_province_get;
+var api_fanscenter_basicinfo_gender_get = fanscenter_basicinfo_gender_get;
+var api_fanscenter_basicinfo_age_get = fanscenter_basicinfo_age_get;
+var api_event_forward = event_forward;
+var api_event_del = event_del;
+var api_event = module_event;
+var api_dj_toplist_popular = dj_toplist_popular;
+var api_dj_toplist_pay = dj_toplist_pay;
+var api_dj_toplist_newcomer = dj_toplist_newcomer;
+var api_dj_toplist_hours = dj_toplist_hours;
+var api_dj_toplist = dj_toplist;
+var api_dj_today_perfered = dj_today_perfered;
+var api_dj_subscriber = dj_subscriber;
+var api_dj_sublist = dj_sublist;
+var api_dj_sub = dj_sub;
+var api_dj_recommend_type = dj_recommend_type;
+var api_dj_recommend = dj_recommend;
+var api_dj_radio_hot = dj_radio_hot;
+var api_dj_program_toplist_hours = dj_program_toplist_hours;
+var api_dj_program_toplist = dj_program_toplist;
+var api_dj_program_detail = dj_program_detail;
+var api_dj_program = dj_program;
+var api_dj_personalize_recommend = dj_personalize_recommend;
+var api_dj_paygift = dj_paygift;
+var api_dj_hot = dj_hot;
+var api_dj_detail = dj_detail;
+var api_dj_catelist = dj_catelist;
+var api_dj_category_recommend = dj_category_recommend;
+var api_dj_category_excludehot = dj_category_excludehot;
+var api_dj_banner = dj_banner;
+var api_digitalAlbum_sales = digitalAlbum_sales;
+var api_digitalAlbum_purchased = digitalAlbum_purchased;
+var api_digitalAlbum_ordering = digitalAlbum_ordering;
+var api_digitalAlbum_detail = digitalAlbum_detail;
+var api_daily_signin = daily_signin;
+var api_creator_authinfo_get = creator_authinfo_get;
+var api_countries_code_list = countries_code_list;
+var api_comment_video = comment_video;
+var api_comment_playlist = comment_playlist;
+var api_comment_new = comment_new;
+var api_comment_mv = comment_mv;
+var api_comment_music = comment_music;
+var api_comment_like = comment_like;
+var api_comment_hug_list = comment_hug_list;
+var api_comment_hot = comment_hot;
+var api_comment_floor = comment_floor;
+var api_comment_event = comment_event;
+var api_comment_dj = comment_dj;
+var api_comment_album = comment_album;
+var api_comment = comment;
+var api_cloud_match = cloud_match;
+var api_cloudsearch = cloudsearch;
+var api_check_music = module_check_music;
+var api_cellphone_existence_check = cellphone_existence_check;
+var api_captcha_verify = captcha_verify;
+var api_captcha_sent = captcha_sent;
+var api_calendar = calendar;
+var api_batch = batch;
+var api_banner = banner;
+var api_avatar_upload = avatar_upload;
+var api_audio_match = audio_match;
+var api_artist_video = artist_video;
+var api_artist_top_song = artist_top_song;
+var api_artist_sublist = artist_sublist;
+var api_artist_sub = artist_sub;
+var api_artist_songs = artist_songs;
+var api_artist_new_song = artist_new_song;
+var api_artist_new_mv = artist_new_mv;
+var api_artist_mv = artist_mv;
+var api_artist_list = artist_list;
+var api_artist_follow_count = artist_follow_count;
+var api_artist_fans = artist_fans;
+var api_artist_detail = artist_detail;
+var api_artist_desc = artist_desc;
+var api_artist_album = artist_album;
+var api_artists = artists;
+var api_album_sublist = album_sublist;
+var api_album_sub = album_sub;
+var api_album_songsaleboard = album_songsaleboard;
+var api_album_newest = album_newest;
+var api_album_new = album_new;
+var api_album_list_style = album_list_style;
+var api_album_list = album_list;
+var api_album_detail_dynamic = album_detail_dynamic;
+var api_album_detail = album_detail;
+var api_album = album;
+var api_aidj_content_rcmd = aidj_content_rcmd;
+var api_activate_init_profile = activate_init_profile;
+api_module.exports = {
+  yunbei_today: api_yunbei_today,
+  yunbei_task_finish: api_yunbei_task_finish,
+  yunbei_tasks_todo: api_yunbei_tasks_todo,
+  yunbei_tasks: api_yunbei_tasks,
+  yunbei_sign: api_yunbei_sign,
+  yunbei_receipt: api_yunbei_receipt,
+  yunbei_rcmd_song_history: api_yunbei_rcmd_song_history,
+  yunbei_rcmd_song: api_yunbei_rcmd_song,
+  yunbei_info: api_yunbei_info,
+  yunbei_expense: api_yunbei_expense,
+  yunbei: api_yunbei,
+  weblog: api_weblog,
+  voice_detail: api_voice_detail,
+  voicelist_trans: api_voicelist_trans,
+  voicelist_search: api_voicelist_search,
+  voicelist_list_search: api_voicelist_list_search,
+  voicelist_list: api_voicelist_list,
+  voicelist_detail: api_voicelist_detail,
+  vip_timemachine: api_vip_timemachine,
+  vip_tasks: api_vip_tasks,
+  vip_info_v2: api_vip_info_v2,
+  vip_info: api_vip_info,
+  vip_growthpoint_get: api_vip_growthpoint_get,
+  vip_growthpoint_details: api_vip_growthpoint_details,
+  vip_growthpoint: api_vip_growthpoint,
+  video_url: api_video_url,
+  video_timeline_recommend: api_video_timeline_recommend,
+  video_timeline_all: api_video_timeline_all,
+  video_sub: api_video_sub,
+  video_group_list: api_video_group_list,
+  video_group: api_video_group,
+  video_detail_info: api_video_detail_info,
+  video_detail: api_video_detail,
+  video_category_list: api_video_category_list,
+  verify_qrcodestatus: api_verify_qrcodestatus,
+  verify_getQr: api_verify_getQr,
+  user_update: api_user_update,
+  user_subcount: api_user_subcount,
+  user_replacephone: api_user_replacephone,
+  user_record: api_user_record,
+  user_playlist: api_user_playlist,
+  user_level: api_user_level,
+  user_follows: api_user_follows,
+  user_followeds: api_user_followeds,
+  user_event: api_user_event,
+  user_dj: api_user_dj,
+  user_detail: api_user_detail,
+  user_comment_history: api_user_comment_history,
+  user_cloud_detail: api_user_cloud_detail,
+  user_cloud_del: api_user_cloud_del,
+  user_cloud: api_user_cloud,
+  user_bindingcellphone: api_user_bindingcellphone,
+  user_binding: api_user_binding,
+  user_audio: api_user_audio,
+  user_account: api_user_account,
+  ugc_user_devote: api_ugc_user_devote,
+  ugc_song_get: api_ugc_song_get,
+  ugc_mv_get: api_ugc_mv_get,
+  ugc_detail: api_ugc_detail,
+  ugc_artist_search: api_ugc_artist_search,
+  ugc_artist_get: api_ugc_artist_get,
+  ugc_album_get: api_ugc_album_get,
+  top_song: api_top_song,
+  top_playlist_highquality: api_top_playlist_highquality,
+  top_playlist: api_top_playlist,
+  top_mv: api_top_mv,
+  top_list: api_top_list,
+  top_artists: api_top_artists,
+  top_album: api_top_album,
+  toplist_detail: api_toplist_detail,
+  toplist_artist: api_toplist_artist,
+  toplist: api_toplist,
+  topic_sublist: api_topic_sublist,
+  topic_detail_event_hot: api_topic_detail_event_hot,
+  topic_detail: api_topic_detail,
+  threshold_detail_get: api_threshold_detail_get,
+  summary_annual: api_summary_annual,
+  style_song: api_style_song,
+  style_preference: api_style_preference,
+  style_playlist: api_style_playlist,
+  style_list: api_style_list,
+  style_detail: api_style_detail,
+  style_artist: api_style_artist,
+  style_album: api_style_album,
+  starpick_comments_summary: api_starpick_comments_summary,
+  song_wiki_summary: api_song_wiki_summary,
+  song_url_v1: api_song_url_v1,
+  song_url: api_song_url,
+  song_red_count: api_song_red_count,
+  song_purchased: api_song_purchased,
+  song_order_update: api_song_order_update,
+  song_music_detail: api_song_music_detail,
+  song_download_url: api_song_download_url,
+  song_detail: api_song_detail,
+  simi_user: api_simi_user,
+  simi_song: api_simi_song,
+  simi_playlist: api_simi_playlist,
+  simi_mv: api_simi_mv,
+  simi_artist: api_simi_artist,
+  sign_happy_info: api_sign_happy_info,
+  signin_progress: api_signin_progress,
+  sheet_preview: api_sheet_preview,
+  sheet_list: api_sheet_list,
+  share_resource: api_share_resource,
+  setting: api_setting,
+  send_text: api_send_text,
+  send_song: api_send_song,
+  send_playlist: api_send_playlist,
+  send_album: api_send_album,
+  search_suggest: api_search_suggest,
+  search_multimatch: api_search_multimatch,
+  search_match: api_search_match,
+  search_hot_detail: api_search_hot_detail,
+  search_hot: api_search_hot,
+  search_default: api_search_default,
+  search: api_search,
+  scrobble: api_scrobble,
+  resource_like: api_resource_like,
+  related_playlist: api_related_playlist,
+  related_allvideo: api_related_allvideo,
+  register_cellphone: api_register_cellphone,
+  record_recent_voice: api_record_recent_voice,
+  record_recent_video: api_record_recent_video,
+  record_recent_song: api_record_recent_song,
+  record_recent_playlist: api_record_recent_playlist,
+  record_recent_dj: api_record_recent_dj,
+  record_recent_album: api_record_recent_album,
+  recommend_songs_dislike: api_recommend_songs_dislike,
+  recommend_songs: api_recommend_songs,
+  recommend_resource: api_recommend_resource,
+  rebind: api_rebind,
+  program_recommend: api_program_recommend,
+  pl_count: api_pl_count,
+  playmode_song_vector: api_playmode_song_vector,
+  playmode_intelligence_list: api_playmode_intelligence_list,
+  playlist_video_recent: api_playlist_video_recent,
+  playlist_update_playcount: api_playlist_update_playcount,
+  playlist_update: api_playlist_update,
+  playlist_track_delete: api_playlist_track_delete,
+  playlist_track_all: api_playlist_track_all,
+  playlist_track_add: api_playlist_track_add,
+  playlist_tracks: api_playlist_tracks,
+  playlist_tags_update: api_playlist_tags_update,
+  playlist_subscribers: api_playlist_subscribers,
+  playlist_subscribe: api_playlist_subscribe,
+  playlist_privacy: api_playlist_privacy,
+  playlist_order_update: api_playlist_order_update,
+  playlist_name_update: api_playlist_name_update,
+  playlist_mylike: api_playlist_mylike,
+  playlist_hot: api_playlist_hot,
+  playlist_highquality_tags: api_playlist_highquality_tags,
+  playlist_detail_dynamic: api_playlist_detail_dynamic,
+  playlist_detail: api_playlist_detail,
+  playlist_desc_update: api_playlist_desc_update,
+  playlist_delete: api_playlist_delete,
+  playlist_create: api_playlist_create,
+  playlist_cover_update: api_playlist_cover_update,
+  playlist_catlist: api_playlist_catlist,
+  personal_fm: api_personal_fm,
+  personalized_privatecontent_list: api_personalized_privatecontent_list,
+  personalized_privatecontent: api_personalized_privatecontent,
+  personalized_newsong: api_personalized_newsong,
+  personalized_mv: api_personalized_mv,
+  personalized_djprogram: api_personalized_djprogram,
+  personalized: api_personalized,
+  nickname_check: api_nickname_check,
+  mv_url: api_mv_url,
+  mv_sublist: api_mv_sublist,
+  mv_sub: api_mv_sub,
+  mv_first: api_mv_first,
+  mv_exclusive_rcmd: api_mv_exclusive_rcmd,
+  mv_detail_info: api_mv_detail_info,
+  mv_detail: api_mv_detail,
+  mv_all: api_mv_all,
+  music_first_listen_info: api_music_first_listen_info,
+  musician_tasks_new: api_musician_tasks_new,
+  musician_tasks: api_musician_tasks,
+  musician_sign: api_musician_sign,
+  musician_play_trend: api_musician_play_trend,
+  musician_data_overview: api_musician_data_overview,
+  musician_cloudbean_obtain: api_musician_cloudbean_obtain,
+  musician_cloudbean: api_musician_cloudbean,
+  msg_recentcontact: api_msg_recentcontact,
+  msg_private_history: api_msg_private_history,
+  msg_private: api_msg_private,
+  msg_notices: api_msg_notices,
+  msg_forwards: api_msg_forwards,
+  msg_comments: api_msg_comments,
+  mlog_url: api_mlog_url,
+  mlog_to_video: api_mlog_to_video,
+  mlog_music_rcmd: api_mlog_music_rcmd,
+  lyric_new: api_lyric_new,
+  lyric: api_lyric,
+  logout: api_logout,
+  login_status: api_login_status,
+  login_refresh: api_login_refresh,
+  login_qr_key: api_login_qr_key,
+  login_qr_create: api_login_qr_create,
+  login_qr_check: api_login_qr_check,
+  login_cellphone: api_login_cellphone,
+  login: api_login,
+  listentogether_sync_playlist_get: api_listentogether_sync_playlist_get,
+  listentogether_sync_list_command: api_listentogether_sync_list_command,
+  listentogether_status: api_listentogether_status,
+  listentogether_room_create: api_listentogether_room_create,
+  listentogether_room_check: api_listentogether_room_check,
+  listentogether_play_command: api_listentogether_play_command,
+  listentogether_heatbeat: api_listentogether_heatbeat,
+  listentogether_end: api_listentogether_end,
+  likelist: api_likelist,
+  like: api_like,
+  inner_version: api_inner_version,
+  hug_comment: api_hug_comment,
+  hot_topic: api_hot_topic,
+  homepage_dragon_ball: api_homepage_dragon_ball,
+  homepage_block_page: api_homepage_block_page,
+  history_recommend_songs_detail: api_history_recommend_songs_detail,
+  history_recommend_songs: api_history_recommend_songs,
+  get_userids: api_get_userids,
+  follow: api_follow,
+  fm_trash: api_fm_trash,
+  fanscenter_trend_list: api_fanscenter_trend_list,
+  fanscenter_overview_get: api_fanscenter_overview_get,
+  fanscenter_basicinfo_province_get: api_fanscenter_basicinfo_province_get,
+  fanscenter_basicinfo_gender_get: api_fanscenter_basicinfo_gender_get,
+  fanscenter_basicinfo_age_get: api_fanscenter_basicinfo_age_get,
+  event_forward: api_event_forward,
+  event_del: api_event_del,
+  event: api_event,
+  dj_toplist_popular: api_dj_toplist_popular,
+  dj_toplist_pay: api_dj_toplist_pay,
+  dj_toplist_newcomer: api_dj_toplist_newcomer,
+  dj_toplist_hours: api_dj_toplist_hours,
+  dj_toplist: api_dj_toplist,
+  dj_today_perfered: api_dj_today_perfered,
+  dj_subscriber: api_dj_subscriber,
+  dj_sublist: api_dj_sublist,
+  dj_sub: api_dj_sub,
+  dj_recommend_type: api_dj_recommend_type,
+  dj_recommend: api_dj_recommend,
+  dj_radio_hot: api_dj_radio_hot,
+  dj_program_toplist_hours: api_dj_program_toplist_hours,
+  dj_program_toplist: api_dj_program_toplist,
+  dj_program_detail: api_dj_program_detail,
+  dj_program: api_dj_program,
+  dj_personalize_recommend: api_dj_personalize_recommend,
+  dj_paygift: api_dj_paygift,
+  dj_hot: api_dj_hot,
+  dj_detail: api_dj_detail,
+  dj_catelist: api_dj_catelist,
+  dj_category_recommend: api_dj_category_recommend,
+  dj_category_excludehot: api_dj_category_excludehot,
+  dj_banner: api_dj_banner,
+  digitalAlbum_sales: api_digitalAlbum_sales,
+  digitalAlbum_purchased: api_digitalAlbum_purchased,
+  digitalAlbum_ordering: api_digitalAlbum_ordering,
+  digitalAlbum_detail: api_digitalAlbum_detail,
+  daily_signin: api_daily_signin,
+  creator_authinfo_get: api_creator_authinfo_get,
+  countries_code_list: api_countries_code_list,
+  comment_video: api_comment_video,
+  comment_playlist: api_comment_playlist,
+  comment_new: api_comment_new,
+  comment_mv: api_comment_mv,
+  comment_music: api_comment_music,
+  comment_like: api_comment_like,
+  comment_hug_list: api_comment_hug_list,
+  comment_hot: api_comment_hot,
+  comment_floor: api_comment_floor,
+  comment_event: api_comment_event,
+  comment_dj: api_comment_dj,
+  comment_album: api_comment_album,
+  comment: api_comment,
+  cloud_match: api_cloud_match,
+  cloudsearch: api_cloudsearch,
+  check_music: api_check_music,
+  cellphone_existence_check: api_cellphone_existence_check,
+  captcha_verify: api_captcha_verify,
+  captcha_sent: api_captcha_sent,
+  calendar: api_calendar,
+  batch: api_batch,
+  banner: api_banner,
+  avatar_upload: api_avatar_upload,
+  audio_match: api_audio_match,
+  artist_video: api_artist_video,
+  artist_top_song: api_artist_top_song,
+  artist_sublist: api_artist_sublist,
+  artist_sub: api_artist_sub,
+  artist_songs: api_artist_songs,
+  artist_new_song: api_artist_new_song,
+  artist_new_mv: api_artist_new_mv,
+  artist_mv: api_artist_mv,
+  artist_list: api_artist_list,
+  artist_follow_count: api_artist_follow_count,
+  artist_fans: api_artist_fans,
+  artist_detail: api_artist_detail,
+  artist_desc: api_artist_desc,
+  artist_album: api_artist_album,
+  artists: api_artists,
+  album_sublist: api_album_sublist,
+  album_sub: api_album_sub,
+  album_songsaleboard: api_album_songsaleboard,
+  album_newest: api_album_newest,
+  album_new: api_album_new,
+  album_list_style: api_album_list_style,
+  album_list: api_album_list,
+  album_detail_dynamic: api_album_detail_dynamic,
+  album_detail: api_album_detail,
+  album: api_album,
+  aidj_content_rcmd: api_aidj_content_rcmd,
+  activate_init_profile: api_activate_init_profile
+};
+/* harmony default export */ const api = (api_module.exports);
+;// CONCATENATED MODULE: ./corejs/util/beforeRequest.js
+function beforeRequest_typeof(o) { "@babel/helpers - typeof"; return beforeRequest_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, beforeRequest_typeof(o); }
+
+
+
+var beforeRequest_module = {
+  exports: {}
+};
+var beforeRequest_exports = beforeRequest_module.exports;
+function beforeRequest_toConsumableArray(arr) { return beforeRequest_arrayWithoutHoles(arr) || beforeRequest_iterableToArray(arr) || beforeRequest_unsupportedIterableToArray(arr) || beforeRequest_nonIterableSpread(); }
+function beforeRequest_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function beforeRequest_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return beforeRequest_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return beforeRequest_arrayLikeToArray(o, minLen); }
+function beforeRequest_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function beforeRequest_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return beforeRequest_arrayLikeToArray(arr); }
+function beforeRequest_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function beforeRequest_ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function beforeRequest_objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? beforeRequest_ownKeys(Object(t), !0).forEach(function (r) { beforeRequest_defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : beforeRequest_ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function beforeRequest_defineProperty(obj, key, value) { key = beforeRequest_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function beforeRequest_toPropertyKey(t) { var i = beforeRequest_toPrimitive(t, "string"); return "symbol" == beforeRequest_typeof(i) ? i : String(i); }
+function beforeRequest_toPrimitive(t, r) { if ("object" != beforeRequest_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != beforeRequest_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function beforeRequest_readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+// import api from "./api.js";
+// import { cookieToJson } from "./index.js";
+// import request_param from "./request_param.js";
+
+var beforeRequest_api = api;
+var beforeRequest_cookieToJson = util.cookieToJson;
+var beforeRequest_request_param = request_param;
+var beforeRequest_USEJSON = false; // 是否使用json格式的返回值
+
+function beforeRequest_hasApi(name) {
+  return Object.keys(beforeRequest_api).includes(name);
 }
-
 function beforeRequest(name, query) {
+  // 兼容query为JSON格式
+  if (typeof query === 'string') {
+    query = JSON.parse(query);
+    true, beforeRequest_readOnlyError("USEJSON"); // 使用json格式的返回值
+  }
+
   // 处理字符串格式的 cookie
-  if (typeof query.cookie === "string") {
-    query.cookie = cookieToJson(query.cookie);
+  if (typeof query.cookie === 'string') {
+    query.cookie = beforeRequest_cookieToJson(query.cookie);
+  }
+
+  // 处理游客登录
+  if (!query.cookie.MUSIC_U) {
+    // 游客
+    if (!query.cookie.MUSIC_A) {
+      options.cookie.MUSIC_A = query.anonymous_token | '';
+      options.cookie.os = options.cookie.os || 'ios';
+      options.cookie.appver = options.cookie.appver || '8.10.90';
+    }
   }
 
   // 处理接口名称
-  if (name.startsWith("/")) {
+  if (name.startsWith('/')) {
     name = name.slice(1);
   }
-  name = name.replace(/\//g, "_");
+  name = name.replace(/\//g, '_');
 
   // 处理ip
   if (query.realIP) {
     query.ip = query.realIP;
   }
-
-  // console.log("query:", query);
-
-  if (hasApi(name)) {
-    return api[name](query, (...params) => {
+  var result;
+  if (beforeRequest_hasApi(name)) {
+    result = beforeRequest_api[name](query, function () {
+      for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+        params[_key] = arguments[_key];
+      }
       // 参数注入客户端IP
-      const obj = [...params];
-
-      // console.log("query:",query,"obj:",obj,"params",params);
-      let ip = query.ip;
+      var obj = [].concat(params);
+      var ip = query.ip;
 
       //处理IPv6地址的问题
-
-      if (ip.substr(0, 7) == "::ffff:") {
+      if (ip.substr(0, 7) == '::ffff:') {
         ip = ip.substr(7);
       }
       // console.log(ip)
-      obj[3] = {
-        ...obj[3],
-        ip,
-        apiName: name,
-      };
-
-      // let a = request_param(...obj);
-      // console.log("a:", a);
-      // return a;
-
-      return request_param(...obj);
+      obj[3] = beforeRequest_objectSpread(beforeRequest_objectSpread({}, obj[3]), {}, {
+        ip: ip,
+        apiName: name
+      });
+      return beforeRequest_request_param.apply(void 0, beforeRequest_toConsumableArray(obj));
     });
   } else {
-    return { error: `api (${name}) not found` };
+    return {
+      error: "api (".concat(name, ") not found")
+    };
   }
-}
 
-/* harmony default export */ const util_beforeRequest = (beforeRequest);
+  // 处理返回值
+  if (beforeRequest_USEJSON) {
+    result = JSON.stringify(result);
+  }
+  return result;
+}
+beforeRequest_module.exports = beforeRequest;
 
 // 下一步你应该按照返回数据发送请求
-
-;// CONCATENATED MODULE: ./afterRequest/check_music.js
-// 歌曲可用性
-
-/* harmony default export */ const afterRequest_check_music = ((response) => {
-  response = JSON.parse(response);
-  let playable = false;
-  if (response.body.code == 200) {
-    if (response.body.data[0].code == 200) {
-      playable = true;
-    }
-  }
-  if (playable) {
-    response.body = { code: 200, success: true, message: "ok" };
-    return response;
-  } else {
-    // response.status = 404
-    response.body = { code: 200, success: false, message: "亲爱的,暂无版权" };
-    return response;
-    // return Promise.reject(response)
-  }
-});
-
-;// CONCATENATED MODULE: ./afterRequest/login_cellphone.js
-/* harmony default export */ const afterRequest_login_cellphone = ((response) => {
-  response = JSON.parse(response);
-  if (response.body.code === 200) {
-    let cookie = response.cookie;
-    if (Array.isArray(cookie)) {
-      cookie = cookie.join(';');
-    }
-
-    response = {
-      status: 200,
-      body: {
-        ...JSON.parse(
-          JSON.stringify(response.body).replace(
-            /avatarImgId_str/g,
-            "avatarImgIdStr"
-          )
-        ),
-        cookie: cookie,
-      },
-      cookie: cookie,
-    };
-  }
-  return response;
-});
-
-;// CONCATENATED MODULE: ./afterRequest/login_refresh.js
-/* harmony default export */ const afterRequest_login_refresh = ((response) => {
-  response = JSON.parse(response);
-  let cookie = response.cookie;
-  if (Array.isArray(cookie)) {
-    cookie = cookie.join(";");
-  }
-  if (response.body.code === 200) {
-    response = {
-      status: 200,
-      body: {
-        ...response.body,
-        cookie: cookie,
-      },
-      cookie: cookie,
-    };
-  }
-
-  return response;
-});
-
-;// CONCATENATED MODULE: ./afterRequest/login_status.js
-/* harmony default export */ const afterRequest_login_status = ((response) => {
-  response = JSON.parse(response);
-  if (response.body.code === 200) {
-    response = {
-      status: 200,
-      body: {
-        data: {
-          ...response.body,
-          cookie: response.cookie,
-        },
-      }
-    };
-  }
-  return response;
-});
-
-;// CONCATENATED MODULE: ./afterRequest/related_playlist.js
-/* harmony default export */ const afterRequest_related_playlist = ((response) => {
-  response = JSON.parse(response);
-  try {
-    const pattern =
-      /<div class="cver u-cover u-cover-3">[\s\S]*?<img src="([^"]+)">[\s\S]*?<a class="sname f-fs1 s-fc0" href="([^"]+)"[^>]*>([^<]+?)<\/a>[\s\S]*?<a class="nm nm f-thide s-fc3" href="([^"]+)"[^>]*>([^<]+?)<\/a>/g;
-    let result,
-      playlists = [];
-    while ((result = pattern.exec(response.body)) != null) {
-      playlists.push({
-        creator: {
-          userId: result[4].slice("/user/home?id=".length),
-          nickname: result[5],
-        },
-        coverImgUrl: result[1].slice(0, -"?param=50y50".length),
-        name: result[3],
-        id: result[2].slice("/playlist?id=".length),
-      });
-    }
-    response.body = { code: 200, playlists: playlists };
-    return response;
-  } catch (err) {
-    response.status = 500;
-    response.body = { code: 500, msg: err.stack };
-    return response;
-  }
-});
-
-;// CONCATENATED MODULE: ./afterRequest/top_playlist.js
-/* harmony default export */ const afterRequest_top_playlist = ((response) => {
-  response = JSON.parse(response);
-  response = JSON.stringify(response).replace(
-    /avatarImgId_str/g,
-    "avatarImgIdStr"
-  );
-  return JSON.parse(response);
-});
-
-;// CONCATENATED MODULE: ./afterRequest/user_detail.js
-/* harmony default export */ const afterRequest_user_detail = ((response) => {
-  response = JSON.parse(response);
-
-  response = JSON.stringify(response).replace(
-    /avatarImgId_str/g,
-    "avatarImgIdStr"
-  );
-  return JSON.parse(response);
-});
-
-;// CONCATENATED MODULE: ./util/afterRequestApi.js
+/* harmony default export */ const util_beforeRequest = (beforeRequest_module.exports);
+;// CONCATENATED MODULE: ./corejs/index.js
 
 
-
-
-
-
-
-
-/* harmony default export */ const afterRequestApi = ({
-    'check_music':afterRequest_check_music,
-    'login_cellphone':afterRequest_login_cellphone,
-    'login_refresh':afterRequest_login_refresh,
-    'login_status':afterRequest_login_status,
-    'related_playlist':afterRequest_related_playlist,
-    'top_playlist':afterRequest_top_playlist,
-    'user_detail':afterRequest_user_detail,
-});
-;// CONCATENATED MODULE: ./util/afterRequest.js
-// 处理请求
-// 要求返回数据的格式为
-/*
-* 
-@param:result:
-{
-    status: 200,
-    body: {},
-    cookie: []
-    headers: {
-        'set-cookie': [] | []
-
-    }
-}
-@param:crypto: "eapi", "weapi", "linuxapi"
-*/
-
-
-
-
-function afterRequest_hasApi(name) {
-  return Object.keys(afterRequestApi).includes(name);
-}
-
-const afterRequest = (result, crypto, apiName) => {
-  result = JSON.parse(result);
-  const answer = { status: 500, body: {}, cookie: [] };
-
-  const body = result.data;
-
-  // let cookie = result.headers["Set-Cookie"];
-  let cookie;
-
-  for (let key in result.headers) {
-    if (key.toLowerCase() === 'set-cookie') {
-      cookie = result.headers[key];
-      break;
-    }
-  }
-  // console.log("得到了set-cookie 的值：", cookie);
-
-  // 处理字符串格式的 cookie 到一个对象
-  // if (typeof cookie === "string") {
-  //   console.log("cookie 是 string", cookie);
-  //   cookie = cookieToJson(cookie);
-  // }
-
-  // 处理数组格式的 cookie
-  if (Array.isArray(cookie)) {
-    cookie = cookie.join(';');
-  }
-
-  // 对象转换为数组
-  // if(typeof cookie === 'object' && cookie !== null){
-  //   console.log("cookie 是 object", cookie);
-  //   cookie = Object.entries(cookie).map(([key, value]) => `${key}=${value}`);
-  // }
-
-  answer.cookie = cookie || "";
-  
-  // 不是浏览器Domain属性不重要
-  // answer.cookie = (cookie || []).map((x) =>
-  //   x.replace(/\s*Domain=[^(;|$)]+;*/, "")
-  // );
-
-  try {
-    if (crypto === "eapi") {
-      answer.body = JSON.parse(util_crypto.decrypt(body));
-    } else {
-      answer.body = body;
-    }
-
-    if (answer.body.code) {
-      answer.body.code = Number(answer.body.code);
-    }
-
-    answer.status = Number(answer.body.code || res.status);
-    if (
-      [201, 302, 400, 502, 800, 801, 802, 803].indexOf(answer.body.code) > -1
-    ) {
-      // 特殊状态码
-      answer.status = 200;
-    }
-  } catch (e) {
-    // console.log(e)
-    try {
-      answer.body = JSON.parse(body.toString());
-    } catch (err) {
-      // console.log(err)
-      // can't decrypt and can't parse directly
-      answer.body = body;
-    }
-    answer.status = result.status;
-  }
-
-  answer.status =
-    100 < answer.status && answer.status < 600 ? answer.status : 400;
-
-  // 处理特殊接口后续操作
-
-  // if(result){
-  //   // 处理返回数据
-  //   console.log("reqponse_operate", reqponse_operate);
-  // }
-  // console.log(answer);
-  if (afterRequest_hasApi(apiName)) {
-    let result = afterRequestApi[apiName](JSON.stringify(answer));
-    if (result.status) {
-      answer.status = result.status;
-    }
-    if (result.body) {
-      answer.body = result.body;
-    }
-    if (result.cookie) {
-      answer.cookie = result.cookie;
-    }
-  }
-
-  // 返回数据
-  if (answer.status !== 200 || !answer.body) {
-    return {
-      code: answer.status,
-      data: answer.body,
-      msg: answer.body.msg || "请求遇到问题",
-      others: {
-        status: answer.status,
-        body: answer.body,
-      },
-    };
-  }
-
-  if (answer.body.code == "301") {
-    return {
-      code: 301,
-      data: null,
-      msg: "需要登录",
-    };
-  }
-
-  return {
-    code: answer.body.code,
-    data: answer.body,
-    msg: answer.body.msg,
-  };
+var corejs_module = {
+  exports: {}
 };
-
-/* harmony default export */ const util_afterRequest = (afterRequest);
-
-;// CONCATENATED MODULE: ./index.js
-
-
-
-
-const NeteaseCloudMusicApi_inner_version = "4.13.8"; // 本项目使用的 NeteaseCloudMusicApi 版本号
-const NeteaseCloudMusicApi_V8_version = package_namespaceObject.i8; // 本项目的版本号
-
-/* harmony default export */ const index = ({
-  beforeRequest: util_beforeRequest,
-  afterRequest: util_afterRequest,
-  inner_version: () => {
-    return {
-      NeteaseCloudMusicApi: NeteaseCloudMusicApi_inner_version,
-      NeteaseCloudMusicApi_V8: NeteaseCloudMusicApi_V8_version,
-    };
-  },
-}); // 一个请求前钩子，一个请求后钩子
-
+var corejs_exports = corejs_module.exports;
+var corejs_beforeRequest = util_beforeRequest;
+var corejs_afterRequest = util_afterRequest;
+corejs_module.exports = {
+  beforeRequest: corejs_beforeRequest,
+  afterRequest: corejs_afterRequest
+}; // 一个请求前钩子，一个请求后钩子
+/* harmony default export */ const corejs = (corejs_module.exports);
 })();
 
 __webpack_exports__ = __webpack_exports__["default"];

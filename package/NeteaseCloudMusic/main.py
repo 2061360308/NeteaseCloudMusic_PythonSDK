@@ -181,17 +181,20 @@ class NeteaseCloudMusicApi:
     def call_api(self, name, query):
         request_param = self.ctx.call('NeteaseCloudMusicApi.beforeRequest', name, query)  # 拿到请求头和请求参数
 
+        # print(request_param)
+
         # Todo 了解 py_mini_racer 返回没有自动编码 而 node可以
-        param_data = {}
-        if request_param["data"] != "":
-            for item in request_param["data"].split("&"):
-                # param_data[item.split("=")[0]] = urllib.parse.quote(item.split("=")[1], safe='') # 不需要编码后反而出错
-                param_data[item.split("=")[0]] = item.split("=")[1]
+        # from urllib.parse import unquote
+        # param_data = {}
+        # if request_param["data"] != "":
+        #     for item in request_param["data"].split("&"):
+        #         # param_data[item.split("=")[0]] = urllib.parse.quote(item.split("=")[1], safe='') # 不需要编码后反而出错
+        #         param_data[item.split("=")[0]] = unquote(item.split("=")[1])
 
         if request_param.get("method") == "GET":
-            response = requests.get(request_param["url"], params=param_data, headers=request_param["headers"])
+            response = requests.get(request_param["url"], params=request_param['data'], headers=request_param["headers"])
         else:
-            response = requests.post(request_param["url"], data=param_data, headers=request_param["headers"])
+            response = requests.post(request_param["url"], data=request_param['data'], headers=request_param["headers"])
 
         try:
             data = json.loads(response.text)
@@ -205,7 +208,7 @@ class NeteaseCloudMusicApi:
         }
 
         result = self.ctx.call('NeteaseCloudMusicApi.afterRequest',
-                               json.dumps(response_result),
+                               response_result,
                                request_param.get('crypto', None),
                                request_param['apiName'])  # 拿到请求结果
 

@@ -19,7 +19,6 @@ jobs:
       with:
         python-version: 3.
         
-    - name: Get the version
       id: get_version
       run: |
         echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV

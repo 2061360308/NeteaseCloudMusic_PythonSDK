@@ -7,7 +7,7 @@ from enum import Enum
 from pprint import pprint
 import dotenv
 
-from NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
+from package.NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
 
 # from NeteaseCloudMusic import NeteaseCloudMusicApi, api_help, api_list
 
@@ -108,13 +108,18 @@ def login_refresh():
     pprint(response)
 
 
+def login_status():
+    response = netease_cloud_music_api.request("login_status")
+    pprint(response)
+
+
 if __name__ == '__main__':
     pass
     # print(api_list())
     # print(api_help())
     # song_url_v1_test()
     # top_mv_test()
-    # search_test()
+    search_test()
     # search_default_test()
     # comment_new_test()
     # toplist_detail_test()
@@ -124,4 +129,5 @@ if __name__ == '__main__':
     # login_cellphone_test()
     # user_account_test()
     # playlist_track_all_test()
-    login_refresh()
+    # login_refresh()
+    # login_status()
