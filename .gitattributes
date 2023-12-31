@@ -4,5 +4,7 @@ report.html linguist-vendored
 report.html linguist-generated
 static/ linguist-vendored
 static/ linguist-generated
+*.js linguist-vendored
+*.js linguist-generated
 package/NeteaseCloudMusic/NeteaseCloudMusicApi.js linguist-vendored
 package/NeteaseCloudMusic/NeteaseCloudMusicApi.js linguist-generated
