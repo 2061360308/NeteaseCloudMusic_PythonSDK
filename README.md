@@ -1,6 +1,7 @@
 # NeteaseCloudMusic_PythonSDK
 现已同步原项目接口且测试通过的有200多个 :wave: :wave: :star: 求赞 :star:
-![](https://img.shields.io/badge/py_mini_racer-@0.6.0-red.svg) ![License](https://img.shields.io/badge/license-MIT-yellow)
+
+![](https://img.shields.io/badge/py_mini_racer-@0.6.0-red.svg) ![License](https://img.shields.io/badge/license-MIT-yellow)[![PyPI Downloads](https://pepy.tech/badge/NeteaseCloudMusic)](https://pepy.tech/project/NeteaseCloudMusic)[![PyPI version](https://badge.fury.io/py/NeteaseCloudMusic.svg)](https://badge.fury.io/py/NeteaseCloudMusic)
 
 > 基于 [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi) 封装的 Python SDK。
 > 网易云API Python版本。
@@ -26,7 +27,7 @@ Binaryify 创建了有趣的项目[NeteaseCloudMusicApi](https://github.com/Bina
 
 事实上，我们知道，除却在网页上独有的限制，只能依赖于服务器转发，在其他平台我们完全可以不需要服务器。
 
-所以这个Python项目诞生了。:joy::joy::joy:
+所以这个Python项目诞生了。 :joy: :joy: :joy:
 
 ### :heart:作者寄语
 
