@@ -1,6 +1,8 @@
-* linguist-vendored
-* linguist-generated
-package/ linguist-vendored=false
-package/ linguist-generated=false
+docs/ linguist-vendored
+docs/ linguist-generated
+report.html linguist-vendored
+report.html linguist-generated
+static/ linguist-vendored
+static/ linguist-generated
 package/NeteaseCloudMusic/NeteaseCloudMusicApi.js linguist-vendored
 package/NeteaseCloudMusic/NeteaseCloudMusicApi.js linguist-generated
