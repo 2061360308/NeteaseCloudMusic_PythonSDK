@@ -1,10 +1,9 @@
 # NeteaseCloudMusic_PythonSDK
 ## 最新消息：***Binaryify/NeteaseCloudMusicApi*** 受到网易法律警告目前已删库且不再维护，该项目也被迫暂停维护
 
-有关***Binaryify/NeteaseCloudMusicApi***最新版本的js其实已经改写完毕了，但是作者懒得继续写Python版本，有意向自己开发的可以扫码加入QQ频道讨论。当然也可以在频道讨论学习什么的。
-<div align="center">
-<img src="https://github.com/2061360308/NeteaseCloudMusic_PythonSDK/assets/42377282/7bb57c90-8b96-4e17-ad57-7429c5780d4e" height="260" />
-</div>
+有关***Binaryify/NeteaseCloudMusicApi***最新版本的js其实已经改写完毕了，但是作者懒得继续写Python版本，有意向自己开发的可以联系我进行接手。
+
+有空的的话我会写文档简述这个项目的思路，以及我在进行过程遇到的问题和解决方案。😆不用太期待，没什么难度主要还是自己辛苦哈。
 
 现已同步原项目接口且测试通过的有200多个 :wave: :wave: :star: 求赞 :star:
 
