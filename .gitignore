@@ -1,7 +1,13 @@
-.idea/
-__pycache__/
-.env
-.pytest_cache/
-cookie_storage
-/情非得已 (童声版) - 群星.mp3
-/cache/
+.venv/
+build/
+dist/
+MusicLibrary.egg-info/
+
+windows-x64.zip
+windows-x86.zip
+windows-arm64.zip
+
+MusicLibrary/lib/
+MusicLibrary/include/
+
+*/__pycache__/
